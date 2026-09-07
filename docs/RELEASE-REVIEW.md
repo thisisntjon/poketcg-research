@@ -4,9 +4,13 @@ A pre-publication review of this repository, recorded so a reader can see what w
 checked, what was found, and what is still open. **This is a scan and a set of
 judgements. It is not a security certification, a legal clearance, or a licence audit.**
 
-Reviewed: 2026-09-07T01:46:08Z, at branch `codex/judge-repo-repair`.
-Scope: all tracked files in this repository. Method: pattern scan over every tracked
-text file, plus manual reading of the attribution and provenance surfaces.
+Reviewed: 2026-09-07T01:46:08Z, at branch `codex/judge-repo-repair`; re-run after
+publication against the public repository, **including every object in its history**.
+Method: pattern scan over every text blob reachable from any ref — not only the checked-out
+tree — plus manual reading of the attribution and provenance surfaces.
+
+Scanning history rather than the working tree matters here, and it changed one conclusion:
+see [the note on the redaction](#the-redaction-does-not-remove-the-path-from-this-repositorys-history).
 
 ## Findings — clean
 
@@ -19,6 +23,11 @@ text file, plus manual reading of the attribution and provenance surfaces.
 | Competition engine, organiser card database, episode dumps, model weights | **0 — none present** |
 | Third-party kernel source | **0 — none present**; only the attribution register |
 | Real email addresses | **0** — the 24 matches are test fixtures (`@example.com`, `@example.invalid`) and synthetic seat names (`master@fleet.local`, `skynet@ptcg.local`) |
+| Slack / OpenAI / Anthropic API keys, bearer headers, private IP addresses | **0** |
+| CI workflows, `setup.py`, git hooks, shell scripts — anything that executes on clone | **none present** |
+
+The rows above were checked across **all 205 text blobs in the public history**, not only
+the current tree.
 
 Repository size: 141 tracked files, ~13 MB working tree, 2.74 MiB packed. Two commits
 (squashed public import).
@@ -45,6 +54,36 @@ otherwise published exactly as it stood; this one redaction is the sole delibera
 deviation, and it is recorded here so the deviation is not silent. `~/.kaggle/kaggle.json`
 still appears in the record: that is the tool's documented default location on every
 machine, not a disclosure.
+
+### The redaction does not remove the path from this repository's history
+
+**Stated plainly because the paragraph above, on its own, overstates what was achieved.**
+The redaction is a commit. The commits before it are public. The pre-redaction bytes are
+therefore still readable by anyone:
+
+```
+$ git show 7d57d58:workflow/DECISIONS.md | grep -o 'V:.Pokemon.kaggle.json'
+V:\Pokemon\kaggle.json
+```
+
+Redacting at `HEAD` changes what a reader sees in the checked-out tree. It does not remove
+an object from a public repository, and no later commit can.
+
+**What that does and does not expose.** A file path and drive letter on one workstation,
+plus the name of an environment variable. **No key material is exposed, and none ever
+was** — a scan of all 205 text blobs across the full public history found zero private-key
+blocks, zero cloud or platform access tokens, and zero credential assignments carrying a
+literal value. The disclosure is that a credential file once lived at a particular local
+path on a machine that is not reachable from the internet.
+
+**Why the history was not rewritten.** Rewriting would invalidate the merge commits and the
+pull-request references that document how this repository was prepared, and it would not
+recall anything already cloned, forked or cached. For a local path with no key material,
+that trade is not worth taking. The honest record is better than a clean-looking one.
+
+**The decisive mitigation, if this is ever judged to matter, is rotating the credential** —
+not editing this repository. That is outside this repository's control and is not claimed
+here.
 
 **Attribution overstatement corrected.** `NOTICE` previously said every opponent kernel
 was recorded in `workflow/PUBLIC-KERNELS-PROVENANCE.md`. It is not. See the open item
@@ -108,14 +147,26 @@ property: any later visibility change voids it.
 29 Windows paths under `C:\Users\thisi\…` and 103 references to a `D:/ptcg_archive`
 local archive remain across 19 files. These are deliberate: they identify where evidence
 was produced, and removing them would break traceability without making anything safer.
-They are not downloadable assets and no credential path remains among them.
+They are not downloadable assets, and no credential path remains among them **at `HEAD`** —
+see [the note above](#the-redaction-does-not-remove-the-path-from-this-repositorys-history)
+for what the history still contains.
 
-**4. No licence audit or automated security scan of dependencies.**
+**4. Two third parties are named in full, not only by handle.**
+
+`workflow/PUBLIC-KERNELS-PROVENANCE.md` records `aristophanivan (Ivan Ternovskiy)` and
+`romanrozen (Roman Rozen)`. The names were read from their public Kaggle pages during
+licence verification. The handle alone would serve the attribution purpose, so the full
+names are additional personal information published without those authors' involvement.
+
+*Decisive check:* confirm each name is still self-published on the author's own public
+profile. If it is not, reduce the row to the handle. Either way, removal on request.
+
+**5. No licence audit or automated security scan of dependencies.**
 
 None was run and none is claimed. The pattern scan above covers secrets and obvious
 leakage; it is not a substitute for either.
 
-**5. Fifty-one links point at the private working repository and return 404.**
+**6. Fifty-one links point at the private working repository and return 404.**
 
 Fifty-one `github.com/thisisntjon/poketcg/...` URLs remain in this tree. Verified
 2026-09-07T05:00Z: an anonymous fetch of one of them returns **HTTP 404**, because that
@@ -140,7 +191,7 @@ edit would desync it from its generator. *Decisive check, if this is closed late
 regenerate the manifest with the URLs rendered as `poketcg#NNN (private)`, and leave the
 audit envelopes as written with this disclosure standing.
 
-**6. The Kaggle project link.**
+**7. The Kaggle project link.**
 
 Still needs to point at this companion repository rather than promising access to the
 private working repository. Outside this repository's control.
