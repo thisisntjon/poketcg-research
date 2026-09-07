@@ -10,6 +10,11 @@ improved an **experimental Mega Lucario product** by **+7.82 percentage points
 [+6.08, +9.56]** on a development panel containing 40% Alakazam, across three
 within-batch comparisons on two computers.
 
+*Checking that number? The +7.82 pools three comparisons and only two ship here; pooling
+those two gives +8.26, which our own retraction register flags as superseded.
+[The bridge is written out in full](docs/EVIDENCE-MAP.md#if-you-recompute-the-headline-you-will-get-a-different-number-here-is-why)
+before you hit it.*
+
 **Where that gain lives.** A later 8,400-game panel — seven opponent implementations,
 600 games per arm per opponent — located it. The two Alakazam cells gained **+20.42**
 and **+18.75** points. The equal-weight mean of the other five is **−0.47 points

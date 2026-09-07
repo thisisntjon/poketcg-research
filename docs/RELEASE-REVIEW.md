@@ -55,6 +55,25 @@ written about the private working repository and reason explicitly from its bein
 private. An export note at its head now states that publishing the register does not
 redistribute any kernel, and that those dispositions are not a clearance for this export.
 
+## Adversarial pass — what a sceptical reader finds
+
+Separately from the security scan, the repository was read the way a judge who trusts
+nothing would read it: recompute the numbers, run the commands, click the links. Findings
+and their disposition:
+
+| Finding | Disposition |
+|---|---|
+| Pooling the combined-arm contrasts that ship gives **+8.26**, not +7.82 — and the retraction register flags +8.26 as superseded | **Explained up front** in [EVIDENCE-MAP](EVIDENCE-MAP.md#if-you-recompute-the-headline-you-will-get-a-different-number-here-is-why); the third input is the second-machine reproduction whose rows are not shipped. The headline is **not independently verifiable from this repository alone**, and that is now stated rather than left to be discovered. |
+| `pytest` reports **11 failed, 179 passed, 24 errors** | **Documented with exact counts** in [REPRODUCING](REPRODUCING.md). All 35 are export-scope, in three files. Not silenced or skipped. |
+| **206 broken relative links** across the tracked Markdown, 188 in `registers/LEARNINGS.md` | **Bannered at the top of that register** with the count and the reason. It is the largest navigation gap here. |
+| `scripts/onboard_check.py` exits 1 printing `ONBOARD CHECK FAILED` | **Documented**; it validates the private repository's onboarding path, which is not part of this export. |
+| The generalisation report prints **+20.17 / +18.50** where Figure 2 gives **+20.42 / +18.75** | **Explained**: wins-÷-all-games versus win = 1 / draw = ½. Both reproduce; 12 draws in 8,400 games. The report notes one convention difference but not this one. |
+| `ATTEMPTS-LEDGER` GR-91 says *"the whole net gain is a one-card deck swap"* | Left as written. It is a different experiment (10,800 games, a different policy pair), and the same row goes on to say explicitly that "the policy contributes nothing" is FALSE. Quotable out of context; the correction is in the row. |
+
+What did reproduce exactly: both Alakazam panel cells, the five-cell mean, the mixture
+equation's coefficient and its value at q = 0.25, and both ablation pools. See
+[EVIDENCE-MAP](EVIDENCE-MAP.md#what-does-recompute-exactly-from-these-rows).
+
 ## Open items — not resolved here
 
 **1. Five opponent authors have no licence-and-provenance row.**

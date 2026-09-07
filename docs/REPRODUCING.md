@@ -59,10 +59,36 @@ python -X utf8 scripts/retraction_register.py <number>
 
 `retraction_scan.py` is the publication check: it reads
 [the retraction register](../workflow/canon/RETRACTIONS.md) and flags any retracted
-numeric token or hash prefix in a document, with the value to use instead. Scanning this
-repository's `README.md` and `docs/` reports 0 hits against 16 retracted tokens. **A clean
-run is not a certificate** — the register can be incomplete, and the tool says so in its
-own output. `retraction_register.py <number>` answers the same question for one value.
+numeric token or hash prefix in a document, with the value to use instead.
+`retraction_register.py <number>` answers the same question for one value.
+
+Run plainly over this repository's own pages, it **exits 1 with 10 hits**:
+
+```
+$ python -X utf8 scripts/retraction_scan.py README.md NOTICE docs
+[RETRACTED] docs\EVIDENCE-MAP.md
+  L44: `8.26` -> use instead: **`+7.82pp [+6.08, +9.56]`**
+  …
+scanned 10 file(s) against 16 retracted tokens: 10 hit(s). FIX BEFORE PUBLISHING.
+```
+
+**That is the firewall working, not a defect.** Every hit is in the two pages that quote
+`+8.26` and `+9.35` deliberately, in order to *explain* why recomputing the headline from
+the shipped rows produces a superseded value. The tool cannot tell "citing a retracted
+number as fact" from "citing it to retract it", and it should not try to.
+
+The tool's own documented escape is `--allow`, one token at a time, so an exemption is
+always visible in the command:
+
+```
+$ python -X utf8 scripts/retraction_scan.py --allow 8.26 --allow 9.35 README.md NOTICE docs
+scanned 10 file(s) against 14 retracted tokens: 0 hit(s); 0 inspection failure(s).
+```
+
+Two tokens allowed, fourteen still enforced. We are not suppressing the check — the plain
+form above is printed here precisely so the exemption cannot be mistaken for a clean bill.
+**A clean run is not a certificate** either way: the register can be incomplete, and the
+tool says so in its own output.
 
 Both are read-only. (`retraction_register.py --census` writes a census file; that form is
 not part of the advertised path here.)
@@ -103,6 +129,43 @@ We deliberately did **not** regenerate a smaller inventory against this reduced 
 Doing so would have produced a new census with less coverage while overwriting historical
 records that carry their original identities and dates. The snapshot is preserved instead,
 and the generator is kept beside it as the source that produced it, unrunnable here.
+
+### If you run the test suite or the onboarding checker
+
+Both are present and both will run. Neither passes here, and the numbers are stated up
+front so nothing is a surprise:
+
+```
+$ python -X utf8 -m pytest -q
+11 failed, 179 passed, 24 errors, 10 subtests passed
+```
+
+All 35 failures and errors are in three files, and every one is an **export-scope**
+failure rather than a code defect — the assertions reference corpus files and inventory
+dependencies that are not in this repository:
+
+| File | Failures + errors | Why |
+|---|---|---|
+| `test_build_sri.py` | 24 | needs the generator's dependency closure (see above) |
+| `test_prior_art.py` | 9 | asserts specific documents rank in the top 5 for a query; those documents are not in this corpus |
+| `test_dock.py` | 2 | same cause |
+
+The other **179 tests pass**, which is what the export can honestly support. We did not
+delete or skip the failing files to make the run green: a suite that is made to pass by
+removing the check is worth less than one that fails legibly.
+
+```
+$ python -X utf8 scripts/onboard_check.py
+… 21 error(s), 15 warning(s).
+ONBOARD CHECK FAILED - a harness reading START-HERE.md would be misled.
+$ echo $?
+1
+```
+
+That banner is **correct and expected**. The checker validates the *private working
+repository's* onboarding path — `START-HERE.md`, `workflow/NOW.md`, `DEADLINES.json`, the
+answer map — none of which is part of this export. It is preserved as source, not
+advertised as a check that passes here.
 
 `scripts/build_sri.py`, `scripts/onboard_check.py`, `scripts/dock.py`,
 `scripts/research_memory.py`, `scripts/map_validate.py`, `scripts/archive_desktop.py`,
