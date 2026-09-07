@@ -62,9 +62,14 @@ The redaction is a commit. The commits before it are public. The pre-redaction b
 therefore still readable by anyone:
 
 ```
-$ git show 7d57d58:workflow/DECISIONS.md | grep -o 'V:.Pokemon.kaggle.json'
-V:\Pokemon\kaggle.json
+$ git show 7d57d58:workflow/DECISIONS.md | grep -c 'kaggle.json'
+5
 ```
+
+Those five lines carry the path in full. **The output is deliberately not reproduced here:**
+printing it would put back into the current tree the exact string the redaction removed from
+it — defeating the redaction in the course of documenting it. Run the command if you want to
+confirm the finding.
 
 Redacting at `HEAD` changes what a reader sees in the checked-out tree. It does not remove
 an object from a public repository, and no later commit can.
