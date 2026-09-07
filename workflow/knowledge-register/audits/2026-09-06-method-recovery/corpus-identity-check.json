@@ -1,0 +1,56 @@
+{
+  "question": "Does the history search hit for a completed 120k corpus supply the missing August 6 mirror-noise calibration?",
+  "why": "A matching count could incorrectly join unrelated study evidence and certify the wrong result.",
+  "method": "Reuse the existing calibration dispute; search all locally available Git commit subjects for 120k/120000 and inspect the exact status, allocation and original calibration claim. No datasets or engines executed.",
+  "sources": [
+    {
+      "commit": "0cc37d8c76f8968618187625937d148ae7fb9a61",
+      "path": "STATUS.json",
+      "blob": "6083929592d7fc0fe39cdcb6d94f4f90bbc23b9a",
+      "sha256": "bde374f480ead26b78f3e45eb89b250fb5381a43b10ef15c145e2a2fd6e74815",
+      "selected_fields": {
+        "name": "roach",
+        "ts": "2026-07-25T03:33:52Z",
+        "mode": "reader banked (seq-58 half done); seq-53 corpus COMPLETE 120k/0 errors; awaiting #1709 verify"
+      }
+    },
+    {
+      "commit": "071ca545d2f578c83c9f0ef6e448c83bf886b323",
+      "path": "workflow/RUN_GATES.json",
+      "blob": "436d41b7664e7488296346d32cd64c5bb5413f33",
+      "sha256": "f93efa37f9c51c2f47d5da7455cfe858f130aec066d70562394c120928026d1c",
+      "selected_fields": {
+        "seq": 53,
+        "instrument": "go3b-selfplay-corpus-utc-2026-07-25",
+        "state": "GO",
+        "issuer": "master",
+        "ts": "2026-07-25T01:11:31Z",
+        "executor": "roach",
+        "box": "roach",
+        "day_cap_games": 120000,
+        "basis": "disk-derived",
+        "reason": "GO-3b for the 2026-07-25 UTC day at a DISK-DERIVED cap of <=120,000 games, NOT the nominal 150,000. Roach flagged (00:11Z) that the two standing rules are arithmetically incompatible at full utilisation and declined to launch toward an unreachable number: V: 165.5 GiB free - 60.0 GiB standing disk floor = 105.5 GiB usable / ~0.79 MB per game ~= 136,700 games before the floor, against a nominal cap of 150,000 (~118 GB) = ~13 GB overshoot. Unattended, that surfaces as a disk-full incident at ~137k games mid-run. 120,000 holds ~14 GB of margin for the shard tail and the ram_watch soft-stop. GENERAL RULE BOUND BY THIS ENTRY: a per-UTC-day game cap is an UPPER bound that is always subordinate to the disk floor; the binding cap is min(nominal, disk-derived), recomputed from measured free space at launch, never the nominal alone. Preconditions unchanged: two-phase launch (announce intent, re-read this file, start from game 1), atomic per-shard checkpoint, preemptible, no double-run of selfplay_gen. Roach box only - this entry grants nothing on Skynet, whose commit envelope shrank ~42 GiB across the P0 restart (85.16 GiB limit vs 127.16 GiB during the overnight incident)."
+      }
+    },
+    {
+      "commit": "a1c906e056aec5b6550315bda05a64fe6444fdb6",
+      "path": "workflow/canon/MEASURED-2026-08-06.md",
+      "blob": "381b7b804305fd32de1659a756abc438a58c8924",
+      "sha256": "67adbe0d11033a25787ae1ee9549b343f286a01dae13183beafe2da7472f53a7",
+      "excerpt_lines": {
+        "start": 48,
+        "end": 61,
+        "text": "## 2. The screening instrument \u2014 MEASURED\n\n`sigma_delta` from 120,000 engine games, true mirror (`rules_lucario` vs itself, seats\nalternated, p = 0.5 by symmetry), unpaired \u2014 the engine exposes no seed on the Windows ship\nABI (`probe_cg_seed.py`), so `Cov = 0` is an engine fact, not an assumption.\n\n| n/arm | single-arm SD | sigma_delta | sqrt(2)*SD | binomial SD |\n|---|---|---|---|---|\n| 400 | 0.02623 | **0.03529** | 0.03709 | 0.02500 |\n| 1200 | 0.01725 | **0.02520** | 0.02439 | 0.01443 |\n| 2400 | 0.01203 | **0.01626** | 0.01702 | 0.01021 |\n\nThe `sqrt(2)` match proves **Cov(arms) = 0** \u2014 independence, no cross-arm leak. It is\nscale-free and does **not** prove binomiality."
+      }
+    }
+  ],
+  "result": "The recovered completion status concerns July 25 seq-53, GO-3b selfplay corpus on ROACH. Its allocation is a disk-derived daily cap. These are status/allocation evidence, not primary game outputs or a sigma calculation. The August 6 mirror-calibration claim remains unlinked to this corpus.",
+  "lesson": "Join studies by purpose, product, host, date, producer and primary receipt, never by game count alone. Do not substitute this corpus or the separate 6000-game A/A summary for the missing calibration.",
+  "limits": [
+    "This does not prove the August calibration never ran.",
+    "No exhaustive remote-host, orphan-object, issue-comment or filesystem search was performed.",
+    "Status claims of completion and zero errors were not independently verified against primary corpus bytes.",
+    "Original scientific claims and current retractions remain unchanged."
+  ],
+  "next_decisive_evidence": "A contemporaneous primary manifest and producer/output chain binding the rules_lucario mirror observations to the published sigma table; if found, recompute without new games. Otherwise retain provenance unresolved."
+}

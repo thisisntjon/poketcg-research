@@ -20,9 +20,8 @@ used with NO MODIFICATIONS.
     Identity:      policy hash c61e540b, deck hash 92b92bac
 
 MODIFICATIONS: NONE. Not one byte. We did not author this agent and we do not
-claim it. It was fielded deliberately as a fixed reference point so that our own
-measurements had a baseline that did not move. Every result in this repository
-that names "the fielded agent" means this kernel.
+claim it. Every result in this repository that names "the fielded agent" means
+this kernel.
 
 The original author does not endorse this project and bears no responsibility for
 it.
@@ -56,20 +55,39 @@ responsibility for it.
 --------------------------------------------------------------------------------
 
 Controlled comparisons in this project were run against additional public Kaggle
-kernels by other authors, used as fixed opponents and not modified. Each one is
-recorded — author, source URL, licence, whether the kernel was public, the date it
-was pulled, a SHA-256 for every file, and the experiments that consumed it — in
-the public-kernel provenance register:
+kernels by other authors, used as fixed opponents and not modified.
+
+Those kernels are NOT redistributed in this repository. Where a kernel is recorded
+in the provenance register below, that record carries the author, source URL,
+licence, whether the kernel was public, the pull date, a SHA-256 for every file,
+and the experiments that consumed it:
 
     workflow/PUBLIC-KERNELS-PROVENANCE.md
 
 Licences there were read from the kernel pages by a human and recorded with the
-date of verification. Where a licence could not be verified, the kernel was not
-consumed by a measurement.
+date of verification.
 
-Those kernels are NOT redistributed in this repository. The register records where
-to obtain each one from its original author, and a SHA-256 for every file so that
-a reader can confirm they have the same bytes we measured.
+INCOMPLETE COVERAGE — stated plainly rather than implied away. An earlier version
+of this notice said every opponent kernel was recorded in that register. That was
+not accurate, and the overstatement is corrected here. The seven-opponent panel
+published in this repository names these authors in its results:
+
+    aristophanivan        recorded in the register
+    plamen06              NOT recorded in the register
+    llccqq624             NOT recorded in the register
+    raunakdey07           NOT recorded in the register
+    zoli800               NOT recorded in the register
+    harukiharada          NOT recorded in the register
+
+For the five marked NOT recorded, this repository publishes measured results
+against their agents without a corresponding licence-and-provenance row. Their
+kernel source is not redistributed here and no claim is made about their licence
+terms. Resolving those five rows is an open item, tracked in
+docs/RELEASE-REVIEW.md.
+
+If you are one of these authors and you object to your kernel being named in these
+results, or the attribution is wrong, that is our error and we will correct or
+remove it on request.
 
 --------------------------------------------------------------------------------
 4. Deck lists

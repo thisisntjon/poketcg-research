@@ -1,0 +1,31 @@
+Research memory @ 2a19ec09857d50674da44f8daa96f433d7a623c8
+Coverage: 740 records; 12 explanatory notes; 0 stale notes.
+Scope: Experiment Markdown, compact rows, historical attempts/dead ends/retractions/equations/lessons/measurement summaries, graveyard/tool/hypothesis/metric/domain-term/trace-source registers, reviewed links, notes and audit knowledge. Other research, raw runs, tools, branches, hosts and transcripts are not exhaustively covered. Extraction is not complete semantic reconciliation.
+Evidence: Source versions and anchors checked; scientific truth, current tool usability and raw-run reproduction not certified.
+Retractions: workflow/canon/RETRACTIONS.md#L1-L134 @ 2a19ec09857d50674da44f8daa96f433d7a623c8 blob=763754f5bc6aa9b1707563d0bbd1464397091153 sha256=ca4bf6b2808d47542648a37a7556316ba4d0ec9cea3b80e27304cb6dc71c6e22
+
+domain_term:DT-01: prize_differential
+historical source assertion; registered availability is not current usability
+Source: workflow/inventories/DOMAIN-TERM-FIXTURE-REGISTER.json#/rows/0 @ 2a19ec09857d50674da44f8daa96f433d7a623c8 blob=ccc0ff7ef5dce005973eb253281431fdcf5d2440 sha256=9b8f7a6bd662ec89728ac2e68b3fbe6223f19ae4379c0704af9f1e99e59a4445
+
+Original structured record:
+{"id": "DT-01", "term": "prize_differential", "source": "workflow/research/16-prize-race-strategies.md", "phase": ["CONVERT", "CLOSE"], "status": "FIXTURED_DEFAULT_OFF", "fixture_path": "ptcg-agent/harness/fixtures/dt01_prize_differential.json", "code_path": "ptcg-agent/learning_factory/prize_differential.py", "consumer": "OWNED-CORE leaf", "notes": "Engine-free Law-21 OFF-fails/ON-passes fixture. Not imported by agent/main.py. Not a POLICY flip."}
+
+Original register context (historical, not current instructions):
+{"schema": "ptcg.domain_term_fixture_register/v1", "stamped": "2026-08-15", "status": "DT01_FIXTURED_DEFAULT_OFF_REST_SPEC_ONLY", "rule": "Each research term must become fixtures+score code or formal WONT_USE within 72h of being marked ACTIVE."}
+
+Explanatory note: SOURCE_VERSION_MATCHES
+Note source: workflow/knowledge-register/records/domain-DT01-context.json#L1-L55 @ 2a19ec09857d50674da44f8daa96f433d7a623c8 blob=d866556302245c0f3e64363faac0168dbc6ce240 sha256=5ea794d14560ff5bdae1fe0a4392c0e4d64b3689073d162b445db8542b5811f0
+id: domain_term:DT-01
+interpretation_basis: ASTRA static source and fixture inspection; no game code executed
+question: Did the prize-differential idea become code, and is that evidence that the agent uses it or wins more?
+why: A new builder should reuse an existing implementation/fixture instead of rediscovering it, while retaining the gap between source presence and integrated behavior.
+methodology: Read the pinned register row, implementation, fixture and test source. The code declares default OFF and computes 120*(opponent prizes remaining - own prizes remaining) only when enabled. The fixture covers ahead, behind and tied; the test source describes OFF/ON behavior and an AST import check for the lab main.
+result: Implementation, fixture and test sources exist. Fixture expectations are +360, -360 and0 for its three states; these are specified expectations, not observed test outputs in this inspection. No runtime consumer, action change or game gain was verified here.
+learn: Keep source/fixture presence, selected consumer, executed action effects and complete-game benefit separate. A historical status of FIXTURED_DEFAULT_OFF is not a winning-agent claim.
+limitations: ["The discovered scoring module and its tests were not executed. No claim of current behavioral-test passage.", "Registry source points to research16 while code/fixture point to research15; this read does not assert those documents are interchangeable.", "A test source that checks lab agent/main.py imports is not a live-product execution trace."]
+reopen_when: Use the existing source and fixture as candidates for later integration review, with the exact consumer and product pinned. Gameplay and training remain paused.
+related_ids: ["hypothesis:HYP-A"]
+source_refs: [{"path": "workflow/inventories/DOMAIN-TERM-FIXTURE-REGISTER.json", "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7", "sha256": "9b8f7a6bd662ec89728ac2e68b3fbe6223f19ae4379c0704af9f1e99e59a4445", "locator": {"json_pointer": "/rows/0"}}, {"path": "ptcg-agent/learning_factory/prize_differential.py", "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7", "sha256": "03aea363f540d37b53f95b0d87b7cd944f9c0f3fdb565f694c1900375313dc3f", "locator": {"line_start": 1, "line_end": 40}}, {"path": "ptcg-agent/harness/fixtures/dt01_prize_differential.json", "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7", "sha256": "2e0bfee98bf0888934a57a6146afac6c54813af7be5fbbb66f94bb3e7673a634", "locator": {"line_start": 1, "line_end": 25}}, {"path": "ptcg-agent/harness/test_dt01_prize_differential.py", "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7", "sha256": "971f6bdb6c1b171f7128b58a188fead03cf48e9de3cb2743c5a447cc161fa550", "locator": {"line_start": 1, "line_end": 71}}]
+
+Historical decisions are evidence, not current instructions. Read caveats and linked corrections before reuse.

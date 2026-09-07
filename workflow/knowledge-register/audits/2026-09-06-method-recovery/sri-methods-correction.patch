@@ -1,0 +1,26 @@
+--- a/workflow/inventories/sri/CURATED.json
++++ b/workflow/inventories/sri/CURATED.json
+@@ -49,10 +49,10 @@
+     {"thing": "Retraction gates that block CI before the write-up deadline", "why": "Roadmap rule B-3: advisory or only-shrink until 2026-09-13; a hard gate on a 448-file citation set stalls the team.", "source": "workflow/research/2026-09-05-inventory-playbook/PLAN.md", "date": "2026-09-05"}
+   ],
+   "methods": [
+-    {"id": "M-001", "name": "Standard error of a win-rate gap", "definition": "SE(gap) = 100/sqrt(N) pp for a two-arm comparison at p~0.5 (N games per arm); sigma(n) = 2.520pp * sqrt(1200/n) under the measured screening procedure", "source": "workflow/canon/MEASURED-2026-08-06.md", "implemented_in": "ptcg-agent/harness/aa_deff_probe.py", "test": "", "status": "live"},
++    {"id": "M-001", "name": "Standard error of a win-rate gap", "definition": "For independent Bernoulli arms at p=0.5 and N games per arm, SE(gap)=100*sqrt(0.5/N) pp. Total T=2N gives 100/sqrt(T). This is distinct from the historical empirical sigma law, whose primary provenance remains unresolved.", "source": "workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md", "implemented_in": "ptcg-agent/harness/aa_deff_probe.py", "test": "", "status": "algebra reviewed; historical calibration unresolved"},
+     {"id": "M-002", "name": "Minimum detectable effect at 80% power", "definition": "MDE_80 = 2.8 * sigma_delta(n): 9.88pp at n=400, 7.06pp at n=1200, 4.55pp at n=2400 (measured sigma_delta); the canon table also lists 6.96 / 4.04 / 2.02pp for the binomial formula at 400 / 1200 / 4800", "source": "workflow/canon/EQUATIONS-AND-BOUNDS.md", "implemented_in": "ptcg-agent/harness/aa_rebuild.py", "test": "", "status": "live"},
+     {"id": "M-003", "name": "Wilson score interval", "definition": "95% interval for a binomial proportion, z = 1.959963985", "source": "workflow/canon/EQUATIONS-AND-BOUNDS.md", "implemented_in": "ptcg-agent/harness/build_measurement_index.py", "test": "", "status": "live"},
+-    {"id": "M-004", "name": "Kill-only screen rule", "definition": "n=400 may KILL a candidate (lower bound below zero) but may not admit one; admission needs n>=1200 or an accompanying null control; any null at n<800 must state its MDE", "source": "workflow/canon/MEASURED-2026-08-06.md", "implemented_in": "", "test": "", "status": "live"},
++    {"id": "M-004", "name": "Kill-only screen rule", "definition": "Historical n=400 kill-only policy is not a universal inference rule. CI [-1,+1]pp has a negative lower bound but does not establish harm. Operational stopping and scientific refutation differ. Admission size needs a declared design and effect; n>=1200 alone does not guarantee adequate power.", "source": "workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md", "implemented_in": "", "test": "", "status": "algebra reviewed; historical calibration unresolved"},
+     {"id": "M-005", "name": "Ladder rating scale", "definition": "mu per +1pp win-rate: 5.45 (b = 217.55, conservative, use for approval); 6.66 sensitivity; 9.20 excluded. c = sqrt(2 beta^2 + sigma_1^2 + sigma_2^2) = 217.55 at the sigma floor 35", "source": "workflow/canon/EQUATIONS.md", "implemented_in": "", "test": "", "status": "live"},
+     {"id": "M-006", "name": "Promotion rule (three-leg foreign-policy panel)", "definition": ">=60% head-to-head at n>=400 on a lineage-diverse panel, no CI-separated loss, at least one CI-separated win; later amended: leg 1 Confirm-SPRT, legs 2-3 n>=1200 or a null control", "source": "workflow/LEARNINGS.md", "implemented_in": "", "test": "", "status": "proposed"},
+     {"id": "M-007", "name": "Between-batch variance", "definition": "tau = 1.18pp between batches of the same arm; a screen winner regresses toward it", "source": "workflow/ATTEMPTS-LEDGER.md", "implemented_in": "", "test": "", "status": "live"},
+--- a/scripts/build_sri.py
++++ b/scripts/build_sri.py
+@@ -539,7 +539,7 @@
+     files["CLAIMS.md"] = "\n".join(lines) + "\n"
+     # METHODS
+     lines = [banner, "# Methods register — equations, rules, thresholds, bound to their implementation", "",
+-             "A formula with no implementation pointer is a research note (status says so). Definitions are quoted from the canon file in `source`.", ""]
++             "Definitions are curated interpretations; source pointers locate their evidence. An implementation pointer is not a mathematical or experimental verification.", ""]
+     lines += md_table(["#", "name", "definition", "source", "implemented in", "pinned by test", "status", "verified"],
+                       [[m["id"], m["name"], clean(m["definition"], 300), m["src_ref"], m["impl_ref"], m["test_ref"], m["status"], m["verified"]] for m in methods])
+     files["METHODS.md"] = "\n".join(lines) + "\n"

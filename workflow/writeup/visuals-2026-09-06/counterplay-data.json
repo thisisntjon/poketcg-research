@@ -1,0 +1,239 @@
+{
+  "source": "workflow/research/2026-09-03-strike3-rows.csv",
+  "source_sha256": "e5a4ae3461f6f9c80261e3ffd22d60a0a66ca5b11fee7e7f1a708318bdad792d",
+  "generator_sha256": "d858444b36ec83207bd73177b974144f7692cceb6ab1897eb36345cff2243ea6",
+  "method": "Draw-half scores; sample variance/n per arm; independent-arm and independent-cell normal 95% intervals. Fixed opponent implementations, no new-opponent uncertainty or multiplicity correction.",
+  "cells": [
+    {
+      "opponent": "tb_567ea9be_llccqq624_ptcg-alakazam-marniebelief-0723-a",
+      "label": "Alakazam \u00b7 llccqq624*",
+      "arms": {
+        "BASELINE": {
+          "n": 600,
+          "mean": 0.36666666666666664,
+          "variance_of_mean": 0.0003876831756631423,
+          "outcomes": {
+            "win": 220,
+            "draw": 0,
+            "loss": 380
+          }
+        },
+        "CHAMPION": {
+          "n": 600,
+          "mean": 0.5708333333333333,
+          "variance_of_mean": 0.00040689923019847894,
+          "outcomes": {
+            "win": 341,
+            "draw": 3,
+            "loss": 256
+          }
+        }
+      },
+      "delta_pp": 20.416666666666668,
+      "variance_pp2": 7.945824058616213,
+      "ci95_pp": [
+        14.891752395514576,
+        25.94158093781876
+      ]
+    },
+    {
+      "opponent": "tb_64e9991a_raunakdey07_pok-mon-tcg-advanced-heuristic-agent",
+      "label": "Alakazam \u00b7 raunakdey07",
+      "arms": {
+        "BASELINE": {
+          "n": 600,
+          "mean": 0.20666666666666667,
+          "variance_of_mean": 0.0002737154516787238,
+          "outcomes": {
+            "win": 124,
+            "draw": 0,
+            "loss": 476
+          }
+        },
+        "CHAMPION": {
+          "n": 600,
+          "mean": 0.39416666666666667,
+          "variance_of_mean": 0.0003965764700426637,
+          "outcomes": {
+            "win": 235,
+            "draw": 3,
+            "loss": 362
+          }
+        }
+      },
+      "delta_pp": 18.75,
+      "variance_pp2": 6.702919217213875,
+      "ci95_pp": [
+        13.675560674828318,
+        23.82443932517168
+      ]
+    },
+    {
+      "opponent": "tb_4b3946f9_plamen06_pokemon-steel",
+      "label": "Steel \u00b7 plamen06",
+      "arms": {
+        "BASELINE": {
+          "n": 600,
+          "mean": 0.325,
+          "variance_of_mean": 0.00036623539232053426,
+          "outcomes": {
+            "win": 195,
+            "draw": 0,
+            "loss": 405
+          }
+        },
+        "CHAMPION": {
+          "n": 600,
+          "mean": 0.33166666666666667,
+          "variance_of_mean": 0.0003700565757744389,
+          "outcomes": {
+            "win": 199,
+            "draw": 0,
+            "loss": 401
+          }
+        }
+      },
+      "delta_pp": 0.6666666666666654,
+      "variance_pp2": 7.362919680949731,
+      "ci95_pp": [
+        -4.651734620029975,
+        5.9850679533633055
+      ]
+    },
+    {
+      "opponent": "tb_a4c53101_aristophanivan_one-of-snapshot-versions",
+      "label": "Snapshot \u00b7 aristophanivan",
+      "arms": {
+        "BASELINE": {
+          "n": 600,
+          "mean": 0.31,
+          "variance_of_mean": 0.00035709515859766276,
+          "outcomes": {
+            "win": 186,
+            "draw": 0,
+            "loss": 414
+          }
+        },
+        "CHAMPION": {
+          "n": 600,
+          "mean": 0.31333333333333335,
+          "variance_of_mean": 0.00035919124466703763,
+          "outcomes": {
+            "win": 188,
+            "draw": 0,
+            "loss": 412
+          }
+        }
+      },
+      "delta_pp": 0.3333333333333355,
+      "variance_pp2": 7.162864032647004,
+      "ci95_pp": [
+        -4.912318053083487,
+        5.578984719750158
+      ]
+    },
+    {
+      "opponent": "tb_ded5c6a6_zoli800_top-dragapult-ex-tempo-control-agent",
+      "label": "Dragapult \u00b7 zoli800",
+      "arms": {
+        "BASELINE": {
+          "n": 600,
+          "mean": 0.8633333333333333,
+          "variance_of_mean": 0.00019697644221851234,
+          "outcomes": {
+            "win": 518,
+            "draw": 0,
+            "loss": 82
+          }
+        },
+        "CHAMPION": {
+          "n": 600,
+          "mean": 0.8683333333333333,
+          "variance_of_mean": 0.00018947783342608052,
+          "outcomes": {
+            "win": 520,
+            "draw": 2,
+            "loss": 78
+          }
+        }
+      },
+      "delta_pp": 0.5000000000000004,
+      "variance_pp2": 3.8645427564459287,
+      "ci95_pp": [
+        -3.3530543018704884,
+        4.35305430187049
+      ]
+    },
+    {
+      "opponent": "tb_eb8c2384_harukiharada_crustle-wall-mirror-ok",
+      "label": "Crustle \u00b7 harukiharada",
+      "arms": {
+        "BASELINE": {
+          "n": 600,
+          "mean": 0.8525,
+          "variance_of_mean": 0.00020922718419588205,
+          "outcomes": {
+            "win": 511,
+            "draw": 1,
+            "loss": 88
+          }
+        },
+        "CHAMPION": {
+          "n": 600,
+          "mean": 0.845,
+          "variance_of_mean": 0.0002186560934891486,
+          "outcomes": {
+            "win": 507,
+            "draw": 0,
+            "loss": 93
+          }
+        }
+      },
+      "delta_pp": -0.7500000000000062,
+      "variance_pp2": 4.278832776850307,
+      "ci95_pp": [
+        -4.804326577318136,
+        3.3043265773181236
+      ]
+    },
+    {
+      "opponent": "tb_f2e2c18d_grimmsnarl_bc_alias",
+      "label": "Grimmsnarl \u00b7 grimmsnarl_bc\u2020",
+      "arms": {
+        "BASELINE": {
+          "n": 600,
+          "mean": 0.5891666666666666,
+          "variance_of_mean": 0.0004020021795585235,
+          "outcomes": {
+            "win": 352,
+            "draw": 3,
+            "loss": 245
+          }
+        },
+        "CHAMPION": {
+          "n": 600,
+          "mean": 0.5583333333333333,
+          "variance_of_mean": 0.0004116815062140605,
+          "outcomes": {
+            "win": 335,
+            "draw": 0,
+            "loss": 265
+          }
+        }
+      },
+      "delta_pp": -3.083333333333327,
+      "variance_pp2": 8.13683685772584,
+      "ci95_pp": [
+        -8.674261026716561,
+        2.507594360049908
+      ]
+    }
+  ],
+  "equal_weight_groups": {
+    "alakazam_pp": 19.583333333333336,
+    "other_five_pp": -0.46666666666666634,
+    "alakazam_variance_pp2": 3.6621858189575223,
+    "other_five_variance_pp2": 1.2322398441847524,
+    "illustrative_q25_pp": 4.545833333333334
+  }
+}

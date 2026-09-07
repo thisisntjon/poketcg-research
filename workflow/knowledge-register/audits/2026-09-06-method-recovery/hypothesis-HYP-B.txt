@@ -1,0 +1,17 @@
+Research memory @ 2a19ec09857d50674da44f8daa96f433d7a623c8
+Coverage: 740 records; 12 explanatory notes; 0 stale notes.
+Scope: Experiment Markdown, compact rows, historical attempts/dead ends/retractions/equations/lessons/measurement summaries, graveyard/tool/hypothesis/metric/domain-term/trace-source registers, reviewed links, notes and audit knowledge. Other research, raw runs, tools, branches, hosts and transcripts are not exhaustively covered. Extraction is not complete semantic reconciliation.
+Evidence: Source versions and anchors checked; scientific truth, current tool usability and raw-run reproduction not certified.
+Retractions: workflow/canon/RETRACTIONS.md#L1-L134 @ 2a19ec09857d50674da44f8daa96f433d7a623c8 blob=763754f5bc6aa9b1707563d0bbd1464397091153 sha256=ca4bf6b2808d47542648a37a7556316ba4d0ec9cea3b80e27304cb6dc71c6e22
+
+hypothesis:HYP-B: card_identity_leaf_or_ranker
+historical source assertion; registered availability is not current usability
+Source: workflow/inventories/HYPOTHESIS-KILL-CARDS.json#/hypotheses/1 @ 2a19ec09857d50674da44f8daa96f433d7a623c8 blob=2db29df5cae2ac1dfaf18072affa450f9ec21b5a sha256=eca11855c9a705dac9be29a7febba94840705ac866f59c2b2dfe6a103b4bd9a4
+
+Original structured record:
+{"id": "HYP-B", "name": "card_identity_leaf_or_ranker", "claim": "Identity features through a selected consumer give >=3pp full-product lift.", "assets": ["+25.6/+32.5pp offline", "0.860 value AUC as leaf candidate"], "max_compute_budget": "phase1_lane_D_budget_TBD", "kill_if": ["no_selected_consumer", "runtime_not_stdlib_or_clock_exceeded", "full_product_lift_lt_3pp"], "advance_if": ["named_consumer", "export_sha_bound", "lift_ge_3pp"], "status": "FROZEN_FOR_ABLATION", "not_allowed": ["pure_BC_bronze_claim"]}
+
+Original register context (historical, not current instructions):
+{"schema": "ptcg.hypothesis_kill_cards/v1", "stamped": "2026-08-11", "rule": "Freeze before measuring. Kill when gates fail. No post-hoc bar shopping."}
+
+Historical decisions are evidence, not current instructions. Read caveats and linked corrections before reuse.

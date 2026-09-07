@@ -1,0 +1,452 @@
+{
+  "schema": "astra.method_source_chain_review/v1",
+  "banked_utc": "2026-09-06T03:04:22.954896+00:00",
+  "reviewer": "inventory_reader_review independent subagent of ASTRA",
+  "reviewed_head": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+  "repository_worktree_read_only": "C:/Users/thisi/Desktop/PK-squads/astra",
+  "scope": "Trace MEASURED-2026-08-06 section 2 screening statistics to original receipts and later corrections, plus source ownership/algebra of SRI M-001 and M-004. This receipt records completed findings without new investigation.",
+  "sources": [
+    {
+      "path": "workflow/canon/MEASURED-2026-08-06.md",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "67adbe0d11033a25787ae1ee9549b343f286a01dae13183beafe2da7472f53a7",
+      "locators": [
+        {
+          "start": 48,
+          "end": 87
+        }
+      ],
+      "role": "Historical 120,000-game claim, design description, sigma table, CI/MDE bars, covariance and sizing assertions",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/workflow/canon/MEASURED-2026-08-06.md"
+    },
+    {
+      "path": "workflow/research/2026-08-22-BREAKTHROUGH-VERIFICATION.md",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "16c86250d24219fb7b53ddb4ab6140faeb3375ad9bb79bc2717e8df2cadffd00",
+      "locators": [
+        {
+          "start": 137,
+          "end": 146
+        },
+        {
+          "start": 188,
+          "end": 191
+        }
+      ],
+      "role": "Already-banked audit reports no manifest/eval-index row/computing script for the claimed 120k run",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/workflow/research/2026-08-22-BREAKTHROUGH-VERIFICATION.md"
+    },
+    {
+      "path": "ptcg-agent/experiments/analysis/2026-08-01-roach-aa-deff-probe-receipt.json",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "04662245756c85b603f6cdc2ce31a7b6e6dae195c80163c204e4e75ece5cfca9",
+      "locators": [
+        {
+          "start": 7,
+          "end": 10
+        },
+        {
+          "start": 12,
+          "end": 85
+        }
+      ],
+      "role": "Readable 6000-game v000_baseline A/A summary with 60 block rates; not the alleged 120k rules_lucario corpus",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/ptcg-agent/experiments/analysis/2026-08-01-roach-aa-deff-probe-receipt.json"
+    },
+    {
+      "path": "ptcg-agent/experiments/analysis/2026-08-01-roach-aa-deff-probe-VOID-shared-module.json",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "5528b2fbb956406946dd592bd5678ffe4388552f3b3d35d960bdaec3d0bbf0ed",
+      "locators": [
+        {
+          "start": 7,
+          "end": 10
+        },
+        {
+          "start": 74,
+          "end": 85
+        }
+      ],
+      "role": "Earlier VOID shared-module 6000-game receipt; a distinct run",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/ptcg-agent/experiments/analysis/2026-08-01-roach-aa-deff-probe-VOID-shared-module.json"
+    },
+    {
+      "path": "workflow/receipts/2026-08-02-aa-rebuild-physical-calibration-receipt-brock.md",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "0715b018401da926e663839a9d164129e098c3d8d1692cbe1f98871bd8766d3f",
+      "locators": [
+        {
+          "start": 7,
+          "end": 16
+        },
+        {
+          "start": 60,
+          "end": 67
+        }
+      ],
+      "role": "Games=0 rebuild verification describes load-order confounding and marks historical deff=.8905 UNREAD",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/workflow/receipts/2026-08-02-aa-rebuild-physical-calibration-receipt-brock.md"
+    },
+    {
+      "path": "ptcg-agent/experiments/analysis/2026-07-11-cg-seed-probe-misty.json",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "c25c3ae67edd7a7ce344bc2ad65c603548b61ffbed0493c3a29c12a248e484a0",
+      "locators": [
+        {
+          "start": 8,
+          "end": 42
+        },
+        {
+          "start": 152,
+          "end": 152
+        }
+      ],
+      "role": "Original ABI inspection receipt: no public Windows seed setter; explicitly does not prove internal RNG unseedable",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/ptcg-agent/experiments/analysis/2026-07-11-cg-seed-probe-misty.json"
+    },
+    {
+      "path": "ptcg-agent/harness/probe_cg_seed.py",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "c32b6a4a7d142d63efaff7586ea9651ba8ab01cd5d8510a4728430e0f06934a6",
+      "locators": [
+        {
+          "start": 2,
+          "end": 14
+        },
+        {
+          "start": 267,
+          "end": 283
+        }
+      ],
+      "role": "Read-only source inspection of seed-probe scope and its exact output path; not executed",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/ptcg-agent/harness/probe_cg_seed.py"
+    },
+    {
+      "path": "ptcg-agent/harness/aa_deff_probe.py",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "0b2793a164b7c5ecc0f4d578b7a725e1ce70180b23d464bb098fe66e196d1966",
+      "locators": [
+        {
+          "start": 1,
+          "end": 26
+        },
+        {
+          "start": 57,
+          "end": 62
+        },
+        {
+          "start": 115,
+          "end": 150
+        }
+      ],
+      "role": "Design-effect producer named by SRI M-001; not executed; default 6000 games and caller-supplied output path",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/ptcg-agent/harness/aa_deff_probe.py"
+    },
+    {
+      "path": "ptcg-agent/harness/aa_rebuild.py",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "11cab5bca5b7298d224ae76532a13634afd6184e71d2a78ebf4c8d118901cc1b",
+      "locators": [
+        {
+          "start": 1,
+          "end": 16
+        },
+        {
+          "start": 60,
+          "end": 113
+        }
+      ],
+      "role": "SRI M-002 implementation pointer; factorial design and removal of historical point-deff authority; not executed",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/ptcg-agent/harness/aa_rebuild.py"
+    },
+    {
+      "path": "ptcg-agent/harness/weighted_delta.py",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "4e67184b2dddfef437790d13b67a0bf7f8ae62dce34254cb26b06eb0f40816e0",
+      "locators": [
+        {
+          "start": 27,
+          "end": 27
+        },
+        {
+          "start": 208,
+          "end": 210
+        }
+      ],
+      "role": "Executable consumer hardcodes SIGMA_1200=2.520 and applies scaling; inspected, not executed",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/ptcg-agent/harness/weighted_delta.py"
+    },
+    {
+      "path": "workflow/canon/EQUATIONS.md",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "a801b6f519741fc3a0b8dd6937e593979cb3b3116e9838c2a94ab55abbdb6a18",
+      "locators": [
+        {
+          "start": 38,
+          "end": 48
+        }
+      ],
+      "role": "Current canon inherits sigma table and distinguishes z>4 admission threshold from MDE",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/workflow/canon/EQUATIONS.md"
+    },
+    {
+      "path": "workflow/canon/EQUATIONS-AND-BOUNDS.md",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "e69071f25397deda29cdea2f8611f8483405d17b6a2d52edcd35347933f2f8d6",
+      "locators": [
+        {
+          "start": 11,
+          "end": 30
+        }
+      ],
+      "role": "Two-sample equal-allocation sizing definition and later inconsistent MDE table; not independently reviewed beyond this scope",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/workflow/canon/EQUATIONS-AND-BOUNDS.md"
+    },
+    {
+      "path": "workflow/canon/RETRACTIONS.md",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "ca4bf6b2808d47542648a37a7556316ba4d0ec9cea3b80e27304cb6dc71c6e22",
+      "locators": [
+        {
+          "start": 24,
+          "end": 24
+        }
+      ],
+      "role": "2026-08-23 retraction of 2.199pp in favor of 3.529pp; repeats covariance claim without resolving primary provenance",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/workflow/canon/RETRACTIONS.md"
+    },
+    {
+      "path": "workflow/AUDITOR-MEMO-TO-MASTER-2026-08-07.md",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "75298b4e272ef5879302274c8991544a4c898dec5ba0090e03c5209a39fd2ec4",
+      "locators": [
+        {
+          "start": 59,
+          "end": 73
+        }
+      ],
+      "role": "Withdraws a purported identical-arm noise result because actual decks differed; later 2.199pp correction retained",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/workflow/AUDITOR-MEMO-TO-MASTER-2026-08-07.md"
+    },
+    {
+      "path": "workflow/inventories/sri/CURATED.json",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "daaeff2d5d54ead993e706505b8ceb3218c3339bd5380eb47fe9499cc5fd814d",
+      "locators": [
+        {
+          "start": 3,
+          "end": 3
+        },
+        {
+          "start": 10,
+          "end": 10
+        },
+        {
+          "start": 19,
+          "end": 19
+        },
+        {
+          "start": 52,
+          "end": 55
+        }
+      ],
+      "role": "Hand-edited owner of M-001 and M-004 wording and universal sizing framing",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/workflow/inventories/sri/CURATED.json"
+    },
+    {
+      "path": "workflow/inventories/sri/registers/METHODS.md",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "1a1833d82cdcf9dbec1cc6a91b067984722701e15072c5deafb86840a3329ae9",
+      "locators": [
+        {
+          "start": 1,
+          "end": 12
+        }
+      ],
+      "role": "Generated navigation; M-001/M-002/M-004 copy source assertions rather than independent equation verification",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/workflow/inventories/sri/registers/METHODS.md"
+    },
+    {
+      "path": "workflow/inventories/sri/registers/CLAIMS.md",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "82758c4e5a635c26c995dff33267120f999041ca276a08bfdd6eafbcd34f5d53",
+      "locators": [
+        {
+          "start": 50,
+          "end": 50
+        }
+      ],
+      "role": "c-041 routes retracted 2.199 to 3.529 and MEASURED section2",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/workflow/inventories/sri/registers/CLAIMS.md"
+    },
+    {
+      "path": "scripts/build_sri.py",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "b40d32bb5a312de8a9be8f009aa4e8cec64e4875e07c6efd159d99f9688abdcf",
+      "locators": [
+        {
+          "start": 323,
+          "end": 335
+        }
+      ],
+      "role": "harvest_methods copies curated definitions and checks pointer existence, not equation semantics; not executed",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/scripts/build_sri.py"
+    },
+    {
+      "path": "workflow/ARTIFACT-CATALOG.jsonl",
+      "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "b3fe137a779c9933c8bf4712a5780843fc7105cb76e512c5078e70999c1f25cd",
+      "locators": [
+        {
+          "start": 1460,
+          "end": 1461
+        }
+      ],
+      "role": "Existing navigation identifies the two 6000-game A/A summaries",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7/workflow/ARTIFACT-CATALOG.jsonl"
+    },
+    {
+      "path": "workflow/canon/EQUATIONS.md",
+      "commit": "b139264419ae61fdae5f86a7721d260fa15b6cbf",
+      "sha256": "0947c484c4132d8a011db490e4ad6320ae7f39c445667e3d05d25f20a1734781",
+      "locators": [
+        {
+          "start": 41,
+          "end": 46
+        }
+      ],
+      "role": "Unmerged correction/dispute evidence, not ratified current authority",
+      "pinned_url": "https://github.com/thisisntjon/poketcg/blob/b139264419ae61fdae5f86a7721d260fa15b6cbf/workflow/canon/EQUATIONS.md"
+    }
+  ],
+  "history_observations": {
+    "measured_file_history_at_reviewed_head": [
+      "689fa7e124ac49a307d5d7d8b15de96172c9d102 recut: replay schema + loss cube payload onto current main (replaces #2701) (#2728)"
+    ],
+    "unmerged_correction_head": "b139264419ae61fdae5f86a7721d260fa15b6cbf",
+    "unmerged_correction_subject": "canon: sigma_Delta(400) DISPUTED -> conservative 4.36pp; one N-law table (fixes my own same-day file)",
+    "merge_base_is_ancestor_exit_code": 1,
+    "interpretation": "The correction object is readable locally but is not an ancestor of the reviewed head; no current-authority status is inferred."
+  },
+  "arithmetic": {
+    "method": "Python standard-library scalar arithmetic and statistics.variance on the 60 already-tracked block-rate values; no investigated source program executed.",
+    "equations": {
+      "CI95_half_width_pp": "1.96 * sigma_delta_fraction * 100",
+      "MDE80_pp": "2.8 * sigma_delta_fraction * 100",
+      "published_scaling_sigma_pp": "2.520 * sqrt(1200 / n_per_arm)",
+      "independent_equal_arm_Bernoulli_SE_pp": "100 * sqrt((p1*(1-p1) + p2*(1-p2))/N_per_arm); at p1=p2=.5: 100*sqrt(.5/N_per_arm)",
+      "general_variance_identity": "Var(A-B)=Var(A)+Var(B)-2*Cov(A,B)",
+      "n_for_target_under_published_scaling": "1200 * (2.8 * 2.520 / target_pp)^2",
+      "deff_from_block_rates": "sample_variance(block_rates) / (p*(1-p)/100)"
+    },
+    "sigma_rows": [
+      {
+        "n_per_arm": 400,
+        "reported_single_arm_sd_fraction": 0.02623,
+        "reported_sigma_delta_fraction": 0.03529,
+        "CI95_half_width_pp": 6.9168400000000005,
+        "MDE80_pp": 9.8812,
+        "published_scaling_sigma_pp": 4.3647680350735705,
+        "sqrt2_single_arm_sd_pp": 3.709482174104629,
+        "iid_two_arm_SE_pp": 3.5355339059327378,
+        "M001_formula_SE_pp": 5.0
+      },
+      {
+        "n_per_arm": 1200,
+        "reported_single_arm_sd_fraction": 0.01725,
+        "reported_sigma_delta_fraction": 0.0252,
+        "CI95_half_width_pp": 4.9392,
+        "MDE80_pp": 7.056,
+        "published_scaling_sigma_pp": 2.52,
+        "sqrt2_single_arm_sd_pp": 2.4395183950935895,
+        "iid_two_arm_SE_pp": 2.041241452319315,
+        "M001_formula_SE_pp": 2.8867513459481287
+      },
+      {
+        "n_per_arm": 2400,
+        "reported_single_arm_sd_fraction": 0.01203,
+        "reported_sigma_delta_fraction": 0.01626,
+        "CI95_half_width_pp": 3.18696,
+        "MDE80_pp": 4.5527999999999995,
+        "published_scaling_sigma_pp": 1.7819090885900999,
+        "sqrt2_single_arm_sd_pp": 1.7012989155348335,
+        "iid_two_arm_SE_pp": 1.4433756729740645,
+        "M001_formula_SE_pp": 2.041241452319315
+      }
+    ],
+    "n_for_14_81pp_MDE_under_published_scaling": 272.38818963225833,
+    "source_claim_n_for_14_81pp": 180,
+    "MDE80_at_n300_pp": 14.111999999999998,
+    "actual_6000_receipt_recompute": {
+      "blocks": 60,
+      "block_size": 100,
+      "games": 6000,
+      "wins_from_block_rates": 2941,
+      "win_rate": 0.49016666666666664,
+      "deff": 0.8905026187143672
+    },
+    "M004_minimal_counterexample": {
+      "CI_pp": [
+        -1,
+        1
+      ],
+      "lower_bound_below_zero": true,
+      "inferiority_established": false,
+      "meaning": "A confidence interval spanning zero satisfies the curated kill condition but does not establish a negative effect."
+    }
+  },
+  "observations": [
+    "MEASURED describes a historical seat-alternated rules_lucario mirror procedure, not a generic future teacher experiment.",
+    "The reported sigma table reproduces its 1.96 and 2.8 multipliers, but the independently stated inverse-square-root scaling law disagrees at n400 and n2400.",
+    "The 120k game manifest, raw result identity and calculating producer were not recovered in the bounded search. The August22 audit already records the same provenance gap.",
+    "The readable 6000-game v000_baseline receipt is a different population; its block-rate arithmetic reproduces but cannot establish the 120k claim.",
+    "The seed-probe receipt supports public-ABI limitations only. It does not establish zero covariance or independence.",
+    "SRI M-001 and M-004 errors originate in CURATED.json. build_sri preserves these assertions and binds paths, but does not verify algebra.",
+    "Unmerged b139264419 is correction-history evidence; current RETRACTIONS and EQUATIONS instead retain 3.529pp at n400."
+  ],
+  "interpretations_and_limits": [
+    "No public seed setter does not imply independent outcomes or zero covariance.",
+    "Approximate finite-sample SD agreement does not prove zero covariance; zero covariance itself does not generally imply independence.",
+    "The reported lag1 autocorrelation cannot by itself rule out all temporal, batch or cross-arm dependence.",
+    "n>=1200 is historical protocol language, not a universal sample size guarantee for teacher interventions, different opponents, clustered decisions, repeated roots or replay-derived labels.",
+    "Future power depends on the estimand, sampling unit, allocation, baseline rates, dependence and testing rule. The retrieved historical mirror assertions do not certify those properties for a new design.",
+    "Source-integrity checks and recomputing arithmetic do not validate the missing original experiment."
+  ],
+  "minimal_recommendation": {
+    "source_owner_path": "workflow/inventories/sri/CURATED.json",
+    "record": "M-004",
+    "locator": {
+      "line": 55
+    },
+    "change": "Remove the invented lower-bound-below-zero kill criterion. Retain the exact historical source qualification (n400 kill-only, described there as supporting only >14pp worse; n>=1200 to admit/reject; nulls below n800 state MDE), explicitly as historical protocol, and connect its underlying calibration to the existing August22 provenance dispute.",
+    "related_source_proven_correction": "M-001 at line52: for independent p=.5 Bernoulli arms and N per arm, use 100*sqrt(.5/N) pp, not 100/sqrt(N). Keep this model-based formula separate from disputed empirical calibration.",
+    "authority_limit": "Do not silently promote unmerged b139264419 or any historical protocol to current authority."
+  },
+  "searched_scope": {
+    "method": "Read-only git show/git grep/git ls-tree/git log and one merge-base ancestry check from the exact local source head. Scalar calculations used standard library only.",
+    "navigation_used": [
+      "workflow/inventories/sri/registers/METHODS.md",
+      "workflow/inventories/sri/registers/CLAIMS.md",
+      "workflow/ARTIFACT-CATALOG.jsonl"
+    ],
+    "searches": "Exact tokens including 120,000, 120k-game, 0.02520, 0.03529, 0.01789, fresh-worker, sigma_delta, probe_cg_seed; candidate filenames for A/A, calibration and mirror; selected reports/canon/receipts and source scripts named by navigation.",
+    "negative_claim_scope": "No primary 120k manifest/producer/raw identity recovered within this bounded tracked-source search. This is not proof that no such artifact exists on another host, untracked path, branch or external surface.",
+    "not_searched": [
+      "whole drives",
+      "large raw game corpora",
+      "external internet",
+      "remote bus history",
+      "other host filesystems"
+    ],
+    "execution_limits": [
+      "No new games",
+      "No engines or model loads",
+      "No training",
+      "No investigated source program execution",
+      "No source edits",
+      "No providers or publication",
+      "No agents spawned"
+    ],
+    "output_retention": "Exact tool outputs remained in the review conversation; some broad search outputs were truncated. They were not saved as raw files. This receipt preserves selected observed paths/hashes/locators and arithmetic, not a complete transcript. No unchanged checks were rerun to create it."
+  }
+}

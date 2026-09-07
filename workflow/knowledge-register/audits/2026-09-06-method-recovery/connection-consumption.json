@@ -1,0 +1,99 @@
+{
+  "checked_head": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a",
+  "reader_sha256": "a90a72aae1bda46839be46b4eff0af5cb1f977a55251285289ca75a40afd3292",
+  "independent_receipt_sha256": "6f8cdae7581fd8df9ec808479be276ec963f6c89888396d753be56caf0a3a9c6",
+  "reviewer_sources_checked": [
+    {
+      "path": "scripts/research_memory.py",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "hash_and_size_match": true
+    },
+    {
+      "path": "ptcg-agent/harness/test_research_memory.py",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "hash_and_size_match": true
+    },
+    {
+      "path": "workflow/knowledge-register/relationships.json",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "hash_and_size_match": true
+    },
+    {
+      "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/knowledge.jsonl",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "hash_and_size_match": true
+    },
+    {
+      "path": "workflow/knowledge-register/records/domain-DT01-context.json",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "hash_and_size_match": true
+    },
+    {
+      "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/sri-methods-correction.patch",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "hash_and_size_match": true
+    }
+  ],
+  "independent_output_files_match_banked_bytes": 2,
+  "final_patch_sha256": "ff05d31da5e974f2c83e891b2e97fcf4a1ee21637ee192963e6533a5e64acde7",
+  "source_catalog_command": [
+    "C:\\Users\\thisi\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-B",
+    "scripts/research_memory.py",
+    "sources",
+    "--format",
+    "json",
+    "--limit",
+    "1"
+  ],
+  "source_catalog_exit_code": 0,
+  "catalog_total": 57,
+  "catalog_dispositions": {
+    "BOUND_REFERENCES_ONLY": 1,
+    "DIRECT_RECORDS_PARTIAL": 13,
+    "NOT_IN_READER": 43
+  },
+  "source_anchor_verify": {
+    "command": "python scripts/research_memory.py verify",
+    "head": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a",
+    "exit_code": 0,
+    "status": "SOURCE_ANCHORS_VALID",
+    "source_views": 740,
+    "notes": 12,
+    "links": 20,
+    "stale_notes": 0,
+    "stale_links": 0,
+    "source": "ASTRA tool output in this review; scientific claims not verified"
+  },
+  "focused_tests": {
+    "count": 41,
+    "result": "PASS",
+    "seconds": 24.997,
+    "scope": "ASTRA prior run of unchanged reader and test bytes at 2a19ec09857d50674da44f8daa96f433d7a623c8; not rerun in this receipt or by independent reviewer"
+  },
+  "limits": [
+    "Catalog denominator excludes unlisted files, branches and hosts.",
+    "Independent reviewer executed two openings and checked five stored outputs; not a fresh-user acceptance study.",
+    "SRI correction is prepared, not applied; active generator work remains owned by SKYNET.",
+    "No game, training, model or provider execution."
+  ],
+  "integration_checks": {
+    "head": "1ae1eb84f2ed24d6a3e50fb43cd74a3d1a63c6ce",
+    "main_merged": "17084aeaba84fd67fe4d19b93f299bccfe05e26b",
+    "source_verify_exit_code": 0,
+    "source_verify_status": "SOURCE_ANCHORS_VALID",
+    "source_views": 740,
+    "notes": 12,
+    "links": 20,
+    "stale_annotations": 0,
+    "ci_gates": {
+      "tree_gates_pass": 4,
+      "body_gate_pass": true,
+      "full_ci_claim": false
+    },
+    "git_diff_check_origin_main_exit_code": 0,
+    "prepared_patch_apply_check_exit_code": 0,
+    "reader_and_tests_unchanged_from_independent_review": true,
+    "limits": "Inventory/source mechanics only. Prepared SRI patch is not applied; generated-view integration belongs to active cleanup owner."
+  }
+}

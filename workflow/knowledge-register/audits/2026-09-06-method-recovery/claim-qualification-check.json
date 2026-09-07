@@ -1,0 +1,19 @@
+{
+  "scope": "Normal claim retrieval preserves historical quantities and receipt status while attaching reviewed limitations.",
+  "consumer_checks": [
+    {
+      "id": "c-026",
+      "output": "# DOCK ASK \u2014 c-026\r\nterms ['c-026'] \u00b7 1 row(s) hit; top 1\r\n\r\n[CLAIMS.md] c-026 (score 1)\r\n  | c-026 | 100 | ~19.8 pp | `workflow/NUMBERS-INVENTORY.md` L339 (blob d568bf2db0) ; qualification: `workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md` (blob 7cf18f1ace) | NUMBERS-INVENTORY state -; no producer named in the row ; QUALIFICATION: Historical sizing assertion, not a validated design for new experiments. Primary calibration provenance and sampling uncertainty remain unresolved; the table and separate scaling law differ. See the reviewed dispute before reuse. | \u2014 | RECEIPT-WEAK | 6.3 Power arithmetic (the number that governs every screen) |\r\n\r\nA hit is a lexical nomination. Open the cited source line before relying on it; check every number with retraction_register.py.\r\n"
+    },
+    {
+      "id": "c-027",
+      "output": "# DOCK ASK \u2014 c-027\r\nterms ['c-027'] \u00b7 1 row(s) hit; top 1\r\n\r\n[CLAIMS.md] c-027 (score 1)\r\n  | c-027 | **9.88 pp** | cannot resolve a 5\u20138 pp claim \u2192 **n=400 is KILL-ONLY, never promotes** | `workflow/NUMBERS-INVENTORY.md` L340 (blob d568bf2db0) ; qualification: `workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md` (blob 7cf18f1ace) | NUMBERS-INVENTORY state -; no producer named in the row ; QUALIFICATION: Historical sizing assertion, not a validated design for new experiments. Primary calibration provenance and sampling uncertainty remain unresolved; the table and separate scaling law differ. See the reviewed dispute before reuse. | \u2014 | RECEIPT-WEAK | 6.3 Power ari\r\n\r\nA hit is a lexical nomination. Open the cited source line before relying on it; check every number with retraction_register.py.\r\n"
+    },
+    {
+      "id": "c-028",
+      "output": "# DOCK ASK \u2014 c-028\r\nterms ['c-028'] \u00b7 1 row(s) hit; top 1\r\n\r\n[CLAIMS.md] c-028 (score 1)\r\n  | c-028 | **7.06 pp** | the protocol floor; a clean 5 pp claim needs n\u22482,400 (MDE 4.55 pp) | `workflow/NUMBERS-INVENTORY.md` L341 (blob d568bf2db0) ; qualification: `workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md` (blob 7cf18f1ace) | NUMBERS-INVENTORY state -; no producer named in the row ; QUALIFICATION: Historical sizing assertion, not a validated design for new experiments. Primary calibration provenance and sampling uncertainty remain unresolved; the table and separate scaling law differ. See the reviewed dispute before reuse. | \u2014 | RECEIPT-WEAK | 6.3 Power arithme\r\n\r\nA hit is a lexical nomination. Open the cited source line before relying on it; check every number with retraction_register.py.\r\n"
+    }
+  ],
+  "tests": "16 build tests passed; after explicit LF hash normalization, focused qualification test passed including CRLF support.",
+  "limits": "Author verification, not fresh acceptance. No new calibration, games, or training. Other weak claims remain open."
+}

@@ -1,0 +1,91 @@
+{
+  "source_head": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+  "reader_sha256": "a90a72aae1bda46839be46b4eff0af5cb1f977a55251285289ca75a40afd3292",
+  "checks": [
+    {
+      "id": "finding:screening-calibration-context",
+      "command": [
+        "C:\\Users\\thisi\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "scripts/research_memory.py",
+        "show",
+        "finding:screening-calibration-context",
+        "--ref",
+        "2a19ec09857d50674da44f8daa96f433d7a623c8"
+      ],
+      "return_code": 0,
+      "bytes": 12154,
+      "seconds": 7.756213499989826,
+      "output": "workflow/knowledge-register/audits/2026-09-06-method-recovery/finding-screening-calibration-context.txt",
+      "sha256": "3667cc795426ab50fe33b48bbaca04f8c7935124da2698fc079e7bd21d425edd"
+    },
+    {
+      "id": "measured:2:r-26d228663f13a885",
+      "command": [
+        "C:\\Users\\thisi\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "scripts/research_memory.py",
+        "show",
+        "measured:2:r-26d228663f13a885",
+        "--ref",
+        "2a19ec09857d50674da44f8daa96f433d7a623c8"
+      ],
+      "return_code": 0,
+      "bytes": 3523,
+      "seconds": 7.3103165999636985,
+      "output": "workflow/knowledge-register/audits/2026-09-06-method-recovery/measured-2-r-26d228663f13a885.txt",
+      "sha256": "ad40934e3145bf3b14fabffbf25ca924d57ad2d119ef45361df15609712b1b76"
+    },
+    {
+      "id": "domain_term:DT-01",
+      "command": [
+        "C:\\Users\\thisi\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "scripts/research_memory.py",
+        "show",
+        "domain_term:DT-01",
+        "--ref",
+        "2a19ec09857d50674da44f8daa96f433d7a623c8"
+      ],
+      "return_code": 0,
+      "bytes": 5130,
+      "seconds": 7.550322099996265,
+      "output": "workflow/knowledge-register/audits/2026-09-06-method-recovery/domain_term-DT-01.txt",
+      "sha256": "e6ad3c03686fc2fdb1ad6d3326da1586f0c822df817d02a72a4aa9be1417f0e9"
+    },
+    {
+      "id": "hypothesis:HYP-B",
+      "command": [
+        "C:\\Users\\thisi\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "scripts/research_memory.py",
+        "show",
+        "hypothesis:HYP-B",
+        "--ref",
+        "2a19ec09857d50674da44f8daa96f433d7a623c8"
+      ],
+      "return_code": 0,
+      "bytes": 2077,
+      "seconds": 7.125052500050515,
+      "output": "workflow/knowledge-register/audits/2026-09-06-method-recovery/hypothesis-HYP-B.txt",
+      "sha256": "fbf59007441a9f939fa531998380032b89b58e126ee30a50ca20a2ac953f19c0"
+    },
+    {
+      "id": "trace_source:SRC-C61",
+      "command": [
+        "C:\\Users\\thisi\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "scripts/research_memory.py",
+        "show",
+        "trace_source:SRC-C61",
+        "--ref",
+        "2a19ec09857d50674da44f8daa96f433d7a623c8"
+      ],
+      "return_code": 0,
+      "bytes": 2708,
+      "seconds": 7.886243899993133,
+      "output": "workflow/knowledge-register/audits/2026-09-06-method-recovery/trace_source-SRC-C61.txt",
+      "sha256": "de5f02b89f079a38961d56cb998dfd3a30bc453321db78b8244e40a81ab465b0"
+    }
+  ]
+}

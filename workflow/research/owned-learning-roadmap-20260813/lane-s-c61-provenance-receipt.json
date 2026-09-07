@@ -1,0 +1,18 @@
+{
+  "schema": "lane-s-public-product-provenance-v1",
+  "created_utc": "2026-08-13T19:28:00Z",
+  "source_receipt_path": "C:/Users/thisi/Desktop/Pokemon/PTCG-SUBMIT-tetsutani/PROVENANCE.json",
+  "source_receipt_sha256": "681b62491927f97b65f9dcb37a85fa05395f97f8c165e9229ec4f73afaed6edd",
+  "source_receipt_bytes": 1886,
+  "source_kernel": "tetsutani/grimmsnarl-ex-damage-transfer-control",
+  "source_url": "https://www.kaggle.com/code/tetsutani/grimmsnarl-ex-damage-transfer-control",
+  "license": "Apache-2.0",
+  "license_verification": "Jon, 2026-08-07, verbatim page read",
+  "modification": "NONE",
+  "archive_sha256": "46bb3180e7b15e41aff60f52b18300aad1ca65d1840464d15e4d30fcac9b57ba",
+  "main_py_sha256": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8",
+  "deck_csv_sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+  "attribution_required": true,
+  "not_claimed_author": true,
+  "caveat": "This compact tracked receipt binds the existing Jon page-read receipt and exact product identities; it does not claim the latest kernel page revision is byte-identical to the fielded archive."
+}

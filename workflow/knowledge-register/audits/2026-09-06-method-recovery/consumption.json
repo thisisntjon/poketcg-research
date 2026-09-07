@@ -1,0 +1,96 @@
+{
+  "source_head": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+  "source_bindings": [
+    {
+      "path": "workflow/canon/MEASURED-2026-08-06.md",
+      "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "67adbe0d11033a25787ae1ee9549b343f286a01dae13183beafe2da7472f53a7",
+      "bytes": 6508
+    },
+    {
+      "path": "workflow/research/2026-08-22-BREAKTHROUGH-VERIFICATION.md",
+      "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "16c86250d24219fb7b53ddb4ab6140faeb3375ad9bb79bc2717e8df2cadffd00",
+      "bytes": 20980
+    },
+    {
+      "path": "ptcg-agent/experiments/analysis/2026-08-01-roach-aa-deff-probe-receipt.json",
+      "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "04662245756c85b603f6cdc2ce31a7b6e6dae195c80163c204e4e75ece5cfca9",
+      "bytes": 1507
+    },
+    {
+      "path": "workflow/receipts/2026-08-02-aa-rebuild-physical-calibration-receipt-brock.md",
+      "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "0715b018401da926e663839a9d164129e098c3d8d1692cbe1f98871bd8766d3f",
+      "bytes": 3597
+    },
+    {
+      "path": "ptcg-agent/experiments/analysis/2026-07-11-cg-seed-probe-misty.json",
+      "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "c25c3ae67edd7a7ce344bc2ad65c603548b61ffbed0493c3a29c12a248e484a0",
+      "bytes": 4927
+    },
+    {
+      "path": "workflow/inventories/sri/CURATED.json",
+      "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "daaeff2d5d54ead993e706505b8ceb3218c3339bd5380eb47fe9499cc5fd814d",
+      "bytes": 13992
+    },
+    {
+      "path": "workflow/inventories/sri/registers/METHODS.md",
+      "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "1a1833d82cdcf9dbec1cc6a91b067984722701e15072c5deafb86840a3329ae9",
+      "bytes": 3866
+    },
+    {
+      "path": "ptcg-agent/harness/weighted_delta.py",
+      "git_commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+      "sha256": "4e67184b2dddfef437790d13b67a0bf7f8ae62dce34254cb26b06eb0f40816e0",
+      "bytes": 15118
+    }
+  ],
+  "arithmetic": [
+    {
+      "n_per_arm": 400,
+      "reported_sigma_pp": 3.529,
+      "ci_half_width_1_96": 6.91684,
+      "MDE_2_8": 9.8812,
+      "published_scaling_law_pp": 4.3647680350735705,
+      "independent_Bernoulli_p_half_SE_pp": 3.5355339059327378
+    },
+    {
+      "n_per_arm": 1200,
+      "reported_sigma_pp": 2.52,
+      "ci_half_width_1_96": 4.9392,
+      "MDE_2_8": 7.055999999999999,
+      "published_scaling_law_pp": 2.52,
+      "independent_Bernoulli_p_half_SE_pp": 2.041241452319315
+    },
+    {
+      "n_per_arm": 2400,
+      "reported_sigma_pp": 1.626,
+      "ci_half_width_1_96": 3.1869599999999996,
+      "MDE_2_8": 4.5527999999999995,
+      "published_scaling_law_pp": 1.7819090885900999,
+      "independent_Bernoulli_p_half_SE_pp": 1.4433756729740645
+    }
+  ],
+  "n_for_14_81pp_using_published_scaling_and_2_8": 272.38818963225833,
+  "unrelated_6000_game_receipt": {
+    "blocks": 60,
+    "wins_from_retained_block_rates": 2941,
+    "win_rate": 0.49016666666666664,
+    "deff_from_sample_variance": 0.8905026187143672,
+    "scope": "Recomputed retained summaries only; not the missing 120k run or a new game experiment; subsequent source marks deff UNREAD."
+  },
+  "counterexample": {
+    "interval_pp": [
+      -1,
+      1
+    ],
+    "lower_bound_below_zero": true,
+    "establishes_negative_effect": false
+  },
+  "scope": "Arithmetic and source consumption only. No new game, engine, model or provider execution. Reported empirical SDs retain unresolved primary provenance."
+}
