@@ -69,8 +69,12 @@ $ python -X utf8 scripts/retraction_scan.py README.md NOTICE docs
 [RETRACTED] docs\EVIDENCE-MAP.md
   L44: `8.26` -> use instead: **`+7.82pp [+6.08, +9.56]`**
   …
-scanned 10 file(s) against 16 retracted tokens: 15 hit(s); 0 inspection failure(s). FIX BEFORE PUBLISHING.
+scanned <N> file(s) against 16 retracted tokens: 15 hit(s); 0 inspection failure(s). FIX BEFORE PUBLISHING.
 ```
+
+`<N>` is however many files `docs/` currently holds; it changes whenever a page is added
+and carries no meaning. **The number that matters is 15 hits, and they are confined to the
+four pages named below.** If a hit ever appears in a fifth page, that is a real finding.
 
 **That is the firewall working, not a defect.** Every hit is in one of the four pages
 that quote `+8.26` and `+9.35` deliberately (`README.md`, `docs/EVIDENCE-MAP.md`,
@@ -84,7 +88,7 @@ always visible in the command:
 
 ```
 $ python -X utf8 scripts/retraction_scan.py --allow 8.26 --allow 9.35 README.md NOTICE docs
-scanned 10 file(s) against 14 retracted tokens: 0 hit(s); 0 inspection failure(s).
+scanned <N> file(s) against 14 retracted tokens: 0 hit(s); 0 inspection failure(s).
 ```
 
 Two tokens allowed, fourteen still enforced. We are not suppressing the check — the plain
