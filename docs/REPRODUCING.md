@@ -62,20 +62,22 @@ python -X utf8 scripts/retraction_register.py <number>
 numeric token or hash prefix in a document, with the value to use instead.
 `retraction_register.py <number>` answers the same question for one value.
 
-Run plainly over this repository's own pages, it **exits 1 with 10 hits**:
+Run plainly over this repository's own pages, it **exits 1 with 15 hits**:
 
 ```
 $ python -X utf8 scripts/retraction_scan.py README.md NOTICE docs
 [RETRACTED] docs\EVIDENCE-MAP.md
   L44: `8.26` -> use instead: **`+7.82pp [+6.08, +9.56]`**
   …
-scanned 10 file(s) against 16 retracted tokens: 10 hit(s). FIX BEFORE PUBLISHING.
+scanned 10 file(s) against 16 retracted tokens: 15 hit(s); 0 inspection failure(s). FIX BEFORE PUBLISHING.
 ```
 
-**That is the firewall working, not a defect.** Every hit is in the two pages that quote
-`+8.26` and `+9.35` deliberately, in order to *explain* why recomputing the headline from
-the shipped rows produces a superseded value. The tool cannot tell "citing a retracted
-number as fact" from "citing it to retract it", and it should not try to.
+**That is the firewall working, not a defect.** Every hit is in one of the four pages
+that quote `+8.26` and `+9.35` deliberately (`README.md`, `docs/EVIDENCE-MAP.md`,
+`docs/RELEASE-REVIEW.md` and this page), in order to *explain* why recomputing the
+headline from the shipped rows produces a superseded value. The tool cannot tell
+"citing a retracted number as fact" from "citing it to retract it", and it should not
+try to.
 
 The tool's own documented escape is `--allow`, one token at a time, so an exemption is
 always visible in the command:
