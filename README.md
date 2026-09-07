@@ -109,7 +109,9 @@ decided games only — so their summaries are reported separately and should not
 
 Code and documents authored by this project are MIT-licensed ([LICENSE](LICENSE)).
 Third-party work — makthanithin's Apache-2.0 sample kernel, tetsutani's fielded kernel —
-is credited in [NOTICE](NOTICE). **The MIT file does not clear every included asset**:
-imported verification records, third-party attribution and release clearance are tracked
-in [docs/EVIDENCE-MAP.md](docs/EVIDENCE-MAP.md), which lists the release questions that
-remain open. No security or legal clearance is asserted here.
+is credited in [NOTICE](NOTICE), which also records where that attribution is
+**incomplete**. **The MIT file does not clear every included asset.** A pre-publication
+scan of this tree — what was checked, what was found, what was fixed and what is still
+open — is recorded in [docs/RELEASE-REVIEW.md](docs/RELEASE-REVIEW.md). It found no
+credentials, no organiser material and no third-party kernel source. It is a scan, not a
+clearance, and no security or legal clearance is asserted here.

@@ -1,3 +1,23 @@
+> **Export note — added when this register was published; not part of the original record.**
+>
+> **No third-party kernel source is in this repository.** This register is
+> attribution metadata only: authors, source URLs, licences, pull dates and file
+> hashes, so a reader can obtain each kernel from its original author and confirm
+> the bytes. Publishing this register does not redistribute any kernel.
+>
+> The dispositions recorded below were written about the **private working
+> repository** `thisisntjon/poketcg`, and some of them reason explicitly from that
+> repository being private. Read them as history of decisions taken there. They are
+> not a clearance for this public export, and nothing here asserts one.
+>
+> **Coverage is incomplete.** Five authors whose agents appear in the published
+> seven-opponent panel — `plamen06`, `llccqq624`, `raunakdey07`, `zoli800`,
+> `harukiharada` — have **no row in this register**. Their kernel source is not
+> redistributed here and no claim is made about their licence terms. See
+> [`NOTICE`](../NOTICE) and [`docs/RELEASE-REVIEW.md`](../docs/RELEASE-REVIEW.md).
+
+---
+
 # PUBLIC-KERNELS-PROVENANCE — license + provenance register for tracked third-party kernels
 
 **Authority:** `JON-DIRECT RULING 2026-07-24T17:14Z` (narrow permit) — see `AGENTS.md` §3 and

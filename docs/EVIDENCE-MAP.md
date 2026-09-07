@@ -77,16 +77,23 @@ alongside it, so its internal links resolve from this export.
 
 ## Open release questions
 
-These are unresolved. They are listed rather than asserted as cleared.
+A pre-publication scan has now been run and recorded in
+**[docs/RELEASE-REVIEW.md](RELEASE-REVIEW.md)** — what was checked, what was found, what
+was fixed, and what is still open. It found no credentials, no organiser material and no
+third-party kernel source. It is a scan, not a clearance.
 
+Still unresolved, listed rather than asserted as cleared:
+
+- **Five opponent authors named in the published panel have no licence-and-provenance
+  row** (`plamen06`, `llccqq624`, `raunakdey07`, `zoli800`, `harukiharada`). See
+  [NOTICE](../NOTICE) and the release review.
 - **This repository is private.** Judge access has not been demonstrated. Signed-out
   viewing must be verified after any authorised visibility change; that change is not
   made here.
 - **A blanket MIT label does not clear every included asset.** The imported verification
   records, the method-recovery audit and the historical registers were authored inside a
   private working repository and have not been individually reviewed for release.
-- **Provenance strings retain local paths and public participant identifiers.** They
-  explain where evidence came from; they are not downloadable assets and were not
-  scrubbed, because scrubbing them would break provenance.
-- **No security scan, licence audit or third-party rights certification has been
-  performed on this tree.** The separate release review remains outstanding.
+- **Provenance strings retain local paths.** They explain where evidence came from; they
+  are not downloadable assets and were not scrubbed, because scrubbing them would break
+  provenance. The one credential *location* found has been redacted.
+- **No licence audit or automated dependency security scan has been performed.**
