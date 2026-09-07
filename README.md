@@ -92,10 +92,12 @@ decided games only — so their summaries are reported separately and should not
   effects is not a null. ([What we learned](docs/WHAT-WE-LEARNED.md))
 - **A learned agent that lost.** Better imitation loss, 1.92% of decided games won. Kept
   in the record rather than dropped.
-- **The instruments that lied.** Measurement tools that each produced at least one
-  confident, wrong verdict before they were caught — an opponent pool made of our own
-  agent, an experiment path that never carried the setting under test, sample sizes that
-  could not resolve the effects being claimed, a broken log schema.
+- **[Ten instruments that lied](docs/INSTRUMENTS-THAT-LIED.md).** Measurement tools that
+  each produced at least one confident, wrong verdict before they were caught — an opponent
+  pool made of our own agent, eleven experiment arms that were byte-equivalent programs, a
+  soak test that passed on empty input, an Elo conversion that made every target look 25%
+  easier than it was. None of them crashed; each returned a plausible number. Written for a
+  reader outside this project.
 - **The corrections.** [RETRACTIONS.md](workflow/canon/RETRACTIONS.md) lists numbers this
   project published and later found to be wrong, each with the reason and what to use
   instead.

@@ -100,9 +100,12 @@ measurement tools that each produced at least one confident, wrong verdict befor
 them. That catalogue is, in our view, the most original thing this project produced.
 
 **It is also the least readable file here** — roughly 0.7 internal references per line
-(ticket ids, seat names, PR numbers). See the decoder below. If you want the findings
-without the archaeology, [WHAT-WE-LEARNED](WHAT-WE-LEARNED.md) states the four most
-important ones in plain language, and it is written for an outside reader.
+(ticket ids, seat names, PR numbers). See the decoder below.
+
+**[Ten instruments that lied](INSTRUMENTS-THAT-LIED.md) restates the whole catalogue
+without the shorthand**, one section each: what we believed, what was actually happening,
+and the generic form of the mistake. Read that instead unless you want the archaeology.
+[WHAT-WE-LEARNED](WHAT-WE-LEARNED.md) covers the four most important in narrative form.
 
 ## 5. Decoding the internal references
 
