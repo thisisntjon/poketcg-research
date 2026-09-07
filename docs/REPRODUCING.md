@@ -21,18 +21,20 @@ retrieval path, then the hit count and elapsed time, then up to `--limit` scored
 
 ```
 PRIOR ART: "Xerosic"
-  terms ['xerosic']  corpus <N> files  via tracked tree (catalog absent)
-  7 hits in 0.169s
+  terms ['xerosic']  corpus 29 files  via tracked tree (catalog absent)
+  7 hits in 0.282s
 
-   7.52  2026-09-03  workflow/research/2026-09-03-xerosic-sniper-factorial.md
+   7.66  2026-09-03  workflow/research/2026-09-03-xerosic-sniper-factorial.md
          Xerosic × Sniper — an INDEPENDENTLY REPRODUCED improvement (2026-09-03, SKYNET)  [state: UNKNOWN]  (keywords only: banked, null)
-   7.52  2026-09-03  workflow/research/2026-09-03-xerosic-sniper-rows.csv
+   7.66  2026-09-03  workflow/research/2026-09-03-xerosic-sniper-rows.csv
          run,arm,opponent,outcome,seat,prize_margin,...  [state: UNKNOWN]
 
   PRIOR_ART: "Xerosic" -> 7 hits -> no-catalog
 ```
 
-Exit code 0. Try any other query in place of `"Xerosic"`.
+Exit code 0. That transcript is from a fresh clone of this commit; elapsed time varies,
+and the scores are corpus-relative, so they shift whenever the corpus changes. Try any
+other query in place of `"Xerosic"`.
 
 **Actual scope and known limitations.**
 
