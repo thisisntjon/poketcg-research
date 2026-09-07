@@ -1,0 +1,51 @@
+{
+  "status": "RECOMPUTED_SAVED_RECORDS_NO_EXECUTION",
+  "source_files": [
+    {
+      "path": "D:\\ptcg_selfplay\\learning-factory\\a1-t1-wall\\T1-RESUME.json",
+      "sha256": "8e14e44da0141639c629dd504c22adfc25ea95f8057e9fb7d196a4e93624f336"
+    },
+    {
+      "path": "D:\\ptcg_selfplay\\learning-factory\\clutch-inv-20260816\\fire-ready\\e8-c61-n1200\\screen-receipt.json",
+      "sha256": "6ae88ebc93434f177f9d489efcf34382800c963b73c304d62c16464bcb1ff7c6"
+    }
+  ],
+  "checkpoint_file": "D:\\ptcg_selfplay\\learning-factory\\a1-t1-wall\\ckpts\\epoch-08-6ef49e2ee697.pt",
+  "checkpoint_sha256": "e072ae4c4555c7fc195b227ae9a7363ffdacf9925697cef9809f1c00dabfc33e",
+  "checkpoint_bytes_match_training_record": true,
+  "selected_state_identity": "6ef49e2ee697876e8569ec043e33a7d0d365f5ffd6aac6aea9a66fc74db873b6",
+  "parent_validation_nll": 1.0717802047729492,
+  "selected_validation_nll": 1.0417600870132446,
+  "selected_epoch": 8,
+  "attempts": 1203,
+  "scored": 1200,
+  "wins": 23,
+  "losses": 1177,
+  "excluded_draws": 3,
+  "win_percent": 1.9166666666666667,
+  "scored_seat_counts": {
+    "0": 600,
+    "1": 600
+  },
+  "opponent_main_sha256": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8",
+  "opponent_deck_sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+  "limits": [
+    "No new games, training or model loading.",
+    "Checkpoint file bytes verified against saved receipt; tensor state hash is a recorded identifier, not independently recomputed by loading weights.",
+    "Recorded result index and player seat independently reproduce win labels.",
+    "Comparison excludes three draws; do not mix with the draw-half counterplay panel.",
+    "No DAgger-off ablation; lower loss does not isolate the cause of the change."
+  ],
+  "banked_receipts": [
+    {
+      "path": "workflow/writeup/visuals-2026-09-06/learning-evidence/screen-receipt.json",
+      "sha256": "e02921d92ff2f0a0c8c774fdc38f460d5953ebf0d51a6865f77a0d3d8a602a26",
+      "normalization": "CRLF to LF only; JSON values unchanged. Original source hashes retained above."
+    },
+    {
+      "path": "workflow/writeup/visuals-2026-09-06/learning-evidence/training-receipt.json",
+      "sha256": "fab7750232057596c50f96fae70c1a2f7f8e4b085f23812bb050584356a8322a",
+      "normalization": "CRLF to LF only; JSON values unchanged. Original source hashes retained above."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "source": "workflow\\research\\2026-09-03-xerosic-sniper-rows.csv",
+  "sha256": "e39d5d54bc51c7b430e4d9ade8cf7a149634d8ef244e32f517e5e8fabf0525aa",
+  "method": "Within-batch independent binomial contrasts, decided games only, inverse-variance fixed-effect pool, normal 1.96 intervals. Development panel only.",
+  "results": {
+    "rule_only": {
+      "delta_pp": 3.6188488316813525,
+      "ci95_pp": [
+        1.515612164999154,
+        5.722085498363551
+      ],
+      "contrasts": [
+        {
+          "run": "sniper_screen1",
+          "treatment_wins": 744,
+          "treatment_decided": 1999,
+          "control_wins": 682,
+          "control_decided": 1999,
+          "delta": 0.03101550775387696,
+          "variance": 0.0002293330776453264
+        },
+        {
+          "run": "factorial",
+          "treatment_wins": 768,
+          "treatment_decided": 1997,
+          "control_wins": 686,
+          "control_decided": 1999,
+          "delta": 0.04140527950505046,
+          "variance": 0.0002312753284254061
+        }
+      ]
+    },
+    "card_only": {
+      "delta_pp": 5.023133642088179,
+      "ci95_pp": [
+        3.2964973980923142,
+        6.749769886084043
+      ],
+      "contrasts": [
+        {
+          "run": "xerosic_screen1",
+          "treatment_wins": 812,
+          "treatment_decided": 1999,
+          "control_wins": 715,
+          "control_decided": 1999,
+          "delta": 0.04852426213106553,
+          "variance": 0.00023559121015126816
+        },
+        {
+          "run": "xerosic_replicate",
+          "treatment_wins": 808,
+          "treatment_decided": 1997,
+          "control_wins": 674,
+          "control_decided": 1998,
+          "delta": 0.06726957302821096,
+          "variance": 0.00023251333716278776
+        },
+        {
+          "run": "factorial",
+          "treatment_wins": 756,
+          "treatment_decided": 1999,
+          "control_wins": 686,
+          "control_decided": 1999,
+          "delta": 0.03501750875437715,
+          "variance": 0.00023039867524265737
+        }
+      ]
+    }
+  }
+}

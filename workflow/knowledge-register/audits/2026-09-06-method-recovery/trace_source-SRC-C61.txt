@@ -1,0 +1,17 @@
+Research memory @ 2a19ec09857d50674da44f8daa96f433d7a623c8
+Coverage: 740 records; 12 explanatory notes; 0 stale notes.
+Scope: Experiment Markdown, compact rows, historical attempts/dead ends/retractions/equations/lessons/measurement summaries, graveyard/tool/hypothesis/metric/domain-term/trace-source registers, reviewed links, notes and audit knowledge. Other research, raw runs, tools, branches, hosts and transcripts are not exhaustively covered. Extraction is not complete semantic reconciliation.
+Evidence: Source versions and anchors checked; scientific truth, current tool usability and raw-run reproduction not certified.
+Retractions: workflow/canon/RETRACTIONS.md#L1-L134 @ 2a19ec09857d50674da44f8daa96f433d7a623c8 blob=763754f5bc6aa9b1707563d0bbd1464397091153 sha256=ca4bf6b2808d47542648a37a7556316ba4d0ec9cea3b80e27304cb6dc71c6e22
+
+trace_source:SRC-C61: c61 public product episodes
+historical source assertion; registered availability is not current usability
+Source: workflow/inventories/OWNED-TRACE-MANIFEST.json#/candidate_sources/3 @ 2a19ec09857d50674da44f8daa96f433d7a623c8 blob=a7fe7134db7b535cb922d769b31ed5c19faa9256 sha256=4f34293640f4c26fd06d20a33ec588ad70725087ab1a330bd279f00f64087a12
+
+Original structured record:
+{"id": "SRC-C61", "path_hint": "c61 public product episodes", "match_owned_product": "NO", "status": "CONTROL_TEACHER_ONLY"}
+
+Original register context (historical, not current instructions):
+{"schema": "ptcg.owned_trace_manifest/v1", "stamped": "2026-08-11", "status": "GO_NO_GO_OPEN", "rule": "c61 traces do not substitute for OWNED-CORE traces. If matching corpus missing, generate fresh immediately.", "required_fields_per_episode": ["product_id_or_main_sha", "deck_sha_or_fingerprint", "actor_visible_observation", "legal_option_menu", "selected_action", "turn_or_decision_ordinal", "outcome_retained_for_eval_only"], "use_for": ["high_mass_disagreement_mine", "prospective_force_tests", "frequency_coverage"], "do_not_use_for": ["winner_action_is_best_label_without_propensities", "clairvoyant_BC_on_hidden_union"], "decision": {"matching_corpus_found": null, "action": "PENDING_PASSPORT_THEN_SCAN_OR_GENERATE", "generate_command_placeholder": "python ptcg-agent/harness/selfplay.py --policy owned --games N --out <path>", "owner": null, "deadline_utc": null}, "subset_filters_when_moving_to_compute": {"same_or_compatible_deck": true, "actor_visible_only": true, "exact_legal_menus": true, "exact_product_identity": true, "high_reach_decision_families": ["resource", "target", "defense", "prize_map", "bench"], "outcome_for_eval_not_proposal": true}}
+
+Historical decisions are evidence, not current instructions. Read caveats and linked corrections before reuse.

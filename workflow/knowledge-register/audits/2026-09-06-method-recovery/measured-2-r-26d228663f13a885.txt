@@ -1,0 +1,54 @@
+Research memory @ 2a19ec09857d50674da44f8daa96f433d7a623c8
+Coverage: 740 records; 12 explanatory notes; 0 stale notes.
+Scope: Experiment Markdown, compact rows, historical attempts/dead ends/retractions/equations/lessons/measurement summaries, graveyard/tool/hypothesis/metric/domain-term/trace-source registers, reviewed links, notes and audit knowledge. Other research, raw runs, tools, branches, hosts and transcripts are not exhaustively covered. Extraction is not complete semantic reconciliation.
+Evidence: Source versions and anchors checked; scientific truth, current tool usability and raw-run reproduction not certified.
+Retractions: workflow/canon/RETRACTIONS.md#L1-L134 @ 2a19ec09857d50674da44f8daa96f433d7a623c8 blob=763754f5bc6aa9b1707563d0bbd1464397091153 sha256=ca4bf6b2808d47542648a37a7556316ba4d0ec9cea3b80e27304cb6dc71c6e22
+
+measured:2:r-26d228663f13a885: 400 — 2. The screening instrument — MEASURED
+historical source assertion; context retained, no new ruling or reproduction
+Source: workflow/canon/MEASURED-2026-08-06.md#L56-L56 @ 2a19ec09857d50674da44f8daa96f433d7a623c8 blob=381b7b804305fd32de1659a756abc438a58c8924 sha256=67adbe0d11033a25787ae1ee9549b343f286a01dae13183beafe2da7472f53a7
+
+Linked context (interpretation; SOURCE_VERSIONS_MATCH):
+The recovered chain contains an earlier unresolved provenance dispute for the claimed 120k mirror calibration and incompatible table/scaling values. Read finding:screening-calibration-context before treating this historical number or n>=1200 wording as a current sizing guarantee. No new run or reinstatement of 2.199pp is authorized.
+finding:screening-calibration-context qualifies measured:2:r-26d228663f13a885
+Link source: workflow/knowledge-register/relationships.json#/relationships/15 @ 2a19ec09857d50674da44f8daa96f433d7a623c8 blob=dc35dc9230f316d690882b1b91cc0d42fb791d46 sha256=32c0a8125abe1984d768e5dac5566093e8ae8eafcc5891cc4631200111a2a2fb
+Read: show finding:screening-calibration-context
+Context: All direct prose in this section and its ancestors; sibling rows are separate. Cross-source contradictions require review.
+
+Original Ancestral heading [L1-L1]:
+# MEASURED — 2026-08-06
+
+Original Surrounding source: MEASURED — 2026-08-06 [L2-L10]:
+
+**Every number here was measured or independently re-derived on this date, with its source,
+its n, and its interval. Nothing in this file is an estimate carried forward from a document.**
+
+Companion to [`RETRACTIONS.md`](RETRACTIONS.md), which lists what these numbers replace.
+Verify with `python scripts/onboard_check.py`.
+
+---
+
+
+Original Ancestral heading [L48-L48]:
+## 2. The screening instrument — MEASURED
+
+Original Surrounding source: 2. The screening instrument — MEASURED [L49-L53]:
+
+`sigma_delta` from 120,000 engine games, true mirror (`rules_lucario` vs itself, seats
+alternated, p = 0.5 by symmetry), unpaired — the engine exposes no seed on the Windows ship
+ABI (`probe_cg_seed.py`), so `Cov = 0` is an engine fact, not an assumption.
+
+
+Original Surrounding source: 2. The screening instrument — MEASURED [L59-L62]:
+
+The `sqrt(2)` match proves **Cov(arms) = 0** — independence, no cross-arm leak. It is
+scale-free and does **not** prove binomiality.
+
+
+Original Original table header [L54-L54]:
+| n/arm | single-arm SD | sigma_delta | sqrt(2)*SD | binomial SD |
+
+Original Original table row [L56-L56]:
+| 400 | 0.02623 | **0.03529** | 0.03709 | 0.02500 |
+
+Historical decisions are evidence, not current instructions. Read caveats and linked corrections before reuse.

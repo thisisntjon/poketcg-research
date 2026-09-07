@@ -1,0 +1,97 @@
+{
+  "status": "TWO_RECORDED_CHOICES_VERIFIED_NO_COUNTERFACTUAL",
+  "method": "Parse original episode JSON. Locate Jonathan Simone in info.TeamNames. Join ACTIVE observation at t-1 to recorded action at t in the same seat. Resolve each context-15 legal option through playerIndex and bench index; compare visible HP and chosen index. Read terminal reward separately. No agent, engine, model or provider executed.",
+  "historical_source": {
+    "path": "C:\\Users\\thisi\\Desktop\\Pokemon\\workflow\\research\\agent-impact-replay-verification.md",
+    "sha256": "54f183c2bdf289d0eef47e12d5fd386e40dcf6e89f6eb663634b366d4edfb6d4",
+    "reported_policy_sha256": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8"
+  },
+  "witnesses": [
+    {
+      "episode": "90644214",
+      "path": "C:\\Users\\thisi\\Desktop\\Pokemon\\ptcg-agent\\experiments\\ladder\\raw\\episode-90644214-replay.json",
+      "sha256": "85ee60eea244009fbda1c97fd918f83bb5bcc230659f9c95dae3bb839b371434",
+      "seat": 1,
+      "observation_step": 133,
+      "action_step": 134,
+      "turn": 13,
+      "recorded_action": [
+        0
+      ],
+      "terminal_reward": -1,
+      "targets": [
+        {
+          "option_index": 0,
+          "card_id": 743,
+          "remaining_hp": 140,
+          "selected": true
+        },
+        {
+          "option_index": 1,
+          "card_id": 743,
+          "remaining_hp": 140,
+          "selected": false
+        },
+        {
+          "option_index": 2,
+          "card_id": 743,
+          "remaining_hp": 20,
+          "selected": false
+        },
+        {
+          "option_index": 3,
+          "card_id": 66,
+          "remaining_hp": 140,
+          "selected": false
+        },
+        {
+          "option_index": 4,
+          "card_id": 65,
+          "remaining_hp": 60,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "episode": "90649836",
+      "path": "C:\\Users\\thisi\\Desktop\\Pokemon\\ptcg-agent\\experiments\\ladder\\raw\\episode-90649836-replay.json",
+      "sha256": "63b0bd75f7180abc23aca54ae8163a5a1922b2c5db88079261479c1c05178a0c",
+      "seat": 0,
+      "observation_step": 76,
+      "action_step": 77,
+      "turn": 5,
+      "recorded_action": [
+        1
+      ],
+      "terminal_reward": 1,
+      "targets": [
+        {
+          "option_index": 0,
+          "card_id": 235,
+          "remaining_hp": 30,
+          "selected": false
+        },
+        {
+          "option_index": 1,
+          "card_id": 120,
+          "remaining_hp": 90,
+          "selected": true
+        },
+        {
+          "option_index": 2,
+          "card_id": 120,
+          "remaining_hp": 90,
+          "selected": false
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "This pass verifies two original recorded choices, not the historical 7,127-action reproduction or entire corpus census.",
+    "Policy identity is attributed to the historical verification; these two JSON choices alone do not prove which source bytes executed.",
+    "A win or loss after a choice does not establish its causal value or the result of an unchosen action.",
+    "Visible HP and legal targeting do not independently prove every damage-prevention interaction. Describe the choices directly rather than guaranteeing a counterfactual knockout.",
+    "Original organizer episode files remain local and are not redistributed."
+  ],
+  "adoption": "Use at most a brief worked example contrasting immediate prize pressure with damage placement, explicitly retaining the counterfactual limitation. Do not add a new strength claim."
+}

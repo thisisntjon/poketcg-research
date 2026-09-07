@@ -1,0 +1,54 @@
+{
+  "status": "DATED_API_OBSERVATION_NOT_GRADING_FINALITY_CERTIFICATE",
+  "captured_utc": "2026-09-06T20:04:32.961318+00:00",
+  "leaderboard": {
+    "source_file": "pokemon-tcg-ai-battle-publicleaderboard-2026-09-06T19:57:36.csv",
+    "csv_sha256": "084d2ff559dfe7be1c6766422491efd0f359811dc4a218ea95ddafda3bc55afa",
+    "zip_sha256": "5bc796c3cb93ab278cb454c86abbce89153514fa5c649fd802c76f0e94e1bbba",
+    "row_count": 6807,
+    "own_row": {
+      "Rank": "840",
+      "TeamId": "16510040",
+      "TeamName": "Jonathan Simone",
+      "LastSubmissionDate": "2026-08-16 20:03:35",
+      "Score": "834.0",
+      "SubmissionCount": "2",
+      "TeamMemberUserNames": "jonathansimone"
+    }
+  },
+  "entry_query": {
+    "command": [
+      "kaggle",
+      "competitions",
+      "list",
+      "--group",
+      "entered",
+      "--search",
+      "pokemon",
+      "--csv"
+    ],
+    "stdout": "ref,deadline,category,reward,teamCount,userHasEntered\n\nhttps://www.kaggle.com/competitions/pokemon-tcg-ai-battle-challenge-strategy,2026-09-13 23:59:00,Featured,\"240,000 Usd\",651,True\n\nhttps://www.kaggle.com/competitions/pokemon-tcg-ai-battle,2026-08-31 23:59:00,Featured,Knowledge,6807,True\n\n",
+    "rows": [
+      {
+        "ref": "https://www.kaggle.com/competitions/pokemon-tcg-ai-battle-challenge-strategy",
+        "deadline": "2026-09-13 23:59:00",
+        "category": "Featured",
+        "reward": "240,000 Usd",
+        "teamCount": "651",
+        "userHasEntered": "True"
+      },
+      {
+        "ref": "https://www.kaggle.com/competitions/pokemon-tcg-ai-battle",
+        "deadline": "2026-08-31 23:59:00",
+        "category": "Featured",
+        "reward": "Knowledge",
+        "teamCount": "6807",
+        "userHasEntered": "True"
+      }
+    ]
+  },
+  "limits": [
+    "Entry flag does not certify every eligibility requirement.",
+    "Public evidence accessibility and Kaggle final rendering remain unchecked."
+  ]
+}

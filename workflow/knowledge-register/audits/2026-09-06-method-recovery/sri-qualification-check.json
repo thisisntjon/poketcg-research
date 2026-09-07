@@ -1,0 +1,25 @@
+{
+  "scope": "Correct stale M-002 and inventory description using existing reviewed dispute; not new calibration or full weak-claim reconciliation",
+  "base": "564d9ed721456ec87de689f1ad9794c69c1bc771",
+  "source": "workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md",
+  "source_sha256": "6cc407b1ab50c2bad7df8d6cccb36f95cdf0b8a51a9876bf8129493e440b1eaf",
+  "actual_consumer_command": [
+    "scripts/dock.py",
+    "ask",
+    "M-002",
+    "--limit",
+    "3"
+  ],
+  "actual_consumer_stdout": "# DOCK ASK \u2014 M-002\r\nterms ['m-002'] \u00b7 1 row(s) hit; top 1\r\n\r\n[METHODS.md] M-002 (score 1)\r\n  | M-002 | Minimum detectable effect at 80% power | Historical table: 2.8 * sigma_delta gives 9.88pp at n=400, 7.06pp at n=1200 and 4.55pp at n=2400 per arm. Arithmetic reproduces; primary calibration provenance remains unresolved. The separate scaling law gives different values. These historical numbers are not a validated power design for a new ex\u2026 | `workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md` (blob 7cf18f1ace) | \u2014 | \u2014 | research note (no implementation pointer) | 2026-09-06 |\r\n\r\nA hit is a lexical nomination. Open the cited source line before relying on it; check every number with retraction_register.py.\r\n",
+  "checks": {
+    "normal_dock_exposes_unresolved_provenance": true,
+    "normal_dock_cites_existing_review": true,
+    "historical_source_files_unchanged": true,
+    "standalone_sri_check": "OK"
+  },
+  "limits": [
+    "Author check only; no fresh consumer acceptance",
+    "Other receipt-weak claims remain unreconciled",
+    "No experiment sizing allocation or change to gameplay/training pause"
+  ]
+}

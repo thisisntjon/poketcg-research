@@ -3,6 +3,12 @@
 Two agents appear throughout this repository. They are different programs and they
 must not be confused.
 
+Everything on this page comes from **static inspection of source and supplied card
+text**, recorded in
+[SOURCE-VERIFICATION.json](../workflow/writeup/visuals-2026-09-06/SOURCE-VERIFICATION.json).
+No game was executed to produce it. A path the source permits is not a measured
+frequency and not a demonstration that the path is the best available.
+
 ## The fielded agent
 
 The agent on the leaderboard is tetsutani's public Grimmsnarl kernel, used
@@ -11,8 +17,11 @@ engine hands it a menu of legal options; the kernel scores every option using
 gradient-boosted-tree ensembles — five sub-models, selected by the *kind* of
 decision being made — wraps that in a cascade of hand-written guards and a
 rules-based fallback, and takes the highest-scoring option. One ply. No lookahead,
-no timer, no model of the opponent's hidden hand. Tens of thousands of lines of
-machinery ending in a single argmax over scored options.
+no timer, no model of the opponent's hidden hand.
+
+The recovered `main.py` and `deck.csv` match the archived submission provenance hashes
+(`c61e540b`, `92b92bac`), and the deck matches the `EXPECTED_DECK` constant asserted at
+load in the inspected source.
 
 ## The deck's game plan
 
@@ -28,7 +37,9 @@ Darkness Energy, and a consistency shell. Three printed effects carry the plan:
   move up to three damage counters from one of your Pokémon to one of your
   opponent's — any of them, not only the Active.
 - **Freezing Shroud** (Froslass): during each checkup, put one damage counter on
-  every Pokémon that has an Ability, on **both** sides.
+  every Pokémon that has an Ability, on **both** sides — **except Froslass itself**.
+  The exclusion matters: the Snorunt–Froslass line is what supplies counters for
+  Munkidori to move, and Froslass does not pay for that supply out of its own HP.
 
 Read together: Froslass manufactures damage counters on your own board, Munkidori
 launders them onto the opponent's, and Grimmsnarl ex's Shadow Bullet (180 damage,
@@ -51,10 +62,13 @@ it as an inference because it is one.)
 ## The experimental pilot
 
 Controlled experiments were run with a second, deliberately simple agent, derived
-from a public Mega Lucario ex sample kernel. It scores every legal option and
-takes the best. The scores are a fixed ladder: abilities 30000, playing a Pokémon
-20000, an unrecognised trainer card 10000, attaching energy about 8000, Switch
-6000, Boss's Orders 3200, attacking 1000.
+from a public Mega Lucario ex sample kernel. **It is a separate product from the
+submitted Grimmsnarl agent**, and no experiment described in this repository was run
+on the submitted agent.
+
+It scores every legal option and takes the best. The scores are a fixed ladder:
+abilities 30000, playing a Pokémon 20000, an unrecognised trainer card 10000,
+attaching energy about 8000, Switch 6000, Boss's Orders 3200, attacking 1000.
 
 Target choice sits inside that. For each attack and each possible target it starts
 from a value for the target; if the attack does not knock the target out, it
@@ -66,31 +80,48 @@ traceable.
 
 ## The targeting intervention
 
-Against Alakazam decks, the threat is the attack **Powerful Hand**: 20 damage for
-each card in the Alakazam player's hand, for one energy. A seven-card hand is 140
-damage. (It is not a bench snipe; we published that description and withdrew it.)
+Against Alakazam decks, the threat is the attack **Powerful Hand**. In the supplied
+card data it **places two damage counters for each card in the Alakazam player's
+hand**. Damage counters are *placed*, not dealt as attack damage — the distinction is
+in the card text and is preserved here because placement and damage are different
+operations in this game. A seven-card hand is fourteen counters. (It is not a bench
+snipe; we published that description and withdrew it.) Card 742, Kadabra, has a
+different attack, Super Psy Bolt.
 
 Two changes were tested.
 
-**The card.** Xerosic's Machinations makes the opponent discard down to three
-cards, which caps Powerful Hand at 60 instead of 140. The pilot plays it for an
-accidental reason worth reporting: the card has no case in the scoring ladder, so
-it falls through to the unrecognised-trainer default of 10000 — the highest rung
-in that block — and is played at the first legal opportunity, whether or not it
-discards anything. Measured: legal on 0.980 occasions per game.
+**The card.** Xerosic's Machinations **reduces the opposing hand to three cards when it
+resolves**. That is a one-time discard on resolution, not a persistent cap: the opponent
+can replenish the hand on later turns, and Powerful Hand scales with whatever the hand
+holds at the moment it is used. The pilot plays the card for an accidental reason worth
+reporting: it has no case in the scoring ladder, so it falls through to the
+unrecognised-trainer default of 10000 — the highest rung in that block — and is played at
+the first legal opportunity, whether or not it discards anything. Measured: legal on 0.980
+occasions per game.
 
 **The rule.** A targeting rule adds a bonus to attacking Abra or Kadabra, the
 50-HP and 80-HP stages before Alakazam, both of which the pilot can one-shot. The
-mechanism turned out to be indirect: bench targets are only scored when the pilot
-can force a switch, which is exactly when it holds Boss's Orders — and the plan
+mechanism, as read from the code, is indirect: bench targets are only scored when the
+pilot can force a switch, which is exactly when it holds Boss's Orders — and the plan
 naming a bench target is what makes Boss's Orders worth playing. So the rule does
 not snipe the bench. **It gusts the pre-evolution into the Active spot and kills it
 there**, spending one of the deck's two Boss's Orders to do so. A first attempt to
 measure it looked at bench damage events, found zero in 400 games, and was wrong
 about the zone rather than the effect.
 
-Both changes help only where Powerful Hand exists. Against opponents without it,
-they measure nothing.
+## What the panel does and does not say about the mechanism
+
+The measured advantage concentrates in the two Alakazam cells of the seven-opponent
+panel. That is consistent with the hand-and-development mechanism described above, and
+it is why the mechanism is worth stating.
+
+It is **not** a demonstration that either change helps *only* where Powerful Hand exists.
+The panel tested seven implementations; the five non-Alakazam cells average −0.47 points
+[−2.64, +1.71] — an interval that leaves modest benefit and modest harm both plausible.
+"Indistinguishable from zero on five tested opponents" is a much weaker statement than
+"inert wherever the attack is absent", and the panel supports only the first. Nor do
+terminal wins alone establish how often the Xerosic-then-attack sequence actually caused
+the advantage.
 
 *No cleared replay exists of our own agents piloting the fielded 60-card list, so
 any turn-by-turn line above should be read as schematic: it follows from the

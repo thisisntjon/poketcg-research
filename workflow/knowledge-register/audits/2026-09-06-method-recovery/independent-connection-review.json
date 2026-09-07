@@ -1,0 +1,311 @@
+{
+  "reviewed_head": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+  "reader_sha256": "a90a72aae1bda46839be46b4eff0af5cb1f977a55251285289ca75a40afd3292",
+  "started_utc": "2026-09-06T03:21:07.308972+00:00",
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\thisi\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "D:\\ptcg_selfplay\\scratch\\astra-method-connection-review-20260906\\194c3c64\\research_memory.py",
+        "show",
+        "measured:2:r-26d228663f13a885",
+        "--root",
+        "C:\\Users\\thisi\\Desktop\\PK-squads\\astra",
+        "--ref",
+        "2a19ec09857d50674da44f8daa96f433d7a623c8"
+      ],
+      "exit_code": 0,
+      "stdout_path": "D:\\ptcg_selfplay\\scratch\\astra-method-connection-review-20260906\\194c3c64\\screening.txt",
+      "stdout_sha256": "ad40934e3145bf3b14fabffbf25ca924d57ad2d119ef45361df15609712b1b76",
+      "stdout_bytes": 3523,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\thisi\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "D:\\ptcg_selfplay\\scratch\\astra-method-connection-review-20260906\\194c3c64\\research_memory.py",
+        "show",
+        "domain_term:DT-01",
+        "--root",
+        "C:\\Users\\thisi\\Desktop\\PK-squads\\astra",
+        "--ref",
+        "2a19ec09857d50674da44f8daa96f433d7a623c8"
+      ],
+      "exit_code": 0,
+      "stdout_path": "D:\\ptcg_selfplay\\scratch\\astra-method-connection-review-20260906\\194c3c64\\dt01.txt",
+      "stdout_sha256": "e6ad3c03686fc2fdb1ad6d3326da1586f0c822df817d02a72a4aa9be1417f0e9",
+      "stdout_bytes": 5130,
+      "stderr": ""
+    }
+  ],
+  "checks": [
+    {
+      "record": "measured:2:r-26d228663f13a885",
+      "assertions": {
+        "normal_read_success": true,
+        "full_original_row_preserved": true,
+        "mirror_population_retained": true,
+        "n_per_arm_header_retained": true,
+        "provenance_dispute_before_original_row": true,
+        "historical_scope_retained": true,
+        "link_once": true
+      }
+    },
+    {
+      "record": "domain_term:DT-01",
+      "assertions": {
+        "normal_read_success": true,
+        "full_original_register_row_preserved": true,
+        "default_off_preserved": true,
+        "not_current_usability": true,
+        "specified_not_observed_fixture_results": true,
+        "no_runtime_or_gain_claim": true,
+        "research15_16_mismatch_retained": true
+      }
+    }
+  ],
+  "sources": [
+    {
+      "path": "scripts/research_memory.py",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "sha256": "a90a72aae1bda46839be46b4eff0af5cb1f977a55251285289ca75a40afd3292",
+      "bytes": 46778
+    },
+    {
+      "path": "ptcg-agent/harness/test_research_memory.py",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "sha256": "002768f69e6df8220e66a418304303ed67e705aec1f09e924f26d4f68d535550",
+      "bytes": 32425
+    },
+    {
+      "path": "workflow/knowledge-register/relationships.json",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "sha256": "32c0a8125abe1984d768e5dac5566093e8ae8eafcc5891cc4631200111a2a2fb",
+      "bytes": 25422
+    },
+    {
+      "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/knowledge.jsonl",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "sha256": "5a7a5649d7c5a5f1572061af4fa1c73bc0bf1d3505daf888497f1b19536963f6",
+      "bytes": 4023
+    },
+    {
+      "path": "workflow/knowledge-register/records/domain-DT01-context.json",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "sha256": "5ea794d14560ff5bdae1fe0a4392c0e4d64b3689073d162b445db8542b5811f0",
+      "bytes": 3073
+    },
+    {
+      "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/sri-methods-correction.patch",
+      "commit": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "sha256": "90b0946ec6e88a93098b6dda3f7813b12b29765c7633e3b9269753dc13e4ad11",
+      "bytes": 4784
+    }
+  ],
+  "limitations": [
+    "Only two selected normal reader openings; no full suite, gameplay, model or investigated source-program execution.",
+    "Existing source-checks will be consumed as saved evidence, not treated as independent re-execution of all20 checks.",
+    "Patch remains unapplied; regenerated SRI consumer rows were not executed or verified here.",
+    "Parent-reported41-test result and git-apply check were not independently rerun.",
+    "Historical screening provenance remains unresolved; successful retrieval and hash binding do not promote it to measured current truth."
+  ],
+  "patch_review": {
+    "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/sri-methods-correction.patch",
+    "sha256": "ff05d31da5e974f2c83e891b2e97fcf4a1ee21637ee192963e6533a5e64acde7",
+    "added_files": [
+      "workflow/inventories/sri/CURATED.json",
+      "scripts/build_sri.py"
+    ],
+    "changed_source_record_ids": [
+      "M-001",
+      "M-004"
+    ],
+    "added_content_lines": 3,
+    "removed_content_lines": 3,
+    "generator_change": "One attribution sentence: curated interpretations; pointer existence is not mathematical/experimental verification.",
+    "definition_characters": {
+      "M-001": 221,
+      "M-004": 292
+    },
+    "generator_definition_limit": 300,
+    "algebra": "At p=.5 with independent Bernoulli arms, N observations per arm: SE=100*sqrt(.5/N)pp; total T=2N:100/sqrt(T). Both supplied expressions are correct.",
+    "harm_counterexample": "CI[-1,+1]pp has lower<0 and does not establish harm. Correctly distinguished from operational stopping.",
+    "changes_game_policy_or_running_estimator": false,
+    "patch_applied": false,
+    "git_apply_check": "Parent reported passing; not rerun by this review.",
+    "prior_wording_issue": {
+      "line": 12,
+      "actual": "n>=1200 alone guarantees no power.",
+      "recommended": "n>=1200 alone does not guarantee a specified power.",
+      "reason": "Current wording can assert zero power rather than absence of a power guarantee; REVIEW.md lines49-50 states the intended scope correctly.",
+      "status": "RESOLVED_IN_FINAL_PATCH",
+      "repair_head": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a"
+    },
+    "reviewed_final_patch_head": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a",
+    "final_wording": "n>=1200 alone does not guarantee adequate power.",
+    "final_wording_present": true,
+    "definitions_fit_300_character_render_limit": true
+  },
+  "counters": {
+    "normal_reader_openings": 2,
+    "normal_reader_exit_zero": 2,
+    "scoped_preservation_assertions": 14,
+    "scoped_preservation_assertions_passed": 14,
+    "patch_source_record_changes": 2,
+    "patch_generator_attribution_line_changes": 1,
+    "full_suites_executed": 0,
+    "games": 0,
+    "model_provider_calls": 0,
+    "worktree_edits": 0,
+    "saved_opening_files_checked": 5,
+    "saved_opening_hashes_matched": 5,
+    "saved_opening_sizes_matched": 5,
+    "saved_openings_reproduced_byte_exact": 2,
+    "source_check_rows_consumed": 20,
+    "source_check_rows_reexecuted_in_this_checkpoint": 0
+  },
+  "evidence_carrier_head": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a",
+  "reader_sha256_at_evidence_carrier": "a90a72aae1bda46839be46b4eff0af5cb1f977a55251285289ca75a40afd3292",
+  "reader_unchanged": true,
+  "saved_opening_verification": {
+    "manifest_path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/opening-checks.json",
+    "manifest_sha256": "588645b7d84478895b2068124e00013a8a9cdb19262ab8735b10adcdde625f70",
+    "declared_source_head": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+    "declared_reader_sha256": "a90a72aae1bda46839be46b4eff0af5cb1f977a55251285289ca75a40afd3292",
+    "reader_binding_matches": true,
+    "files": [
+      {
+        "id": "finding:screening-calibration-context",
+        "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/finding-screening-calibration-context.txt",
+        "commit": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a",
+        "sha256": "3667cc795426ab50fe33b48bbaca04f8c7935124da2698fc079e7bd21d425edd",
+        "bytes": 12154,
+        "manifest_hash_matches": true,
+        "manifest_size_matches": true,
+        "manifest_return_code": 0,
+        "snapshot_header_matches": true,
+        "matches_independently_opened_bytes": null,
+        "within_default_14000_budget": true,
+        "line_endings_LF_only": true
+      },
+      {
+        "id": "measured:2:r-26d228663f13a885",
+        "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/measured-2-r-26d228663f13a885.txt",
+        "commit": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a",
+        "sha256": "ad40934e3145bf3b14fabffbf25ca924d57ad2d119ef45361df15609712b1b76",
+        "bytes": 3523,
+        "manifest_hash_matches": true,
+        "manifest_size_matches": true,
+        "manifest_return_code": 0,
+        "snapshot_header_matches": true,
+        "matches_independently_opened_bytes": true,
+        "within_default_14000_budget": true,
+        "line_endings_LF_only": true
+      },
+      {
+        "id": "domain_term:DT-01",
+        "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/domain_term-DT-01.txt",
+        "commit": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a",
+        "sha256": "e6ad3c03686fc2fdb1ad6d3326da1586f0c822df817d02a72a4aa9be1417f0e9",
+        "bytes": 5130,
+        "manifest_hash_matches": true,
+        "manifest_size_matches": true,
+        "manifest_return_code": 0,
+        "snapshot_header_matches": true,
+        "matches_independently_opened_bytes": true,
+        "within_default_14000_budget": true,
+        "line_endings_LF_only": true
+      },
+      {
+        "id": "hypothesis:HYP-B",
+        "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/hypothesis-HYP-B.txt",
+        "commit": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a",
+        "sha256": "fbf59007441a9f939fa531998380032b89b58e126ee30a50ca20a2ac953f19c0",
+        "bytes": 2077,
+        "manifest_hash_matches": true,
+        "manifest_size_matches": true,
+        "manifest_return_code": 0,
+        "snapshot_header_matches": true,
+        "matches_independently_opened_bytes": null,
+        "within_default_14000_budget": true,
+        "line_endings_LF_only": true
+      },
+      {
+        "id": "trace_source:SRC-C61",
+        "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/trace_source-SRC-C61.txt",
+        "commit": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a",
+        "sha256": "de5f02b89f079a38961d56cb998dfd3a30bc453321db78b8244e40a81ab465b0",
+        "bytes": 2708,
+        "manifest_hash_matches": true,
+        "manifest_size_matches": true,
+        "manifest_return_code": 0,
+        "snapshot_header_matches": true,
+        "matches_independently_opened_bytes": null,
+        "within_default_14000_budget": true,
+        "line_endings_LF_only": true
+      }
+    ]
+  },
+  "saved_source_check_verification": {
+    "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/source-checks.json",
+    "commit": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a",
+    "sha256": "c17e4ffcc6c32eede3214e31f70a424654c85bd6a00973dbee66ab2397a1b97a",
+    "rows": 20,
+    "recorded_hash_match_true": 20,
+    "recorded_locator_range_true": 20,
+    "source_identity_set_matches_independent_review": true,
+    "unique_identities": 20,
+    "independent_review_sha256": "7c1b477254faabfd787f6cc5cb42f416a794f8ca538b52833f607b0a987d19ec",
+    "interpretation": "Consumed 20 reported source-integrity checks and reconciled their exact path/commit identity set to the retained review. Did not rerun all20 source hash/locator checks; no semantic or scientific certification inferred."
+  },
+  "source_locators": [
+    {
+      "head": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "path": "scripts/research_memory.py",
+      "lines": [
+        25,
+        40,
+        490,
+        500
+      ]
+    },
+    {
+      "head": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "path": "workflow/canon/MEASURED-2026-08-06.md",
+      "lines": [
+        48,
+        56,
+        62
+      ]
+    },
+    {
+      "head": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "path": "workflow/inventories/DOMAIN-TERM-FIXTURE-REGISTER.json",
+      "json_pointer": "/rows/0"
+    },
+    {
+      "head": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "path": "workflow/knowledge-register/records/domain-DT01-context.json",
+      "lines": [
+        3,
+        12
+      ]
+    },
+    {
+      "head": "2a19ec09857d50674da44f8daa96f433d7a623c8",
+      "path": "workflow/knowledge-register/relationships.json",
+      "json_pointer": "/relationships/15"
+    },
+    {
+      "head": "5d180f406de37873a67ddb2bba097ac1ca8f2f1a",
+      "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/sri-methods-correction.patch",
+      "lines": [
+        8,
+        12,
+        23
+      ]
+    }
+  ],
+  "conclusion": "SCOPED_ACCEPTANCE: selected screening and DT01 retrieval retains source rows, scope and non-promotion caveats; saved opening hashes/counts reconcile; final unapplied patch corrects only M001/M004 curated inputs and generator attribution. Earlier ambiguous power wording is repaired. No material defect remains in the checked scope.",
+  "ended_utc": "2026-09-06T03:26:31.121759+00:00"
+}

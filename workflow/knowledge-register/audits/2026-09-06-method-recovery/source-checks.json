@@ -1,0 +1,122 @@
+[
+  {
+    "path": "workflow/canon/MEASURED-2026-08-06.md",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "workflow/research/2026-08-22-BREAKTHROUGH-VERIFICATION.md",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "ptcg-agent/experiments/analysis/2026-08-01-roach-aa-deff-probe-receipt.json",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "ptcg-agent/experiments/analysis/2026-08-01-roach-aa-deff-probe-VOID-shared-module.json",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "workflow/receipts/2026-08-02-aa-rebuild-physical-calibration-receipt-brock.md",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "ptcg-agent/experiments/analysis/2026-07-11-cg-seed-probe-misty.json",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "ptcg-agent/harness/probe_cg_seed.py",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "ptcg-agent/harness/aa_deff_probe.py",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "ptcg-agent/harness/aa_rebuild.py",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "ptcg-agent/harness/weighted_delta.py",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "workflow/canon/EQUATIONS.md",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "workflow/canon/EQUATIONS-AND-BOUNDS.md",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "workflow/canon/RETRACTIONS.md",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "workflow/AUDITOR-MEMO-TO-MASTER-2026-08-07.md",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "workflow/inventories/sri/CURATED.json",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "workflow/inventories/sri/registers/METHODS.md",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "workflow/inventories/sri/registers/CLAIMS.md",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "scripts/build_sri.py",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "workflow/ARTIFACT-CATALOG.jsonl",
+    "commit": "d5aa507323d40c8c4b63d4fad7d3a86c1267f4e7",
+    "hash_matches": true,
+    "locators_in_range": true
+  },
+  {
+    "path": "workflow/canon/EQUATIONS.md",
+    "commit": "b139264419ae61fdae5f86a7721d260fa15b6cbf",
+    "hash_matches": true,
+    "locators_in_range": true
+  }
+]
