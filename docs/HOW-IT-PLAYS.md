@@ -63,8 +63,10 @@ it as an inference because it is one.)
 
 Controlled experiments were run with a second, deliberately simple agent, derived
 from a public Mega Lucario ex sample kernel. **It is a separate product from the
-submitted Grimmsnarl agent**, and no experiment described in this repository was run
-on the submitted agent.
+submitted Grimmsnarl agent.** The counter-strategy experiments modified and measured
+this pilot only; the submitted agent was never their subject. It appears elsewhere in
+this repository as a fixed *opponent* — in the owned-student comparison — which is a
+different role.
 
 It scores every legal option and takes the best. The scores are a fixed ladder:
 abilities 30000, playing a Pokémon 20000, an unrecognised trainer card 10000,
@@ -93,21 +95,40 @@ Two changes were tested.
 **The card.** Xerosic's Machinations **reduces the opposing hand to three cards when it
 resolves**. That is a one-time discard on resolution, not a persistent cap: the opponent
 can replenish the hand on later turns, and Powerful Hand scales with whatever the hand
-holds at the moment it is used. The pilot plays the card for an accidental reason worth
-reporting: it has no case in the scoring ladder, so it falls through to the
-unrecognised-trainer default of 10000 — the highest rung in that block — and is played at
-the first legal opportunity, whether or not it discards anything. Measured: legal on 0.980
-occasions per game.
+holds at the moment it is used.
+
+The pilot ends up playing the card for an accidental reason worth reporting. Xerosic has
+no case of its own in the scoring ladder, so it falls through to the unrecognised-trainer
+default of 10000 — above Switch at 6000, Boss's Orders at 3200 and Carmine at 3000. Where
+it is legal and those are its competitors, the ladder ranks it above them, whether or not
+it would discard anything.
+
+Two limits on that sentence. First, the ranking is read from the pilot's scoring code at
+`rules_lucario.py:292-296`; **that source file is not included in this export**, so the
+reading cannot be checked here. Second, the associated measurement is
+**reachable ≈ 0.980 times per game** — an availability rate, not a count of plays and not
+a claim that the card was the option taken. Both come from the GR-91 row of
+[`workflow/ATTEMPTS-LEDGER.md`](../workflow/ATTEMPTS-LEDGER.md), which is the exact source
+and is in this repository; the ladder constants there are not otherwise verifiable from
+this tree.
 
 **The rule.** A targeting rule adds a bonus to attacking Abra or Kadabra, the
 50-HP and 80-HP stages before Alakazam, both of which the pilot can one-shot. The
 mechanism, as read from the code, is indirect: bench targets are only scored when the
 pilot can force a switch, which is exactly when it holds Boss's Orders — and the plan
-naming a bench target is what makes Boss's Orders worth playing. So the rule does
-not snipe the bench. **It gusts the pre-evolution into the Active spot and kills it
-there**, spending one of the deck's two Boss's Orders to do so. A first attempt to
-measure it looked at bench damage events, found zero in 400 games, and was wrong
-about the zone rather than the effect.
+naming a bench target is what makes Boss's Orders worth playing.
+
+So the rule is **not** a bench snipe. What it does is **raise the score of a
+gust-and-attack plan** — pull the pre-evolution into the Active spot with Boss's Orders,
+then attack it there — so that plan is more likely to outrank the alternatives. Whether it
+is actually chosen on any given turn depends on the legal options the engine offers and
+on the board state: the rule has to have a visible Abra or Kadabra to name, the pilot has
+to hold one of the deck's two Boss's Orders, and the resulting plan still has to score
+above everything else available. This is a change in preference, not a guaranteed
+sequence, and we have not measured how often the plan is taken.
+
+A first attempt to measure the rule looked at bench damage events, found zero in 400
+games, and was wrong about the zone rather than about the effect.
 
 ## What the panel does and does not say about the mechanism
 

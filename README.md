@@ -43,7 +43,7 @@ Mechanics: **[How it plays](docs/HOW-IT-PLAYS.md)**. Method and failures:
 | | What it is | Where it appears |
 |---|---|---|
 | **Submitted Grimmsnarl agent** | tetsutani's public Grimmsnarl ex Damage-Transfer Control kernel, used unmodified. Policy hash `c61e540b`, deck hash `92b92bac`. Not written by this project. | The Simulation-track submission. Leaderboard 2026-09-06: 834.0, rank 840 of 6,807 ([receipt](workflow/writeup/visuals-2026-09-06/COMPETITION-VERIFICATION.json)). |
-| **Experimental Lucario product** | A separate derivative of makthanithin's Apache-2.0 `community_1084` sample policy. The counter-strategy was built and measured **on this**, never on the submitted agent. | Every experiment in this repository. Its control arm is a Lucario baseline — **not** the submitted c61. |
+| **Experimental Lucario product** | A separate derivative of makthanithin's Apache-2.0 `community_1084` sample policy. The counter-strategy was built and measured **on this**, never on the submitted agent. | The Lucario counter-strategy experiments. Their control arm is a Lucario baseline — **not** the submitted c61. |
 | **Owned student** | A policy trained on this project's own data. Improved held-out imitation loss; won **23 of 1,200** decided games (1.92% [1.22, 2.86]) against exact c61. | [LEARNING-VERIFICATION.json](workflow/writeup/visuals-2026-09-06/LEARNING-VERIFICATION.json). Not fielded. |
 
 The submitted c61 later appears as an *opponent* in the student comparison. That is a

@@ -20,9 +20,8 @@ used with NO MODIFICATIONS.
     Identity:      policy hash c61e540b, deck hash 92b92bac
 
 MODIFICATIONS: NONE. Not one byte. We did not author this agent and we do not
-claim it. It was fielded deliberately as a fixed reference point so that our own
-measurements had a baseline that did not move. Every result in this repository
-that names "the fielded agent" means this kernel.
+claim it. Every result in this repository that names "the fielded agent" means
+this kernel.
 
 The original author does not endorse this project and bears no responsibility for
 it.
