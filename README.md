@@ -43,6 +43,11 @@ retained anything it learned on its own. The scope is the finding.
 Mechanics: **[How it plays](docs/HOW-IT-PLAYS.md)**. Method and failures:
 **[What we learned](docs/WHAT-WE-LEARNED.md)**.
 
+**Working on something similar?** [For researchers](docs/FOR-RESEARCHERS.md) is the honest
+inventory of what is reusable here: **44,400 game records with a data dictionary**, a
+TrueSkill rating model fitted on 9.5M rows, the closed lines with their scope guards, and a
+decoder for this repository's internal shorthand.
+
 ## Three different products, which must not be conflated
 
 | | What it is | Where it appears |
