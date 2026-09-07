@@ -1,0 +1,102 @@
+{
+  "schema": "ptcg.metrics_inventory/v1",
+  "stamped": "2026-08-11",
+  "rule": "Check RETRACTIONS before citing any metric. Equations live in workflow/canon/EQUATIONS.md.",
+  "metrics": [
+    {
+      "id": "M-MU",
+      "name": "ladder_mu",
+      "definition": "TrueSkill-like skill estimate on Kaggle",
+      "source": "workflow/canon/EQUATIONS.md",
+      "units": "mu",
+      "maturity_h": "85-100",
+      "notes": "frozen legs not observations"
+    },
+    {
+      "id": "M-SIGMA-DRAW",
+      "name": "sigma_draw_same_bytes",
+      "definition": "matched-maturity same-payload ladder spread",
+      "value": 27.5,
+      "source": "workflow/canon/EQUATIONS.md",
+      "units": "mu"
+    },
+    {
+      "id": "M-PP-TO-MU-CONSERVATIVE",
+      "name": "mu_per_pp_conservative",
+      "value": 5.45,
+      "source": "EQUATIONS b=217.55",
+      "use": "approval_pricing"
+    },
+    {
+      "id": "M-PP-TO-MU-SENSITIVITY",
+      "name": "mu_per_pp_sensitivity",
+      "value": 6.66,
+      "source": "EQUATIONS b=265.7",
+      "use": "show_alongside_not_alone"
+    },
+    {
+      "id": "M-LOCAL-WR",
+      "name": "local_win_rate",
+      "definition": "WR on fixed panel",
+      "use": "filter_only_until_M3",
+      "m3_gate": "workflow/inventories/M3-CALIBRATION-LEDGER.json"
+    },
+    {
+      "id": "M-REACH-GAME",
+      "name": "changing_game_reach",
+      "definition": "fraction of games where intervention changes at least one decision",
+      "bars": {"micro": 0.08, "high_mass": 0.20},
+      "use": "Stage-0 materiality"
+    },
+    {
+      "id": "M-REACH-DECISION",
+      "name": "decision_difference_rate",
+      "definition": "fraction of decisions where source differs from baseline",
+      "example": "tempo_33pct_functional"
+    },
+    {
+      "id": "M-ACTIVATION",
+      "name": "activation_counter",
+      "definition": "mechanism fired on ship path",
+      "use": "prove_not_vacuous"
+    },
+    {
+      "id": "M-AUC-OUTCOME",
+      "name": "value_outcome_auc",
+      "example_value": 0.86,
+      "use": "leaf_ranker_not_pure_BC",
+      "source": "owned deep audit reconciliation"
+    },
+    {
+      "id": "M-AUC-148-BC",
+      "name": "bc_auc_148d_wall",
+      "example_value": 0.744,
+      "use": "historical_apparatus_wall"
+    },
+    {
+      "id": "M-H2H-N1200",
+      "name": "exact_product_h2h",
+      "definition": "WR vs pinned opponent product n>=1200",
+      "use": "powered_compare"
+    },
+    {
+      "id": "M-INTERNAL-FILTER",
+      "name": "owned_vs_control_championship_filter",
+      "target_wr": 0.72,
+      "lb_floor": 0.65,
+      "note": "internal filter not official Kaggle threshold"
+    },
+    {
+      "id": "M-PAIR-MAX",
+      "name": "latest_two_max",
+      "definition": "scoreboard uses max of latest two ACTIVE",
+      "use": "portfolio"
+    },
+    {
+      "id": "M-CELL-HARM",
+      "name": "matchup_cell_harm",
+      "definition": "per-cell regression floors in panel design",
+      "source": "owned plan harm rules"
+    }
+  ]
+}

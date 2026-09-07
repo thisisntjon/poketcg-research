@@ -1,0 +1,53 @@
+{
+  "schema": "ptcg.championship_panel_pin/v1",
+  "stamped": "2026-08-11",
+  "status": "SEED_NOT_FROZEN",
+  "rule": "Freeze hashes before powered panels. No post-outcome cell deletion.",
+  "control": {
+    "id": "c61_tetsutani",
+    "role": "public_control",
+    "main_sha256": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8",
+    "deck_sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d"
+  },
+  "cells_proposed": [
+    {
+      "id": "control_c61",
+      "product": "tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control",
+      "lineage": "public_grimmsnarl_multi_source"
+    },
+    {
+      "id": "alakazam_prv",
+      "product": "tb_03a20f79_prvsiyan_alakazam_class",
+      "lineage": "alakazam",
+      "note": "Confirm exact sha at freeze from public_kernels"
+    },
+    {
+      "id": "crustle_prv",
+      "product": "tb_244eb8c6_crustle_class",
+      "lineage": "crustle"
+    },
+    {
+      "id": "lucario_or_steel",
+      "product": "lineage_distinct_third",
+      "lineage": "fighting_or_steel",
+      "note": "Prefer single-file foreign; avoid Kojimar hang class"
+    },
+    {
+      "id": "mirror_or_same_deck_policy",
+      "product": "same_deck_owned_vs_control_or_second_foreign",
+      "lineage": "policy_isolation"
+    }
+  ],
+  "design_rules": {
+    "seat_balance": true,
+    "lineage_diverse": true,
+    "band_pool_forbidden": true,
+    "harm_rules": "cell_harm_as_in_owned_plan",
+    "internal_filter_vs_control": "target_approx_72pct_with_LB_gt_65pct_is_filter_not_official"
+  },
+  "freeze": {
+    "frozen": false,
+    "frozen_utc": null,
+    "manifest_sha256": null
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schema": "ptcg.scientific_methodology_inventory/v1",
+  "stamped": "2026-08-14",
+  "note": "Catalog of verified external scientific methodologies, equations, target milestones, and license constraints. Do not issue work cards until the designated milestone.",
+  "methods": [
+    {
+      "id": "METH-EGTA-DECK",
+      "name": "empirical_game_theoretic_analysis",
+      "domain": "meta_game_theory",
+      "status": "APPROVED_FOR_REPORT",
+      "target_milestone": "September 13 Strategy Deliverable (20% Deck Chapter)",
+      "mathematical_formulation": "Zero-sum game linear program (max v s.t. M^T x >= v*1, sum(x)=1) + Replicator Dynamics (dx_i/dt = x_i[(Mx)_i - x^T M x]) over empirical archetype payoff matrix",
+      "primary_sources": [
+        "Wellman, M. P. (AAAI 2006): Methods for Empirical Game-Theoretic Analysis",
+        "Lanctot et al. (NeurIPS 2017): A Unified Game-Theoretic Approach to Multiagent Reinforcement Learning (PSRO)"
+      ],
+      "license_safety": {
+        "nashpy": "MIT (Approved for reference/vendoring)",
+        "OpenSpiel": "Apache-2.0 (Approved for methodology)",
+        "Gambit": "GPLv2 (Fenced: do not import code; use SciPy HiGHS LP solver)",
+        "implementation": "scipy.optimize.linprog (MIT-compatible in-repo)"
+      },
+      "actionable_use": "Proves field equilibrium deck mix and optimal counter-strategy from measured census without ad-hoc heuristic claims."
+    },
+    {
+      "id": "METH-PENTANOMIAL-SPRT",
+      "name": "fishtest_pentanomial_sprt",
+      "domain": "candidate_screening",
+      "status": "APPROVED_FOR_POST_BC0_EVAL",
+      "target_milestone": "Phase A3 Candidate Screening (eval.py / sprt.py)",
+      "mathematical_formulation": "Paired-game observation over {LL=0, LD=0.25, WL/DD=0.5, WD=0.75, WW=1.0}; Generalized SPRT LLR = (N/2)*ln[(s^2 + (x_bar - mu0)^2) / (s^2 + (x_bar - mu1)^2)]; Normalized Elo = (x_bar - 0.5)/s * (800 / ln(10))",
+      "primary_sources": [
+        "Van den Bergh, M. (2014): Generalized Sequential Probability Ratio Test for Fishtest",
+        "Stockfish Development Team: Stockfish Fishtest Pentanomial Model"
+      ],
+      "license_safety": {
+        "stockfish_fishtest": "GPLv3 (Fenced: clean-room mathematical implementation only; no code borrowing)",
+        "implementation": "ptcg-agent/harness/sprt.py clean-room implementation"
+      },
+      "actionable_use": "Captures paired-game win/loss covariance across identical seeds and eliminates draw-rate distortion during candidate filtering."
+    },
+    {
+      "id": "METH-AIVAT-CV",
+      "name": "aivat_control_variates",
+      "domain": "variance_reduction",
+      "status": "APPROVED_FOR_POST_STUDENT_EVAL",
+      "target_milestone": "Phase A3 RL Selfplay & Tournament Evaluation (post-BC0)",
+      "mathematical_formulation": "Unbiased outcome estimator Y* = Y - sum(V(s_t, a_t) - E_pi[V(s_t, a)]) - sum(V(s_t, c_t) - E_P[V(s_t, c)]); variance reduction factor = (1 - rho_{Y,V}^2)",
+      "primary_sources": [
+        "Burch, Schmid, Moravcik, Bowling (AAAI 2018): AIVAT: A New Variance Reduction Technique for Imperfect Information Games",
+        "Moravcik et al. (Science 2017): DeepStack: Expert-Level Artificial Intelligence in Heads-Up No-Limit Poker"
+      ],
+      "license_safety": {
+        "implementation": "Clean-room statistical estimator over owned value net"
+      },
+      "actionable_use": "Subtracts baseline state value expectations from match outcomes to reduce sample size requirements by 2-4x for statistical significance."
+    },
+    {
+      "id": "METH-BAYESIAN-DEAL",
+      "name": "hidden_hand_bayesian_inference",
+      "domain": "opponent_modeling",
+      "status": "APPROVED_FOR_TOKYO_KIT",
+      "target_milestone": "Post-Wall Advanced Kit (In-Person Finals / Best-of-3 Adaptation)",
+      "mathematical_formulation": "P(Deal D | History h) proportional to P(D) * prod_{t in opp turns} P(a_t | S_t, D); weighted ISMCTS rollout Q_hat(s, a) = sum(w_k * Q(s(D_k), a))",
+      "primary_sources": [
+        "Ginsberg, M. L. (JAIR 2001): GIB: Imperfect Information in a Computationally Challenging Game",
+        "Buro et al. (IJCAI 2009): Solving Skat Using Bayesian Determinization"
+      ],
+      "license_safety": {
+        "implementation": "Clean-room Bayesian importance sampler"
+      },
+      "actionable_use": "Replaces uniform random card shuffling with posterior deal sampling weighted by observed opponent play history."
+    },
+    {
+      "id": "METH-SAFE-EXPLOIT",
+      "name": "safe_opponent_exploitation_rnr",
+      "domain": "adaptive_play",
+      "status": "APPROVED_FOR_TOKYO_KIT",
+      "target_milestone": "Post-Wall Multi-Game Tournament Adaptation",
+      "mathematical_formulation": "Maximum safe deviation delta_exploit <= BankedSurplus / RemainingGames; Restricted Nash Response sigma_RNR = argmax_sigma u(sigma, sigma_opp_hat) s.t. min_sigma' u(sigma, sigma') >= v* - epsilon",
+      "primary_sources": [
+        "Ganzfried & Sandholm (ACM EC 2011): Game Theory-Based Opponent Modeling in Large Imperfect-Information Games",
+        "Johanson, Zinkevich, Bowling (AAMAS 2007): Response to Opponent Modeling in Imperfect Information Games"
+      ],
+      "license_safety": {
+        "implementation": "Clean-room regret-bounded deviation solver"
+      },
+      "actionable_use": "Bounds exploitative deviations against observed opponent tendencies to guarantee worst-case score does not drop below game value."
+    },
+    {
+      "id": "METH-CLARK-BIVARIATE",
+      "name": "clark_bivariate_normal_maximum",
+      "domain": "sequential_decision",
+      "status": "BANKED_IN_CANON",
+      "target_milestone": "Pre-Wall Decision Rules (workflow/canon/EQUATIONS.md)",
+      "mathematical_formulation": "E[max(X1, X2)] = mu1*Phi(alpha) + mu2*Phi(-alpha) + theta*phi(alpha), where theta = sqrt(sig1^2 + sig2^2 - 2*rho*sig1*sig2) and alpha = (mu1 - mu2)/theta",
+      "primary_sources": [
+        "Clark, C. E. (Operations Research, 1961): The Greatest of a Finite Set of Random Variables",
+        "Harter, H. L. (Biometrika, 1961): Expected Values of Normal Order Statistics"
+      ],
+      "license_safety": {
+        "implementation": "Closed-form formula documented in EQUATIONS.md"
+      },
+      "actionable_use": "Evaluates exact expected value of independent candidate fires versus duplicate submissions."
+    },
+    {
+      "id": "METH-CLOCK-INSTABILITY",
+      "name": "instability_scaled_time_budgeting",
+      "domain": "runtime_search",
+      "status": "APPROVED_FOR_AGENT_PACING",
+      "target_milestone": "Match Clock Optimization (ptcg-agent/agent/turnsearch.py)",
+      "mathematical_formulation": "T_move = (T_bank - T_reserve)/M_rem * (1 + kappa * exp(-|Q1 - Q2| / sigma_Q)) with hard reserve floor T_reserve = 15s",
+      "primary_sources": [
+        "Markovitch & Sella (AIJ 1996): Learning to Allocate Search Time in Real-Time Search",
+        "Cowling, Ward, Powley (IEEE TCIAIG 2012): Information Set MCTS in Card Games"
+      ],
+      "license_safety": {
+        "implementation": "ptcg-agent/agent/turnsearch.py"
+      },
+      "actionable_use": "Allocates search time dynamically, speeding through obvious decisions and spending deep time on pivotal branch points."
+    },
+    {
+      "id": "METH-PURE-PY-BITBOARD",
+      "name": "pure_python_bitboard_engine",
+      "domain": "engine_craft",
+      "status": "PERMANENTLY_REJECTED",
+      "target_milestone": "NONE (Fenced)",
+      "mathematical_formulation": "N/A",
+      "primary_sources": [
+        "Sunfish Chess Engine (GPLv3)"
+      ],
+      "license_safety": {
+        "status": "FENCED / FORBIDDEN"
+      },
+      "actionable_use": "REJECTED. Project policy strictly forbids replacing or rewriting the compiled organizer engine binding (agent/cg/)."
+    }
+  ]
+}

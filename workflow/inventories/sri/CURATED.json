@@ -1,0 +1,126 @@
+{
+  "schema": "ptcg.sri_curated/v1",
+  "note": "The ONLY hand-edited input to scripts/build_sri.py. Everything else in workflow/inventories/sri/ is generated from canonical sources and must not be edited by hand. Each entry names the source a reader can open to check it; the generator verifies every path exists at build time and records the blob.",
+  "project_summary": "An agent for the Pokemon TCG Kaggle competition (submissions closed 2026-08-16; the Strategy write-up is due 2026-09-13 23:59 UTC). Seven weeks of multi-agent research on how to make a card-game policy measurably stronger, most of it spent discovering how our own instruments lied. The inventory is the asset: the record of what was tried, why, how, what happened, and what it taught.",
+  "current_state": "Jon 2026-09-05: 'we are not continuing experiments until we know we can reliably learn from the ones we have done.' Games = 0 by directive. Live work is the inventory itself and the Strategy write-up derived from it. The last experiment (ASTRA, 2026-09-05) was a 40-game empty-bench screen with zero intervention reach, parked by its pre-registered rule.",
+  "five_things": [
+    {"what": "The instruments that lied", "path": "workflow/ATTEMPTS-LEDGER.md", "why": "Ten instruments each cost at least one false verdict (band-pool self-similarity, a ship path that never carried our knobs, underpowered n, a deck-clobber confound, a broken ladder log). Every earlier result must be read through this list."},
+    {"what": "The retraction register", "path": "workflow/canon/RETRACTIONS.md", "why": "Sixteen numbers and several claims that are still printed in this repo and must never be cited; machine-readable through scripts/retraction_register.py."},
+    {"what": "The dead-ends with scope guards", "path": "workflow/DEAD-ENDS.md", "why": "Thirteen closed lines, each with the exact claim the evidence supports and the claim it does NOT, so nobody retreads refuted ground or closes a door that was never shut."},
+    {"what": "Statistical methods and calibration limits", "path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md", "why": "The historical 120,000-game calibration has unresolved primary provenance; its table and scaling law differ. Read the recovered evidence and verified arithmetic before sizing a study. Neither n=400 nor n>=1200 alone determines adequate power."},
+    {"what": "Exact product identity", "path": "workflow/inventories/IDENTITY.json", "why": "Which bytes were submitted, which bytes are the experimental Parent, and that they differ; rendered from git, never remembered."}
+  ],
+  "a_assets": [
+    {"path": "START-HERE.md", "why": "The machine-checked onboarding path every seat reads first.", "next_action": "Add the one-line SRI pointer; keep under the onboarding byte budget."},
+    {"path": "workflow/NOW.md", "why": "The single current routing record; everything older is in history/.", "next_action": "Freshness stamp on the identity region (blueprint correction #9)."},
+    {"path": "workflow/canon/RETRACTIONS.md", "why": "The only source of truth for banned numbers and claims.", "next_action": "Every new retraction lands here in the same change that finds it."},
+    {"path": "workflow/DEAD-ENDS.md", "why": "Closed lines with scope guards and reopen conditions.", "next_action": "Re-verify A-rows against the 07-31 reclassification before the write-up cites them."},
+    {"path": "workflow/ATTEMPTS-LEDGER.md", "why": "Every lane tried, its result, and the instruments that lied; the harvest the registers are built from.", "next_action": "Keep §4 the experiment record complete: any run not here does not exist."},
+    {"path": "workflow/canon/MEASURED-2026-08-06.md", "why": "Historical 120k-game calibration claim; primary provenance remains unresolved in the recovered chain.", "next_action": "Read workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md before using its sizing numbers. Missing provenance does not prove the run never occurred."},
+    {"path": "workflow/canon/EQUATIONS-AND-BOUNDS.md", "why": "The statistical and ladder-physics canon: sizing, Wilson, break-even, attribution, PIMC variance, DAgger bounds.", "next_action": "Bind each equation to its implementation and test (METHODS register)."},
+    {"path": "workflow/canon/EQUATIONS.md", "why": "Verified ladder constants (b-curves, slot identities, field anchors).", "next_action": "Field anchors are snapshots; never cite without their stamp."},
+    {"path": "workflow/inventories/IDENTITY.json", "why": "Four product roles rendered from exact git bytes.", "next_action": "Resolve which Parent is of record (repo ee86a5de vs built 12f2aeba) with ASTRA."},
+    {"path": "workflow/DECISIONS.md", "why": "1,741 dated rulings with basis, confidence and reversal condition.", "next_action": "Post-08-13 decisions have no source file; recover them from the bus or mark absent."},
+    {"path": "workflow/canon/GRAVEYARD-INDEX.json", "why": "Thirty buried strategies with burial verdict, class and residual value.", "next_action": "Reconcile FALSE_NARRATIVE burials with DEAD-ENDS before the write-up."},
+    {"path": "workflow/inventories/TRIED-RESULTS-COMPACT.json", "why": "Compact tried-to-result index with class discipline (PHYSICS / SCARCITY / UNREAD / INSTRUMENT).", "next_action": "Add 'src' to the rows that predate the field."},
+    {"path": "workflow/inventories/HYPOTHESIS-KILL-CARDS.json", "why": "Kill cards: what was hypothesised, the evidence that killed it, and the scope.", "next_action": "Cross-link each card to its DEAD-ENDS or ledger row."},
+    {"path": "workflow/canon/SUPERSESSION-REGISTER.md", "why": "Which archive surfaces are still in the repo and what replaced them.", "next_action": "Append a row for every archive move (TOMBSTONES draws from it)."},
+    {"path": "workflow/writeup/APPENDIX.md", "why": "The write-up appendix generated from records; the write-up body must cite it, not restate it.", "next_action": "Fold the CLAIMS ids into every number the body uses."},
+    {"path": "workflow/ARTIFACT-CATALOG.jsonl", "why": "4,798 rows, one per tracked artifact and tool, the routing surface prior_art searches.", "next_action": "Advisory freshness; regenerate after every merge that adds artifacts."},
+    {"path": "scripts/prior_art.py", "why": "'Have we already done this?' over the artifact corpus and the registers; the compliance tool.", "next_action": "Make its use a required step before any new experiment is declared."},
+    {"path": "scripts/retraction_register.py", "why": "Machine reader of RETRACTIONS.md; the census reports who still cites a retracted token.", "next_action": "None."},
+    {"path": "scripts/context_pack.py", "why": "Generates the task-scoped context packet from exact receipts; the object under Subject 3 test.", "next_action": "Pass the six-question consumer test (Subject 3)."},
+    {"path": "scripts/build_sri.py", "why": "Generates this inventory layer from the sources above; the only path by which the registers change.", "next_action": "Run monthly and before every publish; gate with validate."}
+  ],
+  "d_do_not_resume": [
+    {"thing": "H + belief-PIMC search stack as a shipped product", "why": "Ladder 476-554 mu, below the borrowed rules bot; loses 20-0 same-deck (DEAD-ENDS A1). Scope guard: does NOT refute search as a mechanism class.", "source": "workflow/DEAD-ENDS.md", "date": "2026-07-28"},
+    {"thing": "V13 dormant search enabled as-is", "why": "Lost 24-0 to its own fallback (A2, SK-294). Citable ONLY as this implementation, as enabled.", "source": "workflow/DEAD-ENDS.md", "date": "2026-07-28"},
+    {"thing": "Full-policy imitation on the 148-feature representation", "why": "0.744 AUC wall (A3); a materially different representation reopens this claim only.", "source": "workflow/DEAD-ENDS.md", "date": "2026-07-28"},
+    {"thing": "Cross-archetype deck-swap probes on the ladder", "why": "Measured toxic on the ladder (mu 422) and actually shipped (A7). Within-family list work stays open.", "source": "workflow/DEAD-ENDS.md", "date": "2026-07-28"},
+    {"thing": "Representation re-architecture for this competition", "why": "Killed for this competition (A8); representation science in general is not closed.", "source": "workflow/DEAD-ENDS.md", "date": "2026-07-28"},
+    {"thing": "Band pool as a strength gate", "why": "Opponents piloted by our own heuristic measure self-similarity, 97-99% lineage ceiling; never reopen as primary instrument.", "source": "workflow/ATTEMPTS-LEDGER.md", "date": "2026-08-11"},
+    {"thing": "Harness-flag experiments on rules_lucario as ladder evidence", "why": "The submitted bundle read no config, env or flag; SW_* screens were 11 byte-equivalent arms (vacuous).", "source": "workflow/ATTEMPTS-LEDGER.md", "date": "2026-08-11"},
+    {"thing": "Reusing historical sample-size rules as universal guarantees", "why": "The old n=400 kill-only rule is historical; calibration provenance remains unresolved. n>=1200 alone does not establish adequate power. Specify the target effect, design, dependence and error criterion; operational stopping is not proof of inferiority.", "source": "workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md", "date": "2026-09-06"},
+    {"thing": "Elo-400 conversion", "why": "Retired: real c = 217.55; targets about 25% harder than estimated.", "source": "workflow/canon/EQUATIONS.md", "date": "2026-08-06"},
+    {"thing": "Home-grown liveness and staleness detectors", "why": "All two-strike dead (silent-seat inference, days_since_last_submit, substring liveness, hub worktree reads); read state via git show origin/main only.", "source": "workflow/ATTEMPTS-LEDGER.md", "date": "2026-08-11"},
+    {"thing": "Sim rank as a strength predictor", "why": "rho = -0.50 vs ladder, confounded; sim is a brokenness screen only, ladder-first doctrine.", "source": "workflow/ATTEMPTS-LEDGER.md", "date": "2026-08-11"},
+    {"thing": "'Identical bytes converge' as a ladder assumption", "why": "Falsified: identical products settle about 50 mu apart; sigma_draw = 27.5 persistent.", "source": "workflow/canon/EQUATIONS-AND-BOUNDS.md", "date": "2026-08-06"},
+    {"thing": "A second inventory system (YAML records + sqlite + a new command suite)", "why": "The same hypothesis was written six times (08-11, 08-14, 08-21, 08-23, 09-02, 09-05 blueprint); the measured cause of rediscovery is compliance, not storage. Extend the generators; do not build beside them.", "source": "workflow/research/2026-09-05-inventory-playbook/PLAN.md", "date": "2026-09-05"},
+    {"thing": "Retraction gates that block CI before the write-up deadline", "why": "Roadmap rule B-3: advisory or only-shrink until 2026-09-13; a hard gate on a 448-file citation set stalls the team.", "source": "workflow/research/2026-09-05-inventory-playbook/PLAN.md", "date": "2026-09-05"}
+  ],
+  "methods": [
+    {"id": "M-001", "name": "Standard error of a win-rate gap", "definition": "For independent Bernoulli arms at p=0.5 and N games per arm, SE(gap)=100*sqrt(0.5/N) pp. Total T=2N gives 100/sqrt(T). This is distinct from the historical empirical sigma law, whose primary provenance remains unresolved.", "source": "workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md", "implemented_in": "ptcg-agent/harness/aa_deff_probe.py", "test": "", "status": "algebra reviewed; historical calibration unresolved"},
+    {"id": "M-002", "name": "Minimum detectable effect at 80% power", "definition": "Historical table: 2.8 * sigma_delta gives 9.88pp at n=400, 7.06pp at n=1200 and 4.55pp at n=2400 per arm. Arithmetic reproduces; primary calibration provenance remains unresolved. The separate scaling law gives different values. These historical numbers are not a validated power design for a new experiment.", "source": "workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md", "implemented_in": "", "test": "", "status": "arithmetic reviewed; calibration unresolved; no current allocation"},
+    {"id": "M-003", "name": "Wilson score interval", "definition": "95% interval for a binomial proportion, z = 1.959963985", "source": "workflow/canon/EQUATIONS-AND-BOUNDS.md", "implemented_in": "ptcg-agent/harness/build_measurement_index.py", "test": "", "status": "live"},
+    {"id": "M-004", "name": "Kill-only screen rule", "definition": "Historical n=400 kill-only policy is not a universal inference rule. CI [-1,+1]pp has a negative lower bound but does not establish harm. Operational stopping and scientific refutation differ. Admission size needs a declared design and effect; n>=1200 alone does not guarantee adequate power.", "source": "workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md", "implemented_in": "", "test": "", "status": "algebra reviewed; historical calibration unresolved"},
+    {"id": "M-005", "name": "Ladder rating scale", "definition": "mu per +1pp win-rate: 5.45 (b = 217.55, conservative, use for approval); 6.66 sensitivity; 9.20 excluded. c = sqrt(2 beta^2 + sigma_1^2 + sigma_2^2) = 217.55 at the sigma floor 35", "source": "workflow/canon/EQUATIONS.md", "implemented_in": "", "test": "", "status": "live"},
+    {"id": "M-006", "name": "Promotion rule (three-leg foreign-policy panel)", "definition": ">=60% head-to-head at n>=400 on a lineage-diverse panel, no CI-separated loss, at least one CI-separated win; later amended: leg 1 Confirm-SPRT, legs 2-3 n>=1200 or a null control", "source": "workflow/LEARNINGS.md", "implemented_in": "", "test": "", "status": "proposed"},
+    {"id": "M-007", "name": "Between-batch variance", "definition": "tau = 1.18pp between batches of the same arm; a screen winner regresses toward it", "source": "workflow/ATTEMPTS-LEDGER.md", "implemented_in": "", "test": "", "status": "live"},
+    {"id": "M-008", "name": "Retraction check before citation", "definition": "every printed decimal or hash is looked up in the register's values table; a hit is RETRACTED, a miss is NOT a certificate", "source": "workflow/canon/RETRACTIONS.md", "implemented_in": "scripts/retraction_register.py", "test": "scripts/test_retraction_register.py", "status": "live"},
+    {"id": "M-009", "name": "Explicit state of an artifact", "definition": "a top-level status/verdict/state key in JSON, or a Verdict:/Status: line in a markdown head; fenced blocks and blockquotes are not declarations; two different declarations are a conflict (no state)", "source": "scripts/prior_art.py", "implemented_in": "scripts/prior_art.py", "test": "ptcg-agent/harness/test_prior_art_explicit_state.py", "status": "live"},
+    {"id": "M-010", "name": "Claim binding is nomination, not adjudication", "definition": "a number that matches an answer-map node is NAMED_BY(node:status), never SUPPORTED; only the register yields a verdict (RETRACTED)", "source": "scripts/writeup_gen.py", "implemented_in": "scripts/writeup_gen.py", "test": "ptcg-agent/harness/test_writeup_gen.py", "status": "live"}
+  ],
+  "claim_qualifications": [
+  {
+    "target_path": "workflow/NUMBERS-INVENTORY.md",
+    "target_line": 339,
+    "expected_claim": "100",
+    "expected_value": "~19.8 pp",
+    "evidence_path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md",
+    "evidence_sha256_lf": "6cc407b1ab50c2bad7df8d6cccb36f95cdf0b8a51a9876bf8129493e440b1eaf",
+    "note": "Historical sizing assertion, not a validated design for new experiments. Primary calibration provenance and sampling uncertainty remain unresolved; the table and separate scaling law differ. See the reviewed dispute before reuse."
+  },
+  {
+    "target_path": "workflow/NUMBERS-INVENTORY.md",
+    "target_line": 340,
+    "expected_claim": "**9.88 pp**",
+    "expected_value": "cannot resolve a 5–8 pp claim → **n=400 is KILL-ONLY, never promotes**",
+    "evidence_path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md",
+    "evidence_sha256_lf": "6cc407b1ab50c2bad7df8d6cccb36f95cdf0b8a51a9876bf8129493e440b1eaf",
+    "note": "Historical sizing assertion, not a validated design for new experiments. Primary calibration provenance and sampling uncertainty remain unresolved; the table and separate scaling law differ. See the reviewed dispute before reuse."
+  },
+  {
+    "target_path": "workflow/NUMBERS-INVENTORY.md",
+    "target_line": 341,
+    "expected_claim": "**7.06 pp**",
+    "expected_value": "the protocol floor; a clean 5 pp claim needs n≈2,400 (MDE 4.55 pp)",
+    "evidence_path": "workflow/knowledge-register/audits/2026-09-06-method-recovery/REVIEW.md",
+    "evidence_sha256_lf": "6cc407b1ab50c2bad7df8d6cccb36f95cdf0b8a51a9876bf8129493e440b1eaf",
+    "note": "Historical sizing assertion, not a validated design for new experiments. Primary calibration provenance and sampling uncertainty remain unresolved; the table and separate scaling law differ. See the reviewed dispute before reuse."
+  }
+],
+  "external_archive_observations": [
+  {
+    "archive_manifest": "D:/ptcg_archive/desktop/2026-09-05/manifest.json",
+    "sha256": "3af32acd1e8593489531b658fbea27b8991ddebf0f20187b0b8fca320582cedf",
+    "observed_at": "2026-09-06T12:44:22.443708+00:00",
+    "host": "SKYNET Windows",
+    "legacy_display": "0 items (see manifest)",
+    "limitation": "Legacy displayed count is not a verified archive file count. Manifest identity only; contents and restorability not verified by this observation."
+  },
+  {
+    "archive_manifest": "D:/ptcg_archive/holding/2026-09-05/manifest.json",
+    "sha256": "fa1886296f2de1d11124556ad82fab655ef2417f6842b4e080c4a9899740a9db",
+    "observed_at": "2026-09-06T12:44:22.444711+00:00",
+    "host": "SKYNET Windows",
+    "legacy_display": "6702 items (see manifest)",
+    "limitation": "Legacy displayed count is not a verified archive file count. Manifest identity only; contents and restorability not verified by this observation."
+  },
+  {
+    "archive_manifest": "D:/ptcg_archive/hub-toplevel/2026-09-05/manifest.json",
+    "sha256": "d55ccb0e0bcfb4114ec3fbe2dff1ce4dea4559ea35812a670a50c29bf38b2dfa",
+    "observed_at": "2026-09-06T12:44:22.445842+00:00",
+    "host": "SKYNET Windows",
+    "legacy_display": "0 items (see manifest)",
+    "limitation": "Legacy displayed count is not a verified archive file count. Manifest identity only; contents and restorability not verified by this observation."
+  },
+  {
+    "archive_manifest": "D:/ptcg_archive/hub-untracked/2026-09-05/manifest.json",
+    "sha256": "cbdbed0ee8de4d92ce279d25ed5cbd87aa530043de94fa39409ff5b584092aa9",
+    "observed_at": "2026-09-06T12:44:22.445842+00:00",
+    "host": "SKYNET Windows",
+    "legacy_display": "0 items (see manifest)",
+    "limitation": "Legacy displayed count is not a verified archive file count. Manifest identity only; contents and restorability not verified by this observation."
+  }
+]
+}

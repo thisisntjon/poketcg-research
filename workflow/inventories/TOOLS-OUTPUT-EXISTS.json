@@ -1,0 +1,86 @@
+{
+  "schema": "ptcg.tools_output_exists/v1",
+  "stamped": "2026-08-11",
+  "rule": "CODE EXISTS is not completion. Status requires last_output_path or explicit NEVER_RUN/OUTPUT_EXISTS.",
+  "tools": [
+    {
+      "id": "T-ORACLE",
+      "path": "ptcg-agent/harness/oracle_labeler.py",
+      "code_exists": true,
+      "output_status": "RAN_HISTORICALLY",
+      "last_output_summary": "PR #2161: 331 games, 44366 states; scoped lethal NO-RUNTIME-GAIN",
+      "consumer": "new_consumer_only_if_reopened",
+      "do_not_claim": "never_run"
+    },
+    {
+      "id": "T-TRAIN-BC",
+      "path": "ptcg-agent/harness/train_bc.py",
+      "code_exists": true,
+      "output_status": "HISTORICAL_CHECKPOINTS",
+      "consumer": "not_prewall_pure_BC_bronze"
+    },
+    {
+      "id": "T-DAGGER",
+      "path": "ptcg-agent/harness/dagger_relabel.py",
+      "code_exists": true,
+      "output_status": "TOOLING_READY",
+      "consumer": "exceed_teacher_lane"
+    },
+    {
+      "id": "T-SPRT",
+      "path": "ptcg-agent/harness/sprt.py",
+      "code_exists": true,
+      "output_status": "UNDERUSED_AS_GATE",
+      "consumer": "confirm_path"
+    },
+    {
+      "id": "T-EVAL",
+      "path": "ptcg-agent/harness/eval.py",
+      "code_exists": true,
+      "output_status": "HEAVILY_USED",
+      "consumer": "panels"
+    },
+    {
+      "id": "T-SELFPLAY",
+      "path": "ptcg-agent/harness/selfplay.py",
+      "code_exists": true,
+      "output_status": "USED",
+      "consumer": "fresh_owned_traces"
+    },
+    {
+      "id": "T-PREFLIGHT",
+      "path": "ptcg-agent/harness/preflight.py",
+      "code_exists": true,
+      "output_status": "USED",
+      "consumer": "bundle_gate"
+    },
+    {
+      "id": "T-CONTROLLER-SOURCE",
+      "path": "ptcg-agent/harness/controller_source_trial.py",
+      "code_exists": "check_codex_worktree",
+      "output_status": "FUNCTIONAL_AND_OR_STRENGTH_IN_FLIGHT",
+      "consumer": "diagnostic_only_rebuild_in_OWNED_CORE"
+    },
+    {
+      "id": "T-ONBOARD-CHECK",
+      "path": "scripts/onboard_check.py",
+      "code_exists": true,
+      "output_status": "CI",
+      "consumer": "onboarding_truth"
+    },
+    {
+      "id": "T-HARNESS-INDEX",
+      "path": "scripts/build_harness_index.py",
+      "code_exists": true,
+      "output_status": "GENERATES_HARNESS-INDEX.json",
+      "consumer": "path_inventory"
+    },
+    {
+      "id": "T-CONFIGCTL",
+      "path": "ptcg-agent/harness/configctl.py",
+      "code_exists": true,
+      "output_status": "USED",
+      "notes": "Vacuous if policy path ignores config"
+    }
+  ]
+}

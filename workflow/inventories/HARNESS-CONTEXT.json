@@ -1,0 +1,103 @@
+{
+  "schema": "ptcg.harness_context/v1",
+  "stamped": "2026-09-04",
+  "live_object": "THE UNCONSTRAINED AGENT (workflow/unconstrained-agent/STRATEGY-OF-RECORD.md). Lane 1: exact-action SELECT/EVALUATE reads on natural roots (root 1 COMPLETE, GR-97: evaluator resolves, Parent1 top; root 2 rerun). Lane 2 KILLED (GR-95). Selective complete-game caller exists (#3396), dose banked (GR-98). Read the one-screen table at the top of workflow/NOW.md for lanes, owners, authorized games and next event. No ladder work, no writeup work (Jon-Direct 2026-09-04).",
+  "instruction": "Load this object first. Follow load_order. Resolve the CURRENT LEAD and the CURRENT DISPATCH from the bus (git show origin/main:workflow/BUS.md | head -5, then the most recent DIRECTIVE/RULING post) — never from any file, including this one. Do not open workflow/PLAN.md, STRATEGY-NOW.md or full research trees unless a row points you there; they are history. Before opening ANY new lane: grep workflow/ATTEMPTS-LEDGER.md (newest GR rows first) + workflow/canon/RETRACTIONS.md — most questions are already answered. INVENTORY RULE (Jon 2026-09-04): work that is in git but not in the inventory does not exist — a PR that adds a top-level name registers it in workflow/PROJECT-CATALOG.json (CI ratchet: TRACKED-QUARANTINE-BASELINE.json may only shrink); a tool names its consumer; a finding is a ledger row + a receipt under ptcg-agent/experiments/analysis/ + a pointer from NOW.md.",
+  "superseded_live_objects": [
+    "H2 pc-gr11-h2 SEALED 2026-08-26 (not IMPROVED)",
+    "Lane S quota 2026-08-21 (wall passed)",
+    "rule portfolio P-A..P-D 2026-09-04 00:09Z (hand-written-rule lane CLOSED 03:20Z)"
+  ],
+  "mission": {
+    "north_star": "OWNED-CORE team-authored product at championship scale",
+    "simulation_wall": "2026-08-16T23:59Z",
+    "simulation_wall_status": "PASSED_AND_CLOSED — no new submission can ever enter; convergence grading only. Every quota/fire/slot instruction below or in older docs is ARCHIVE.",
+    "strategy_deadline": "2026-09-13",
+    "strategy_entry": "2026-09-06",
+    "three_live_doors": {
+      "_superseded_2026_09_04": "The three-doors framing (writeup / local train-eval / agent improvement) is history. Jon-Direct 2026-09-04: no ladder work, no writeup work. ONE door.",
+      "THE_DOOR_agent_improvement": "the unconstrained agent — workflow/unconstrained-agent/STRATEGY-OF-RECORD.md (objective, architecture, lanes, fence, out-of-scope) + the one-screen table at the top of workflow/NOW.md (lanes, owners, next event) + the current bus (resolve from origin/main workflow/BUS.md) for the live dispatch"
+    },
+    "c61_role": "borrowed_public_kernel_teacher_and_comparison_baseline",
+    "owned_factory": "lf_v2_parent_e2290d9c_not_fielded",
+    "lane_s_default": "RETIRED_2026-08-21_wall_passed",
+    "writeup_lane": "moved_to_Write-Up_workspace_2026-08-16"
+  },
+  "authority": {
+    "strategy_of_record": "workflow/unconstrained-agent/STRATEGY-OF-RECORD.md (binding; lead SKYNET, Jon-Direct 2026-09-04)",
+    "plan": "workflow/unconstrained-agent/PLAN.md (phased; Pivot 2 = inventory/refactor/context investigation)",
+    "foundational_evidence": "unconstrained-agent-vision/workflow/research/SYNTHESIS.md (Dual Ratchet: Actor-A / Coach-B / Oracle-O; report 06 falsifies omniscient imitation) — evidence base, not operational authority",
+    "hub_now": "workflow/NOW.md",
+    "hub_now_note": "read the one-screen table at the top only; everything below it is dated history",
+    "hub_truth": "workflow/canon/CURRENT-TRUTH.json",
+    "current_lead": "RESOLVE FROM THE BUS — never from a file",
+    "history_not_authority": [
+      "workflow/WINNING-STRATEGY-ARCHITECTURE.md (08-13)",
+      "workflow/OWNED-LEARNING-LOOP-ROADMAP.md (08-15)",
+      "Desktop/PK-squads/codexstrategy/workflow/PLAN.md (host-local, unreachable from a clone)",
+      "workflow/PLAN.md (123 KB campaign overlay; becomes a pointer)"
+    ],
+    "repo_plan_of_record": "workflow/unconstrained-agent/STRATEGY-OF-RECORD.md"
+  },
+  "load_order": [
+    "workflow/inventories/HARNESS-CONTEXT.json",
+    "workflow/NOW.md (the one-screen table at the top ONLY; everything below it is dated history)",
+    "workflow/unconstrained-agent/STRATEGY-OF-RECORD.md",
+    "the current bus: git show origin/main:workflow/BUS.md | head -5, then the newest DIRECTIVE/RULING and any post addressed to you",
+    "workflow/canon/RETRACTIONS.md (table only) before quoting any number",
+    "workflow/inventories/MASTER-INVENTORY-INDEX.json -> one child inventory for your task; workflow/inventories/TRACKED-QUARANTINE-BASELINE.json is the inventory debt list",
+    "workflow/ATTEMPTS-LEDGER.md by grep on the newest GR ids only (never read linearly: 271 KB)"
+  ],
+  "load_order_note_2026_09_04": "Investigation 2 / I2 measured the previous chain at 426 KB (~106k tokens) with zero bytes of agent code in it; the items above are what a seat needs today (~37 KB). MAP-VIEW.md (08-24) and the answer map are history unless a row points at them.",
+  "answer_map_note_2026_08_24": "MAP-VIEW.md is the generated one-screen view of workflow/answer-map/MAP.json (the machine truth: every claim on the path to an improving agent, with status/receipt/owner). READ THE 'NEXT ACTION' LINE, not the frontier table's first row: the frontier is DEPTH-ordered (nearest the root), NOT priority-ordered, and its top row can be a node blocked by a disjunctive dependency the schema cannot encode. Measured 2026-08-24 by cold-start quiz (8/10): a fresh seat routed off the frontier's first row does the wrong work. Regenerate with `python scripts/map_render.py`; validate with `python scripts/map_validate.py` (both live on origin/main - a stale hub checkout will not have them; fetch first).",
+  "load_order_note_2026_08_21": "P0-SLA-BOARD.json and PRODUCT-PASSPORT.json rows were closed on origin by PRs #2862/#2864/#2866/#2867 (see CURRENT-TRUTH.closed_today). Do NOT treat their open-looking cells as today's queue and do NOT refill them — that is the documented repeat-work failure mode.",
+  "operating_rules": [
+    "CODE_EXISTS_is_not_OUTPUT_EXISTS",
+    "P0_starts_in_cost_window_or_rerank",
+    "positive_result_named_consumer_within_72h",
+    "lane_s_and_lane_o_do_not_share_strength_claims",
+    "no_search_until_leaf_ranking_gate",
+    "no_public_policy_live_fallback_in_OWNED_CORE",
+    "do_not_delete_docs_archive_only",
+    "hub_working_copy_is_not_authority"
+  ],
+  "p0_ids": [
+    "R-P0-1",
+    "R-P0-8",
+    "R-P0-3",
+    "R-P0-5",
+    "R-P0-6",
+    "R-DOMAIN-1",
+    "R-P0-7"
+  ],
+  "p0_status_source": "workflow/inventories/P0-SLA-BOARD.json",
+  "do_not": [
+    "protect_c61_as_win",
+    "sit_on_nonbronze_borrowed_pair",
+    "treat_unused_quota_as_prudence",
+    "cite_v000_or_Lucario_as_live_pair",
+    "pure_BC_bronze",
+    "weak_leaf_search_revival",
+    "micro_rules_on_public_base",
+    "broad_new_labeling",
+    "treat_bus_probe_as_promotion"
+  ],
+  "inventory_root": "workflow/inventories/",
+  "archive_policy": "workflow/canon/ARCHIVE-POLICY.md",
+  "identity": {
+    "note": "rendered by scripts/render_identity.py from workflow/inventories/IDENTITY.json; do not hand-edit",
+    "identity_json": "workflow/inventories/IDENTITY.json",
+    "experimental_parent_repo_main_py_sha256": "ee86a5debc1db030458cdbfacd563b5bb17b9a9650eca811769db8d91cc16f56",
+    "experimental_parent_repo_ref": "origin/main@bb9e31fcf0a0",
+    "experimental_parent_built_main_py_sha256": "12f2aebab246cd3f4d0cc5a3ae1a92e57c8f8e6f913d2b6c75864e769ba0f3b7",
+    "repo_vs_built": {
+      "main_py": "MISMATCH",
+      "deck_csv": "MATCH",
+      "note": "the coached Parent is a BUILT ASSET (its tree is not the repo file set); a MISMATCH on main.py means the repo copy at --repo-ref and the built copy differ -- name both, never one"
+    },
+    "opponent_yardstick_main_py_sha256": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8",
+    "submitted_product": "tetsutani_c61_grimmsnarl",
+    "owned_factory_parent": "lf_v2_factory_parent_e2290d9c_not_fielded",
+    "proposed_student": null
+  }
+}

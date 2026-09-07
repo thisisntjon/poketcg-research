@@ -1,0 +1,64 @@
+{
+  "schema": "ptcg.m3_calibration_ledger/v1",
+  "stamped": "2026-08-11",
+  "status": "INSUFFICIENT_DATA",
+  "question": "Does local panel ranking correlate with ladder ordering for identity-matched products?",
+  "method": {
+    "name": "M3_local_ladder_rank_correlation",
+    "games_required": 0,
+    "inputs": [
+      "identity-matched local eval WRs or scores",
+      "ladder mature reads for same product identity",
+      "maturity filter >=85h",
+      "exclude frozen/dethroned pre-maturity legs"
+    ],
+    "outputs": [
+      "Spearman_or_Kendall_rho",
+      "n_pairs",
+      "exclusions_list",
+      "allowed_claims_text"
+    ]
+  },
+  "prior_belief": {
+    "historical_claim": "local may invert ladder (e.g. deck-swap local+ ladder-)",
+    "rho_negative_example": "reported rho=-0.50 at n=5 in external synthesis — UNIDENTIFIED; do not cite as this compute",
+    "pool_bias": "Grimmsnarl underrepresented in some practice pools vs field"
+  },
+  "result": {
+    "computed": false,
+    "rho": null,
+    "n": 0,
+    "ci": null,
+    "receipt_path": "workflow/receipts/2026-08-15-R-P0-8-m3-skynet.md",
+    "computed_utc": "2026-08-15T18:25:00Z",
+    "admitted_pairs": [],
+    "exclusions": [
+      "v0_54476582_UNKNOWN_JOIN",
+      "v1_54484582_ERRORED",
+      "v1.1_54485057_SKIP_BOT",
+      "v2_54503857_SKIP_BOT",
+      "v2.1_54510010_LABEL_ONLY_AND_LT_85H",
+      "generic_54558877_IDENTITY_MISMATCH",
+      "parity_54561875_NO_LOCAL_RANKING_WR",
+      "wallC_54752809_NO_SEALED_IDENTITY_PANEL_WR",
+      "community1084_54771748_LOCAL_PROVENANCE_HAZARD",
+      "floor_54871318_54871322_NO_NEW_LOCAL_WR",
+      "deckswap_54802103_PREFIX_ONLY",
+      "55032423_FROZEN_PRE_MATURITY",
+      "V13_55034300_NO_PAIRED_LOCAL_WR",
+      "roman_a81eab3e_NO_PAIR_FILED",
+      "lf_v2_e2290d9c_UNFIELDED",
+      "c61_archive_46bb3180_x_mirror_block_variance_NOT_RANKING_WR"
+    ],
+    "allowed_claims_text": "No rho. Local numbers remain mechanical screens / catastrophe veto only. Forbidden: ship_on_local_WR_alone; cite_local_as_mu; cite historical rho=-0.50 as measured."
+  },
+  "disposition": {
+    "home_ladder_may_decide": "NO",
+    "allowed_uses_if_rho_positive": ["rank_order_screens", "kill_clear_negatives"],
+    "forbidden_if_rho_null_or_negative": ["ship_on_local_WR_alone", "cite_local_as_mu"]
+  },
+  "consumer": "championship_panel_trust + Phase1_2 screens",
+  "owner": "skynet",
+  "lease": "5303489424",
+  "sla_start": "immediate_zero_game"
+}

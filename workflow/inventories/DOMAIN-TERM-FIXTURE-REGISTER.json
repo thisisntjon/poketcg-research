@@ -1,0 +1,164 @@
+{
+  "schema": "ptcg.domain_term_fixture_register/v1",
+  "stamped": "2026-08-15",
+  "status": "DT01_FIXTURED_DEFAULT_OFF_REST_SPEC_ONLY",
+  "rule": "Each research term must become fixtures+score code or formal WONT_USE within 72h of being marked ACTIVE.",
+  "rows": [
+    {
+      "id": "DT-01",
+      "term": "prize_differential",
+      "source": "workflow/research/16-prize-race-strategies.md",
+      "phase": ["CONVERT", "CLOSE"],
+      "status": "FIXTURED_DEFAULT_OFF",
+      "fixture_path": "ptcg-agent/harness/fixtures/dt01_prize_differential.json",
+      "code_path": "ptcg-agent/learning_factory/prize_differential.py",
+      "consumer": "OWNED-CORE leaf",
+      "notes": "Engine-free Law-21 OFF-fails/ON-passes fixture. Not imported by agent/main.py. Not a POLICY flip."
+    },
+    {
+      "id": "DT-02",
+      "term": "ko_trade_expectation",
+      "source": "workflow/research/16-prize-race-strategies.md",
+      "phase": ["MAP_DAMAGE", "CONVERT"],
+      "status": "SPEC_ONLY",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "OWNED-CORE leaf"
+    },
+    {
+      "id": "DT-03",
+      "term": "liability_exposure_penalty",
+      "source": "workflow/research/16-prize-race-strategies.md",
+      "phase": ["DEFEND", "MAP_DAMAGE"],
+      "status": "SPEC_ONLY",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "OWNED-CORE leaf"
+    },
+    {
+      "id": "DT-04",
+      "term": "attach_late_sequencing",
+      "source": "workflow/research/06-human-ptcg-mastery.md",
+      "phase": ["DEVELOP"],
+      "status": "SPEC_ONLY",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "OWNED-CORE sequencing"
+    },
+    {
+      "id": "DT-05",
+      "term": "info_before_commit",
+      "source": "workflow/research/06-human-ptcg-mastery.md",
+      "phase": ["SETUP", "DEVELOP"],
+      "status": "SPEC_ONLY",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "OWNED-CORE sequencing"
+    },
+    {
+      "id": "DT-06",
+      "term": "target_selection_priority",
+      "source": "workflow/research/15-winning-agent-design.md",
+      "phase": ["MAP_DAMAGE", "CONVERT"],
+      "status": "SPEC_ONLY",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "OWNED-CORE targeting"
+    },
+    {
+      "id": "DT-07",
+      "term": "value_function_nine_terms",
+      "source": "workflow/research/15-winning-agent-design.md",
+      "phase": ["ALL"],
+      "status": "SPEC_ONLY",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "OWNED-CORE leaf vector"
+    },
+    {
+      "id": "DT-08",
+      "term": "ex_immunity_no_damage_dex",
+      "source": "workflow/research/18-ex-immunity-walls.md",
+      "phase": ["MAP_DAMAGE"],
+      "status": "SPEC_ONLY",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "OWNED-CORE targeting",
+      "notes": "Risk of dead code if not read by scorer"
+    },
+    {
+      "id": "DT-09",
+      "term": "alakazam_single_prize_math",
+      "source": "workflow/research/19-single-prize-combo.md",
+      "phase": ["CONVERT", "ROUTE"],
+      "status": "SPEC_ONLY",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "matchup plan"
+    },
+    {
+      "id": "DT-10",
+      "term": "opponent_exploit_maps",
+      "source": "workflow/research/14-opponent-study.md",
+      "phase": ["ROUTE"],
+      "status": "SPEC_ONLY",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "router",
+      "notes": "Public-visible only; no hidden-info claims"
+    },
+    {
+      "id": "DT-11",
+      "term": "same_list_attach_rate_delta",
+      "source": "workflow/research/2026-08-10-competitor-replay-gap.md",
+      "phase": ["DEVELOP"],
+      "status": "MEASURED_NOMINATION",
+      "evidence": "+7.6pp attach when legal vs c61",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "OWNED-CORE resource ordering"
+    },
+    {
+      "id": "DT-12",
+      "term": "same_list_retreat_rate_delta",
+      "source": "workflow/research/2026-08-10-competitor-replay-gap.md",
+      "phase": ["DEVELOP", "DEFEND"],
+      "status": "MEASURED_NOMINATION",
+      "evidence": "+2.5pp retreat when legal",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "OWNED-CORE active management"
+    },
+    {
+      "id": "DT-13",
+      "term": "attacker_line_conditional_logic",
+      "source": "workflow/IMPROVEMENT-INVENTORY.md#30",
+      "phase": ["DEVELOP", "CONVERT"],
+      "status": "DOCTRINE",
+      "fixture_path": null,
+      "code_path": null,
+      "consumer": "phase transitions"
+    },
+    {
+      "id": "DT-14",
+      "term": "config_POLICY_V2_prize_map_weights",
+      "source": "ptcg-agent/agent/config.py",
+      "phase": ["ALL"],
+      "status": "CODE_EXISTS_DEFAULT_OFF",
+      "code_path": "ptcg-agent/agent/config.py",
+      "fixture_path": null,
+      "consumer": "OWNED-CORE if selected",
+      "notes": "Must be on ship path if used"
+    },
+    {
+      "id": "DT-15",
+      "term": "op_router_public_visible",
+      "source": "workflow/IMPROVEMENT-INVENTORY.md#68",
+      "phase": ["ROUTE"],
+      "status": "PARTIAL_E1A",
+      "code_path": "ship_kernels v001 observed_ids",
+      "fixture_path": null,
+      "consumer": "OWNED-CORE router"
+    }
+  ]
+}

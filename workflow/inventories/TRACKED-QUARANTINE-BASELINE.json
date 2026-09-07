@@ -1,0 +1,27 @@
+{
+  "schema": "ptcg.tracked_quarantine_baseline/v1",
+  "policy": "ratchet: names may only be REMOVED (by registering them in PROJECT-CATALOG.json or by git rm). A new tracked top-level name that is not catalogued fails CI (exit 4).",
+  "tracked_quarantine": [
+    ".runner_curve_checkpoint.json",
+    "_status_push",
+    "brock_inbox_watcher.ps1",
+    "brock_timed_wake.ps1",
+    "climbingtheleaderboard.md",
+    "episodes",
+    "experiments",
+    "intel.db",
+    "M4-ENTRANT-MANIFEST.json",
+    "MEMORY.md",
+    "PLAN - READ ONLY DO NOT DELETE OR MODIFY.md",
+    "Pokemon-OFFLINE",
+    "Policy Study",
+    "PTCG_HANDOFF_MEMO_2026-08-08.md",
+    "PTCG_SEQ-808_JON_GAMES_AUTHORIZATION_2026-08-08.md",
+    "PTCG_SOL_VALUE_ASSESSMENT_2026-08-08.md",
+    "reconciliation_output.md",
+    "RESUME-HERE-2026-08-08.md",
+    "test_live.json",
+    "test_replays.json",
+    "throughput_receipt.json"
+  ]
+}

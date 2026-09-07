@@ -1,0 +1,37 @@
+{
+  "schema": "ptcg.exploration_jobs_status/v1",
+  "stamped": "2026-08-11",
+  "rule": "Finish outcome-disciplined. Do not block OWNED-CORE. Positive mechanisms rebuild in owned policy.",
+  "jobs": [
+    {
+      "id": "JOB-SOURCE-CENSUS",
+      "host": "roach_or_skynet",
+      "question": "Which alternate decision sources reach and change final actions?",
+      "role": "diagnostic",
+      "blocks_owned_core": false,
+      "status": "RUNNING_OR_CHECK",
+      "output_path": null,
+      "if_positive": "compile_into_OWNED_CORE_scorer",
+      "if_null_or_harm": "close_source_family"
+    },
+    {
+      "id": "JOB-STRENGTH-PANEL",
+      "host": "skynet_or_codex",
+      "question": "Do source differences help or harm on public base?",
+      "role": "diagnostic",
+      "blocks_owned_core": false,
+      "status": "RUNNING_OR_CHECK",
+      "design_n": 159600,
+      "outcomes": "withheld_until_complete",
+      "output_path": null,
+      "if_positive": "rebuild_mechanism_in_OWNED_CORE",
+      "if_harm": "do_not_ship_public_selector"
+    },
+    {
+      "id": "JOB-SETUP-ACTIVE",
+      "status": "CLOSED",
+      "blocks_owned_core": false,
+      "notes": "No arm advances"
+    }
+  ]
+}

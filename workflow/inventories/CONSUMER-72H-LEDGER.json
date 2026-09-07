@@ -1,0 +1,95 @@
+{
+  "schema": "ptcg.consumer_72h_ledger/v1",
+  "stamped": "2026-08-15",
+  "rule": "Every positive result must name owner, consumer path, and deadline within 72h. CODE EXISTS is not enough.",
+  "rows": [
+    {
+      "id": "C72-001",
+      "result": "identity_embeddings_+25.6pp_offline",
+      "status": "CONSUMER_OVERDUE_OR_MISSING",
+      "owner": null,
+      "consumer_path": "OWNED-CORE identity leaf (R-L1-D)",
+      "deadline_utc": null,
+      "closed": false
+    },
+    {
+      "id": "C72-002",
+      "result": "same_list_attach_retreat_deltas",
+      "status": "OPEN",
+      "owner": null,
+      "consumer_path": "DOMAIN-TERM-FIXTURE DT-11/12 + OWNED-CORE scorer",
+      "deadline_utc": null,
+      "closed": false
+    },
+    {
+      "id": "C72-003",
+      "result": "value_outcome_AUC_0.86",
+      "status": "OPEN",
+      "owner": null,
+      "consumer_path": "strong leaf ranker test (not pure BC)",
+      "deadline_utc": null,
+      "closed": false
+    },
+    {
+      "id": "C72-004",
+      "result": "oracle_labeler_331g_44366_states",
+      "status": "PARTIAL_CONSUMED",
+      "owner": null,
+      "consumer_path": "NO-RUNTIME-GAIN on scoped lethal; need new consumer if reopened",
+      "notes": "Do not claim never-run",
+      "closed": false
+    },
+    {
+      "id": "C72-005",
+      "result": "controller_source_functional_pass_tempo_mirror",
+      "status": "OPEN",
+      "owner": null,
+      "consumer_path": "rebuild mechanisms into OWNED-CORE (not ship public selector)",
+      "deadline_utc": null,
+      "closed": false
+    },
+    {
+      "id": "C72-006",
+      "result": "E1a_observed_opponent_ids",
+      "status": "PARTIAL",
+      "owner": null,
+      "consumer_path": "OWNED-CORE router reader",
+      "deadline_utc": null,
+      "closed": false
+    },
+    {
+      "id": "C72-007",
+      "result": "product_passport_frozen_59_files_855dc79e",
+      "status": "CLOSED",
+      "owner": "skynet",
+      "consumer_path": "workflow/inventories/PRODUCT-PASSPORT.json",
+      "deadline_utc": "2026-08-15T23:59:00Z",
+      "closed": true,
+      "notes": "PR #2866. Extend only when product files change."
+    },
+    {
+      "id": "C72-008",
+      "result": "M3_insufficient_data_n0",
+      "status": "CLOSED",
+      "owner": "skynet",
+      "consumer_path": "workflow/inventories/M3-CALIBRATION-LEDGER.json",
+      "deadline_utc": "2026-08-15T23:59:00Z",
+      "closed": true,
+      "notes": "PR #2862. Local may kill; cannot cite as ladder mu."
+    },
+    {
+      "id": "C72-009",
+      "result": "DT01_prize_differential_Law21_fixture",
+      "status": "CLOSED",
+      "owner": "roach",
+      "consumer_path": "ptcg-agent/harness/fixtures/dt01_prize_differential.json",
+      "deadline_utc": "2026-08-15T23:59:00Z",
+      "closed": true,
+      "notes": "PR #2864. Default OFF. Not the first RL child."
+    }
+  ],
+  "how_to_add": {
+    "when": "any measured positive or FUNCTIONAL_PASS",
+    "fields": ["result", "owner", "consumer_path", "deadline_utc_now_plus_72h"]
+  }
+}

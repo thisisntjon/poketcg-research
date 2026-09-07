@@ -1,0 +1,118 @@
+{
+  "schema": "ptcg.identity/v1",
+  "generated_from": {
+    "repo_ref": "origin/main",
+    "repo_sha": "bb9e31fcf0a07227f603d1eda9751beca8767bbe",
+    "receipt_ref": "origin/codex/astra-context-roadmap-review",
+    "receipt_path": "ptcg-agent/experiments/analysis/2026-09-05-astra-empty-bench-cycle.json",
+    "truth_stamp": "2026-09-04",
+    "passport_stamp": "2026-08-16T03:30:00Z",
+    "tool": "scripts/render_identity.py"
+  },
+  "roles": {
+    "experimental_parent": {
+      "what": "the Parent ASTRA coaches; POLICY=rules_lucario, every experimental flag OFF",
+      "repo_tuple": {
+        "ptcg-agent/agent/main.py": {
+          "sha256": "ee86a5debc1db030458cdbfacd563b5bb17b9a9650eca811769db8d91cc16f56",
+          "blob": "e7fe8ed2ae54a95e17b9e295d7e7e6c2ec8f5da9",
+          "source": "origin/main@bb9e31fcf0a0:ptcg-agent/agent/main.py"
+        },
+        "ptcg-agent/agent/deck.csv": {
+          "sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+          "blob": "d1d3602207eb8c3697b75cdfb58811b9d78c6c6b",
+          "source": "origin/main@bb9e31fcf0a0:ptcg-agent/agent/deck.csv"
+        },
+        "ptcg-agent/agent/rules_lucario.py": {
+          "sha256": "1cb60b171d3bb71172c134048b45ee0490dca269e5440f8bb7a3d8deb83b21be",
+          "blob": "61b271f91095cedf7e2e19b1e1d20ce1c4719457",
+          "source": "origin/main@bb9e31fcf0a0:ptcg-agent/agent/rules_lucario.py"
+        },
+        "ptcg-agent/agent/view.py": {
+          "sha256": "30bb6e70b5baf0d148e389e9bf58b926cfec264e54bc3be161d1828de7dd6c12",
+          "blob": "66e82dfbe325eef0d17c4db6f800b0a5f0b7a91b",
+          "source": "origin/main@bb9e31fcf0a0:ptcg-agent/agent/view.py"
+        },
+        "ptcg-agent/agent/value_net.py": {
+          "sha256": "42bbea2382e55e22238842f8bddd92dc436384385332eb508cb3820df478c414",
+          "blob": "95947d68b3b49ef484fa06c367a10c8ee3aea7ea",
+          "source": "origin/main@bb9e31fcf0a0:ptcg-agent/agent/value_net.py"
+        }
+      },
+      "built_tuple": {
+        "available": true,
+        "source": "origin/codex/astra-context-roadmap-review@883ec6d43838:ptcg-agent/experiments/analysis/2026-09-05-astra-empty-bench-cycle.json",
+        "receipt_blob": "69aac7fba24103c5a3ed33e7191cbc6d770832b0",
+        "receipt_status": "NATIVE_COMPLETE_ZERO_REACH_NO_STRENGTH_CLAIM",
+        "source_head": null,
+        "parent": {
+          "source_root": "D:\\ptcg_selfplay\\astra\\coach-game-001.assets\\parent",
+          "main_sha256": "12f2aebab246cd3f4d0cc5a3ae1a92e57c8f8e6f913d2b6c75864e769ba0f3b7",
+          "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+          "tree_sha256": "6018be6f9c3da5dea3a105781c027fc96cbf83fba17866ec37fb7bd303a20532",
+          "tree_member_count": 66
+        },
+        "opponent": {
+          "source_root": "D:\\ptcg_selfplay\\astra\\coach-game-001.assets\\opponent",
+          "main_sha256": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8",
+          "deck_sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+          "tree_sha256": "e5ff888c03b0b90c0344e51d28b18dab945cf6998cc679b495684ac3eb37d072",
+          "tree_member_count": 187
+        }
+      },
+      "repo_vs_built": {
+        "main_py": "MISMATCH",
+        "deck_csv": "MATCH",
+        "note": "the coached Parent is a BUILT ASSET (its tree is not the repo file set); a MISMATCH on main.py means the repo copy at --repo-ref and the built copy differ -- name both, never one"
+      }
+    },
+    "opponent_yardstick": {
+      "what": "public tetsutani c61 kernel; not ours; an arbitrary yardstick (Jon 2026-09-03)",
+      "name": "tetsutani_c61_grimmsnarl",
+      "main_py_sha256": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8",
+      "deck_csv_sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+      "source": "workflow/canon/CURRENT-TRUTH.json#product.c61_control"
+    },
+    "submitted_product": {
+      "what": "what occupies the ladder slot: the unmodified public c61 kernel (borrowed, not a win)",
+      "live_ladder": {
+        "name": "tetsutani_c61_grimmsnarl",
+        "role": "current_occupancy_borrowed_not_bronze_not_a_win",
+        "kind": "unmodified_public_kernel",
+        "licence": "Apache-2.0",
+        "modification": "NONE",
+        "main_py_sha256": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8",
+        "deck_csv_sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+        "archive_sha256": "46bb3180e7b15e41aff60f52b18300aad1ca65d1840464d15e4d30fcac9b57ba",
+        "provenance": "workflow/research/owned-learning-roadmap-20260813/lane-s-c61-provenance-receipt.json"
+      },
+      "passport": {
+        "product_id": "OWNED-CORE-CANDIDATE-SEED",
+        "status": "FROZEN",
+        "stamped_utc": "2026-08-16T03:30:00Z",
+        "config_defaults": {
+          "POLICY": "rules_lucario",
+          "USE_VALUE_NET": false,
+          "USE_POLICY_NET": false
+        }
+      },
+      "source": "workflow/canon/CURRENT-TRUTH.json#product.live_ladder + workflow/inventories/PRODUCT-PASSPORT.json"
+    },
+    "owned_factory_parent": {
+      "what": "the lf_v2 factory parent (NOT fielded, NOT the experimental Parent) -- the object CURRENT-TRUTH.owned_core names",
+      "owned_core": "lf_v2_factory_parent_e2290d9c_not_fielded",
+      "live_experiment": {
+        "status": "PROBES_RAN_VERDICTS_ON_BUS_NOT_PROMOTION",
+        "parent": "e2290d9c",
+        "policy": "lf_v2_not_selected_as_fielded_product",
+        "question": "Does a terminal-reward child beat exact parent e2290d9c on held-out complete games?",
+        "outcomes": "bus_only_until_banked_receipt_on_main"
+      },
+      "source": "workflow/canon/CURRENT-TRUTH.json#product.owned_core"
+    },
+    "proposed_student": {
+      "what": "none exists yet (ASTRA: prepare the representation before the small transfer test)",
+      "exists": false
+    }
+  }
+}

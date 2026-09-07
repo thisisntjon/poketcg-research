@@ -1,0 +1,93 @@
+Third-party attribution NOTICE
+==============================
+
+This project contains and depends on work by other people. Each item below is
+listed with its author, its licence, and exactly what we changed, as the terms of
+those licences require.
+
+--------------------------------------------------------------------------------
+1. The fielded agent — tetsutani's Grimmsnarl ex Damage-Transfer Control
+--------------------------------------------------------------------------------
+
+The agent submitted to the competition leaderboard is a public community kernel,
+used with NO MODIFICATIONS.
+
+    Original work: Grimmsnarl ex Damage-Transfer Control
+    Author:        tetsutani
+    Source:        https://www.kaggle.com/code/tetsutani/grimmsnarl-ex-damage-transfer-control
+    License:       Apache License, Version 2.0
+                   (licence read from the kernel page and verified 2026-08-07)
+    Identity:      policy hash c61e540b, deck hash 92b92bac
+
+MODIFICATIONS: NONE. Not one byte. We did not author this agent and we do not
+claim it. It was fielded deliberately as a fixed reference point so that our own
+measurements had a baseline that did not move. Every result in this repository
+that names "the fielded agent" means this kernel.
+
+The original author does not endorse this project and bears no responsibility for
+it.
+
+--------------------------------------------------------------------------------
+2. Mega Lucario ex rules policy — the experimental pilot
+--------------------------------------------------------------------------------
+
+Derived from the public "community_1084" Mega Lucario ex sample kernel published
+on Kaggle by makthanithin, licensed under the Apache License, Version 2.0.
+
+    Original work: community_1084 Mega Lucario ex sample kernel
+    Author:        makthanithin
+    License:       Apache License 2.0 (see LICENSE-APACHE-2.0)
+
+MODIFICATIONS: This file HAS BEEN MODIFIED from the original. Changes made by this
+project include: adaptation to this project's agent interface and observation
+types; a deck-request guard; hardcoding of the Lucario 60-card multiset (pin
+c6ca3985) for standalone deck selection; import made side-effect free; and
+stdlib-plus-engine-only import constraints for the submission sandbox. The decoded
+priority structure is documented separately in this repository.
+
+This derived policy is the experimental pilot used for controlled A/B comparisons.
+It is NOT the agent that was fielded on the leaderboard; see item 1.
+
+The original author does not endorse this derivative work and bears no
+responsibility for it.
+
+--------------------------------------------------------------------------------
+3. Other public kernels used as opponents
+--------------------------------------------------------------------------------
+
+Controlled comparisons in this project were run against additional public Kaggle
+kernels by other authors, used as fixed opponents and not modified. Each one is
+recorded — author, source URL, licence, whether the kernel was public, the date it
+was pulled, a SHA-256 for every file, and the experiments that consumed it — in
+the public-kernel provenance register:
+
+    workflow/PUBLIC-KERNELS-PROVENANCE.md
+
+Licences there were read from the kernel pages by a human and recorded with the
+date of verification. Where a licence could not be verified, the kernel was not
+consumed by a measurement.
+
+Those kernels are NOT redistributed in this repository. The register records where
+to obtain each one from its original author, and a SHA-256 for every file so that
+a reader can confirm they have the same bytes we measured.
+
+--------------------------------------------------------------------------------
+4. Deck lists
+--------------------------------------------------------------------------------
+
+Deck lists describe publicly known competitive constructions. They are card-name
+and quantity data rather than authored code. Where a specific published list
+informed a file, the provenance is recorded in this repository.
+
+--------------------------------------------------------------------------------
+5. Competition-provided materials
+--------------------------------------------------------------------------------
+
+The game engine and the card data provided by the competition organisers are used
+under the competition's own terms. They are NOT redistributed by this project and
+are excluded from version control by design.
+
+--------------------------------------------------------------------------------
+
+Corrections welcome. If you believe your work is used here without correct
+attribution, that is an error on our part and we will fix it promptly.

@@ -1,0 +1,60 @@
+{
+  "schema": "ptcg.hypothesis_kill_cards/v1",
+  "stamped": "2026-08-11",
+  "rule": "Freeze before measuring. Kill when gates fail. No post-hoc bar shopping.",
+  "hypotheses": [
+    {
+      "id": "HYP-A",
+      "name": "clean_room_plan_then_score_core",
+      "claim": "Actor-visible phase machine + score terms beats public control on championship panel.",
+      "assets": ["DOMAIN-TERM-FIXTURE-REGISTER", "PRODUCT-PASSPORT", "prize/view/heuristic code"],
+      "max_compute_budget": "phase1_lane_A_budget_TBD",
+      "kill_if": [
+        "legality_or_preflight_fail",
+        "context_coverage_below_95pct_frequent",
+        "cannot_remove_public_policy_runtime_within_6h"
+      ],
+      "advance_if": [
+        "legal_fallback_works",
+        "coverage_ge_95pct",
+        "activation_counters_nonzero",
+        "whole_product_lift_on_panel"
+      ],
+      "status": "FROZEN_FOR_BUILD"
+    },
+    {
+      "id": "HYP-B",
+      "name": "card_identity_leaf_or_ranker",
+      "claim": "Identity features through a selected consumer give >=3pp full-product lift.",
+      "assets": ["+25.6/+32.5pp offline", "0.860 value AUC as leaf candidate"],
+      "max_compute_budget": "phase1_lane_D_budget_TBD",
+      "kill_if": [
+        "no_selected_consumer",
+        "runtime_not_stdlib_or_clock_exceeded",
+        "full_product_lift_lt_3pp"
+      ],
+      "advance_if": ["named_consumer", "export_sha_bound", "lift_ge_3pp"],
+      "status": "FROZEN_FOR_ABLATION",
+      "not_allowed": ["pure_BC_bronze_claim"]
+    },
+    {
+      "id": "HYP-C",
+      "name": "own_turn_beam_strong_leaf",
+      "claim": "Bounded own-turn beam with owned strong leaf improves over identical-leaf greedy.",
+      "assets": ["search.py", "turnsearch.py", "peer beam priors"],
+      "max_compute_budget": "phase1_lane_C_budget_TBD",
+      "kill_if": [
+        "leaf_ranking_gate_fail",
+        "uses_weak_H_leaf_that_lost_136_314",
+        "p99_latency_unsafe",
+        "degrades_to_public_policy"
+      ],
+      "advance_if": [
+        "heldout_leaf_ranking_improved",
+        "activation_ge_10pct_games",
+        "ge_5pp_over_greedy_LB_above_0"
+      ],
+      "status": "BLOCKED_ON_LEAF_GATE"
+    }
+  ]
+}

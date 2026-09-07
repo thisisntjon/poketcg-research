@@ -1,0 +1,123 @@
+{
+  "schema": "ptcg.p0_sla_board/v1",
+  "stamped": "2026-08-15",
+  "rule": "P0/P1 starts inside cost window or is formally re-ranked with reason. No new diagnosis while higher P0 unstarted. CODE EXISTS is not OUTPUT EXISTS.",
+  "rows": [
+    {
+      "id": "R-P0-1",
+      "title": "Owned product passport freeze",
+      "priority": "P0",
+      "cost_window": "hours",
+      "owner": "skynet",
+      "status": "FROZEN",
+      "output_exists": "workflow/inventories/PRODUCT-PASSPORT.json",
+      "next": "extend_only_when_product_files_change",
+      "started_utc": "2026-08-11",
+      "closed_utc": "2026-08-15",
+      "evidence": "PR #2866 at 855dc79e; lf_v2_linear/net/weights shas refreshed on #2874 after #2865/#2869",
+      "rerank_reason": null
+    },
+    {
+      "id": "R-P0-8",
+      "title": "M3 local-ladder calibration",
+      "priority": "P0",
+      "cost_window": "zero_games_hours",
+      "owner": "skynet",
+      "status": "INSUFFICIENT_DATA",
+      "output_exists": "workflow/inventories/M3-CALIBRATION-LEDGER.json",
+      "next": "recompute_only_when_identity_matched_mature_pairs_exist",
+      "started_utc": "2026-08-15",
+      "closed_utc": "2026-08-15",
+      "evidence": "PR #2862; n=0; local may kill, cannot convert to ladder mu",
+      "rerank_reason": null
+    },
+    {
+      "id": "R-P0-3",
+      "title": "Matching owned traces or generate",
+      "priority": "P0",
+      "cost_window": "hours_to_day",
+      "owner": null,
+      "status": "MANIFEST_OPEN",
+      "output_exists": "workflow/inventories/OWNED-TRACE-MANIFEST.json",
+      "next": "scan_or_generate_owned_lf_v2_traces",
+      "started_utc": null,
+      "rerank_reason": null
+    },
+    {
+      "id": "R-P0-5",
+      "title": "Minimum vertical compiler first ON flip",
+      "priority": "P0",
+      "cost_window": "hours_to_day",
+      "owner": "roach",
+      "status": "FIXTURED_DEFAULT_OFF",
+      "output_exists": "ptcg-agent/harness/fixtures/dt01_prize_differential.json",
+      "next": "do_not_import_into_first_RL_child; C1-DT01 is a separate treatment",
+      "started_utc": "2026-08-15",
+      "closed_utc": "2026-08-15",
+      "evidence": "PR #2864 Law-21 fixture; not imported by agent/main.py",
+      "rerank_reason": "ON flip of live policy is a later treatment, not this fixture card"
+    },
+    {
+      "id": "R-P0-6",
+      "title": "Phase machine product specification",
+      "priority": "P0",
+      "cost_window": "hours",
+      "owner": null,
+      "status": "ONE_PAGER_LANDED",
+      "output_exists": "workflow/research/R-P0-6-phase-machine.md",
+      "next": "consume_or_hold_do_not_open_DT-02",
+      "started_utc": "2026-08-15",
+      "closed_utc": "2026-08-15",
+      "evidence": "PR #2867",
+      "rerank_reason": null
+    },
+    {
+      "id": "R-DOMAIN-1",
+      "title": "Wire prize-race terms to fixtures",
+      "priority": "P0",
+      "cost_window": "parallel_with_P0-5",
+      "owner": "roach",
+      "status": "DT01_FIXTURED_DEFAULT_OFF",
+      "output_exists": "workflow/inventories/DOMAIN-TERM-FIXTURE-REGISTER.json",
+      "next": "DT-02_and_later_WONT_USE_until_DT01_changes_a_real_action",
+      "started_utc": "2026-08-15",
+      "closed_utc": "2026-08-15",
+      "evidence": "PR #2864 updated DT-01 row only",
+      "rerank_reason": null
+    },
+    {
+      "id": "R-P0-7",
+      "title": "Championship panel pin",
+      "priority": "P0",
+      "cost_window": "hours",
+      "owner": null,
+      "status": "SEED_NOT_FROZEN",
+      "output_exists": "workflow/inventories/CHAMPIONSHIP-PANEL-PIN.json",
+      "next": "freeze_hashes_before_powered_field_panel",
+      "started_utc": null,
+      "rerank_reason": null
+    },
+    {
+      "id": "R-RUN-1",
+      "title": "Source census exploration finish",
+      "priority": "P1_diagnostic",
+      "cost_window": "until_complete",
+      "owner": "roach_or_skynet",
+      "status": "CHECK_STALE_NONBLOCKING",
+      "output_exists": null,
+      "next": "summary_sha_only_diagnostic_if_still_running",
+      "blocks_owned_core": false
+    },
+    {
+      "id": "R-RUN-2",
+      "title": "Strength panel exploration finish",
+      "priority": "P1_diagnostic",
+      "cost_window": "until_complete",
+      "owner": "skynet_or_codex",
+      "status": "CHECK_STALE_NONBLOCKING",
+      "output_exists": null,
+      "next": "summary_sha_only_diagnostic_if_still_running",
+      "blocks_owned_core": false
+    }
+  ]
+}
