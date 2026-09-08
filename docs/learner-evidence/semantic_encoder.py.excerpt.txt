@@ -41,7 +41,7 @@ LINES 187-215
 212:     elif "players" in raw:
 213:         raw["players"] = _project_players(raw["players"], actor)
 214:     return _project_value(raw, actor)
-215: 
+215:
 
 LINES 230-270
 230: def _semantic_action(option: Mapping[str, Any], actor: int, context: object) -> dict:
@@ -65,7 +65,7 @@ LINES 230-270
 248:             "min_count": minimum,
 249:             "max_count": maximum,
 250:         }
-251: 
+251:
 252:     def learner_options(self) -> list[dict[str, Any]]:
 253:         return [
 254:             {
@@ -75,7 +75,7 @@ LINES 230-270
 258:             }
 259:             for entry in self._entries
 260:         ]
-261: 
+261:
 262:     def native_indices(self, semantic_ids: Sequence[str]) -> list[int]:
 263:         by_id = {entry.semantic_id: entry for entry in self._entries}
 264:         selected: list[int] = []

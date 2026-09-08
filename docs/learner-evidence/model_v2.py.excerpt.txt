@@ -5,7 +5,7 @@ Scope: selected source excerpts, not a complete runnable package.
 LINES 100-135
 100: class LearningFactoryModelV2(nn.Module):
 101:     """46/24/32/8 blocks -> GRU-256 actor with entity-linked option scoring."""
-102: 
+102:
 103:     def __init__(self, config: ModelV2Config | None = None) -> None:
 104:         super().__init__()
 105:         self.config = config or ModelV2Config()
@@ -38,7 +38,7 @@ LINES 100-135
 132:         self.plan_head = nn.Sequential(nn.Linear(HIDDEN_SIZE, 128), nn.SiLU(), nn.Linear(128, PLAN_CLASSES))
 133:         self.value_head.requires_grad_(False)
 134:         self.plan_head.requires_grad_(False)
-135: 
+135:
 
 LINES 205-260
 205:     def encode_state(
@@ -57,7 +57,7 @@ LINES 205-260
 218:         history_h, next_history_state = self.encode_history(encoded.history_block, history_state)
 219:         summary = self.state_proj(torch.cat([global_h, entity_summary, history_h], dim=-1))
 220:         return _finite("state_summary", summary), entity_h, next_history_state
-221: 
+221:
 222:     def _token_map(self, encoded: EncodedV2, entity_h: torch.Tensor) -> dict[int, torch.Tensor]:
 223:         mapping: dict[int, torch.Tensor] = {}
 224:         tokens = encoded.entity_block[:, ENTITY_TOKEN_COL].detach().round().to(device="cpu", dtype=torch.long).tolist()
@@ -71,14 +71,14 @@ LINES 205-260
 232:                 raise ModelV2Error("duplicate_source_target")
 233:             mapping[token] = entity_h[index]
 234:         return mapping
-235: 
+235:
 236:     def _linked_entity(self, token: int, mapping: dict[int, torch.Tensor], missing: torch.Tensor, role: str) -> torch.Tensor:
 237:         if token <= 0:
 238:             return missing
 239:         if token not in mapping:
 240:             raise ModelV2Error(f"unresolved_{role}")
 241:         return mapping[token]
-242: 
+242:
 243:     def encode_options(self, encoded: EncodedV2, entity_h: torch.Tensor) -> torch.Tensor:
 244:         menu = encoded.legal_menu
 245:         if menu is None:
@@ -120,7 +120,7 @@ LINES 291-312
 309:         hidden = recurrent_output[0, 0]
 310:         logits, stop, value, plan = self._heads(hidden, option_embeddings, legal_mask)
 311:         return StepOutput(logits, stop, value, plan, next_state, next_history_state, option_embeddings, summary)
-312: 
+312:
 
 LINES 338-395
 338:     def evaluate_autoregressive(

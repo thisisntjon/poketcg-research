@@ -18,8 +18,8 @@ LINES 60-78
 72:         ctx.lf_v2_spent_s = 0.0
 73:     except AttributeError:
 74:         pass
-75: 
-76: 
+75:
+76:
 77: def choose(obs: Any, ctx: Any) -> list[int] | None:
 78:     """Return a legal index list, or None to degrade to heuristic."""
 
