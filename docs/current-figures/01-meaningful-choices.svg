@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="684pt" height="330.408pt" viewBox="0 0 684 330.408" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-07T23:04:08.178579</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 330.408 
+L 684 330.408 
+L 684 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 12.78 133.6032 
+L 149.49 133.6032 
+Q 153.954 133.6032 153.954 129.168 
+L 153.954 78.1632 
+Q 153.954 73.728 149.49 73.728 
+L 12.78 73.728 
+Q 8.316 73.728 8.316 78.1632 
+L 8.316 129.168 
+Q 8.316 133.6032 12.78 133.6032 
+z
+" clip-path="url(#p590617d7ae)" style="fill: #eaf5f5"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 177.39 133.6032 
+L 314.1 133.6032 
+Q 318.564 133.6032 318.564 129.168 
+L 318.564 78.1632 
+Q 318.564 73.728 314.1 73.728 
+L 177.39 73.728 
+Q 172.926 73.728 172.926 78.1632 
+L 172.926 129.168 
+Q 172.926 133.6032 177.39 133.6032 
+z
+" clip-path="url(#p590617d7ae)" style="fill: #eaf5f5"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 342 133.6032 
+L 478.71 133.6032 
+Q 483.174 133.6032 483.174 129.168 
+L 483.174 78.1632 
+Q 483.174 73.728 478.71 73.728 
+L 342 73.728 
+Q 337.536 73.728 337.536 78.1632 
+L 337.536 129.168 
+Q 337.536 133.6032 342 133.6032 
+z
+" clip-path="url(#p590617d7ae)" style="fill: #eaf5f5"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 506.61 133.6032 
+L 665.64 133.6032 
+Q 670.104 133.6032 670.104 129.168 
+L 670.104 78.1632 
+Q 670.104 73.728 665.64 73.728 
+L 506.61 73.728 
+Q 502.146 73.728 502.146 78.1632 
+L 502.146 129.168 
+Q 502.146 133.6032 506.61 133.6032 
+z
+" clip-path="url(#p590617d7ae)" style="fill: #eaf5f5"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 12.78 258.3432 
+L 180.18 258.3432 
+Q 184.644 258.3432 184.644 253.908 
+L 184.644 201.24 
+Q 184.644 196.8048 180.18 196.8048 
+L 12.78 196.8048 
+Q 8.316 196.8048 8.316 201.24 
+L 8.316 253.908 
+Q 8.316 258.3432 12.78 258.3432 
+z
+" clip-path="url(#p590617d7ae)" style="fill: #f1f4f7"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 233.19 258.3432 
+L 411.75 258.3432 
+Q 416.214 258.3432 416.214 253.908 
+L 416.214 201.24 
+Q 416.214 196.8048 411.75 196.8048 
+L 233.19 196.8048 
+Q 228.726 196.8048 228.726 201.24 
+L 228.726 253.908 
+Q 228.726 258.3432 233.19 258.3432 
+z
+" clip-path="url(#p590617d7ae)" style="fill: #f1f4f7"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 464.76 258.3432 
+L 665.64 258.3432 
+Q 670.104 258.3432 670.104 253.908 
+L 670.104 201.24 
+Q 670.104 196.8048 665.64 196.8048 
+L 464.76 196.8048 
+Q 460.296 196.8048 460.296 201.24 
+L 460.296 253.908 
+Q 460.296 258.3432 464.76 258.3432 
+z
+" clip-path="url(#p590617d7ae)" style="fill: #f1f4f7"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 23px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #19344b" x="7.2" y="26.604" transform="rotate(-0 7.2 26.604)">Give each choice meaning</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #00858a" x="7.2" y="52.6608" transform="rotate(-0 7.2 52.6608)">Experimental learner: implemented design</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(38.376172 97.502787)">Player-visible</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(64.669688 117.887397)">state</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(214.072734 98.562084)">Recurrent</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(218.586172 115.703803)">memory</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(374.362266 97.502787)">Score legal</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(386.414687 117.002787)">options</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(546.920859 98.762162)">Return valid</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(553.523438 118.262162)">selections</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 154.27782 103.6656 
+Q 162.044456 103.6656 167.798631 103.6656 
+" style="fill: none; stroke: #00858a; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 162.998631 101.2656 
+L 167.798631 103.6656 
+L 162.998631 106.0656 
+" style="fill: none; stroke: #00858a; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 318.88782 103.6656 
+Q 326.654456 103.6656 332.408631 103.6656 
+" style="fill: none; stroke: #00858a; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 327.608631 101.2656 
+L 332.408631 103.6656 
+L 327.608631 106.0656 
+" style="fill: none; stroke: #00858a; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 483.49782 103.6656 
+Q 491.264456 103.6656 497.018631 103.6656 
+" style="fill: none; stroke: #00858a; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 492.218631 101.2656 
+L 497.018631 103.6656 
+L 492.218631 106.0656 
+" style="fill: none; stroke: #00858a; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #19344b" x="12.78" y="167.976" transform="rotate(-0 12.78 167.976)">ILLUSTRATIVE CHOICE  /  minimum 1, maximum 3</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(41.093906 222.007359)">Available: A, B, C</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(69.914297 242.170562)">Select A</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(258.130156 221.892594)">Rescore: B, C, STOP</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(246.431172 240.911187)">A is no longer available</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(522.003438 222.670562)">Choose STOP</text>
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; fill: #19344b" transform="translate(537.117969 241.970484)">Return A</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 187.760034 227.8512 
+Q 206.685362 227.8512 223.59823 227.8512 
+" style="fill: none; stroke: #00858a; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 218.79823 225.4512 
+L 223.59823 227.8512 
+L 218.79823 230.2512 
+" style="fill: none; stroke: #00858a; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 419.330034 227.8512 
+Q 438.255362 227.8512 455.16823 227.8512 
+" style="fill: none; stroke: #00858a; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 450.36823 225.4512 
+L 455.16823 227.8512 
+L 450.36823 230.2512 
+" style="fill: none; stroke: #00858a; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #19344b" x="12.78" y="293.8248" transform="rotate(-0 12.78 293.8248)">Selecting fewer than the maximum is an expressible decision.</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #63788b" x="12.78" y="316.5552" transform="rotate(-0 12.78 316.5552)">Source-level capability; this example does not measure playing strength.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p590617d7ae">
+   <rect x="7.2" y="7.2" width="669.6" height="316.008"/>
+  </clipPath>
+ </defs>
+</svg>

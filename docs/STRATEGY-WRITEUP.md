@@ -1,122 +1,107 @@
-<!--
-This page is the manuscript submitted to the Kaggle Strategy track on
-2026-09-06. Its text is reproduced from PTCG_FINAL_UPLOAD_2026-09-06/FINAL-REPORT.md
-(sha256 22e0d43a736a9db1e7a9f7ed67bd1933a6faebc7bde9ed3a687a32c28169ff4e).
-The only changes are the three figure paths and the eight evidence references,
-which are repointed at the copies of those exact files inside this repository.
-No sentence of the report has been edited. See docs/EVIDENCE-MAP.md.
--->
+# From Research Agents to Better Pokémon TCG Decisions
 
-> **This is the current report.** It supersedes every earlier draft in this
-> repository, including the September 4 draft preserved at
-> [docs/historical/2026-09-04-strategy-draft-v18.md](historical/2026-09-04-strategy-draft-v18.md).
-> Figures and numbered evidence below link to the files they were computed from.
+*60 days of player design, deck-policy experiments, and a tested Alakazam counter.*
 
-# Building and Testing a Pokémon TCG Counter-Strategy
+Jonathan Simone
 
-*Learning Pokémon TCG through experiments that survive inspection*
+## A player that can keep improving
 
-Jonathan Simone · Simone Systems Research
+I entered this competition learning Pokémon TCG and asking a larger question: how could I build a player that keeps getting better? Over roughly 60 days, I worked as a solo developer with AI coding and research agents across multiple vendors. We called them "The Fleet". They helped investigate opponents, implement ideas and compare results while I directed the work.
 
-## Learning the game meant building the laboratory
+The project developed along two connected research questions: how to teach a player useful behavior, and how to identify behavior worth teaching. I built components of a recurrent learning player and tested strategic modifications in a separate Lucario pilot. One combination, hand disruption plus pressure on Alakazam's evolution line, improved mean game score by roughly 19–20 percentage points against two tested Alakazam implementations.
 
-I entered this competition as one human researcher learning an unfamiliar game while building its software. I used AI coding and research workers to investigate opponents, implement candidate agents, run comparisons and challenge interpretations. The work grew into a research laboratory with local compute and a memory of its experiments.
+That result is a concrete step toward the larger objective. The learning player and the counter remain separate experimental branches; connecting discoveries to retained improvements is the next milestone.
 
-Its clearest result is a selective counter-strategy. A card substitution and targeting change improved an experimental Mega Lucario product by **7.82 percentage points [6.08, 9.56]** on a development panel containing 40% Alakazam, across three within-batch comparisons on two computers. A later panel located the advantage more precisely: two Alakazam implementations gained strongly, while broader improvement remained unresolved.
+## What I submitted and what I developed
 
-My Simulation submission used **tetsutani’s unmodified public Grimmsnarl ex Damage-Transfer Control**, policy hash `c61e540b`, deck hash `92b92bac`. The September 6 leaderboard records **834.0, rank 840 of 6,807**. The post-submission Lucario experiments use a separate derivative of makthanithin’s Apache-2.0 community_1084 policy. My contributions are the research system, tested modifications and evidence explaining their limits. [1, 2, 7]
-
-## The playing program and the research system
-
-The submitted Grimmsnarl program combines a context-routed tree ensemble, strategic fallback and specialist policies. It scores options using state, action features and recent history. A controller arbitrates; tactical and development checks may revise its choice. It checks selection bounds, uniqueness and indices, and asserts the fixed deck at load. These are features of the credited public implementation, inspected at its matching source hash. [6]
-
-The experimental Lucario pilot uses rules to score choices and construct an attack plan. Its decisions connect board development, available Energy, attack damage and target selection. The targeting intervention adds a preference for visible Abra or Kadabra when the opponent’s Alakazam line is detected. This changes a concrete decision procedure; it does not require a language model to choose every move.
-
-![Source-level decision paths](../workflow/writeup/visuals-2026-09-06/03-decision-paths.png)
-
-*Figure 1. Source-level architecture. The submitted public implementation and experimental derivative are distinct; neither diagram establishes a completed learning cycle.*
-
-We also explored sampled-state search, learned scorers and feature representations. Search can expose an alternative but value it poorly; a scorer can imitate accurately without improving play. A stronger deck can change outcomes without its pilot learning anything.
-
-A separate owned student improved held-out imitation loss but won only **23 of 1,200 decided games (1.92%)** against exact c61 on the same Grimmsnarl list. Better prediction metrics had not produced a competitive replacement. The practical lesson is to assess learned policies in fresh complete games alongside imitation metrics. Training identities, draw handling and causal limitations remain in the supporting receipts. [3]
-
-Workers used owned tasks, isolated directories and non-author review. The remaining goal is a learning cycle: a stronger teacher supplies decisions, a student retains the advantage, and fresh games verify retention. We have not established that cycle.
-
-## Deck strategy: turn preparation into Prizes
-
-The submitted 60 contains 18 Pokémon, 32 Trainers and 10 Basic Darkness Energy. Its game plan connects evolution, distributed damage and transfer into prize opportunities:
-
-| Package | Strategic role |
+| Artifact | Contribution and evidence |
 |---|---|
-| Impidimp ×4, Morgrem ×3, Grimmsnarl ex ×3; Rare Candy ×3 | Establish the main attacker. Evolving Grimmsnarl from hand can accelerate Darkness Energy onto Marnie’s Pokémon. |
-| Munkidori ×4 | With its own Darkness attachment, transfer up to three damage counters from one friendly Pokémon to an opposing Pokémon. |
-| Snorunt ×2, Froslass ×2 | Froslass adds damage counters during Checkup to Pokémon with Abilities, including friendly ones, except Froslass. |
-| Boss’s Orders ×2; Night Stretcher ×3 | Bring a prepared target Active and recover resources for subsequent turns. |
+| Simulation submission | Tetsutani's unmodified public Grimmsnarl ex Damage-Transfer Control: policy c61e540b, deck 92b92bac. September 6 score: 834.0; rank 840/6,807. |
+| Experimental learned player | My implementation of visible-state encoding, recurrent memory, legal-option scoring and sequential selection, using established learning methods. |
+| Experimental Lucario counter | My card substitution, targeting modification and comparisons on a derivative of makthanithin's Apache-2.0 community_1084 policy. |
 
-This produces a concrete allocation problem. Grimmsnarl’s acceleration does not power Munkidori: the latter needs a separate Darkness attachment. Shadow Bullet pressures the Active for 180 and a Benched target for 30, while transfer can concentrate existing counters. The pilot must prepare both the attack and the transfer opportunity without neglecting replacement attackers. Counts and mechanics were checked against the recovered package. [6]
+The public implementations supplied working players, teachers and controls. The later experimental results below belong to their named development branches, rather than to the submitted agent's ladder score. [1, 2, 3]
 
-Two recorded choices of Shadow Bullet’s 30-damage Bench target make the tradeoff concrete. One targeted a 140-HP Alakazam while a 20-HP Alakazam was available; another targeted a 90-HP Drakloak while a 30-HP Budew was available. The first game was lost; the second was won. We verified both choices in the original seat-visible records. Neither outcome reveals whether taking the lower-HP target would have improved the result. [8]
+## A legal move needs meaning
 
-The rationale for the Lucario counter is to pressure two resources in Alakazam’s strategy: the hand that powers its attack and the visible evolution line that develops its board. Replacing one Carmine with Xerosic tests hand disruption; preferring visible Abra or Kadabra tests pressure on development. Separating the changes experimentally distinguishes the contribution of the deck modification, the targeting rule and their interaction.
+A TCG player faces a changing menu of choices: attach Energy, evolve a Pokémon, choose an attack, or select its target. Learning “choose option three” would give the same number different meanings as the menu changes. My learner instead encodes the offered actions and scores their features against the current game context.
 
-In the supplied card data, **Alakazam’s** Powerful Hand places two damage counters per card in its player’s hand; Kadabra has a different attack. Xerosic reduces the opposing hand to three cards when resolved, reducing that resource until it is replenished. This supplies a plausible mechanism for the counter, but terminal wins alone cannot establish how often this sequence caused the advantage. [6]
+The current v2 design links each option to its source and target, combines encoded state with a 256-unit recurrent network, and scores the available options. Recurrence provides a place to retain information across decisions; legal masking restricts selection to allowed options. The state projection uses the acting player's view, distinguishes self from opponent, and explicitly rejects hidden-information fields. These choices make observation, memory and action selection inspectable parts of the design. [2]
 
-This is a tradeoff, not a free upgrade. Removing a draw Supporter changes access to resources. Using a disruptive Supporter competes with development or gusting on that turn. Targeting a developing threat can direct pressure away from another prize opportunity. A persuasive card interaction therefore needs complete-game evidence.
+Selecting several items creates another problem. If a choice allows up to three selections, taking all three is a decision, not an obligation. The decoder selects without replacement, updates its selection context, and offers a learned STOP choice once the minimum is satisfied. Figure 1 illustrates this interface; it is an explanatory example rather than a recorded match.
 
-The experiment separates list and pilot through a factorial design:
+![The experimental learner and an illustrative sequential selection](current-figures/01-meaningful-choices.png)
 
-| | Original list | One Carmine replaced by Xerosic |
+*Figure 1. Implemented design: visible state and recurrent memory score legal options. Sequential selection respects minimum/maximum bounds and can stop early. The schematic illustrates expressible choices, not measured tactical quality.*
+
+These components give a learned policy the means to express game decisions. They also separate questions that can otherwise become tangled: can the player represent a choice, can it learn that choice, and does choosing it improve complete-game outcomes?
+
+## Practice creates new teaching opportunities
+
+A developing player reaches positions an expert may rarely encounter. Teacher-query tooling therefore reconstructs player-visible positions and requests choices from a credited public teacher, providing a route to advice on the learner's own situations. Training, checkpoint handling and inference are separate components, so the teacher or player can change without redefining the whole experiment. [2]
+
+An earlier August student checkpoint improved held-out imitation loss and completed a 1,200-decided-game comparison against exact c61 on the same Grimmsnarl list, winning 23 games. That checkpoint was not a competitive replacement. The comparison reinforced the need to assess learning through fresh complete games alongside prediction metrics; it does not evaluate the current v2 implementation. [3]
+
+The research question then becomes practical: what useful behavior should a player acquire? The Lucario experiment provides one well-defined answer to investigate.
+
+## Decks turn resources into a game plan
+
+My submitted Grimmsnarl list contains 18 Pokémon, 32 Trainers and 10 Basic Darkness Energy. Its central engine combines Grimmsnarl ex's attacks with Froslass damage counters and Munkidori's damage transfer. Four Impidimp, three Morgrem, three Grimmsnarl and three Rare Candy support attacker development; four Munkidori and two Froslass support damage placement. Boss's Orders brings prepared targets Active, while Night Stretcher recovers resources. [4]
+
+The interactions create meaningful allocation choices. Grimmsnarl's evolution ability accelerates Darkness Energy onto Marnie's Pokémon; Munkidori needs its own Darkness attachment to transfer counters. Shadow Bullet deals 180 damage to the Active and 30 to a Benched target. The player must balance immediate prizes, distributed damage and development of the next attacker. The credited submitted program combines learned option scoring with tactical checks and specialist fallback policies. [4]
+
+The experimental Lucario pilot approaches play through rules connecting board development, available Energy, attack damage and target selection. My intervention focuses on the opponent's resources: the hand that powers Alakazam and the evolution line that prepares it.
+
+Mega Lucario ex connects attack and preparation: Aura Jab deals 130 damage for one Fighting Energy and can attach up to three discarded Basic Fighting Energy to Benched Pokémon. Mega Brave offers 270 damage for two Fighting Energy, but that Pokémon cannot use it on its next turn. Energy recovery and preparing the next attacker therefore matter alongside immediate damage. [4]
+
+Alakazam's Powerful Hand places two damage counters for each card in its player's hand. Xerosic reduces a large opposing hand to three cards when resolved. Replacing one Carmine with Xerosic therefore tests whether disruption is worth sacrificing a draw Supporter. The targeting modification separately prefers visible Abra or Kadabra when the opponent's Alakazam line is detected. [4]
+
+Pressure on both resources is a plausible counter: reduce the current attack resource while threatening future attackers. There are costs. Playing Xerosic uses the Supporter opportunity that could have supported development or gusting; attacking an evolving threat can forgo a different prize opportunity. Alakazam can also replenish its hand. These tradeoffs make the whole-game experiment essential.
+
+## Was it the card, the targeting, or both?
+
+I separated the changes in a four-arm experiment:
+
+| | Original list | Carmine replaced by Xerosic |
 |---|---|---|
-| Targeting disabled | Control | Card change alone |
-| Targeting enabled | Rule change alone | Combined product |
+| Original targeting | Control | Card change alone |
+| Modified targeting | Rule change alone | Combined product |
 
-The four-arm batch used 2,000 games per arm. Recomputing the development rows gives a rule-only gain of **+3.62 points [1.52, 5.72]** across two batches; the card-only gain is **+5.02 [3.30, 6.75]** across three. The combined product gained +7.82 across three comparisons. Each contrast uses its own batch’s control, decided games and inverse-variance pooling. The interaction did not establish synergy. These development results do not establish broader superiority. [2]
+The four-arm batch used 2,000 games per arm. Development comparisons gave a rule-only improvement of +3.62 percentage points [1.52, 5.72] across two batches, a card-only improvement of +5.02 [3.30, 6.75] across three, and a combined improvement of +7.82 [6.08, 9.56] across three comparisons on two computers. Brackets give 95% intervals. These use within-batch controls, decided games and inverse-variance pooling on a panel containing 40% Alakazam. The interaction did not establish synergy. [5]
 
-Our deck-construction contribution is the tested Carmine-to-Xerosic modification of the experimental Lucario list; the submitted Grimmsnarl list remains credited to its public author.
+A later evaluation asked where the combined advantage appeared. It contains 8,400 game records: seven opponent implementations, 600 games per arm per opponent. Here game score is win = 1, draw = ½, loss = 0, distinct from the development analysis's decided-game convention. [6]
 
-## The opponent panel reveals the scope of the gain
+![Combined counter results against seven opponents](current-figures/02-matchup-results.png)
 
-The subsequent panel contains **8,400 game records: seven opponent implementations, 600 games per arm per opponent**. The candidate carries both changes; the baseline carries neither. Figure 2 recomputes each difference directly from terminal outcomes, scoring a win as 1, a draw as ½ and a loss as 0. This convention differs from the development replication’s decided-game analysis, so their summaries are kept separate. [4]
+*Figure 2. Combined intervention minus baseline, with approximate 95% intervals conditional on these implementations and independent games. One Alakazam deck overlaps development under a different pilot; this panel's Grimmsnarl pilot is not submitted c61.*
 
-![Matchup differences and uncertainty](../workflow/writeup/visuals-2026-09-06/01-matchup-evidence.png)
+The two Alakazam cells improved by 20.42 and 18.75 points. The other five averaged −0.47 [−2.64, +1.71], leaving broader benefit unresolved. The result demonstrates a substantial counter advantage in those tested matchups. Terminal outcomes support the product comparison; they do not identify which individual disruption or targeting sequence caused each win.
 
-*Figure 2. Combined card-and-rule intervention minus baseline. Approximate 95% intervals assume independent games and condition on these implementations. One Alakazam deck overlaps development under another pilot. The Grimmsnarl pilot here is distinct from submitted c61.*
+## A counter's value changes with the opposition
 
-The two Alakazam cells gained **20.42 and 18.75 points**. The equal-weight mean of the other five is **−0.47 points**, with an approximate interval of **[−2.64, +1.71]**. Modest benefit and harm remain plausible for that group. The visible concentration supports a specialist interpretation; it neither proves the mechanism nor establishes an advantage against every member of an archetype.
+The matchup pattern is strategically useful. If Alakazam represents a fraction q of an assumed field, equally weighting the tested implementations within the Alakazam and other-opponent groups gives:
 
-A new pilot on a familiar list is a weaker generalization test than a new pilot and list.
+**Expected score change = 19.583q − 0.467(1 − q) percentage points.**
 
-## A counter’s value depends on whom it faces
+At q = 0.25, the point estimate is +4.55 points. This calculation reuses the same panel; it is a sensitivity analysis, not an estimate of the competitive metagame or a new replication. [6]
 
-A panel average is meaningful only for its opponent mixture. For an illustrative field with Alakazam fraction q, equally weighting the two tested Alakazam implementations within their group and the other five within theirs:
+![Counter value under different assumed opponent mixtures](current-figures/03-opponent-mixture.png)
 
-**Δ(q) = 19.583q − 0.467(1 − q) percentage points.**
+*Figure 3. Counter value under an assumed mixture of the seven tested opponents. Uncertainty covers their measured means, not unknown opponents or the assumed field composition.*
 
-At q = 0.25, the point estimate is +4.55 points. Figure 3 shows the sensitivity across possible mixtures. This is a calculation from the same panel, not another replication, an estimate of the competitive meta, or a deployment threshold.
+For another builder, the reusable method is straightforward: change the deck and policy separately, compare their combination, then examine the opponents behind the average. That turns a headline improvement into a reasoned strategic choice.
 
-![Sensitivity to assumed opponent mixture](../workflow/writeup/visuals-2026-09-06/02-mixture-sensitivity.png)
+## The next generation
 
-*Figure 3. Expected score change under an assumed mixture of the seven tested opponents. The band covers approximate uncertainty in their measured means; it excludes uncertainty about meta share and unseen opponents.*
+The fleet let me pursue player design and strategic experiments alongside each other. Its research records link questions to implementations, outcomes and sources, preserving material for the next experiment. This memory across research sessions is distinct from the player's memory within a game and the parameter changes produced by training. [7]
 
-The strategic lesson is practical: evaluate a counter against the opposition it is intended to face. A gain concentrated in one matchup can be useful without qualifying the product as a universal replacement. Further claims require appropriate fresh opposition and a declared mixture.
+I am continuing toward a modular system in which practice produces teaching material, strategic discoveries inform the player, and fresh games establish which improvements it retains. These 60 days produced implemented learning components, a tested matchup counter and a method for valuing it. My next objective is to connect those pieces into repeated, demonstrated improvement.
 
-## Preserve the experiment, including why its conclusion changed
+## Evidence and acknowledgements
 
-The inventory connects research questions to implementations, outcomes, corrections and reopening conditions. Its reader searches records, retrieves evidence and reports source identities and coverage. It lets a new worker recover the experiment behind a conclusion without reading the entire project. A missing search result remains a coverage limitation, not proof that work never happened. [5]
+The accompanying source notes map claims to existing evidence and inspected code excerpts: [1] submitted provenance and dated score; [2] learner, decoder and teacher tooling; [3] student training and game comparison; [4] recovered deck and mechanics; [5] factorial comparisons; [6] seven-opponent rows and mixture calculation; [7] research memory and continuing architecture. Some underlying assets, including one development host's raw rows and training weights, are not redistributed. AI agents assisted implementation, analysis and writing under my direction.
 
-That memory is a reusable research asset, but its existence does not establish improved agent behavior. The next useful test is whether a fresh worker can recover the right baseline, interpret a result correctly and prepare the justified next comparison with less human repair.
 
-The project produced a measured Lucario counter with strong gains against two tested Alakazam implementations, while broader improvement remained unresolved. It also demonstrated a reusable method: separate deck changes from policy changes, compare each with its control, challenge aggregate gains across opponents, and examine how the counter’s value changes with the assumed opponent mixture. That is a concrete foundation for learning strategically under uncertainty.
+---
 
-## Evidence
-
-The attached PTCG-EVIDENCE.zip contains numbered source routes and file hashes in START-HERE.md. Original records retain their limitations; some underlying local assets are not redistributed. AI agents assisted implementation, analysis and writing under my direction.
-
-1. Submitted-product provenance: [lane-s-c61-provenance-receipt.json](../workflow/research/owned-learning-roadmap-20260813/lane-s-c61-provenance-receipt.json).
-2. Factorial design and replication: [2026-09-03-xerosic-sniper-factorial.md](../workflow/research/2026-09-03-xerosic-sniper-factorial.md); [ABLATION-VERIFICATION.json](../workflow/writeup/visuals-2026-09-06/ABLATION-VERIFICATION.json); [development rows](../workflow/research/2026-09-03-xerosic-sniper-rows.csv).
-3. Owned student: [LEARNING-VERIFICATION.json](../workflow/writeup/visuals-2026-09-06/LEARNING-VERIFICATION.json); [training](../workflow/writeup/visuals-2026-09-06/learning-evidence/training-receipt.json) and [complete-game](../workflow/writeup/visuals-2026-09-06/learning-evidence/screen-receipt.json) receipts.
-4. Fresh-opponent panel: [2026-09-03-strike3-rows.csv](../workflow/research/2026-09-03-strike3-rows.csv); [generalisation report](../workflow/research/2026-09-03-strike3-generalisation.md); [counterplay-data.json](../workflow/writeup/visuals-2026-09-06/counterplay-data.json).
-5. Research-memory interface: [knowledge-register/README.md](../workflow/knowledge-register/README.md). Full tool and acceptance are outside this attachment.
-6. Recovered product, deck and mechanics: [SOURCE-VERIFICATION.json](../workflow/writeup/visuals-2026-09-06/SOURCE-VERIFICATION.json). Source inspections, not redistributed card data.
-7. Dated competition result: [COMPETITION-VERIFICATION.json](../workflow/writeup/visuals-2026-09-06/COMPETITION-VERIFICATION.json).
-8. Two original replay choices: [REPLAY-CHOICE-VERIFICATION.json](../workflow/writeup/visuals-2026-09-06/REPLAY-CHOICE-VERIFICATION.json). Original episodes are not redistributed.
+[Evidence map: references 1–7](EVIDENCE-MAP.md) · [Download report](downloads/FINAL-REPORT.pdf) · [Evidence guide](downloads/EVIDENCE-GUIDE.pdf) · [Evidence ZIP](downloads/PTCG-EVIDENCE.zip)

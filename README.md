@@ -1,129 +1,51 @@
-# A measured counter-strategy for Pokémon TCG, and the evidence behind it
+# From Research Agents to Better Pokémon TCG Decisions
 
-This repository is the research record supporting the Kaggle Strategy-track report
-**[Building and Testing a Pokémon TCG Counter-Strategy](docs/STRATEGY-WRITEUP.md)**
-by Jonathan Simone (Simone Systems Research).
+**60 days of player design, deck-policy experiments, and a tested Alakazam counter.**
 
-**The result.** A card substitution (one Carmine replaced by Xerosic) together with a
-targeting rule (prefer a visible Abra or Kadabra when an Alakazam line is detected)
-improved an **experimental Mega Lucario product** by **+7.82 percentage points
-[+6.08, +9.56]** on a development panel containing 40% Alakazam, across three
-within-batch comparisons on two computers.
+I am Jonathan Simone, a solo developer working toward TCG players that can keep improving. During this project, AI coding and research agents helped me investigate two connected questions: **how to teach useful behavior, and how to identify behavior worth teaching.** We called them "The Fleet".
 
-*Checking that number? The +7.82 pools three comparisons and only two ship here; pooling
-those two gives +8.26, which our own retraction register flags as superseded.
-[The bridge is written out in full](docs/EVIDENCE-MAP.md#if-you-recompute-the-headline-you-will-get-a-different-number-here-is-why)
-before you hit it.*
+This repository shares selected research, results and implementation evidence behind the [Kaggle Strategy article](https://www.kaggle.com/competitions/pokemon-tcg-ai-battle-challenge-strategy/writeups/measure-everything).
 
-**Where that gain lives.** A later 8,400-game panel — seven opponent implementations,
-600 games per arm per opponent — located it. The two Alakazam cells gained **+20.42**
-and **+18.75** points. The equal-weight mean of the other five is **−0.47 points
-[−2.64, +1.71]**, an interval that leaves both modest benefit and modest harm plausible.
+## Start here
 
-[![Combined intervention minus baseline, by opponent](workflow/writeup/visuals-2026-09-06/01-matchup-evidence.png)](docs/STRATEGY-WRITEUP.md)
+- **[Read the current report](docs/STRATEGY-WRITEUP.md)** — the approach, game mechanics, experiments and next objective.
+- **[Download the report](docs/downloads/FINAL-REPORT.pdf)** — a readable five-page version with three figures.
+- **[Follow the evidence](docs/EVIDENCE-MAP.md)** — the article's seven reference groups, source excerpts and experiment records.
+- **[Get the evidence package](docs/downloads/PTCG-EVIDENCE.zip)** and its [guide](docs/downloads/EVIDENCE-GUIDE.pdf).
+- **[Try an offline research example](docs/REPRODUCING.md)** — search the published records without a game engine.
 
-This is a real, scoped gain on a specific experimental product against specific tested
-opponents. It is **not** a universal upgrade, and it is **not** evidence that an agent
-retained anything it learned on its own. The scope is the finding.
+## What I developed
 
-## Four ways in
+**A player needs meaningful choices.** The experimental v2 learner links legal actions to their source and target, scores them with recurrent context, and supports sequential selections with a learned STOP. Selecting "up to three" items can mean choosing one and stopping. [Inspect the design](docs/learner-evidence/README.md).
 
-1. **[Read the report](docs/STRATEGY-WRITEUP.md)** — the submitted manuscript, with its
-   three figures and its eight numbered evidence routes.
-2. **[Inspect the evidence](docs/EVIDENCE-MAP.md)** — references 1–8 mapped to the actual
-   files in this repository, with hashes and with what each one does not establish.
-3. **[Try a verified offline example](docs/REPRODUCING.md)** — one command, no game engine,
-   recorded output shape and limits.
-4. **[Explore the inventory and the corrections](workflow/inventories/sri/INDEX.md)** — the
-   record of what was tried and what it taught, plus
-   [the retraction register](workflow/canon/RETRACTIONS.md) of numbers this project
-   published and later withdrew, and [the dead-ends register](workflow/DEAD-ENDS.md),
-   where every closed line carries the claim its evidence does *not* support.
+**Practice creates teaching opportunities.** Teacher-query tooling provides a route to advice on positions reached by a developing player. State representation, training, checkpoints and inference are separate components. The implemented components are steps toward repeated retained improvement; that full cycle remains the next objective.
 
-Mechanics: **[How it plays](docs/HOW-IT-PLAYS.md)**. Method and failures:
-**[What we learned](docs/WHAT-WE-LEARNED.md)**.
+**Deck and policy changes can be tested separately.** On a community_1084-derived Lucario pilot, I replaced one Carmine with Xerosic and changed targeting to prefer visible Abra/Kadabra when an Alakazam line is detected. A four-arm experiment separated the card, the targeting change, and their combination.
 
-**Working on something similar?** [For researchers](docs/FOR-RESEARCHERS.md) is the honest
-inventory of what is reusable here: **44,400 game records with a data dictionary**, a
-TrueSkill rating model fitted on 9.5M rows, the closed lines with their scope guards, and a
-decoder for this repository's internal shorthand.
+## A counter with a measured strategic role
 
-## Three different products, which must not be conflated
+In an 8,400-game, seven-opponent panel, the combined intervention improved mean game score by **20.42 and 18.75 percentage points against two tested Alakazam implementations**. The other five averaged **−0.47 points [−2.64, +1.71]**. These results locate the counter's advantage and support evaluating its value under different opponent mixtures.
 
-| | What it is | Where it appears |
-|---|---|---|
-| **Submitted Grimmsnarl agent** | tetsutani's public Grimmsnarl ex Damage-Transfer Control kernel, used unmodified. Policy hash `c61e540b`, deck hash `92b92bac`. Not written by this project. | The Simulation-track submission. Leaderboard 2026-09-06: 834.0, rank 840 of 6,807 ([receipt](workflow/writeup/visuals-2026-09-06/COMPETITION-VERIFICATION.json)). |
-| **Experimental Lucario product** | A separate derivative of makthanithin's Apache-2.0 `community_1084` sample policy. The counter-strategy was built and measured **on this**, never on the submitted agent. | The Lucario counter-strategy experiments. Their control arm is a Lucario baseline — **not** the submitted c61. |
-| **Owned student** | A policy trained on this project's own data. Improved held-out imitation loss; won **23 of 1,200** decided games (1.92% [1.22, 2.86]) against exact c61. | [LEARNING-VERIFICATION.json](workflow/writeup/visuals-2026-09-06/LEARNING-VERIFICATION.json). Not fielded. |
+[![Counter results across all seven opponents](docs/current-figures/02-matchup-results.png)](docs/STRATEGY-WRITEUP.md)
 
-The submitted c61 later appears as an *opponent* in the student comparison. That is a
-choice made after the fact for a fixed, identified referent; it does not establish why
-c61 was originally submitted, and this repository makes no claim about that rationale.
+Earlier development comparisons gave **+7.82 points [6.08, 9.56]** across three within-batch comparisons on two computers, on a panel containing 40% Alakazam. The repository includes raw rows for two of those comparisons; [the evidence map explains the third input and the exact reproducibility boundary](docs/EVIDENCE-MAP.md#if-you-recompute-the-headline-you-will-get-a-different-number-here-is-why). Development uses decided games; the later panel scores win 1, draw 0.5, loss 0.
 
-## What the experiment actually separated
+## The three gameplay artifacts
 
-The design is a 2×2 over the experimental Lucario product:
+| Artifact | Role and evidence |
+|---|---|
+| **Submitted public Grimmsnarl** | Tetsutani's unmodified implementation, policy `c61e540b`, deck `92b92bac`. September 6: 834.0, rank 840/6,807. [Provenance and score](docs/EVIDENCE-MAP.md). |
+| **Experimental learned player** | Project-developed representation, recurrent model and selection tooling. An earlier August checkpoint won 23/1,200 decided games against c61; that result does not evaluate the entire current v2 design. [Sources and historical evaluation](docs/EVIDENCE-MAP.md). |
+| **Experimental Lucario counter** | Project modifications to makthanithin's Apache-2.0 community_1084 policy. The measured counter gains belong to this branch, not to the submitted product or recurrent learner. [Experiment](workflow/research/2026-09-03-xerosic-sniper-factorial.md). |
 
-| | Original list | One Carmine replaced by Xerosic |
-|---|---|---|
-| Targeting disabled | Control | Card change alone |
-| Targeting enabled | Rule change alone | Combined product |
+## Continue exploring
 
-- **Card change alone: +5.02 points [+3.30, +6.75]** across three contrasts.
-- **Rule change alone: +3.62 points [+1.52, +5.72]** across two contrasts.
-- **Combined arm: +7.82 points [+6.08, +9.56]** across three contrasts.
+[Game mechanics](docs/HOW-IT-PLAYS.md) · [Research findings](docs/WHAT-WE-LEARNED.md) · [Reusable research assets](docs/FOR-RESEARCHERS.md) · [Inventory](workflow/inventories/sri/INDEX.md) · [Corrections](workflow/canon/RETRACTIONS.md)
 
-The single-arm contrasts each change one thing against their own batch control. **The
-combined arm changes both the card list and the targeting rule**, so its +7.82 is the
-value of the pair, not of either component. We tested for an interaction and could not
-distinguish it from zero. **Failing to detect an interaction is not evidence of
-additivity** — the test simply does not resolve one at this sample size. Arithmetic and
-per-contrast counts: [ABLATION-VERIFICATION.json](workflow/writeup/visuals-2026-09-06/ABLATION-VERIFICATION.json).
+The continuing objective is a modular system where practice produces teaching material, strategic discoveries inform the player, and fresh games establish which improvements it retains. The public records preserve useful work for that next step.
 
-The panel and the development replication also use different scoring conventions — the
-panel scores a win as 1, a draw as ½ and a loss as 0; the development contrasts use
-decided games only — so their summaries are reported separately and should not be pooled.
+## Scope and attribution
 
-## What else is in the record
+This is selected research evidence, not a complete runnable game agent. The competition engine, organizer card data, raw episode dumps and training weights are not included. Source excerpts explain design; historical records retain their original context. Earlier article versions remain in Git history.
 
-- **A sign flip.** A tactical rule that always prefers an available knockout measured
-  about **+12 points** against one opponent deck and about **−10** against a deck close to
-  our own. Pooled across the panel it looked like nothing. The average of two opposite
-  effects is not a null. ([What we learned](docs/WHAT-WE-LEARNED.md))
-- **A learned agent that lost.** Better imitation loss, 1.92% of decided games won. Kept
-  in the record rather than dropped.
-- **[Ten instruments that lied](docs/INSTRUMENTS-THAT-LIED.md).** Measurement tools that
-  each produced at least one confident, wrong verdict before they were caught — an opponent
-  pool made of our own agent, eleven experiment arms that were byte-equivalent programs, a
-  soak test that passed on empty input, an Elo conversion that made every target look 25%
-  easier than it was. None of them crashed; each returned a plausible number. Written for a
-  reader outside this project.
-- **The corrections.** [RETRACTIONS.md](workflow/canon/RETRACTIONS.md) lists numbers this
-  project published and later found to be wrong, each with the reason and what to use
-  instead.
-
-## What is not here
-
-- **The competition engine and the organiser card data.** Supplied by the competition
-  organisers under their own terms; not ours to redistribute. **Nothing in this
-  repository will play a game.** Every source check recorded here is a static inspection,
-  not an execution.
-- **Raw episode dumps and model weights.** Not redistributed. Aggregated outcome rows,
-  sample sizes, intervals and the analysis script are published instead.
-- **The full working repository and its Git history.** This is a squashed public import.
-  Objects that are not in this tree are not reachable here, and a file's first appearance
-  in *this* repository's history is an import artifact — it is not the date the work was
-  run, the date it was implemented, or an explanation of why it was built.
-- **Third-party kernel source.** Public, licensed and attributed in [NOTICE](NOTICE), to
-  be fetched from the original source.
-
-## Licence and attribution
-
-Code and documents authored by this project are MIT-licensed ([LICENSE](LICENSE)).
-Third-party work — makthanithin's Apache-2.0 sample kernel, tetsutani's fielded kernel —
-is credited in [NOTICE](NOTICE), which also records where that attribution is
-**incomplete**. **The MIT file does not clear every included asset.** A pre-publication
-scan of this tree — what was checked, what was found, what was fixed and what is still
-open — is recorded in [docs/RELEASE-REVIEW.md](docs/RELEASE-REVIEW.md). It found no
-credentials, no organiser material and no third-party kernel source. It is a scan, not a
-clearance, and no security or legal clearance is asserted here.
+Project-authored code and documents use the [MIT license](LICENSE). Public baselines and other contributions are credited in [NOTICE](NOTICE); the original [release review](docs/RELEASE-REVIEW.md) records its scope and open attribution questions. The inspected source and experiment evidence remain distinguishable from the future learning objective.

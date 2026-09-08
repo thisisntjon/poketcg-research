@@ -1,0 +1,70 @@
+SOURCE: workflow/WINNING-STRATEGY-ARCHITECTURE.md
+SHA256 OF COMPLETE SOURCE: 94c57e89e07c515bb9178cdef07d04fa3f2773ed695af546246fa6c56a51af42
+Scope: selected source excerpts, not a complete runnable package.
+
+LINES 1-65
+1: # Winning Strategy Architecture
+2: 
+3: **Status:** PROPOSED DESIGN OF RECORD — fleet-authoritative only after merge to `origin/main`
+4: **Date:** 2026-08-13
+5: **Mission:** build an owned learning player that can repeatedly create stronger
+6: checkpoints, nominate a safe pure-stdlib product, and use ladder evidence to improve the
+7: next generation.
+8: **Scope:** architecture, interfaces, gates, build-versus-borrow decisions, and execution
+9: order. This document does not claim that an unrun checkpoint is strong.
+10: **Authority boundary:** this is the primary gameplay-learning architecture. It does not
+11: supersede competition rules, compliance fences, submission authority, exact dates, or
+12: artifact-custody requirements.
+13: 
+14: ---
+15: 
+16: ## 1. The decision
+17: 
+18: We will build one recognizable system rather than invent a new algorithm:
+19: 
+20: > **A Metamon-style actor-view data flywheel around a causal recurrent league learner:
+21: > behavior-cloning warm start, exploratory complete-game self-play, recurrent PPO against a
+22: > frozen checkpoint population, scientifically budgeted prospective promotion, and eventual
+23: > owned pure-stdlib deployment.**
+24: 
+25: The closest problem-specific ancestor is **Metamon**, the MIT-licensed baseline behind the
+26: NeurIPS 2025 PokéAgent Challenge. Its transferable core is first-person trajectory
+27: reconstruction, a long-memory actor-critic, and repeated retraining on diverse self-play.
+28: Its Binary/leaky advantage filters are candidate objectives to test after we own a causal
+29: replay corpus; the paper supports offline RL over pure BC but does not isolate hard Binary as
+30: the unique winner. AMAGO is the MIT-licensed reference for those later objectives. AlphaStar
+31: and the open-source Lux AI 2021 winner supply frozen-generation and league discipline.
+32: DouZero and RLCard supply card-game state/action contracts. Expert
+33: Iteration, ReBeL, and Student of Games define a possible later search teacher; search is not
+34: a prerequisite for the first successful improvement cycle.
+35: 
+36: The winning hypothesis is deliberately conventional and falsifiable:
+37: 
+38: 1. a leakage-proof actor-view trajectory store and explicit semantic representation can
+39:    produce a minimally competent behavior-cloned checkpoint `BC0`;
+40: 2. exploratory complete games against a frozen opponent population can expand action and
+41:    hidden-state coverage and provide causal returns for recurrent PPO;
+42: 3. a frozen-parent-KL recurrent PPO update can produce a stronger immutable candidate `RL1`;
+43: 4. after that causal corpus exists, advantage-filtered replay may improve data reuse and is
+44:    tested against the PPO-only control rather than assumed;
+45: 5. a globally budgeted prospective comparison can distinguish real improvement from
+46:    repeated-gate selection noise and create a promoted `P1`;
+47: 6. a compact actor-visible student can retain enough of the strongest owned reference to run
+48:    inside the competition bundle; and
+49: 7. field episodes and a fresh deck/metagame census can update the next data and opponent
+50:    manifests, closing both the policy and deck loops.
+51: 
+52: If two fixed-budget recurrent-PPO cycles from a competent bootstrap cannot clear their
+53: preallocated sealed promotion comparisons, this PPO formulation is killed for the current
+54: competition. The next bounded alternatives are DouZero-style Deep Monte Carlo and then
+55: IMPALA/V-trace. Binary, exponential, leaky and importance-sampled advantage filters are
+56: matched ablations only after a causally generated replay corpus exists. We do not respond
+57: with unlimited tuning, repeated 400-game selection, or an unvalidated search fusion.
+58: 
+59: Checkpoint names are role names, not historical filenames: `R0` is the random transport
+60: parent, `T1` is the transport-update child, `BC0` is the first competent behavior clone,
+61: `AF1` is an optional post-causal advantage-filter ablation, `D1`, `D2`, ... are development
+62: checkpoints with no strength authority, `RL1` is the first sealed scientific candidate, and
+63: `P0 := BC0` is the accepted bootstrap and `P1`, `P2`, ... are its accepted promoted lineage. Existing artifacts that use `B0`,
+64: `B1`, or `LF1-C0` retain their historical names in receipts but are mapped to these roles
+65: explicitly.

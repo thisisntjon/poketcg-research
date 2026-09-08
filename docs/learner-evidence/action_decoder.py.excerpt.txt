@@ -1,0 +1,87 @@
+SOURCE: ptcg-agent/learning_factory/action_decoder.py
+SHA256 OF COMPLETE SOURCE: 05917722d740c3a12ba1533ea91049acbf61e15afae9ff0c50306d6baa7bc724
+Scope: selected source excerpts, not a complete runnable package.
+
+LINES 30-111
+30: def encode_menu(options: Sequence[Mapping[str, object]], *, numeric_dim: int) -> EncodedMenu:
+31:     """Encode semantic fields while retaining source indices only as output mapping."""
+32:     if numeric_dim <= 0:
+33:         raise SelectionError("numeric_dim must be positive")
+34:     numeric: list[list[float]] = []
+35:     kinds: list[int] = []
+36:     semantic_keys: list[str] = []
+37:     source_indices: list[int] = []
+38:     for option in options:
+39:         features = option.get("features")
+40:         if not isinstance(features, Sequence) or isinstance(features, (str, bytes)):
+41:             raise SelectionError("option features must be a numeric sequence")
+42:         if len(features) != numeric_dim:
+43:             raise SelectionError(f"option features must have length {numeric_dim}")
+44:         try:
+45:             row = [float(value) for value in features]
+46:             kind = int(option["kind"])
+47:             source_index = int(option["source_index"])
+48:             semantic_key = str(option["semantic_key"])
+49:         except (KeyError, TypeError, ValueError) as exc:
+50:             raise SelectionError("invalid semantic option") from exc
+51:         tensor_row = torch.tensor(row, dtype=torch.float32)
+52:         if not torch.isfinite(tensor_row).all():
+53:             raise SelectionError("option features must be finite")
+54:         if kind < 0 or source_index < 0 or not semantic_key:
+55:             raise SelectionError("kind, source_index, and semantic_key must be valid")
+56:         numeric.append(row)
+57:         kinds.append(kind)
+58:         semantic_keys.append(semantic_key)
+59:         source_indices.append(source_index)
+60:     return EncodedMenu(
+61:         numeric=torch.tensor(numeric, dtype=torch.float32).reshape(len(options), numeric_dim),
+62:         kinds=torch.tensor(kinds, dtype=torch.long),
+63:         semantic_keys=tuple(semantic_keys),
+64:         source_indices=tuple(source_indices),
+65:     )
+66: 
+67: 
+68: def decode_selection(
+69:     score_fn: Callable[[tuple[int, ...]], torch.Tensor],
+70:     *,
+71:     legal_mask: torch.Tensor,
+72:     min_count: int,
+73:     max_count: int,
+74:     sample: bool = False,
+75:     generator: torch.Generator | None = None,
+76: ) -> SelectionResult:
+77:     """Decode options plus learned STOP under exact min/max and legality constraints."""
+78:     if legal_mask.ndim != 1 or legal_mask.dtype is not torch.bool:
+79:         raise SelectionError("legal_mask must be a rank-1 bool tensor")
+80:     option_count = legal_mask.numel()
+81:     if not 0 <= min_count <= max_count <= option_count:
+82:         raise SelectionError("selection bounds must satisfy 0 <= min <= max <= menu size")
+83:     selected: list[int] = []
+84:     log_prob = torch.zeros((), dtype=torch.float32, device=legal_mask.device)
+85:     while len(selected) < max_count:
+86:         logits = score_fn(tuple(selected))
+87:         if logits.ndim != 1 or logits.numel() != option_count + 1:
+88:             raise SelectionError("score_fn must return one logit per option plus STOP")
+89:         logits = logits.to(device=legal_mask.device)
+90:         allowed = legal_mask.clone()
+91:         if selected:
+92:             allowed[torch.tensor(selected, device=allowed.device)] = False
+93:         allowed = torch.cat(
+94:             [allowed, torch.tensor([len(selected) >= min_count], dtype=torch.bool, device=allowed.device)]
+95:         )
+96:         if not allowed.any():
+97:             raise SelectionError("no legal selection can satisfy min_count")
+98:         if not torch.isfinite(logits[allowed]).all():
+99:             raise SelectionError("available selection logits must be finite")
+100:         masked = logits.masked_fill(~allowed, -torch.inf)
+101:         distribution = torch.distributions.Categorical(logits=masked)
+102:         choice = (
+103:             int(torch.multinomial(torch.softmax(masked, dim=0), 1, generator=generator).item())
+104:             if sample
+105:             else int(masked.argmax().item())
+106:         )
+107:         log_prob = log_prob + distribution.log_prob(torch.tensor(choice, device=masked.device))
+108:         if choice == option_count:
+109:             return SelectionResult(tuple(selected), True, log_prob)
+110:         selected.append(choice)
+111:     return SelectionResult(tuple(selected), True, log_prob)

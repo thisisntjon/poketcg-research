@@ -62,42 +62,21 @@ python -X utf8 scripts/retraction_register.py <number>
 numeric token or hash prefix in a document, with the value to use instead.
 `retraction_register.py <number>` answers the same question for one value.
 
-Run plainly over this repository's own pages, it **exits 1 with 15 hits**:
+Run the scan over the repository's public pages:
 
 ```
-$ python -X utf8 scripts/retraction_scan.py README.md NOTICE docs
-[RETRACTED] docs\EVIDENCE-MAP.md
-  L44: `8.26` -> use instead: **`+7.82pp [+6.08, +9.56]`**
-  …
-scanned <N> file(s) against 16 retracted tokens: 15 hit(s); 0 inspection failure(s). FIX BEFORE PUBLISHING.
+python -X utf8 scripts/retraction_scan.py README.md NOTICE docs
 ```
 
-`<N>` is however many files `docs/` currently holds; it changes whenever a page is added
-and carries no meaning. **The number that matters is 15 hits, and they are confined to the
-four pages named below.** If a hit ever appears in a fifth page, that is a real finding.
+Some historical explanations intentionally quote superseded development estimates. The scanner matches those quoted values as well as assertions, so inspect each reported context. File counts, line numbers and hit counts change as the documentation changes.
 
-**That is the firewall working, not a defect.** Every hit is in one of the four pages
-that quote `+8.26` and `+9.35` deliberately (`README.md`, `docs/EVIDENCE-MAP.md`,
-`docs/RELEASE-REVIEW.md` and this page), in order to *explain* why recomputing the
-headline from the shipped rows produces a superseded value. The tool cannot tell
-"citing a retracted number as fact" from "citing it to retract it", and it should not
-try to.
-
-The tool's own documented escape is `--allow`, one token at a time, so an exemption is
-always visible in the command:
+To verify the remaining registered tokens while explicitly allowing those two documented historical values:
 
 ```
-$ python -X utf8 scripts/retraction_scan.py --allow 8.26 --allow 9.35 README.md NOTICE docs
-scanned <N> file(s) against 14 retracted tokens: 0 hit(s); 0 inspection failure(s).
+python -X utf8 scripts/retraction_scan.py --allow 8.26 --allow 9.35 README.md NOTICE docs
 ```
 
-Two tokens allowed, fourteen still enforced. We are not suppressing the check — the plain
-form above is printed here precisely so the exemption cannot be mistaken for a clean bill.
-**A clean run is not a certificate** either way: the register can be incomplete, and the
-tool says so in its own output.
-
-Both are read-only. (`retraction_register.py --census` writes a census file; that form is
-not part of the advertised path here.)
+The evidence map explains why these two values appear. This token scan is a focused publication check, not a substitute for reading the result and its scope.
 
 ## The inventory is a preserved snapshot, not a rebuild
 

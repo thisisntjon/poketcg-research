@@ -1,0 +1,26 @@
+[
+  {
+    "file": "action_decoder.py.excerpt.txt",
+    "sha256": "97977ddd8d3436bc5ec947b8beaa504226085f63ba33f2f99790947d6107e1b4"
+  },
+  {
+    "file": "architecture.md.excerpt.txt",
+    "sha256": "220b93eef464a8df680c59b1c098f7de45af03824afd21ac4639d3a7e2bbc044"
+  },
+  {
+    "file": "c61_teacher_bridge.py.excerpt.txt",
+    "sha256": "04a01e2ec1923ff2c4414523a0af20362470f9f23c854d57ce467c71ab0c2a9b"
+  },
+  {
+    "file": "lf_v2_policy.py.excerpt.txt",
+    "sha256": "916b1a4358219f2c0ce55a215d935309c8a8c0a6311e4d3d9c2a3c0cc247f79d"
+  },
+  {
+    "file": "model_v2.py.excerpt.txt",
+    "sha256": "22b769ee239e581b953126ee88d1f35f6c4368391b3761e8425e90d4cb746769"
+  },
+  {
+    "file": "semantic_encoder.py.excerpt.txt",
+    "sha256": "1a512e9f7f50a5f46b59e6cccc79033243d351cdd53683fe6bf493898ad1d241"
+  }
+]

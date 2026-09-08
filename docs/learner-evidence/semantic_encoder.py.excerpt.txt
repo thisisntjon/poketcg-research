@@ -1,0 +1,87 @@
+SOURCE: ptcg-agent/learning_factory/semantic_encoder.py
+SHA256 OF COMPLETE SOURCE: c58b1742e30ffc4de61d33378eb22a592aaa42252ca3f9d507961d39536f0b8d
+Scope: selected source excerpts, not a complete runnable package.
+
+LINES 17-24
+17:     "search_begin_input",
+18:     "hidden",
+19:     "hiddenState",
+20:     "trueState",
+21:     "opponentHand",
+22:     "deckOrder",
+23:     "rngState",
+24: }
+
+LINES 187-215
+187: def project_actor_visible(observation: Mapping[str, Any]) -> dict[str, Any]:
+188:     if not isinstance(observation, Mapping):
+189:         raise TypeError("observation must be a mapping")
+190:     actor = _actor_from(observation)
+191:     raw = copy.deepcopy(dict(observation))
+192:     if set(raw).issubset(_OFFICIAL_ROOT) and {"select", "logs", "current"} <= set(raw):
+193:         _validate_official(raw)
+194:     elif set(raw).issubset(_SIMPLE_ROOT):
+195:         _validate_simple(raw)
+196:     else:
+197:         unknown = sorted(set(raw) - _OFFICIAL_ROOT)
+198:         raise HiddenInformationError(f"unknown official field at observation: {unknown}")
+199:     # ``cg.game`` appends this opaque branch-engine serialization to every raw
+200:     # observation.  It is not an actor input and never crosses the LF firewall.
+201:     raw.pop("search_begin_input", None)
+202:     for forbidden in _FORBIDDEN_KEYS:
+203:         if forbidden in raw:
+204:             raise HiddenInformationError(f"forbidden hidden field: {forbidden}")
+205:     if isinstance(raw.get("current"), Mapping):
+206:         current = dict(raw["current"])
+207:         # Outcome is validated as part of the exact engine schema, but never
+208:         # enters the learner. Terminal reward is joined only after the game.
+209:         current.pop("result", None)
+210:         current["players"] = _project_players(current.get("players"), actor)
+211:         raw["current"] = current
+212:     elif "players" in raw:
+213:         raw["players"] = _project_players(raw["players"], actor)
+214:     return _project_value(raw, actor)
+215: 
+
+LINES 230-270
+230: def _semantic_action(option: Mapping[str, Any], actor: int, context: object) -> dict:
+231:     return {
+232:         "option": _project_value(copy.deepcopy(dict(option)), actor),
+233:         "selection_context": _project_value(copy.deepcopy(context), actor),
+234:     }
+235: @dataclass(frozen=True)
+236: class _Entry:
+237:     semantic_id: str
+238:     action: dict[str, Any]
+239:     original_index: int | None
+240: class SemanticMenu:
+241:     def __init__(self, entries: Sequence[_Entry], minimum: int, maximum: int):
+242:         self._entries = tuple(entries)
+243:         self.minimum = minimum
+244:         self.maximum = maximum
+245:         self.stop_id = None
+246:         self.selection_contract = {
+247:             "schema": "ptcg.lf_selection/v1",
+248:             "min_count": minimum,
+249:             "max_count": maximum,
+250:         }
+251: 
+252:     def learner_options(self) -> list[dict[str, Any]]:
+253:         return [
+254:             {
+255:                 "semantic_id": entry.semantic_id,
+256:                 "action": copy.deepcopy(entry.action),
+257:                 "selection_contract": copy.deepcopy(self.selection_contract),
+258:             }
+259:             for entry in self._entries
+260:         ]
+261: 
+262:     def native_indices(self, semantic_ids: Sequence[str]) -> list[int]:
+263:         by_id = {entry.semantic_id: entry for entry in self._entries}
+264:         selected: list[int] = []
+265:         seen: set[str] = set()
+266:         for semantic_id in semantic_ids:
+267:             if semantic_id in seen:
+268:                 raise SelectionError("duplicate semantic selection")
+269:             seen.add(semantic_id)
+270:             entry = by_id.get(semantic_id)

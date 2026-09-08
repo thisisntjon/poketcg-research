@@ -1,7 +1,6 @@
 # How it plays
 
-Two agents appear throughout this repository. They are different programs and they
-must not be confused.
+This page explains the submitted public Grimmsnarl player and the experimental Lucario pilot. For the project-developed recurrent learner, see the [current report](STRATEGY-WRITEUP.md#a-legal-move-needs-meaning) and [source excerpts](learner-evidence/README.md).
 
 Everything on this page comes from **static inspection of source and supplied card
 text**, recorded in
