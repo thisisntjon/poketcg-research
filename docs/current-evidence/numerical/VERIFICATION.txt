@@ -1,0 +1,32 @@
+PASS: hashes, complete cohorts, unique game keys, seat counts and published numerical checks.
+Saved outcomes only; no games or training executed.
+
+Development: decided games; inverse-variance within-batch contrasts; 40% Alakazam.
+  card (3 contrasts): +5.02 pp [+3.30, +6.75]
+  rule (2 contrasts): +3.62 pp [+1.52, +5.72]
+  combined (3 contrasts): +7.82 pp [+6.08, +9.55]
+  Four-arm interaction: +1.71 pp [-2.55, +5.96]
+
+Seven-opponent panel: 8,400 records; win=1, draw=0.5, loss=0.
+  llccqq624 Alakazam: 36.67% -> 57.08%; +20.42 pp [+14.89, +25.94]
+  raunakdey07 Alakazam: 20.67% -> 39.42%; +18.75 pp [+13.68, +23.82]
+  plamen06 Steel: 32.50% -> 33.17%; +0.67 pp [-4.65, +5.99]
+  aristophanivan snapshot: 31.00% -> 31.33%; +0.33 pp [-4.91, +5.58]
+  zoli800 Dragapult: 86.33% -> 86.83%; +0.50 pp [-3.35, +4.35]
+  harukiharada Crustle: 85.25% -> 84.50%; -0.75 pp [-4.80, +3.30]
+  Grimmsnarl BC alias (not c61): 58.92% -> 55.83%; -3.08 pp [-8.67, +2.51]
+  Equal-weight Alakazam group: +19.58 pp [+15.83, +23.33]
+  Equal-weight Other group: -0.47 pp [-2.64, +1.71]
+  Assumed Alakazam share q=0.25: +4.55 pp [+2.66, +6.43]
+  Alakazam first seat: +19.50 pp [+14.11, +24.89]
+  Alakazam second seat: +19.67 pp [+14.27, +25.06]
+  Alakazam first-minus-second: -0.17 pp [-7.79, +7.46]
+
+Exact-c61 opponent follow-up: 16,000 records; draws excluded.
+  All: -0.14 pp [-1.68, +1.40]
+  first: -0.50 pp [-2.69, +1.69]
+  second: +0.23 pp [-1.91, +2.37]
+
+Historical student: 23 wins / 1200 decided (1.9167%); 3 excluded draws; 1203 attempts.
+Training receipt reports 1358 learner-state teacher labels; original labels are not recounted here.
+Selection-set validation NLL 1.071780205 -> 1.041760087 (change -0.030020118).

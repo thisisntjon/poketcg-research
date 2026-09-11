@@ -1,3 +1,8 @@
 *.pdf binary
 *.png binary
 *.zip binary
+
+# Preserve file bytes checked by the current release manifests on every platform.
+/docs/current-evidence/** -text
+/docs/downloads/** -text
+/docs/current-figures/** -text

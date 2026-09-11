@@ -1,0 +1,135 @@
+SOURCE: ptcg-agent/learning_factory/semantic_features_v2.py
+COMMIT: e9f4b64f1f2bf92e98234e004f4b668cee41fd2b
+COMPLETE SOURCE SHA256: a1df12dbb56436415cc0a1e976f7f62aa391991b2c423bac55898798996cf487
+Selected authored text/code for inspection; not a runnable release.
+
+LINES 602-669
+602:     def encode(
+603:         self,
+604:         observation: Mapping[str, Any],
+605:         options: Sequence[Mapping[str, Any]] | None = None,
+606:         *,
+607:         min_count: int = 0,
+608:         max_count: int | None = None,
+609:         context: object = None,
+610:         actor: int | None = None,
+611:     ) -> EncodedV2:
+612:         if not isinstance(observation, Mapping):
+613:             raise FeatureV2Error("observation must be a mapping")
+614:         _walk_refuse(observation)
+615:         if options is not None:
+616:             _walk_refuse(options)
+617:         _walk_refuse(context)
+618:         self._physical_actor(observation, actor)
+619:         for event in _as_list(observation.get("logs")):
+620:             if isinstance(event, Mapping) and isinstance(event.get("playerIndex"), bool):
+621:                 raise FeatureV2Error("bad_actor")
+622:             if isinstance(event, Mapping) and isinstance(event.get("type"), bool):
+623:                 raise FeatureV2Error("unknown_or_appended_log_type")
+624:         try:
+625:             visible = project_actor_visible(observation)
+626:         except HiddenInformationError as exc:
+627:             message = str(exc)
+628:             if "opponent hand" in message.lower():
+629:                 raise FeatureV2Error("opponent-hand identity") from exc
+630:             raise FeatureV2Error(message) from exc
+631:         self._bind_document_serials(visible)
+632:         if options is not None:
+633:             self._bind_option_serials_canonical(options)
+634:         select = visible.get("select") if isinstance(visible.get("select"), Mapping) else {}
+635:         select_map = select if isinstance(select, Mapping) else {}
+636:         resolved_max = 0 if max_count is None and not options else (max_count if max_count is not None else len(options or ()))
+637:         if options is not None and not _is_ctx34_forced_completion(
+638:             select_map, options, min_count, resolved_max
+639:         ):
+640:             self._refuse_hold_and_unlisted(options, select_map)
+641:         blocks = self._blocks(visible)
+642:         legal_menu = None
+643:         semantic_menu = None
+644:         if options is not None:
+645:             legal_menu, semantic_menu = self._encode_menu(
+646:                 options,
+647:                 min_count=min_count,
+648:                 max_count=resolved_max,
+649:                 context=context,
+650:                 actor=self._physical_actor(observation, actor),
+651:                 entities=blocks["entity_meta"],
+652:                 select=select if isinstance(select, Mapping) else {},
+653:             )
+654:         encoded = EncodedV2(
+655:             schema_sha256=self.schema_sha256,
+656:             treatment=TREATMENT,
+657:             global_block=blocks["global_block"],
+658:             entity_block=blocks["entity_block"],
+659:             history_block=blocks["history_block"],
+660:             legal_menu=legal_menu,
+661:             semantic_menu=semantic_menu,
+662:             min_count=min_count,
+663:             max_count=resolved_max,
+664:             global_meta=blocks["global_meta"],
+665:             entity_meta=blocks["entity_meta"],
+666:             history_meta=blocks["history_meta"],
+667:         )
+668:         self._assert_no_raw_serials(encoded)
+669:         return encoded
+
+LINES 835-869
+835:     def _source_target_links(
+836:         self,
+837:         option: Mapping[str, Any],
+838:         entities: Sequence[Mapping[str, Any]],
+839:         select: Mapping[str, Any],
+840:     ) -> tuple[float, float, float, float, float, float]:
+841:         kind = self._kind_index({"option": option})
+842:         if kind not in {_ATTACH_TYPE, _EVOLVE_TYPE}:
+843:             return 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+844:         if not _attach_evolve_select_allowed(kind, select.get("type"), select.get("context")):
+845:             raise FeatureV2Error("unlisted_selectcontext_optiontype")
+846:         hand_index = option.get("index")
+847:         area = option.get("inPlayArea")
+848:         play_index = option.get("inPlayIndex")
+849:         if not isinstance(hand_index, int) or isinstance(hand_index, bool):
+850:             raise FeatureV2Error("ambiguous_source_target")
+851:         if area not in (4, 5) or not isinstance(play_index, int) or isinstance(play_index, bool):
+852:             raise FeatureV2Error("ambiguous_source_target")
+853:         source = self._find_entity(entities, owner="SELF", zone="hand", root_slot=hand_index)
+854:         if area == 4:
+855:             target = self._find_entity(entities, owner="SELF", zone="active", root_slot=0 if play_index == 0 else play_index)
+856:             if target is None:
+857:                 target = self._find_entity(entities, owner="SELF", zone="active", root_slot=play_index)
+858:         else:
+859:             target = self._find_entity(entities, owner="SELF", zone="bench", root_slot=play_index)
+860:         if source is None or target is None:
+861:             raise FeatureV2Error("unresolved_source_target")
+862:         serial = option.get("serial")
+863:         if not _is_missing(serial) and not _is_unknown(serial) and serial not in (0, 0.0):
+864:             token = self.tokens.token(serial)
+865:             if token != source.get("token"):
+866:                 raise FeatureV2Error("serial_slot_disagreement")
+867:         return (
+868:             float(source.get("token") or 0),
+869:             float(target.get("token") or 0),
+
+LINES 1038-1059
+1038:     def _refuse_hidden_zones(self, player: Mapping[str, Any], seat: str, public: set[str]) -> None:
+1039:         if seat == "OPP":
+1040:             hand = player.get("hand")
+1041:             if isinstance(hand, Sequence) and not isinstance(hand, (str, bytes)) and any(
+1042:                 isinstance(card, Mapping) and _identity(card) is not None for card in hand
+1043:             ):
+1044:                 raise FeatureV2Error("opponent-hand identity")
+1045:         prize = player.get("prize")
+1046:         if isinstance(prize, Sequence) and not isinstance(prize, (str, bytes)):
+1047:             for card in prize:
+1048:                 if isinstance(card, Mapping) and (
+1049:                     _identity(card) is not None
+1050:                     or (
+1051:                         not _is_missing(card.get("serial"))
+1052:                         and not _is_unknown(card.get("serial"))
+1053:                     )
+1054:                 ):
+1055:                     if not _is_public_prize(card, public):
+1056:                         raise FeatureV2Error("prize identity")
+1057:         for key in ("deck", "deckOrder", "deck_order"):
+1058:             if player.get(key) not in (None, [], ()):
+1059:                 raise FeatureV2Error("deck order")

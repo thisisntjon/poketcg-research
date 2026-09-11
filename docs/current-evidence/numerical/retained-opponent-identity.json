@@ -1,0 +1,33 @@
+{
+  "schema": "ptcg.retained_opponent_identity/v1",
+  "inspection_date": "2026-09-11",
+  "opponent_id": "P07",
+  "source_alias": "tb_f2e2c18d_grimmsnarl_bc_alias",
+  "method": "Read retained local files and calculate SHA-256; do not execute or redistribute their contents.",
+  "host": "Jonathan Simone local Windows workstation",
+  "retained_directory": "Pokemon/ptcg-agent/experiments/public_kernels/keval24/sources/nb_f2e2c18d_grimmsnarl_bc",
+  "files": [
+    {
+      "file": "main.py",
+      "bytes": 8563,
+      "sha256": "f2e2c18d50570b15ab4380ec540c128afff45d84f989b4bdd8ea4ff1a901d398",
+      "lf_sha256": "f2e2c18d50570b15ab4380ec540c128afff45d84f989b4bdd8ea4ff1a901d398"
+    },
+    {
+      "file": "deck.csv",
+      "bytes": 252,
+      "sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+      "lf_sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d"
+    }
+  ],
+  "historical_link": {
+    "url": "https://github.com/thisisntjon/poketcg-research/blob/76717ec5b210efe9cdff1daaf220c89f4d88195f/workflow/research/2026-09-03-strike3-generalisation.md#validity",
+    "lines": [
+      214,
+      216
+    ],
+    "policy_prefix": "f2e2c18d5057",
+    "deck_prefix": "92b92bac9f91"
+  },
+  "scope": "Retained-file hashes match the historical report prefixes. The deck matches submitted c61; the policy differs. This is not an independent reconstruction of historical execution or a complete rights audit."
+}

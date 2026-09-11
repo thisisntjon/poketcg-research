@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "panel_original_rows_independent_statistics_variance_max_difference": 6.217248937900877e-15,
+  "combined_pool_original_sources_independent_delta": 7.8168705352302394,
+  "json_stdout_roundtrip": "PASS",
+  "failure_cases": [
+    {
+      "case": "missing_required_file",
+      "exit_code": 1,
+      "stderr": "INCOMPLETE OR ALTERED DATA -- refusing to report results: Missing required file: panel-outcomes.csv",
+      "stdout_empty": true
+    },
+    {
+      "case": "truncated_rows_checksum",
+      "exit_code": 1,
+      "stderr": "INCOMPLETE OR ALTERED DATA -- refusing to report results: SHA256 mismatch: panel-outcomes.csv",
+      "stdout_empty": true
+    },
+    {
+      "case": "truncated_rows_updated_export_checksum",
+      "exit_code": 1,
+      "stderr": "INCOMPLETE OR ALTERED DATA -- refusing to report results: panel-outcomes.csv: expected 8400 rows, found 8399",
+      "stdout_empty": true
+    },
+    {
+      "case": "duplicate_game_with_updated_export_checksum",
+      "exit_code": 1,
+      "stderr": "INCOMPLETE OR ALTERED DATA -- refusing to report results: Duplicate game key: ('seven_opponent_panel', 'COMBINED', 'P07', 598)",
+      "stdout_empty": true
+    },
+    {
+      "case": "invalid_outcome_with_updated_export_checksum",
+      "exit_code": 1,
+      "stderr": "INCOMPLETE OR ALTERED DATA -- refusing to report results: Unknown outcome",
+      "stdout_empty": true
+    }
+  ],
+  "scope": "Stored-outcome arithmetic and input-integrity behavior only; no games/training executed."
+}

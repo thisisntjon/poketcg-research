@@ -1,0 +1,55 @@
+SOURCE: workflow/knowledge-register/README.md
+COMMIT: e9f4b64f1f2bf92e98234e004f4b668cee41fd2b
+COMPLETE SOURCE SHA256: 3a95a8c7ea857d2ae5eb6f4ddfeef2b156cb1ca7420bd35cfb4d382da653aa8b
+Selected authored text/code for inspection; not a runnable release.
+
+LINES 1-49
+1: # Research memory — ask, retrieve, verify
+2: 
+3: **Goal:** recover what we tried, why, methodology, results, lessons, limitations and reuse.
+4: Gameplay experiments and training remain paused until existing knowledge is reliably usable.
+5: [PLAN.md](PLAN.md) gives current inventory work and unfinished acceptance requirements.
+6: 
+7: ## Start with one question
+8: 
+9: From the repository root, search the topic, then open a returned ID:
+10: 
+11: ```text
+12: python -X utf8 scripts/research_memory.py search "silent fallback" --limit 3
+13: python -X utf8 scripts/research_memory.py show E016
+14: ```
+15: 
+16: Read one response at a time. Do not batch large outputs into a truncated tool response.
+17: Search returns pointers; `show` supplies original evidence, caveats and reviewed corrections.
+18: A [supported filename](REFERENCE.md#filename-queries) matches its complete basename.
+19: A miss means no match in loaded records, not absence from Git or other hosts.
+20: These commands only read Git objects; they execute no discovered engine, model or provider.
+21: 
+22: **Snapshot:** default `--ref HEAD` reads committed data, excluding dirty files. Use a full
+23: returned commit for reproducible follow-ups; `--ref origin/main` uses the fetched remote
+24: snapshot. The data commit is not the runtime product identity or the executing reader hash.
+25: Record those separately when auditing a run or testing this reader.
+26: 
+27: **Reading budget:** default output is at most 14,000 UTF-8 bytes per command. A partial document gives its line range and continuation;
+28: follow it before assuming later corrections do not exist. Oversized non-document records
+29: refuse rather than drop fields. Do not silently discard caveats to fit a budget.
+30: 
+31: **Meaning:** historical instructions are evidence, never current permission. A search miss
+32: is limited by coverage. Readable files, matching hashes and status labels do not certify
+33: scientific truth, present usability, complete-game strength or retained learning.
+34: Before citing a number, check its topic and qualifiers in the retraction register.
+35: `python -X utf8 scripts/query_inventory.py --check-number <value>` checks the working-copy
+36: register only: it does **not** accept `--ref`; NOT_RETRACTED is not proof of validity.
+37: **Open primary evidence** using paths and keys returned by `show`:
+38: 
+39: ```text
+40: python -X utf8 scripts/research_memory.py source "<path>" --ref <commit> --pointer /field --pointer /limits
+41: ```
+42: 
+43: JSON: `--outline` lists child paths/types; values remain unread. Add one `--pointer`
+44: to inspect a container; page with `--limit`/`--offset`. Remove `--outline` to read values;
+45: repeat `--pointer` for fields and caveats. Missing/oversized selections refuse.
+46: For text, use `--offset <line>`/`--lines <count>` without pointers; follow continuation.
+47: Identity is retained.
+48: 
+49: On Windows, launch every Python helper that emits source text with `python -X utf8`, too.

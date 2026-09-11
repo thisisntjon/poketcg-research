@@ -1,0 +1,44 @@
+SOURCE: ptcg-agent/learning_factory/c61_teacher_bridge.py
+SHA256 OF COMPLETE SOURCE: 2d979aa4b33c8fd0acfc4f608d9dd83855138000f7ab07609c2b26dec5c57653
+Scope: selected source excerpts, not a complete runnable package.
+
+LINES 428-466
+428:     def choose_native(
+429:         self,
+430:         actor_visible: Mapping[str, Any],
+431:         native_menu: list[Mapping[str, Any]],
+432:         selection_contract: Mapping[str, Any],
+433:     ) -> list[int | str]:
+434:         if self._closed or self._faulted:
+435:             raise C61TeacherBridgeError("CLOSED_NO_REUSE_NO_FALLBACK")
+436:         if self.active_adapter is None:
+437:             raise C61TeacherBridgeError("NOT_RESET")
+438:         try:
+439:             observation, select = self._validate_actor(actor_visible)
+440:             menu = self._validate_menu(native_menu)
+441:             selection = self._validate_selection(selection_contract, len(menu))
+442:             options = self._validate_coupling(select, menu, selection)
+443:             self.last_c61_observation = copy.deepcopy(observation)
+444:             control_selection = {
+445:                 "options": options,
+446:                 "minimum": selection["min_count"],
+447:                 "maximum": selection["max_count"],
+448:             }
+449:             try:
+450:                 output = self.active_adapter.choose_native(
+451:                     copy.deepcopy(observation), copy.deepcopy(control_selection)
+452:                 )
+453:             except Exception as exc:
+454:                 raise C61TeacherBridgeError(f"CONTROL_ADAPTER_FAULT: {exc}") from exc
+455:             positions = self._validate_output(
+456:                 output,
+457:                 len(menu),
+458:                 selection["min_count"],
+459:                 selection["max_count"],
+460:             )
+461:         except C61TeacherBridgeError as exc:
+462:             self._fail(str(exc), exc)
+463:         tokens: list[int | str] = [menu[position]["source_index"] for position in positions]
+464:         if len(positions) < selection["max_count"]:
+465:             tokens.append(STOP)
+466:         return tokens

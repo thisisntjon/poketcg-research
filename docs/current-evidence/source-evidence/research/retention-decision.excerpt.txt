@@ -1,0 +1,27 @@
+SOURCE: workflow/research/2026-08-10-final-strategy-ladder-options.md
+COMMIT: e9f4b64f1f2bf92e98234e004f4b668cee41fd2b
+COMPLETE SOURCE SHA256: 244ce0bc8dc8d8c1e4551b65f8fd1ddcaa9fa5146e515c31607a723483a34923
+Selected authored text/code for inspection; not a runnable release.
+
+LINES 9-18
+9: 
+10: **Do not stop local experimentation. Stop unbounded pre-wall candidate churn.** The rational operating posture is:
+11: 
+12: 1. **RUN** read-only monitoring and the two active exact-base legs through their first valid maturity window.
+13: 2. **HOLD** the exact current pair on the ladder. A rank move alone—up or down—is not evidence that an unqualified replacement is stronger.
+14: 3. Permit only bounded local work with a named decision consumer: pair counterfactual pricing and, at most, an outcome-blind materiality measurement of the one remaining architecture-scale c61 controller hypothesis.
+15: 4. Do not spend a ladder position unless a complete product—not an idea, source-code diff, legal-opportunity count, or early local win rate—clears reach, randomized causal benefit, reliability, exact bundle identity, independent reproduction, and conservative pair-value gates.
+16: 5. After the wall, keep investigating for the Strategy report and future scientific value, but make no claim that local work can repair the locked Simulation pair.
+17: 
+18: This is not a claim that all useful AI research is exhausted. It is a narrower finding: **the known, evidence-supported routes likely to create a decision-grade stronger submission before the preferred 2026-08-12 fire ceiling are nearly exhausted.** No current derivative qualifies. The current pair is already in the nominal bronze band, although both legs are immature and the band is volatile.
+
+LINES 45-53
+45: Both descriptions identify an intentional `PAIR-REDRAW` and the second says it is the same file as the first. More importantly, identity is byte-grounded:
+46: 
+47: - full archive SHA-256 for both refs in `workflow/REFS.json`: `46bb3180e7b15e41aff60f52b18300aad1ca65d1840464d15e4d30fcac9b57ba`;
+48: - independently hashed local archive: `PTCG-SUBMIT-tetsutani/submission_20260807_tetsutani_c61e540b.tar.gz`, same SHA-256;
+49: - `main.py` SHA-256: `c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8`;
+50: - deck SHA-256: `92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d`;
+51: - public provenance: `tetsutani/grimmsnarl-ex-damage-transfer-control`, Apache-2.0, recorded as unmodified.
+52: 
+53: The **full archive hash** is the decisive identity. This product imports multiple top-level modules; matching only `main.py` would not establish the same product. The public author page’s historical “V9 921.1” is not evidence that the pulled latest bytes are that exact V9 build.

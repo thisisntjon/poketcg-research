@@ -1,0 +1,27 @@
+[
+  {
+    "file": "submission-provenance.json",
+    "sha256": "4e9801ee993d33b709ab0740ef59acfc8de1cd146de2f328ee597bc023e871fb",
+    "source_archive_member": "original-evidence/workflow/research/owned-learning-roadmap-20260813/lane-s-c61-provenance-receipt.json"
+  },
+  {
+    "file": "competition-verification.json",
+    "sha256": "bb7621cfdd123257aefa9bc07962ec0a4405b5ddd6046b916690c35e53c81a1d",
+    "source_archive_member": "original-evidence/workflow/writeup/visuals-2026-09-06/COMPETITION-VERIFICATION.json"
+  },
+  {
+    "file": "training-receipt.json",
+    "sha256": "fab7750232057596c50f96fae70c1a2f7f8e4b085f23812bb050584356a8322a",
+    "source_archive_member": "original-evidence/workflow/writeup/visuals-2026-09-06/learning-evidence/training-receipt.json"
+  },
+  {
+    "file": "learning-verification.json",
+    "sha256": "3eefa8895eef2483f76efa93ece4214d819701fc70105416089ecd046d66f552",
+    "source_archive_member": "original-evidence/workflow/writeup/visuals-2026-09-06/LEARNING-VERIFICATION.json"
+  },
+  {
+    "file": "source-verification.json",
+    "sha256": "dcb3c2ffd41f1635f6d7d0b9ab42d6e1e1ee73b126c5924de27eef27f8f06703",
+    "source_archive_member": "original-evidence/workflow/writeup/visuals-2026-09-06/SOURCE-VERIFICATION.json"
+  }
+]

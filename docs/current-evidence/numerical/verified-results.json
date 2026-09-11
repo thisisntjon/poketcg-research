@@ -1,0 +1,1210 @@
+{
+  "schema": "ptcg.verified_writeup_results/v1",
+  "verification_scope": "Recount of saved terminal outcomes and arithmetic from exported receipts; no new execution of players or training",
+  "interval_method": "Normal 1.96 SE; independent games/arms/cells. Decided games use p(1-p)/n; half-draw scores use unbiased sample variance/n, matching current article figures (see METHODS.md)",
+  "development": {
+    "records": 28000,
+    "panel_alakazam_fraction": 0.4,
+    "effects": {
+      "card": {
+        "comparisons": [
+          {
+            "run": "xerosic_screen1",
+            "baseline_arm": "control",
+            "treatment_arm": "variant",
+            "baseline": {
+              "wins": 715,
+              "losses": 1284,
+              "draws": 1,
+              "attempts": 2000,
+              "denominator": 1999,
+              "score_total": 715,
+              "score_pct": 35.767883941970986,
+              "mean_variance_pct2": 1.1492980852980454
+            },
+            "combined": {
+              "wins": 812,
+              "losses": 1187,
+              "draws": 1,
+              "attempts": 2000,
+              "denominator": 1999,
+              "score_total": 812,
+              "score_pct": 40.62031015507754,
+              "mean_variance_pct2": 1.2066140162146364
+            },
+            "draw_convention": "decided",
+            "delta_pp": 4.852426213106554,
+            "variance_pp2": 2.355912101512682,
+            "se_pp": 1.5348980752847017,
+            "ci95_pp": [
+              1.844025985548539,
+              7.860826440664569
+            ]
+          },
+          {
+            "run": "xerosic_replicate",
+            "baseline_arm": "control",
+            "treatment_arm": "variant",
+            "baseline": {
+              "wins": 674,
+              "losses": 1324,
+              "draws": 2,
+              "attempts": 2000,
+              "denominator": 1998,
+              "score_total": 674,
+              "score_pct": 33.733733733733736,
+              "mean_variance_pct2": 1.1188231139914555
+            },
+            "combined": {
+              "wins": 808,
+              "losses": 1189,
+              "draws": 3,
+              "attempts": 2000,
+              "denominator": 1997,
+              "score_total": 808,
+              "score_pct": 40.46069103655483,
+              "mean_variance_pct2": 1.206310257636422
+            },
+            "draw_convention": "decided",
+            "delta_pp": 6.726957302821091,
+            "variance_pp2": 2.3251333716278775,
+            "se_pp": 1.524838801850175,
+            "ci95_pp": [
+              3.7382732511947485,
+              9.715641354447435
+            ]
+          },
+          {
+            "run": "factorial",
+            "baseline_arm": "A_baseline",
+            "treatment_arm": "C_xerosic",
+            "baseline": {
+              "wins": 686,
+              "losses": 1313,
+              "draws": 1,
+              "attempts": 2000,
+              "denominator": 1999,
+              "score_total": 686,
+              "score_pct": 34.31715857928965,
+              "mean_variance_pct2": 1.127588036504678
+            },
+            "combined": {
+              "wins": 756,
+              "losses": 1243,
+              "draws": 1,
+              "attempts": 2000,
+              "denominator": 1999,
+              "score_total": 756,
+              "score_pct": 37.81890945472736,
+              "mean_variance_pct2": 1.1763987159218956
+            },
+            "draw_convention": "decided",
+            "delta_pp": 3.5017508754377147,
+            "variance_pp2": 2.3039867524265736,
+            "se_pp": 1.5178889130718933,
+            "ci95_pp": [
+              0.5266886058168039,
+              6.4768131450586255
+            ]
+          }
+        ],
+        "pooled": {
+          "weighting": "inverse_variance",
+          "count": 3,
+          "weights": [
+            0.3294052224471332,
+            0.3337656924692231,
+            0.3368290850836436
+          ],
+          "delta_pp": 5.023133642088177,
+          "variance_pp2": 0.776049749864678,
+          "se_pp": 0.8809368591815636,
+          "ci95_pp": [
+            3.2964973980923125,
+            6.749769886084041
+          ]
+        }
+      },
+      "rule": {
+        "comparisons": [
+          {
+            "run": "sniper_screen1",
+            "baseline_arm": "OFF",
+            "treatment_arm": "ON",
+            "baseline": {
+              "wins": 682,
+              "losses": 1317,
+              "draws": 1,
+              "attempts": 2000,
+              "denominator": 1999,
+              "score_total": 682,
+              "score_pct": 34.11705852926463,
+              "mean_variance_pct2": 1.1244282992682315
+            },
+            "combined": {
+              "wins": 744,
+              "losses": 1255,
+              "draws": 1,
+              "attempts": 2000,
+              "denominator": 1999,
+              "score_total": 744,
+              "score_pct": 37.218609304652325,
+              "mean_variance_pct2": 1.1689024771850325
+            },
+            "draw_convention": "decided",
+            "delta_pp": 3.101550775387693,
+            "variance_pp2": 2.293330776453264,
+            "se_pp": 1.5143747146770723,
+            "ci95_pp": [
+              0.13337633462063136,
+              6.069725216154755
+            ]
+          },
+          {
+            "run": "factorial",
+            "baseline_arm": "A_baseline",
+            "treatment_arm": "B_sniper",
+            "baseline": {
+              "wins": 686,
+              "losses": 1313,
+              "draws": 1,
+              "attempts": 2000,
+              "denominator": 1999,
+              "score_total": 686,
+              "score_pct": 34.31715857928965,
+              "mean_variance_pct2": 1.127588036504678
+            },
+            "combined": {
+              "wins": 768,
+              "losses": 1229,
+              "draws": 3,
+              "attempts": 2000,
+              "denominator": 1997,
+              "score_total": 768,
+              "score_pct": 38.45768652979469,
+              "mean_variance_pct2": 1.1851652477493826
+            },
+            "draw_convention": "decided",
+            "delta_pp": 4.140527950505046,
+            "variance_pp2": 2.3127532842540606,
+            "se_pp": 1.5207739096440538,
+            "ci95_pp": [
+              1.1598110876027006,
+              7.121244813407391
+            ]
+          }
+        ],
+        "pooled": {
+          "weighting": "inverse_variance",
+          "count": 2,
+          "weights": [
+            0.5021083535976343,
+            0.4978916464023657
+          ],
+          "delta_pp": 3.618848831681351,
+          "variance_pp2": 1.1515005404197327,
+          "se_pp": 1.0730799319807136,
+          "ci95_pp": [
+            1.5156121649991525,
+            5.722085498363549
+          ]
+        }
+      },
+      "combined": {
+        "comparisons": [
+          {
+            "run": "factorial",
+            "baseline_arm": "A_baseline",
+            "treatment_arm": "D_both",
+            "baseline": {
+              "wins": 686,
+              "losses": 1313,
+              "draws": 1,
+              "attempts": 2000,
+              "denominator": 1999,
+              "score_total": 686,
+              "score_pct": 34.31715857928965,
+              "mean_variance_pct2": 1.127588036504678
+            },
+            "combined": {
+              "wins": 872,
+              "losses": 1125,
+              "draws": 3,
+              "attempts": 2000,
+              "denominator": 1997,
+              "score_total": 872,
+              "score_pct": 43.665498247371055,
+              "mean_variance_pct2": 1.2317847208542518
+            },
+            "draw_convention": "decided",
+            "delta_pp": 9.348339668081408,
+            "variance_pp2": 2.35937275735893,
+            "se_pp": 1.536024985916222,
+            "ci95_pp": [
+              6.337730695685613,
+              12.358948640477204
+            ]
+          },
+          {
+            "run": "combined_replicate",
+            "baseline_arm": "A_baseline",
+            "treatment_arm": "D_both",
+            "baseline": {
+              "wins": 701,
+              "losses": 1296,
+              "draws": 3,
+              "attempts": 2000,
+              "denominator": 1997,
+              "score_total": 701,
+              "score_pct": 35.10265398097146,
+              "mean_variance_pct2": 1.1407456592835927
+            },
+            "combined": {
+              "wins": 845,
+              "losses": 1154,
+              "draws": 1,
+              "attempts": 2000,
+              "denominator": 1999,
+              "score_total": 845,
+              "score_pct": 42.271135567783894,
+              "mean_variance_pct2": 1.2207426986435341
+            },
+            "draw_convention": "decided",
+            "delta_pp": 7.168481586812433,
+            "variance_pp2": 2.3614883579271266,
+            "se_pp": 1.5367134924660246,
+            "ci95_pp": [
+              4.156523141579025,
+              10.18044003204584
+            ]
+          },
+          {
+            "run": "combined_reproduction_4070",
+            "baseline_arm": "A_baseline",
+            "treatment_arm": "D_both",
+            "baseline": {
+              "wins": 695,
+              "losses": 1303,
+              "draws": 2,
+              "attempts": 2000,
+              "denominator": 1998,
+              "score_total": 695,
+              "score_pct": 34.78478478478478,
+              "mean_variance_pct2": 1.135383996974316
+            },
+            "combined": {
+              "wins": 834,
+              "losses": 1165,
+              "draws": 1,
+              "attempts": 2000,
+              "denominator": 1999,
+              "score_total": 834,
+              "score_pct": 41.720860430215104,
+              "mean_variance_pct2": 1.21633609203803
+            },
+            "draw_convention": "decided",
+            "delta_pp": 6.936075645430321,
+            "variance_pp2": 2.351720089012346,
+            "se_pp": 1.533531900226515,
+            "ci95_pp": [
+              3.930353120986352,
+              9.941798169874291
+            ]
+          }
+        ],
+        "pooled": {
+          "weighting": "inverse_variance",
+          "count": 3,
+          "weights": [
+            0.33307151726433526,
+            0.33277312651055097,
+            0.33415535622511383
+          ],
+          "delta_pp": 7.816870535230241,
+          "variance_pp2": 0.7858398640856772,
+          "se_pp": 0.8864760933525941,
+          "ci95_pp": [
+            6.079377392259157,
+            9.554363678201327
+          ]
+        }
+      }
+    },
+    "factorial": {
+      "arms": {
+        "A_baseline": {
+          "wins": 686,
+          "losses": 1313,
+          "draws": 1,
+          "attempts": 2000,
+          "denominator": 1999,
+          "score_total": 686,
+          "score_pct": 34.31715857928965,
+          "mean_variance_pct2": 1.127588036504678
+        },
+        "B_sniper": {
+          "wins": 768,
+          "losses": 1229,
+          "draws": 3,
+          "attempts": 2000,
+          "denominator": 1997,
+          "score_total": 768,
+          "score_pct": 38.45768652979469,
+          "mean_variance_pct2": 1.1851652477493826
+        },
+        "C_xerosic": {
+          "wins": 756,
+          "losses": 1243,
+          "draws": 1,
+          "attempts": 2000,
+          "denominator": 1999,
+          "score_total": 756,
+          "score_pct": 37.81890945472736,
+          "mean_variance_pct2": 1.1763987159218956
+        },
+        "D_both": {
+          "wins": 872,
+          "losses": 1125,
+          "draws": 3,
+          "attempts": 2000,
+          "denominator": 1997,
+          "score_total": 872,
+          "score_pct": 43.665498247371055,
+          "mean_variance_pct2": 1.2317847208542518
+        }
+      },
+      "interaction": {
+        "delta_pp": 1.7060608421386476,
+        "variance_pp2": 4.720936721030208,
+        "se_pp": 2.1727716679463143,
+        "ci95_pp": [
+          -2.5525716270361283,
+          5.9646933113134235
+        ]
+      }
+    }
+  },
+  "panel": {
+    "records": 8400,
+    "cells": [
+      {
+        "opponent_id": "P01",
+        "opponent_label": "llccqq624 Alakazam",
+        "group": "Alakazam",
+        "baseline": {
+          "wins": 220,
+          "losses": 380,
+          "draws": 0,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 220.0,
+          "score_pct": 36.666666666666664,
+          "mean_variance_pct2": 3.876831756631423
+        },
+        "combined": {
+          "wins": 341,
+          "losses": 256,
+          "draws": 3,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 342.5,
+          "score_pct": 57.08333333333333,
+          "mean_variance_pct2": 4.06899230198479
+        },
+        "draw_convention": "half",
+        "delta_pp": 20.416666666666664,
+        "variance_pp2": 7.945824058616212,
+        "se_pp": 2.8188338118122913,
+        "ci95_pp": [
+          14.891752395514573,
+          25.941580937818756
+        ]
+      },
+      {
+        "opponent_id": "P02",
+        "opponent_label": "raunakdey07 Alakazam",
+        "group": "Alakazam",
+        "baseline": {
+          "wins": 124,
+          "losses": 476,
+          "draws": 0,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 124.0,
+          "score_pct": 20.666666666666668,
+          "mean_variance_pct2": 2.737154516787238
+        },
+        "combined": {
+          "wins": 235,
+          "losses": 362,
+          "draws": 3,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 236.5,
+          "score_pct": 39.416666666666664,
+          "mean_variance_pct2": 3.9657647004266368
+        },
+        "draw_convention": "half",
+        "delta_pp": 18.749999999999996,
+        "variance_pp2": 6.702919217213875,
+        "se_pp": 2.588999655699837,
+        "ci95_pp": [
+          13.675560674828315,
+          23.824439325171678
+        ]
+      },
+      {
+        "opponent_id": "P03",
+        "opponent_label": "plamen06 Steel",
+        "group": "Other",
+        "baseline": {
+          "wins": 195,
+          "losses": 405,
+          "draws": 0,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 195.0,
+          "score_pct": 32.5,
+          "mean_variance_pct2": 3.6623539232053424
+        },
+        "combined": {
+          "wins": 199,
+          "losses": 401,
+          "draws": 0,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 199.0,
+          "score_pct": 33.166666666666664,
+          "mean_variance_pct2": 3.7005657577443887
+        },
+        "draw_convention": "half",
+        "delta_pp": 0.6666666666666643,
+        "variance_pp2": 7.362919680949731,
+        "se_pp": 2.71347004423298,
+        "ci95_pp": [
+          -4.651734620029976,
+          5.985067953363305
+        ]
+      },
+      {
+        "opponent_id": "P04",
+        "opponent_label": "aristophanivan snapshot",
+        "group": "Other",
+        "baseline": {
+          "wins": 186,
+          "losses": 414,
+          "draws": 0,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 186.0,
+          "score_pct": 31.0,
+          "mean_variance_pct2": 3.5709515859766277
+        },
+        "combined": {
+          "wins": 188,
+          "losses": 412,
+          "draws": 0,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 188.0,
+          "score_pct": 31.333333333333336,
+          "mean_variance_pct2": 3.5919124466703765
+        },
+        "draw_convention": "half",
+        "delta_pp": 0.3333333333333357,
+        "variance_pp2": 7.162864032647004,
+        "se_pp": 2.676352748171848,
+        "ci95_pp": [
+          -4.912318053083487,
+          5.578984719750158
+        ]
+      },
+      {
+        "opponent_id": "P05",
+        "opponent_label": "zoli800 Dragapult",
+        "group": "Other",
+        "baseline": {
+          "wins": 518,
+          "losses": 82,
+          "draws": 0,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 518.0,
+          "score_pct": 86.33333333333333,
+          "mean_variance_pct2": 1.9697644221851238
+        },
+        "combined": {
+          "wins": 520,
+          "losses": 78,
+          "draws": 2,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 521.0,
+          "score_pct": 86.83333333333333,
+          "mean_variance_pct2": 1.8947783342608058
+        },
+        "draw_convention": "half",
+        "delta_pp": 0.5,
+        "variance_pp2": 3.8645427564459296,
+        "se_pp": 1.9658440315665762,
+        "ci95_pp": [
+          -3.3530543018704893,
+          4.35305430187049
+        ]
+      },
+      {
+        "opponent_id": "P06",
+        "opponent_label": "harukiharada Crustle",
+        "group": "Other",
+        "baseline": {
+          "wins": 511,
+          "losses": 88,
+          "draws": 1,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 511.5,
+          "score_pct": 85.25,
+          "mean_variance_pct2": 2.0922718419588193
+        },
+        "combined": {
+          "wins": 507,
+          "losses": 93,
+          "draws": 0,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 507.0,
+          "score_pct": 84.5,
+          "mean_variance_pct2": 2.186560934891487
+        },
+        "draw_convention": "half",
+        "delta_pp": -0.75,
+        "variance_pp2": 4.278832776850306,
+        "se_pp": 2.068533968019454,
+        "ci95_pp": [
+          -4.80432657731813,
+          3.30432657731813
+        ]
+      },
+      {
+        "opponent_id": "P07",
+        "opponent_label": "Grimmsnarl BC alias (not c61)",
+        "group": "Other",
+        "baseline": {
+          "wins": 352,
+          "losses": 245,
+          "draws": 3,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 353.5,
+          "score_pct": 58.916666666666664,
+          "mean_variance_pct2": 4.020021795585236
+        },
+        "combined": {
+          "wins": 335,
+          "losses": 265,
+          "draws": 0,
+          "attempts": 600,
+          "denominator": 600,
+          "score_total": 335.0,
+          "score_pct": 55.833333333333336,
+          "mean_variance_pct2": 4.1168150621406046
+        },
+        "draw_convention": "half",
+        "delta_pp": -3.0833333333333286,
+        "variance_pp2": 8.13683685772584,
+        "se_pp": 2.8525141292771607,
+        "ci95_pp": [
+          -8.674261026716565,
+          2.5075943600499064
+        ]
+      }
+    ],
+    "equal_groups": {
+      "Alakazam": {
+        "weighting": "equal",
+        "count": 2,
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "delta_pp": 19.58333333333333,
+        "variance_pp2": 3.662185818957522,
+        "se_pp": 1.913683834638711,
+        "ci95_pp": [
+          15.832513017441455,
+          23.3341536492252
+        ]
+      },
+      "Other": {
+        "weighting": "equal",
+        "count": 5,
+        "weights": [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        "delta_pp": -0.4666666666666658,
+        "variance_pp2": 1.2322398441847526,
+        "se_pp": 1.1100629910886826,
+        "ci95_pp": [
+          -2.642390129200484,
+          1.709056795867152
+        ]
+      }
+    },
+    "mixture": {
+      "q": 0.25,
+      "group_weights": {
+        "Alakazam": 0.25,
+        "Other": 0.75
+      },
+      "delta_pp": 4.5458333333333325,
+      "variance_pp2": 0.9220215260387684,
+      "se_pp": 0.9602195197134707,
+      "ci95_pp": [
+        2.66380307469493,
+        6.427863591971735
+      ]
+    },
+    "seat_groups": {
+      "Alakazam": {
+        "first": {
+          "baseline": {
+            "wins": 172,
+            "losses": 428,
+            "draws": 0,
+            "attempts": 600,
+            "denominator": 600,
+            "score_total": 172.0,
+            "score_pct": 28.666666666666668,
+            "mean_variance_pct2": 3.4138378779447223
+          },
+          "combined": {
+            "wins": 287,
+            "losses": 309,
+            "draws": 4,
+            "attempts": 600,
+            "denominator": 600,
+            "score_total": 289.0,
+            "score_pct": 48.16666666666667,
+            "mean_variance_pct2": 4.1401873492858465
+          },
+          "draw_convention": "half",
+          "delta_pp": 19.500000000000004,
+          "variance_pp2": 7.554025227230569,
+          "se_pp": 2.7484587002955982,
+          "ci95_pp": [
+            14.113020947420631,
+            24.886979052579377
+          ]
+        },
+        "second": {
+          "baseline": {
+            "wins": 172,
+            "losses": 428,
+            "draws": 0,
+            "attempts": 600,
+            "denominator": 600,
+            "score_total": 172.0,
+            "score_pct": 28.666666666666668,
+            "mean_variance_pct2": 3.4138378779447223
+          },
+          "combined": {
+            "wins": 289,
+            "losses": 309,
+            "draws": 2,
+            "attempts": 600,
+            "denominator": 600,
+            "score_total": 290.0,
+            "score_pct": 48.333333333333336,
+            "mean_variance_pct2": 4.155073270265257
+          },
+          "draw_convention": "half",
+          "delta_pp": 19.666666666666668,
+          "variance_pp2": 7.568911148209979,
+          "se_pp": 2.751165416366304,
+          "ci95_pp": [
+            14.274382450588712,
+            25.058950882744625
+          ]
+        },
+        "first_minus_second": {
+          "delta_pp": -0.1666666666666643,
+          "variance_pp2": 15.122936375440549,
+          "se_pp": 3.8888219778540325,
+          "ci95_pp": [
+            -7.788757743260568,
+            7.4554244099272395
+          ]
+        }
+      },
+      "Other": {
+        "first": {
+          "baseline": {
+            "wins": 874,
+            "losses": 624,
+            "draws": 2,
+            "attempts": 1500,
+            "denominator": 1500,
+            "score_total": 875.0,
+            "score_pct": 58.333333333333336,
+            "mean_variance_pct2": 1.6192276332369726
+          },
+          "combined": {
+            "wins": 900,
+            "losses": 600,
+            "draws": 0,
+            "attempts": 1500,
+            "denominator": 1500,
+            "score_total": 900.0,
+            "score_pct": 60.0,
+            "mean_variance_pct2": 1.601067378252168
+          },
+          "draw_convention": "half",
+          "delta_pp": 1.6666666666666643,
+          "variance_pp2": 3.2202950114891404,
+          "se_pp": 1.7945180443476016,
+          "ci95_pp": [
+            -1.8505887002546348,
+            5.183922033587963
+          ]
+        },
+        "second": {
+          "baseline": {
+            "wins": 888,
+            "losses": 610,
+            "draws": 2,
+            "attempts": 1500,
+            "denominator": 1500,
+            "score_total": 889.0,
+            "score_pct": 59.266666666666666,
+            "mean_variance_pct2": 1.6082692165147134
+          },
+          "combined": {
+            "wins": 849,
+            "losses": 649,
+            "draws": 2,
+            "attempts": 1500,
+            "denominator": 1500,
+            "score_total": 850.0,
+            "score_pct": 56.666666666666664,
+            "mean_variance_pct2": 1.6359054184270996
+          },
+          "draw_convention": "half",
+          "delta_pp": -2.6000000000000014,
+          "variance_pp2": 3.244174634941813,
+          "se_pp": 1.801159247524164,
+          "ci95_pp": [
+            -6.130272125147362,
+            0.93027212514736
+          ]
+        },
+        "first_minus_second": {
+          "delta_pp": 4.266666666666666,
+          "variance_pp2": 6.4644696464309535,
+          "se_pp": 2.5425321328217176,
+          "ci95_pp": [
+            -0.7166963136639009,
+            9.250029646997232
+          ]
+        }
+      },
+      "All": {
+        "first": {
+          "baseline": {
+            "wins": 1046,
+            "losses": 1052,
+            "draws": 2,
+            "attempts": 2100,
+            "denominator": 2100,
+            "score_total": 1047.0,
+            "score_pct": 49.857142857142854,
+            "mean_variance_pct2": 1.1898993041714065
+          },
+          "combined": {
+            "wins": 1187,
+            "losses": 909,
+            "draws": 4,
+            "attempts": 2100,
+            "denominator": 2100,
+            "score_total": 1189.0,
+            "score_pct": 56.61904761904763,
+            "mean_variance_pct2": 1.167902002789364
+          },
+          "draw_convention": "half",
+          "delta_pp": 6.761904761904773,
+          "variance_pp2": 2.357801306960771,
+          "se_pp": 1.535513369189852,
+          "ci95_pp": [
+            3.752298558292664,
+            9.771510965516883
+          ]
+        },
+        "second": {
+          "baseline": {
+            "wins": 1060,
+            "losses": 1038,
+            "draws": 2,
+            "attempts": 2100,
+            "denominator": 2100,
+            "score_total": 1061.0,
+            "score_pct": 50.523809523809526,
+            "mean_variance_pct2": 1.1897783092910024
+          },
+          "combined": {
+            "wins": 1138,
+            "losses": 958,
+            "draws": 4,
+            "attempts": 2100,
+            "denominator": 2100,
+            "score_total": 1140.0,
+            "score_pct": 54.285714285714285,
+            "mean_variance_pct2": 1.1800241773698523
+          },
+          "draw_convention": "half",
+          "delta_pp": 3.761904761904759,
+          "variance_pp2": 2.3698024866608547,
+          "se_pp": 1.5394162811471284,
+          "ci95_pp": [
+            0.7446488508563878,
+            6.779160672953131
+          ]
+        },
+        "first_minus_second": {
+          "delta_pp": 3.000000000000014,
+          "variance_pp2": 4.7276037936216255,
+          "se_pp": 2.1743053588724894,
+          "ci95_pp": [
+            -1.2616385033900652,
+            7.261638503390094
+          ]
+        }
+      }
+    }
+  },
+  "anchor": {
+    "records": 16000,
+    "all": {
+      "baseline": {
+        "wins": 3463,
+        "losses": 4508,
+        "draws": 29,
+        "attempts": 8000,
+        "denominator": 7971,
+        "score_total": 3463,
+        "score_pct": 43.44498808179652,
+        "mean_variance_pct2": 0.30824637043685993
+      },
+      "combined": {
+        "wins": 3457,
+        "losses": 4526,
+        "draws": 17,
+        "attempts": 8000,
+        "denominator": 7983,
+        "score_total": 3457,
+        "score_pct": 43.304522109482654,
+        "mean_variance_pct2": 0.30754986544126184
+      },
+      "draw_convention": "decided",
+      "delta_pp": -0.14046597231386215,
+      "variance_pp2": 0.6157962358781217,
+      "se_pp": 0.7847268543118183,
+      "ci95_pp": [
+        -1.678530606765026,
+        1.3975986621373018
+      ]
+    },
+    "seats": {
+      "first": {
+        "baseline": {
+          "wins": 1916,
+          "losses": 2074,
+          "draws": 10,
+          "attempts": 4000,
+          "denominator": 3990,
+          "score_total": 1916,
+          "score_pct": 48.02005012531328,
+          "mean_variance_pct2": 0.6255839093969243
+        },
+        "combined": {
+          "wins": 1897,
+          "losses": 2095,
+          "draws": 8,
+          "attempts": 4000,
+          "denominator": 3992,
+          "score_total": 1897,
+          "score_pct": 47.52004008016032,
+          "mean_variance_pct2": 0.624711873445889
+        },
+        "draw_convention": "decided",
+        "delta_pp": -0.5000100451529619,
+        "variance_pp2": 1.2502957828428132,
+        "se_pp": 1.118166259034323,
+        "ci95_pp": [
+          -2.691615912860235,
+          1.6915958225543113
+        ]
+      },
+      "second": {
+        "baseline": {
+          "wins": 1547,
+          "losses": 2434,
+          "draws": 19,
+          "attempts": 4000,
+          "denominator": 3981,
+          "score_total": 1547,
+          "score_pct": 38.859583019341876,
+          "mean_variance_pct2": 0.5968076135385744
+        },
+        "combined": {
+          "wins": 1560,
+          "losses": 2431,
+          "draws": 9,
+          "attempts": 4000,
+          "denominator": 3991,
+          "score_total": 1560,
+          "score_pct": 39.08794788273616,
+          "mean_variance_pct2": 0.5965740713079725
+        },
+        "draw_convention": "decided",
+        "delta_pp": 0.2283648633942832,
+        "variance_pp2": 1.1933816848465468,
+        "se_pp": 1.092420104559847,
+        "ci95_pp": [
+          -1.912778541543017,
+          2.3695082683315833
+        ]
+      }
+    }
+  },
+  "student": {
+    "all": {
+      "wins": 23,
+      "losses": 1177,
+      "draws": 3,
+      "attempts": 1203,
+      "denominator": 1200,
+      "score_total": 23,
+      "score_pct": 1.9166666666666665,
+      "mean_variance_pct2": 0.15666087962962963
+    },
+    "seats": {
+      "first": {
+        "wins": 20,
+        "losses": 580,
+        "draws": 2,
+        "attempts": 602,
+        "denominator": 600,
+        "score_total": 20,
+        "score_pct": 3.3333333333333335,
+        "mean_variance_pct2": 0.5370370370370371
+      },
+      "second": {
+        "wins": 3,
+        "losses": 597,
+        "draws": 1,
+        "attempts": 601,
+        "denominator": 600,
+        "score_total": 3,
+        "score_pct": 0.5,
+        "mean_variance_pct2": 0.08291666666666667
+      }
+    },
+    "learning_receipt": {
+      "training_receipt_source_id": "S14",
+      "screen_receipt_source_id": "S15",
+      "label_count_source_pointer": "/dagger_decisions",
+      "learner_state_teacher_decisions": 1358,
+      "label_count_evidence_level": "Training-receipt value; underlying labeled decisions are not redistributed or recounted by verify_results.py",
+      "parent_validation_nll": 1.0717802047729492,
+      "selected_validation_nll": 1.0417600870132446,
+      "selected_epoch": 8,
+      "epochs_completed": 10,
+      "training_seed": 101,
+      "parent_state_sha256": "18e6883a78d995617dd33ef75a13d896db3f1bd1d2e3c1a6d782362e645940be",
+      "selected_state_sha256": "6ef49e2ee697876e8569ec043e33a7d0d365f5ffd6aac6aea9a66fc74db873b6",
+      "label_pin_sha256": "bf1ac3d6a5fe05f09c4f0dd2b13126ef6b424b20464d4ee52cce83baa21bf92a",
+      "opponent_main_sha256": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8",
+      "opponent_deck_sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+      "same_deck": true,
+      "reported_screen_totals": {
+        "n": 1200,
+        "wins": 23,
+        "losses": 1177,
+        "voids": {
+          "incomplete": 0,
+          "none": 0,
+          "draw": 3
+        },
+        "attempts": 1203
+      },
+      "limitations": [
+        "Validation selected the checkpoint; it is not an untouched final holdout.",
+        "No teacher-label-off ablation or matched parent-child game comparison is included.",
+        "Historical checkpoint; current v2 runtime performance is not measured here."
+      ]
+    },
+    "validation_nll_change": -0.03002011775970459
+  },
+  "published_value_checks": [
+    {
+      "claim": "development_card",
+      "recomputed": 5.023133642088177,
+      "published_rounded": 5.02,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "development_rule",
+      "recomputed": 3.618848831681351,
+      "published_rounded": 3.62,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "development_combined",
+      "recomputed": 7.816870535230241,
+      "published_rounded": 7.82,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "factorial_interaction",
+      "recomputed": 1.7060608421386476,
+      "published_rounded": 1.71,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "P01_delta",
+      "recomputed": 20.416666666666664,
+      "published_rounded": 20.42,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "P02_delta",
+      "recomputed": 18.749999999999996,
+      "published_rounded": 18.75,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "P03_delta",
+      "recomputed": 0.6666666666666643,
+      "published_rounded": 0.67,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "P04_delta",
+      "recomputed": 0.3333333333333357,
+      "published_rounded": 0.33,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "P05_delta",
+      "recomputed": 0.5,
+      "published_rounded": 0.5,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "P06_delta",
+      "recomputed": -0.75,
+      "published_rounded": -0.75,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "P07_delta",
+      "recomputed": -3.0833333333333286,
+      "published_rounded": -3.08,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "P01_current_figure_variance",
+      "recomputed": 7.945824058616212,
+      "published_rounded": 7.945824058616213,
+      "tolerance": 1e-10
+    },
+    {
+      "claim": "P02_current_figure_variance",
+      "recomputed": 6.702919217213875,
+      "published_rounded": 6.702919217213875,
+      "tolerance": 1e-10
+    },
+    {
+      "claim": "P03_current_figure_variance",
+      "recomputed": 7.362919680949731,
+      "published_rounded": 7.362919680949731,
+      "tolerance": 1e-10
+    },
+    {
+      "claim": "P04_current_figure_variance",
+      "recomputed": 7.162864032647004,
+      "published_rounded": 7.162864032647004,
+      "tolerance": 1e-10
+    },
+    {
+      "claim": "P05_current_figure_variance",
+      "recomputed": 3.8645427564459296,
+      "published_rounded": 3.8645427564459287,
+      "tolerance": 1e-10
+    },
+    {
+      "claim": "P06_current_figure_variance",
+      "recomputed": 4.278832776850306,
+      "published_rounded": 4.278832776850307,
+      "tolerance": 1e-10
+    },
+    {
+      "claim": "P07_current_figure_variance",
+      "recomputed": 8.13683685772584,
+      "published_rounded": 8.13683685772584,
+      "tolerance": 1e-10
+    },
+    {
+      "claim": "other_five_equal_mean",
+      "recomputed": -0.4666666666666658,
+      "published_rounded": -0.47,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "assumed_q_0.25",
+      "recomputed": 4.5458333333333325,
+      "published_rounded": 4.55,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "alakazam_first",
+      "recomputed": 19.500000000000004,
+      "published_rounded": 19.5,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "alakazam_second",
+      "recomputed": 19.666666666666668,
+      "published_rounded": 19.67,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "c61_followup",
+      "recomputed": -0.14046597231386215,
+      "published_rounded": -0.14,
+      "tolerance": 0.005
+    },
+    {
+      "claim": "student_wins",
+      "recomputed": 23,
+      "published_rounded": 23,
+      "tolerance": 0
+    },
+    {
+      "claim": "student_decided",
+      "recomputed": 1200,
+      "published_rounded": 1200,
+      "tolerance": 0
+    },
+    {
+      "claim": "student_draws",
+      "recomputed": 3,
+      "published_rounded": 3,
+      "tolerance": 0
+    }
+  ],
+  "bundle_manifest_sha256": "7bbddbd2f3472f73208064be7f593f4571ba7d6555b7260d751708702f4f2c95"
+}

@@ -1,0 +1,34 @@
+{
+  "training_receipt_source_id": "S14",
+  "screen_receipt_source_id": "S15",
+  "label_count_source_pointer": "/dagger_decisions",
+  "learner_state_teacher_decisions": 1358,
+  "label_count_evidence_level": "Training-receipt value; underlying labeled decisions are not redistributed or recounted by verify_results.py",
+  "parent_validation_nll": 1.0717802047729492,
+  "selected_validation_nll": 1.0417600870132446,
+  "selected_epoch": 8,
+  "epochs_completed": 10,
+  "training_seed": 101,
+  "parent_state_sha256": "18e6883a78d995617dd33ef75a13d896db3f1bd1d2e3c1a6d782362e645940be",
+  "selected_state_sha256": "6ef49e2ee697876e8569ec043e33a7d0d365f5ffd6aac6aea9a66fc74db873b6",
+  "label_pin_sha256": "bf1ac3d6a5fe05f09c4f0dd2b13126ef6b424b20464d4ee52cce83baa21bf92a",
+  "opponent_main_sha256": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8",
+  "opponent_deck_sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+  "same_deck": true,
+  "reported_screen_totals": {
+    "n": 1200,
+    "wins": 23,
+    "losses": 1177,
+    "voids": {
+      "incomplete": 0,
+      "none": 0,
+      "draw": 3
+    },
+    "attempts": 1203
+  },
+  "limitations": [
+    "Validation selected the checkpoint; it is not an untouched final holdout.",
+    "No teacher-label-off ablation or matched parent-child game comparison is included.",
+    "Historical checkpoint; current v2 runtime performance is not measured here."
+  ]
+}

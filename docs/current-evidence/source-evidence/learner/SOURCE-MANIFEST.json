@@ -1,0 +1,110 @@
+[
+  {
+    "file": "model_v2.py.excerpt.txt",
+    "sha256": "b6ac67767ecae592a10f620fa4bd3d1aca360fe2d539cf24a47b95bf1306a1d7",
+    "source": "C:\\Users\\thisi\\Desktop\\Pokemon\\ptcg-agent\\learning_factory\\model_v2.py",
+    "source_sha256": "dd59df5c520050709c0c6b28779a6c80addf70493f816b19b167a92356b53eb2",
+    "ranges": [
+      [
+        100,
+        135
+      ],
+      [
+        205,
+        260
+      ],
+      [
+        291,
+        312
+      ],
+      [
+        338,
+        395
+      ]
+    ],
+    "source_archive_member": "new-source-evidence/model_v2.py.excerpt.txt",
+    "scope": "Selected inspection excerpt copied unchanged from the preserved previous package"
+  },
+  {
+    "file": "action_decoder.py.excerpt.txt",
+    "sha256": "c7c7113f588f86a235691208ae02adf81d07c3b3d72b492c0e4230c0b5f509a4",
+    "source": "C:\\Users\\thisi\\Desktop\\Pokemon\\ptcg-agent\\learning_factory\\action_decoder.py",
+    "source_sha256": "05917722d740c3a12ba1533ea91049acbf61e15afae9ff0c50306d6baa7bc724",
+    "ranges": [
+      [
+        30,
+        111
+      ]
+    ],
+    "source_archive_member": "new-source-evidence/action_decoder.py.excerpt.txt",
+    "scope": "Selected inspection excerpt copied unchanged from the preserved previous package"
+  },
+  {
+    "file": "semantic_encoder.py.excerpt.txt",
+    "sha256": "0e9017a934f9cdd87f455dd24b604093bdaa7128e0da43f061f63d4789af1d88",
+    "source": "C:\\Users\\thisi\\Desktop\\Pokemon\\ptcg-agent\\learning_factory\\semantic_encoder.py",
+    "source_sha256": "c58b1742e30ffc4de61d33378eb22a592aaa42252ca3f9d507961d39536f0b8d",
+    "ranges": [
+      [
+        17,
+        24
+      ],
+      [
+        187,
+        215
+      ],
+      [
+        230,
+        270
+      ]
+    ],
+    "source_archive_member": "new-source-evidence/semantic_encoder.py.excerpt.txt",
+    "scope": "Selected inspection excerpt copied unchanged from the preserved previous package"
+  },
+  {
+    "file": "c61_teacher_bridge.py.excerpt.txt",
+    "sha256": "0b022022187b601e0d3e3cc71d04d2a94241690a3267c11abf47d495e419eefa",
+    "source": "C:\\Users\\thisi\\Desktop\\Pokemon\\ptcg-agent\\learning_factory\\c61_teacher_bridge.py",
+    "source_sha256": "2d979aa4b33c8fd0acfc4f608d9dd83855138000f7ab07609c2b26dec5c57653",
+    "ranges": [
+      [
+        428,
+        466
+      ]
+    ],
+    "source_archive_member": "new-source-evidence/c61_teacher_bridge.py.excerpt.txt",
+    "scope": "Selected inspection excerpt copied unchanged from the preserved previous package"
+  },
+  {
+    "file": "lf_v2_policy.py.excerpt.txt",
+    "sha256": "a3f28bd3391c98866a2ae54d0722329d993b7f07709814fb7e443da4b3d7a4fb",
+    "source": "C:\\Users\\thisi\\Desktop\\Pokemon\\ptcg-agent\\agent\\lf_v2_policy.py",
+    "source_sha256": "f39e1fbcf334976afe0fe9d871e4f1237469402a838d3f5bd2e78fa74b341e1e",
+    "ranges": [
+      [
+        60,
+        78
+      ],
+      [
+        120,
+        150
+      ]
+    ],
+    "source_archive_member": "new-source-evidence/lf_v2_policy.py.excerpt.txt",
+    "scope": "Selected inspection excerpt copied unchanged from the preserved previous package"
+  },
+  {
+    "file": "architecture.md.excerpt.txt",
+    "sha256": "bc685f94c55d090882455eaa0af056885454092d5aff9a19c6eaab2e378a2781",
+    "source": "C:\\Users\\thisi\\Desktop\\Pokemon\\workflow\\WINNING-STRATEGY-ARCHITECTURE.md",
+    "source_sha256": "94c57e89e07c515bb9178cdef07d04fa3f2773ed695af546246fa6c56a51af42",
+    "ranges": [
+      [
+        1,
+        65
+      ]
+    ],
+    "source_archive_member": "new-source-evidence/architecture.md.excerpt.txt",
+    "scope": "Selected inspection excerpt copied unchanged from the preserved previous package"
+  }
+]
