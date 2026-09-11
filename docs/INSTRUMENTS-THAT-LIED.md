@@ -152,4 +152,4 @@ audit run for an unrelated reason, or by someone noticing that a result was too 
 practical conclusion we drew is that a research system needs a **cheap way for a second
 party to recompute a headline from raw rows** — which is why the published game-level rows
 in this repository are rows, not summaries. See
-[FOR-RESEARCHERS](FOR-RESEARCHERS.md#1-the-data--44400-game-records-you-can-re-analyse-today).
+[FOR-RESEARCHERS](FOR-RESEARCHERS.md#recount-the-retained-experiments).

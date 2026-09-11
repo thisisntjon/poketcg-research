@@ -1,0 +1,69 @@
+{
+  "status": "SOURCE_CHECKED_NOT_EXECUTED",
+  "host": "SKYNET Windows",
+  "files": {
+    "main.py": {
+      "path": "C:\\Users\\thisi\\Desktop\\Pokemon\\ptcg-agent\\experiments\\public_kernels\\keval24\\sources\\tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control\\main.py",
+      "sha256": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8",
+      "bytes": 10381
+    },
+    "deck.csv": {
+      "path": "C:\\Users\\thisi\\Desktop\\Pokemon\\ptcg-agent\\experiments\\public_kernels\\keval24\\sources\\tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control\\deck.csv",
+      "sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+      "bytes": 252
+    },
+    "EN_Card_Data.csv": {
+      "path": "C:\\Users\\thisi\\Desktop\\Pokemon\\ptcg-agent\\experiments\\public_kernels\\keval24\\sources\\tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control\\EN_Card_Data.csv",
+      "sha256": "a0ea63cf7adcb65d35436ce0eb390de6e2e35654a7c67c065a45f4abaa00f373",
+      "bytes": 359151
+    }
+  },
+  "deck_count": 60,
+  "deck_id_counts": {
+    "7": 10,
+    "104": 2,
+    "112": 4,
+    "646": 4,
+    "647": 3,
+    "648": 3,
+    "860": 2,
+    "1079": 3,
+    "1080": 1,
+    "1086": 4,
+    "1097": 3,
+    "1122": 1,
+    "1137": 1,
+    "1152": 4,
+    "1182": 2,
+    "1219": 4,
+    "1227": 4,
+    "1231": 1,
+    "1259": 4
+  },
+  "main_path_review": [
+    "imports and tree loader lines 10-79",
+    "option scoring and recent history lines 163-204",
+    "agent arbitration and guards lines 207-304"
+  ],
+  "card_ids_checked": [
+    104,
+    112,
+    648,
+    742,
+    743,
+    1197
+  ],
+  "findings": [
+    "The recovered main.py and deck.csv match the archived submission provenance hashes.",
+    "The deck matches EXPECTED_DECK in the inspected main.py.",
+    "Card 743 Alakazam has Powerful Hand: two damage counters per hand card; card 742 Kadabra has Super Psy Bolt.",
+    "Xerosic reduces the opposing hand to three on resolution. Later replenishment is possible.",
+    "Punk Up attaches to Marnie Pokemon, while Munkidori requires its own Darkness Energy for Adrena-Brain."
+  ],
+  "limits": [
+    "Static source and supplied card-text review, no engine execution.",
+    "No claim about actual branch frequencies, optimal decisions, completed learning or terminal competition rank.",
+    "Source card data is not redistributed.",
+    "Package card text is not proof of engine implementation parity."
+  ]
+}

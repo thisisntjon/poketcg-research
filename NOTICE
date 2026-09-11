@@ -1,9 +1,9 @@
 Third-party attribution NOTICE
 ==============================
 
-This project contains and depends on work by other people. Each item below is
-listed with its author, its licence, and exactly what we changed, as the terms of
-those licences require.
+This project contains and depends on work by other people. Known authorship, licences and changes are
+identified below. Unverified licences and historical version linkage are stated
+explicitly; partial provenance is not presented as rights clearance.
 
 --------------------------------------------------------------------------------
 1. The fielded agent — tetsutani's Grimmsnarl ex Damage-Transfer Control
@@ -79,11 +79,12 @@ published in this repository names these authors in its results:
     zoli800               NOT recorded in the register
     harukiharada          NOT recorded in the register
 
-For the five marked NOT recorded, this repository publishes measured results
-against their agents without a corresponding licence-and-provenance row. Their
-kernel source is not redistributed here and no claim is made about their licence
-terms. Resolving those five rows is an open item, tracked in
-docs/RELEASE-REVIEW.md.
+For the five marked NOT recorded in the historical register, partial provenance
+is now documented in docs/OPPONENT-PROVENANCE.md: exact notebook references,
+current public-listing observations and historical experimental file hashes.
+Licences, historical pull dates and exact notebook-version linkage remain
+unresolved. Their kernel source is not redistributed here, and no licence terms
+are inferred from public availability. See docs/RELEASE-REVIEW.md for scope.
 
 If you are one of these authors and you object to your kernel being named in these
 results, or the attribution is wrong, that is our error and we will correct or

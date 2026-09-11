@@ -107,8 +107,8 @@ for the other half.
 
 ## The learned agent lost, and we kept the result
 
-We trained a policy on our own play data. The held-out loss improved from
-**1.07178 to 1.04176** — a real improvement in the training objective. Fielded against
+We trained a policy on our own play data. The checkpoint-selection validation loss improved from
+**1.07178 to 1.04176**. This validation set selected the checkpoint; it was not an untouched holdout. Fielded against
 exact c61 on the same Grimmsnarl list, it won **23 of 1,200 decided games**: 1.92%,
 95% CI [1.22, 2.86].
 ([LEARNING-VERIFICATION.json](../workflow/writeup/visuals-2026-09-06/LEARNING-VERIFICATION.json))

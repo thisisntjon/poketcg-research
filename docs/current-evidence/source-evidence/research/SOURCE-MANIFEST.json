@@ -1,0 +1,97 @@
+[
+  {
+    "file": "retention-decision.excerpt.txt",
+    "source": "workflow/research/2026-08-10-final-strategy-ladder-options.md",
+    "commit": "e9f4b64f1f2bf92e98234e004f4b668cee41fd2b",
+    "source_sha256": "244ce0bc8dc8d8c1e4551b65f8fd1ddcaa9fa5146e515c31607a723483a34923",
+    "ranges": [
+      [
+        9,
+        18
+      ],
+      [
+        45,
+        53
+      ]
+    ],
+    "sha256": "c79160139fd01ef21c79b9a2dc08f6487cb57fc9a925e1914f9a22e206e40eff"
+  },
+  {
+    "file": "behavior-objective.excerpt.txt",
+    "source": "ptcg-agent/learning_factory/behavior_objective_v2.py",
+    "commit": "e9f4b64f1f2bf92e98234e004f4b668cee41fd2b",
+    "source_sha256": "390c30dd918ce66c17de09ed4edeb94ca2b1ae84110921cf5c166a6ada4436cc",
+    "ranges": [
+      [
+        80,
+        115
+      ],
+      [
+        153,
+        183
+      ]
+    ],
+    "sha256": "b09e0ccb2c6c7fa951bef024a43c832e95db6862eb25b7aaac12db71be6e7c03"
+  },
+  {
+    "file": "semantic-features-v2.excerpt.txt",
+    "source": "ptcg-agent/learning_factory/semantic_features_v2.py",
+    "commit": "e9f4b64f1f2bf92e98234e004f4b668cee41fd2b",
+    "source_sha256": "a1df12dbb56436415cc0a1e976f7f62aa391991b2c423bac55898798996cf487",
+    "ranges": [
+      [
+        602,
+        669
+      ],
+      [
+        835,
+        869
+      ],
+      [
+        1038,
+        1059
+      ]
+    ],
+    "sha256": "26393f811b669263df05c4682971d341d3986bb980fbf9db9a68d18bc086a131"
+  },
+  {
+    "file": "research-memory.excerpt.txt",
+    "source": "workflow/knowledge-register/README.md",
+    "commit": "e9f4b64f1f2bf92e98234e004f4b668cee41fd2b",
+    "source_sha256": "3a95a8c7ea857d2ae5eb6f4ddfeef2b156cb1ca7420bd35cfb4d382da653aa8b",
+    "ranges": [
+      [
+        1,
+        49
+      ]
+    ],
+    "sha256": "0efc280b9444dd13c8e830035426c177539bd4f6e7a510c03ffb850521aa4940"
+  },
+  {
+    "file": "execution-identity.excerpt.txt",
+    "source": "workflow/DECISIONS.md",
+    "commit": "e9f4b64f1f2bf92e98234e004f4b668cee41fd2b",
+    "source_sha256": "ce1cb972ee55532a7b2d2c124909d138c8f223ac04c7394b804cbb8e331a49c7",
+    "ranges": [
+      [
+        1573,
+        1574
+      ]
+    ],
+    "sha256": "5e394e6ac87e181bfd40e55db3eb0b8f0066b5508c03d8728bbc4c44dd9c1c55"
+  },
+  {
+    "file": "recovered-audit.excerpt.txt",
+    "source": "60Days/Story-Material/Night-Investigation/research/inventory/BUS-READ-16.jsonl",
+    "message_id": 5504307875,
+    "source_sha256": "75250dcc6eec46a32f01bc6c081ab51e7e4ed78423790b2b3515970f2a7d72f5",
+    "section": "3 only",
+    "sha256": "34fbd13afe7dd172981efa5e8cdaeae9cd1051d76e8e67b19a86d0126625b373"
+  },
+  {
+    "file": "public-notebook-status-20260911.json",
+    "sha256": "714c704b37f7807781dd721ba20deddcda42f8337447f80008d142130b7a6f98",
+    "source": "Read-only Kaggle kernels_list observation on 2026-09-11",
+    "scope": "Analyst-recorded public listing metadata; not a raw API response, license verification or historical version attestation."
+  }
+]

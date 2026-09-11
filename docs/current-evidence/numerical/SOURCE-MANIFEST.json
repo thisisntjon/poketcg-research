@@ -1,0 +1,196 @@
+{
+  "schema": "ptcg.outcome_evidence_manifest/v1",
+  "prepared_date": "2026-09-11",
+  "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb",
+  "scope": "Saved-outcome recount and selected receipt inspection; no games, training, runtime activation, or independent execution reproduction performed",
+  "sources": [
+    {
+      "id": "S01",
+      "path": "workflow/research/2026-09-03-xerosic-sniper-rows.csv",
+      "bytes": 2964764,
+      "sha256": "e39d5d54bc51c7b430e4d9ade8cf7a149634d8ef244e32f517e5e8fabf0525aa",
+      "lf_sha256": "e39d5d54bc51c7b430e4d9ade8cf7a149634d8ef244e32f517e5e8fabf0525aa",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb"
+    },
+    {
+      "id": "S02",
+      "path": "workflow/research/2026-09-03-4070-repro/MANIFEST.json",
+      "bytes": 1010,
+      "sha256": "79872c66bc3b7a0b1e8b2da9be684a8bece3fc7d2127627f909c83557798ba3b",
+      "lf_sha256": "79872c66bc3b7a0b1e8b2da9be684a8bece3fc7d2127627f909c83557798ba3b",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb"
+    },
+    {
+      "id": "S03",
+      "path": "workflow/research/2026-09-03-4070-repro/arms_proof.json",
+      "bytes": 497,
+      "sha256": "ef85c4b890e746a73c1e9690a90196363612452d362b395c494a5091c2647192",
+      "lf_sha256": "ef85c4b890e746a73c1e9690a90196363612452d362b395c494a5091c2647192",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb"
+    },
+    {
+      "id": "S04",
+      "path": "workflow/research/2026-09-03-4070-repro/A_shipped.games.jsonl",
+      "bytes": 3291686,
+      "sha256": "1c0e2266cd57f42e774c445bce3b0099c94ba023ddc76aa8f80b095ee204a383",
+      "lf_sha256": "1c0e2266cd57f42e774c445bce3b0099c94ba023ddc76aa8f80b095ee204a383",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb",
+      "historical_manifest_sha256": "98e9d202c077a2449afb842dc1a7837d180931788e4ddf4f8065f5659a15befe",
+      "historical_manifest_bytes": 3293686,
+      "crlf_sha256": "98e9d202c077a2449afb842dc1a7837d180931788e4ddf4f8065f5659a15befe",
+      "historical_hash_matches_after_crlf_normalization": true
+    },
+    {
+      "id": "S05",
+      "path": "workflow/research/2026-09-03-4070-repro/D_combined.games.jsonl",
+      "bytes": 3290707,
+      "sha256": "56fd74c2b0647efa0c9bb412516a96ff07c84a2b96930a86dcaf3e07136347b4",
+      "lf_sha256": "56fd74c2b0647efa0c9bb412516a96ff07c84a2b96930a86dcaf3e07136347b4",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb",
+      "historical_manifest_sha256": "96694d3c35450ff7051b41c0803a80d8029be7ac80d38334ef196838bc6a7572",
+      "historical_manifest_bytes": 3292707,
+      "crlf_sha256": "96694d3c35450ff7051b41c0803a80d8029be7ac80d38334ef196838bc6a7572",
+      "historical_hash_matches_after_crlf_normalization": true
+    },
+    {
+      "id": "S06",
+      "path": "workflow/research/2026-09-03-c61-anchor/seat2-replicate/MANIFEST.json",
+      "bytes": 1222,
+      "sha256": "c085ad5e293a080f59c1dedad822464aa21bd233ba94164e4d1ce2c5eb2b8742",
+      "lf_sha256": "c085ad5e293a080f59c1dedad822464aa21bd233ba94164e4d1ce2c5eb2b8742",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb"
+    },
+    {
+      "id": "S07",
+      "path": "workflow/research/2026-09-03-c61-anchor/seat2-replicate/arms_proof.json",
+      "bytes": 487,
+      "sha256": "dd18afa87a3e2e392980fcba13aaa4481f34ae0fbf94527f5dcba68a96eda893",
+      "lf_sha256": "dd18afa87a3e2e392980fcba13aaa4481f34ae0fbf94527f5dcba68a96eda893",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb"
+    },
+    {
+      "id": "S08",
+      "path": "workflow/research/2026-09-03-c61-anchor/seat2-replicate/A_shipped.games.part-000.jsonl",
+      "bytes": 6727190,
+      "sha256": "e4aa0636b6e9cdd5a930875fbf0f0cebdef50f6d2873b3a3f1decf4122781fb8",
+      "lf_sha256": "e4aa0636b6e9cdd5a930875fbf0f0cebdef50f6d2873b3a3f1decf4122781fb8",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb",
+      "historical_manifest_sha256": "5134e00b671e72eac22bdf3719ee5258f9aa5bf7c5f856bf8283e81ab6d282ab",
+      "historical_manifest_bytes": 6731190,
+      "crlf_sha256": "5134e00b671e72eac22bdf3719ee5258f9aa5bf7c5f856bf8283e81ab6d282ab",
+      "historical_hash_matches_after_crlf_normalization": true
+    },
+    {
+      "id": "S09",
+      "path": "workflow/research/2026-09-03-c61-anchor/seat2-replicate/A_shipped.games.part-001.jsonl",
+      "bytes": 6728254,
+      "sha256": "722e1b15fdcd590e937d3a6b82d5bd64281c0283533532f81d2193592d19eaf0",
+      "lf_sha256": "722e1b15fdcd590e937d3a6b82d5bd64281c0283533532f81d2193592d19eaf0",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb",
+      "historical_manifest_sha256": "cc43a3c881e1319345961c613835453ebb38de75eb11ce03765059e478e0865a",
+      "historical_manifest_bytes": 6732254,
+      "crlf_sha256": "cc43a3c881e1319345961c613835453ebb38de75eb11ce03765059e478e0865a",
+      "historical_hash_matches_after_crlf_normalization": true
+    },
+    {
+      "id": "S10",
+      "path": "workflow/research/2026-09-03-c61-anchor/seat2-replicate/D_combined.games.part-000.jsonl",
+      "bytes": 6727751,
+      "sha256": "74cfb03ca635728bb7137e6197546dd705710e742c04955df6cba018fccc60ae",
+      "lf_sha256": "74cfb03ca635728bb7137e6197546dd705710e742c04955df6cba018fccc60ae",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb",
+      "historical_manifest_sha256": "74952fe5b4cc05a583e6dbfaee2c4d2bc5ac8690737e1ebb4610d1c13a467ef9",
+      "historical_manifest_bytes": 6731751,
+      "crlf_sha256": "74952fe5b4cc05a583e6dbfaee2c4d2bc5ac8690737e1ebb4610d1c13a467ef9",
+      "historical_hash_matches_after_crlf_normalization": true
+    },
+    {
+      "id": "S11",
+      "path": "workflow/research/2026-09-03-c61-anchor/seat2-replicate/D_combined.games.part-001.jsonl",
+      "bytes": 6728789,
+      "sha256": "ceecde5ddc997a09842473287433edc65d52b1b9baa609e33b915ce1e898532c",
+      "lf_sha256": "ceecde5ddc997a09842473287433edc65d52b1b9baa609e33b915ce1e898532c",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb",
+      "historical_manifest_sha256": "3ebc1b355a3a8ae606b8853f1bfb5091bec9a9afa4b0a6b2841a47bf68e52743",
+      "historical_manifest_bytes": 6732789,
+      "crlf_sha256": "3ebc1b355a3a8ae606b8853f1bfb5091bec9a9afa4b0a6b2841a47bf68e52743",
+      "historical_hash_matches_after_crlf_normalization": true
+    },
+    {
+      "id": "S12",
+      "path": "workflow/research/2026-09-03-strike3-rows.csv",
+      "bytes": 736844,
+      "sha256": "e5a4ae3461f6f9c80261e3ffd22d60a0a66ca5b11fee7e7f1a708318bdad792d",
+      "lf_sha256": "e5a4ae3461f6f9c80261e3ffd22d60a0a66ca5b11fee7e7f1a708318bdad792d",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb"
+    },
+    {
+      "id": "S13",
+      "path": "workflow/research/2026-09-03-strike3-panel/candidates.csv",
+      "bytes": 16079,
+      "sha256": "89ede39fbe81657540992f398c34762394b8d11f8400d8d9affe3b14ab11ce72",
+      "lf_sha256": "89ede39fbe81657540992f398c34762394b8d11f8400d8d9affe3b14ab11ce72",
+      "source_checkout_commit": "9bbef1b1ddb3fea24946efd7a5ca8862289fe1bb"
+    },
+    {
+      "id": "S14",
+      "path": "learning-evidence/training-receipt.json",
+      "bytes": 6968,
+      "sha256": "fab7750232057596c50f96fae70c1a2f7f8e4b085f23812bb050584356a8322a",
+      "lf_sha256": "fab7750232057596c50f96fae70c1a2f7f8e4b085f23812bb050584356a8322a"
+    },
+    {
+      "id": "S15",
+      "path": "learning-evidence/screen-receipt.json",
+      "bytes": 240502,
+      "sha256": "e02921d92ff2f0a0c8c774fdc38f460d5953ebf0d51a6865f77a0d3d8a602a26",
+      "lf_sha256": "e02921d92ff2f0a0c8c774fdc38f460d5953ebf0d51a6865f77a0d3d8a602a26"
+    }
+  ],
+  "exports": [
+    {
+      "file": "development-outcomes.csv",
+      "rows": 28000,
+      "sha256": "18cc894a25aba4758f158e99ea46d51bcfc5e0816a4c6e9654c04e87f83dc076"
+    },
+    {
+      "file": "panel-outcomes.csv",
+      "rows": 8400,
+      "sha256": "3d5888e34564a79c34a9118dc8a271aa75fc989a0f089c5a2188f49b51a46795"
+    },
+    {
+      "file": "anchor-outcomes.csv",
+      "rows": 16000,
+      "sha256": "fefd2e42d78ff7a0e8d1add4ce4548310d8f5d049bb054ff17d609a30b9c51af"
+    },
+    {
+      "file": "student-outcomes.csv",
+      "rows": 1203,
+      "sha256": "f9305897b83f83d36f3dc0616cfaf14cf3d96dbad810f27194fb518160b6456e"
+    },
+    {
+      "file": "opponents.json",
+      "sha256": "dcdd8c8270b02807c56824153331ac7768c9514ee3b28c182fadc0eb13da0663"
+    },
+    {
+      "file": "learning-summary.json",
+      "sha256": "65e185a1485c288c4963ee0ca29f689948c088fcbeea679b5454584e398cf43e"
+    },
+    {
+      "file": "activation-checks.json",
+      "sha256": "26c6cdc3117086b89fbec25c54151f993466b4a6765db88faeb80682a4d7eb02"
+    },
+    {
+      "file": "retained-opponent-identity.json",
+      "sha256": "0b8c2d91b6d02d57256df16d63c3ec16b472e3107f0c172628b7c53123f52942"
+    }
+  ],
+  "transformations": [
+    "Only run, arm, anonymous opponent ID, game index, seat, terminal outcome and source locator are exported from game records.",
+    "Development CSV filtered to exactly five named cohorts; separate 4070 A/D contrast appended once.",
+    "CHAMPION is relabeled COMBINED in the seven-opponent panel.",
+    "Student win flags cross-checked against result==seat; source per_game array positions are zero-based; CSV/JSONL source_record values are one-based source line numbers.",
+    "Source manifests used CRLF files; current git checkout uses LF. Both exact current hashes and historical CRLF-equivalent hashes are recorded.",
+    "P07 full hashes are supplemented by a 2026-09-11 retained-file inspection; its original outcome alias remains sourced to S12. No historical execution reconstruction is implied."
+  ]
+}

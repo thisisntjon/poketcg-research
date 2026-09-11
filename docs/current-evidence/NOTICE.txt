@@ -1,0 +1,11 @@
+PTCG strategy research evidence — Jonathan Simone
+
+The original report, numerical analysis and participant-authored code in this revision are offered under the MIT license, subject to the competition rules and third-party rights. A general code license does not grant rights to Pokémon Elements or permit uses of Pokémon-trained models that the competition rules restrict.
+
+Credited foundations: Tetsutani's public Grimmsnarl ex Damage-Transfer Control (the unmodified submitted player and teacher/comparator); makthanithin's Apache-2.0 community_1084 policy (the experimental Lucario lineage). These third-party implementations are not reproduced in this new numerical bundle. Existing license and provenance records retained in historical evidence keep their original scope.
+
+Opponent aliases and available historical hashes are recorded in numerical/opponents.json. Incomplete upstream identity or license records are disclosed, not cured by this arithmetic export. The package is not a blanket certification of all historical source provenance.
+
+Organizer card data, artwork, engine, bindings and secrets are excluded. This package includes participant-authored source excerpts and outcome-only research exports; it is not a complete runnable release of the trained player. Full winner-code delivery is a separate obligation under the competition rules.
+
+©Pokémon/Nintendo/Creatures/GAME FREAK. Pokémon and character names are trademarks of Nintendo.

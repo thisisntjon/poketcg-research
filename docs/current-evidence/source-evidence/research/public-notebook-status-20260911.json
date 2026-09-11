@@ -1,0 +1,83 @@
+{
+  "schema": "ptcg.public_notebook_status_observation/v1",
+  "observation_date": "2026-09-11",
+  "record_type": "Analyst-recorded observation of successful read-only API results; not a raw API response",
+  "method": {
+    "client": "Installed Kaggle Python API, kaggle.api.kaggle_api_extended.KaggleApi",
+    "operation": "kernels_list",
+    "authentication": "Existing authorized Kaggle configuration; no credential values copied or recorded",
+    "query_scope": {
+      "user": "One separate query for each notebook owner below",
+      "page": 1,
+      "page_size": 100,
+      "mine": false,
+      "search": null,
+      "competition": null,
+      "sort_by": "Client default (HOTNESS)"
+    },
+    "selection": "From each returned first page, record only the exact notebook reference used by the research panel. Other listing results are not included.",
+    "read_only": true,
+    "notebook_source_downloaded": false,
+    "notebook_source_executed": false
+  },
+  "observations": [
+    {
+      "ref": "plamen06/pokemon-steel",
+      "url": "https://www.kaggle.com/code/plamen06/pokemon-steel",
+      "author_handle": "plamen06",
+      "api_author_display_name": "Plamen",
+      "is_private": false,
+      "query_user": "plamen06",
+      "query_returned_count": 7
+    },
+    {
+      "ref": "llccqq624/ptcg-alakazam-marniebelief-0723-a",
+      "url": "https://www.kaggle.com/code/llccqq624/ptcg-alakazam-marniebelief-0723-a",
+      "author_handle": "llccqq624",
+      "api_author_display_name": "Jiachen Li",
+      "is_private": false,
+      "query_user": "llccqq624",
+      "query_returned_count": 33
+    },
+    {
+      "ref": "raunakdey07/pok-mon-tcg-advanced-heuristic-agent",
+      "url": "https://www.kaggle.com/code/raunakdey07/pok-mon-tcg-advanced-heuristic-agent",
+      "author_handle": "raunakdey07",
+      "api_author_display_name": "Raunak Dey",
+      "is_private": false,
+      "query_user": "raunakdey07",
+      "query_returned_count": 25
+    },
+    {
+      "ref": "zoli800/top-dragapult-ex-tempo-control-agent",
+      "url": "https://www.kaggle.com/code/zoli800/top-dragapult-ex-tempo-control-agent",
+      "author_handle": "zoli800",
+      "api_author_display_name": "Chekhlov Dmitrii",
+      "is_private": false,
+      "query_user": "zoli800",
+      "query_returned_count": 33
+    },
+    {
+      "ref": "harukiharada/crustle-wall-mirror-ok",
+      "url": "https://www.kaggle.com/code/harukiharada/crustle-wall-mirror-ok",
+      "author_handle": "harukiharada",
+      "api_author_display_name": "HARUKI HARADA",
+      "is_private": false,
+      "query_user": "harukiharada",
+      "query_returned_count": 37
+    }
+  ],
+  "license_observation": {
+    "status": "Unavailable from this listing metadata",
+    "basis": "The inspected installed ApiKernelMetadata class has no license field; the selected listing observations returned no license value.",
+    "license_inferred": false
+  },
+  "limitations": [
+    "This records public status reported by an authenticated read-only listing on the observation date; it is not an anonymous page-access test or a permanent visibility guarantee.",
+    "The author handle identifies the notebook owner. Display names are API metadata and do not establish sole authorship or rights in every component.",
+    "Current notebook listing metadata does not establish which historical notebook version supplied each evaluated policy or prove byte identity with historical extracted files.",
+    "Historical pull dates, version-to-extracted-policy linkage, and license terms remain unresolved by this observation.",
+    "The first-page queries establish the returned exact references only; no completeness claim is made about each author's full notebook inventory.",
+    "No notebook source, organizer materials, credentials, or unrelated listing records are contained in this receipt."
+  ]
+}

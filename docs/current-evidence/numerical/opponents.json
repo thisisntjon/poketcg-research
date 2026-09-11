@@ -1,0 +1,127 @@
+{
+  "D01": {
+    "source_alias": "kernel_aristophanivan_940",
+    "group": "Other",
+    "identity_source": "S01",
+    "identity_status": "Historical alias; full policy/deck identity not independently reconstructed by this export"
+  },
+  "D02": {
+    "source_alias": "kernel_prvsiyan_844_router",
+    "group": "Other",
+    "identity_source": "S01",
+    "identity_status": "Historical alias; full policy/deck identity not independently reconstructed by this export"
+  },
+  "D03": {
+    "source_alias": "kernel_prvsiyan_alakazam_v12",
+    "group": "Alakazam",
+    "identity_source": "S01",
+    "identity_status": "Historical alias; full policy/deck identity not independently reconstructed by this export"
+  },
+  "D04": {
+    "source_alias": "kernel_prvsiyan_alakazam_v8",
+    "group": "Alakazam",
+    "identity_source": "S01",
+    "identity_status": "Historical alias; full policy/deck identity not independently reconstructed by this export"
+  },
+  "D05": {
+    "source_alias": "kernel_romanrozen_v13",
+    "group": "Other",
+    "identity_source": "S01",
+    "identity_status": "Historical alias; full policy/deck identity not independently reconstructed by this export"
+  },
+  "C61": {
+    "source_alias": "tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control",
+    "group": "Other",
+    "identity_source": "S11",
+    "identity_status": "Exact-c61 historical source identity; c61 is the opponent, not the modified candidate"
+  },
+  "P01": {
+    "source_alias": "tb_567ea9be_llccqq624_ptcg-alakazam-marniebelief-0723-a",
+    "label": "llccqq624 Alakazam",
+    "group": "Alakazam",
+    "identity_source": "S12",
+    "shares_development_deck": true,
+    "identity_status": "Historical implementation alias; this export does not independently rerun the original policy",
+    "policy_sha256": "567ea9bec00f60204510e7b507833de06d6ced9b5f25e3e1d2f01ddf647ae749",
+    "deck_sha256": "0598646548d081832ec311c15fdc369b32c6f5e63175b0cfd1904d21fd082451",
+    "author": "llccqq624",
+    "dev_deck_reuse": "prvsiyan_alakazam_v12",
+    "hash_source": "S13"
+  },
+  "P02": {
+    "source_alias": "tb_64e9991a_raunakdey07_pok-mon-tcg-advanced-heuristic-agent",
+    "label": "raunakdey07 Alakazam",
+    "group": "Alakazam",
+    "identity_source": "S12",
+    "shares_development_deck": false,
+    "identity_status": "Historical implementation alias; this export does not independently rerun the original policy",
+    "policy_sha256": "64e9991a5c39678c33c29a0062b72b8c7d42ce5a73346c00b796d13159e283dd",
+    "deck_sha256": "8eccc69c3bf7d499f38c6116c33c5fac837050bf0ec71a5a1883f0f20f41ddbc",
+    "author": "raunakdey07",
+    "dev_deck_reuse": "",
+    "hash_source": "S13"
+  },
+  "P03": {
+    "source_alias": "tb_4b3946f9_plamen06_pokemon-steel",
+    "label": "plamen06 Steel",
+    "group": "Other",
+    "identity_source": "S12",
+    "shares_development_deck": false,
+    "identity_status": "Historical implementation alias; this export does not independently rerun the original policy",
+    "policy_sha256": "4b3946f9a1078a5afad36fe584ce9474a5d5b495516ebd755553afd9b38f9bbf",
+    "deck_sha256": "fbe6ab59992260b0d6774abed19469be315521b5ed0546de8c20f329607693e6",
+    "author": "plamen06",
+    "dev_deck_reuse": "",
+    "hash_source": "S13"
+  },
+  "P04": {
+    "source_alias": "tb_a4c53101_aristophanivan_one-of-snapshot-versions",
+    "label": "aristophanivan snapshot",
+    "group": "Other",
+    "identity_source": "S12",
+    "shares_development_deck": false,
+    "identity_status": "Historical implementation alias; this export does not independently rerun the original policy",
+    "policy_sha256": "a4c53101be301c181bd477204a72c0e5cba65fddd34d8cd0ec4d36e4b41c9518",
+    "deck_sha256": "fbe6ab59992260b0d6774abed19469be315521b5ed0546de8c20f329607693e6",
+    "author": "aristophanivan",
+    "dev_deck_reuse": "",
+    "hash_source": "S13"
+  },
+  "P05": {
+    "source_alias": "tb_ded5c6a6_zoli800_top-dragapult-ex-tempo-control-agent",
+    "label": "zoli800 Dragapult",
+    "group": "Other",
+    "identity_source": "S12",
+    "shares_development_deck": false,
+    "identity_status": "Historical implementation alias; this export does not independently rerun the original policy",
+    "policy_sha256": "ded5c6a6c83b4ad96ad94c092a97427ff563c095fb84211f20f591c797f0eb06",
+    "deck_sha256": "008816603a8ac836007f2cfc1c5b238177d7c1853eb3bbbbb931eec24cf717a7",
+    "author": "zoli800",
+    "dev_deck_reuse": "",
+    "hash_source": "S13"
+  },
+  "P06": {
+    "source_alias": "tb_eb8c2384_harukiharada_crustle-wall-mirror-ok",
+    "label": "harukiharada Crustle",
+    "group": "Other",
+    "identity_source": "S12",
+    "shares_development_deck": false,
+    "identity_status": "Historical implementation alias; this export does not independently rerun the original policy",
+    "policy_sha256": "eb8c2384bf146a036e3e37b21ff4d7221f03427e3c574aaabdb77f25b06dc9e4",
+    "deck_sha256": "0bf6b29c6d3555637da0302dedc65087836a1d628c3c44dcb8cff52289062072",
+    "author": "harukiharada",
+    "dev_deck_reuse": "",
+    "hash_source": "S13"
+  },
+  "P07": {
+    "source_alias": "tb_f2e2c18d_grimmsnarl_bc_alias",
+    "label": "Grimmsnarl BC alias (not c61)",
+    "group": "Other",
+    "identity_source": "S12",
+    "shares_development_deck": false,
+    "identity_status": "Retained local files inspected on 2026-09-11 match historical panel-report hash prefixes. The deck matches c61; the policy differs. Historical execution is not independently reconstructed.",
+    "policy_sha256": "f2e2c18d50570b15ab4380ec540c128afff45d84f989b4bdd8ea4ff1a901d398",
+    "deck_sha256": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+    "hash_source": "retained-opponent-identity.json"
+  }
+}

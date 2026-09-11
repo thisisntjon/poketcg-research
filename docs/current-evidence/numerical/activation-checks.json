@@ -1,0 +1,46 @@
+[
+  {
+    "run": "combined_reproduction_4070",
+    "source_id": "S03",
+    "historical_manifest_source_id": "S02",
+    "arms": {
+      "A_shipped": {
+        "env_raw": "0",
+        "flag_in_child": false,
+        "deck_sha": "2a541d7bf3d9",
+        "expect_flag": false,
+        "expect_sha": "2a541d7bf3d9"
+      },
+      "D_combined": {
+        "env_raw": "1",
+        "flag_in_child": true,
+        "deck_sha": "2186cf7be6cf",
+        "expect_flag": true,
+        "expect_sha": "2186cf7be6cf"
+      }
+    },
+    "scope": "Saved child-process activation check, not a rerun or a complete reconstruction of historical execution"
+  },
+  {
+    "run": "c61_anchor_followup",
+    "source_id": "S07",
+    "historical_manifest_source_id": "S06",
+    "arms": {
+      "A_shipped": {
+        "env_raw": "0",
+        "flag_in_child": false,
+        "deck_sha": "2a541d7bf3d9",
+        "expect_flag": false,
+        "expect_sha": "2a541d7bf3d9"
+      },
+      "D_combined": {
+        "env_raw": "1",
+        "flag_in_child": true,
+        "deck_sha": "2186cf7be6cf",
+        "expect_flag": true,
+        "expect_sha": "2186cf7be6cf"
+      }
+    },
+    "scope": "Saved child-process activation check, not a rerun or a complete reconstruction of historical execution"
+  }
+]

@@ -1,0 +1,183 @@
+SOURCE: ptcg-agent/learning_factory/model_v2.py
+SHA256 OF COMPLETE SOURCE: dd59df5c520050709c0c6b28779a6c80addf70493f816b19b167a92356b53eb2
+Scope: selected source excerpts, not a complete runnable package.
+
+LINES 100-135
+100: class LearningFactoryModelV2(nn.Module):
+101:     """46/24/32/8 blocks -> GRU-256 actor with entity-linked option scoring."""
+102: 
+103:     def __init__(self, config: ModelV2Config | None = None) -> None:
+104:         super().__init__()
+105:         self.config = config or ModelV2Config()
+106:         if self.config.global_dim != GLOBAL_DIM or self.config.entity_dim != ENTITY_DIM:
+107:             raise ModelV2Error("v2 model is pinned to census-bound 46/24 widths")
+108:         if self.config.history_dim != HISTORY_DIM or self.config.option_numeric_dim != OPTION_DIM:
+109:             raise ModelV2Error("v2 model is pinned to census-bound 8/32 widths")
+110:         if self.config.option_kind_count != len(OPTION_KINDS):
+111:             raise ModelV2Error("v2 model is pinned to the 17 declared option kinds")
+112:         self.global_encoder = nn.Sequential(nn.Linear(GLOBAL_DIM, TOWER_SIZE), nn.LayerNorm(TOWER_SIZE), nn.SiLU())
+113:         self.entity_encoder = nn.Sequential(nn.Linear(ENTITY_DIM, TOWER_SIZE), nn.LayerNorm(TOWER_SIZE), nn.SiLU())
+114:         self.entity_pool_proj = nn.Sequential(nn.Linear(POOL_GROUPS * POOL_WIDTH, ENTITY_SUMMARY), nn.SiLU())
+115:         self.history_encoder = nn.Sequential(nn.Linear(HISTORY_DIM, HISTORY_SIZE), nn.LayerNorm(HISTORY_SIZE), nn.SiLU())
+116:         self.history_recurrent = nn.GRU(HISTORY_SIZE, HISTORY_SIZE, batch_first=True)
+117:         self.state_proj = nn.Sequential(nn.Linear(STATE_CONCAT, HIDDEN_SIZE), nn.LayerNorm(HIDDEN_SIZE), nn.SiLU())
+118:         self.recurrent = nn.GRU(HIDDEN_SIZE, HIDDEN_SIZE, batch_first=True)
+119:         self.kind_embedding = nn.Embedding(self.config.option_kind_count, 32)
+120:         self.missing_source = nn.Parameter(torch.zeros(TOWER_SIZE))
+121:         self.missing_target = nn.Parameter(torch.zeros(TOWER_SIZE))
+122:         self.option_encoder = nn.Sequential(
+123:             nn.Linear(OPTION_DIM + 32 + TOWER_SIZE + TOWER_SIZE, 128),
+124:             nn.SiLU(),
+125:             nn.Linear(128, OPTION_EMBED_SIZE),
+126:             nn.LayerNorm(OPTION_EMBED_SIZE),
+127:         )
+128:         self.option_query = nn.Linear(HIDDEN_SIZE, OPTION_EMBED_SIZE)
+129:         self.stop_head = nn.Sequential(nn.Linear(HIDDEN_SIZE, 64), nn.SiLU(), nn.Linear(64, 1))
+130:         self.selection_recurrent = nn.GRUCell(OPTION_EMBED_SIZE, HIDDEN_SIZE)
+131:         self.value_head = nn.Sequential(nn.Linear(HIDDEN_SIZE, 128), nn.SiLU(), nn.Linear(128, 1), nn.Sigmoid())
+132:         self.plan_head = nn.Sequential(nn.Linear(HIDDEN_SIZE, 128), nn.SiLU(), nn.Linear(128, PLAN_CLASSES))
+133:         self.value_head.requires_grad_(False)
+134:         self.plan_head.requires_grad_(False)
+135: 
+
+LINES 205-260
+205:     def encode_state(
+206:         self, encoded: EncodedV2, history_state: torch.Tensor | None = None
+207:     ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+208:         if encoded.treatment != TREATMENT or encoded.schema_sha256 != FEATURE_SCHEMA_SHA256:
+209:             raise ModelV2Error("EncodedV2 treatment/schema mismatch")
+210:         global_block = encoded.global_block
+211:         if global_block.ndim == 1:
+212:             global_block = global_block.unsqueeze(0)
+213:         if global_block.shape != (1, GLOBAL_DIM):
+214:             raise ModelV2Error("global_block must be [46] or [1, 46]")
+215:         _finite("global_block", global_block)
+216:         global_h = self.global_encoder(global_block[0])
+217:         entity_h, entity_summary = self.encode_entities(encoded.entity_block)
+218:         history_h, next_history_state = self.encode_history(encoded.history_block, history_state)
+219:         summary = self.state_proj(torch.cat([global_h, entity_summary, history_h], dim=-1))
+220:         return _finite("state_summary", summary), entity_h, next_history_state
+221: 
+222:     def _token_map(self, encoded: EncodedV2, entity_h: torch.Tensor) -> dict[int, torch.Tensor]:
+223:         mapping: dict[int, torch.Tensor] = {}
+224:         tokens = encoded.entity_block[:, ENTITY_TOKEN_COL].detach().round().to(device="cpu", dtype=torch.long).tolist()
+225:         for index, token in enumerate(tokens):
+226:             meta_token = encoded.entity_meta[index].get("token") if index < len(encoded.entity_meta) else None
+227:             if meta_token not in (None, 0) and int(meta_token) != token:
+228:                 raise ModelV2Error("disagreeing_source_target")
+229:             if token <= 0:
+230:                 continue
+231:             if token in mapping:
+232:                 raise ModelV2Error("duplicate_source_target")
+233:             mapping[token] = entity_h[index]
+234:         return mapping
+235: 
+236:     def _linked_entity(self, token: int, mapping: dict[int, torch.Tensor], missing: torch.Tensor, role: str) -> torch.Tensor:
+237:         if token <= 0:
+238:             return missing
+239:         if token not in mapping:
+240:             raise ModelV2Error(f"unresolved_{role}")
+241:         return mapping[token]
+242: 
+243:     def encode_options(self, encoded: EncodedV2, entity_h: torch.Tensor) -> torch.Tensor:
+244:         menu = encoded.legal_menu
+245:         if menu is None:
+246:             return entity_h.new_zeros((0, OPTION_EMBED_SIZE))
+247:         numeric = menu.numeric
+248:         kinds = menu.kinds
+249:         if numeric.ndim != 2 or numeric.shape[-1] != OPTION_DIM:
+250:             raise ModelV2Error("option numeric tensor has the wrong shape")
+251:         if kinds.shape != numeric.shape[:1] or kinds.dtype != torch.long:
+252:             raise ModelV2Error("option kinds must be long and match the menu")
+253:         _finite("option_numeric", numeric)
+254:         if numeric.numel() and (int(kinds.min()) < 0 or int(kinds.max()) >= self.config.option_kind_count):
+255:             raise ModelV2Error("option kind is outside the configured vocabulary")
+256:         mapping = self._token_map(encoded, entity_h)
+257:         link_tokens = numeric[:, [SOURCE_TOKEN_COL, TARGET_TOKEN_COL]].detach().round().to(
+258:             device="cpu", dtype=torch.long
+259:         ).tolist()
+260:         serial_present = numeric[:, OPTION_SERIAL_COL] > 0
+
+LINES 291-312
+291:     def forward_step(
+292:         self,
+293:         encoded: EncodedV2,
+294:         recurrent_state: torch.Tensor | None = None,
+295:         legal_mask: torch.Tensor | None = None,
+296:         history_state: torch.Tensor | None = None,
+297:     ) -> StepOutput:
+298:         if not isinstance(encoded, EncodedV2):
+299:             raise ModelV2Error("v2 model consumes EncodedV2 only")
+300:         summary, entity_h, next_history_state = self.encode_state(encoded, history_state)
+301:         option_embeddings = self.encode_options(encoded, entity_h)
+302:         count = option_embeddings.shape[0]
+303:         if legal_mask is None:
+304:             legal_mask = summary.new_ones((count,), dtype=torch.bool)
+305:         if legal_mask.dtype is not torch.bool or legal_mask.shape != (count,):
+306:             raise ModelV2Error("legal mask must be a bool vector matching the menu")
+307:         state = recurrent_state if recurrent_state is not None else self.initial_state(1, device=summary.device)
+308:         recurrent_output, next_state = self.recurrent(summary.view(1, 1, HIDDEN_SIZE), state)
+309:         hidden = recurrent_output[0, 0]
+310:         logits, stop, value, plan = self._heads(hidden, option_embeddings, legal_mask)
+311:         return StepOutput(logits, stop, value, plan, next_state, next_history_state, option_embeddings, summary)
+312: 
+
+LINES 338-395
+338:     def evaluate_autoregressive(
+339:         self,
+340:         encoded: EncodedV2,
+341:         *,
+342:         selection_tokens: torch.Tensor,
+343:         selection_mask: torch.Tensor,
+344:         min_count: int,
+345:         max_count: int,
+346:         recurrent_state: torch.Tensor | None = None,
+347:     ) -> AutoregressiveOutput:
+348:         step = self.forward_step(encoded, recurrent_state)
+349:         option_count = step.option_embeddings.shape[0]
+350:         if not 0 <= min_count <= max_count <= option_count:
+351:             raise ModelV2Error("invalid autoregressive min/max bounds")
+352:         if selection_tokens.ndim != 1 or selection_mask.ndim != 1 or selection_tokens.shape != selection_mask.shape:
+353:             raise ModelV2Error("selection tokens must be a rank-1 pair")
+354:         if selection_mask.dtype is not torch.bool:
+355:             raise ModelV2Error("selection_mask must be bool")
+356:         hidden = step.recurrent_state[0, 0]
+357:         selected: list[int] = []
+358:         token_logps: list[torch.Tensor] = []
+359:         entropies: list[torch.Tensor] = []
+360:         seen_padding = False
+361:         stop_used = False
+362:         legal = encoded.legal_menu.numeric.new_ones((option_count,), dtype=torch.bool) if option_count else hidden.new_zeros((0,), dtype=torch.bool)
+363:         for index, token in enumerate(selection_tokens.tolist()):
+364:             active = bool(selection_mask[index])
+365:             if not active:
+366:                 seen_padding = True
+367:                 continue
+368:             if seen_padding:
+369:                 raise ModelV2Error("selection_mask must be a contiguous prefix")
+370:             if len(selected) >= max_count and max_count > 0:
+371:                 raise ModelV2Error("selection continued after max_count")
+372:             logits, stop_allowed = self.selection_logits(
+373:                 hidden, step.option_embeddings, legal, tuple(selected), min_count=min_count, max_count=max_count
+374:             )
+375:             token_i = int(token)
+376:             if token_i == option_count:
+377:                 if not stop_allowed:
+378:                     raise ModelV2Error("STOP unavailable at this selection count")
+379:                 if bool(selection_mask[index + 1 :].any()):
+380:                     raise ModelV2Error("active_after_stop")
+381:                 stop_used = True
+382:             elif token_i < 0 or token_i >= option_count or token_i in selected:
+383:                 if token_i in selected:
+384:                     raise ModelV2Error("duplicate_selection_token")
+385:                 raise ModelV2Error("illegal_selection_token")
+386:             if not torch.isfinite(logits[token_i if token_i < logits.numel() else -1]):
+387:                 raise ModelV2Error("illegal_selection_token")
+388:             distribution = torch.distributions.Categorical(logits=logits)
+389:             token_tensor = torch.tensor(token_i, device=logits.device)
+390:             token_logps.append(distribution.log_prob(token_tensor))
+391:             entropies.append(distribution.entropy())
+392:             if token_i == option_count:
+393:                 break
+394:             selected.append(token_i)
+395:             hidden = self.selection_recurrent(step.option_embeddings[token_i], hidden)

@@ -1,0 +1,57 @@
+SOURCE: ptcg-agent/agent/lf_v2_policy.py
+SHA256 OF COMPLETE SOURCE: f39e1fbcf334976afe0fe9d871e4f1237469402a838d3f5bd2e78fa74b341e1e
+Scope: selected source excerpts, not a complete runnable package.
+
+LINES 60-78
+60:     """Reset encoder tokens + GRU state when the game or seat changes."""
+61:     game_id = getattr(ctx, "game_id", None)
+62:     prev_game = getattr(ctx, "lf_v2_game_id", None)
+63:     prev_seat = getattr(ctx, "lf_v2_seat", None)
+64:     if prev_game == game_id and prev_seat == seat:
+65:         return
+66:     _encoder().reset_episode()
+67:     try:
+68:         ctx.lf_v2_recurrent = None
+69:         ctx.lf_v2_history_state = None
+70:         ctx.lf_v2_game_id = game_id
+71:         ctx.lf_v2_seat = seat
+72:         ctx.lf_v2_spent_s = 0.0
+73:     except AttributeError:
+74:         pass
+75: 
+76: 
+77: def choose(obs: Any, ctx: Any) -> list[int] | None:
+78:     """Return a legal index list, or None to degrade to heuristic."""
+
+LINES 120-150
+120:             history_state=None,
+121:         )
+122:         try:
+123:             ctx.lf_v2_recurrent = step["recurrent"]
+124:             # Public history is a complete observation-local window, not an
+125:             # append-only episode stream.  Never carry its GRU state forward.
+126:             ctx.lf_v2_history_state = None
+127:         except AttributeError:
+128:             pass
+129:         if forced:
+130:             return [0]
+131:         relative = _net().greedy_indices(
+132:             step["option_logits"],
+133:             step["stop_logit"],
+134:             encoded.min_count,
+135:             encoded.max_count,
+136:             step["hidden"],
+137:             step["option_embeddings"],
+138:         )
+139:         semantic_ids = [menu.semantic_keys[index] for index in relative]
+140:         native = encoded.semantic_menu.native_indices(semantic_ids)
+141:         n = len(options)
+142:         picked = []
+143:         seen = set()
+144:         for index in native:
+145:             if not isinstance(index, int) or index < 0 or index >= n or index in seen:
+146:                 return None
+147:             seen.add(index)
+148:             picked.append(index)
+149:         if not (min_count <= len(picked) <= max_count):
+150:             return None

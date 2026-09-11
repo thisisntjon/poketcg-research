@@ -1,0 +1,75 @@
+SOURCE: ptcg-agent/learning_factory/behavior_objective_v2.py
+COMMIT: e9f4b64f1f2bf92e98234e004f4b668cee41fd2b
+COMPLETE SOURCE SHA256: 390c30dd918ce66c17de09ed4edeb94ca2b1ae84110921cf5c166a6ada4436cc
+Selected authored text/code for inspection; not a runnable release.
+
+LINES 80-115
+80:         return [[]]
+81:     orders: list[list[int]] = []
+82:     for index, item in enumerate(items):
+83:         for tail in _path_orders(items[:index] + items[index + 1 :]):
+84:             orders.append([item] + tail)
+85:     return orders
+86: 
+87: 
+88: def _set_joint_logp(
+89:     model: LearningFactoryModelV2,
+90:     encoded: object,
+91:     selected: list[int],
+92:     stop_used: bool,
+93:     min_count: int,
+94:     max_count: int,
+95:     target: torch.device,
+96:     recurrent: torch.Tensor | None,
+97:     menu_size: int,
+98: ) -> torch.Tensor:
+99:     parts: list[torch.Tensor] = []
+100:     for order in _path_orders(selected):
+101:         path = order + ([menu_size] if stop_used else [])
+102:         scored = model.evaluate_autoregressive(
+103:             encoded,
+104:             selection_tokens=torch.tensor(path, dtype=torch.long, device=target),
+105:             selection_mask=torch.ones((len(path),), dtype=torch.bool, device=target),
+106:             min_count=min_count,
+107:             max_count=max_count,
+108:             recurrent_state=recurrent,
+109:         )
+110:         parts.append(scored.joint_logp)
+111:     return torch.logsumexp(torch.stack(parts), dim=0)
+112: 
+113: 
+114: def teacher_forced_episode(model: LearningFactoryModelV2, episode: BehaviorEpisodeV2) -> EpisodeObjectiveV2:
+115:     if not isinstance(model, LearningFactoryModelV2):
+
+LINES 153-183
+153:                 menu = replace(menu, numeric=menu.numeric.to(target), kinds=menu.kinds.to(target))
+154:             encoded = replace(
+155:                 encoded,
+156:                 global_block=encoded.global_block.to(target),
+157:                 entity_block=encoded.entity_block.to(target),
+158:                 history_block=encoded.history_block.to(target),
+159:                 legal_menu=menu,
+160:             )
+161:             step = model.forward_step(encoded, recurrent)
+162:             scored = model.evaluate_autoregressive(
+163:                 encoded,
+164:                 selection_tokens=token_tensor,
+165:                 selection_mask=mask,
+166:                 min_count=decision.selection_contract.min_count,
+167:                 max_count=decision.selection_contract.max_count,
+168:                 recurrent_state=recurrent,
+169:             )
+170:             if decision.selection_contract.ordered or not tokens:
+171:                 joint = scored.joint_logp
+172:             else:
+173:                 picked = [token for token in tokens if token < len(decision.semantic_menu)]
+174:                 joint = _set_joint_logp(
+175:                     model,
+176:                     encoded,
+177:                     picked,
+178:                     stop_used,
+179:                     decision.selection_contract.min_count,
+180:                     decision.selection_contract.max_count,
+181:                     target,
+182:                     recurrent,
+183:                     len(decision.semantic_menu),
