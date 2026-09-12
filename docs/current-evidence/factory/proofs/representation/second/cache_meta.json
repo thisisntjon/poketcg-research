@@ -1,0 +1,12 @@
+{
+  "schema": "ptcg.repr_probe_cache/v1",
+  "state_dim": 148,
+  "n_options": 16,
+  "n_opt_feats": 4,
+  "n_examples": 66030,
+  "n_skipped": 44,
+  "id_resolution_rate": 0.8834,
+  "n_valid_slots": 465747,
+  "source": "D:\\policy_rows\\kernel_clone_5080\\corpus\\traces",
+  "elapsed_s": 79.5
+}

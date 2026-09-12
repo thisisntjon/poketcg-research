@@ -1,0 +1,31 @@
+{
+  "verification": "PASS",
+  "scope": "Portable arithmetic proof only; no model or game execution",
+  "from_unrelated_cwd_passed": true,
+  "input_files": 5,
+  "arm_seed_rows_checked": 12,
+  "new_games": 0,
+  "new_training": 0,
+  "negative_cases": [
+    {
+      "case": "duplicate_arm_seed",
+      "expected": "rejected",
+      "actual": "rejected",
+      "message": "Duplicate arm/seed: (False, 0)"
+    },
+    {
+      "case": "paired_validation_count_mismatch",
+      "expected": "rejected",
+      "actual": "rejected",
+      "message": "Paired counts differ at seed 0"
+    },
+    {
+      "case": "retained_mean_mismatch",
+      "expected": "rejected",
+      "actual": "rejected",
+      "message": "Stored mean mismatch: baseline/raw"
+    }
+  ],
+  "local_readme_links_resolved": 5,
+  "verifier_sha256": "162b1b98de3460bea839ff639c722985a7f5a97c369ed597e917aa43191d33e4"
+}

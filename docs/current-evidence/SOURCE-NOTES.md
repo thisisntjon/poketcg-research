@@ -16,15 +16,19 @@ The [replay-state proof of concept](factory/cases/sources/06-replay-state-proof-
 
 ## [3] Labeling: test the consumer before scaling the producer
 
-The [consumer derivation](factory/cases/sources/07-label-consumer-derivation.txt) identifies one effective relative scalar per training row through this particular weighted-loss seam. Additional categories alone do not create extra learning channels there; other training architectures could.
+The [consumer derivation](factory/cases/sources/07-label-consumer-derivation.txt) identifies one effective relative loss weight per training row through this particular weighted-loss seam. Additional categories alone do not create extra learning channels there; other training architectures could.
 
 The [initial mapping receipt](factory/cases/sources/08-initial-label-map.txt) and [enriched comparison](factory/cases/sources/09-enriched-labeling-comparison.txt) preserve the negative result and follow-up. A fresh count of retained outputs is supplied as [labeling aggregates](factory/cases/labeling-aggregates.json): 46 initial quarantined drafts at default weight; eight enriched cases with five non-abstaining explanations; all eight still default under the original mapping. An alternate mapping moved two weights; the article does not present that mapping change as a same-method improvement. Non-abstention is not correctness, accuracy or training benefit. Only aggregate counts and bounded authored analysis are exported.
 
-## [4] Representation probe
+## [4] Representation probes
 
-[Representation evidence and runnable recount](factory/proofs/representation/README.md) supplies the exact six-run summary, cache metadata, source identities and a standard-library verifier. It checks six retained arm/seed rows, matching paired validation counts 4,308 / 4,466 / 4,579 and cache size 44,343. Inspected trainer code uses seed-dependent whole-game splits; the retained files do not include assignments for independent split verification. Means are 48.616737% and 74.251360%, rounded to 48.62% and 74.25% in the article. These are seed-dependent game splits, not repeated runs on one fixed holdout.
+[Representation evidence and portable recount](factory/proofs/representation/README.md) supplies two retained six-row summaries, cache metadata, source identities and a standard-library verifier. The first cache contains 44,343 examples; paired validation counts are 4,308 / 4,466 / 4,579. Mean raw validation agreement is 48.616737% baseline and 74.251360% identity, rounded to 48.62% and 74.25% in the article.
 
-The variant also adds a 16-dimensional identity embedding, enlarges the option-layer input from four to twenty and increases capacity by 69,632 parameters. There is no capacity-matched control. The retained summary does not bind the exact original trainer, runtime and checkpoint; later screen artifacts differ. The recount verifies historical metric arithmetic without rerunning training, certifying execution or attributing playing strength to the probe. Current v2 is not claimed to descend directly from this exact July experiment.
+The second recorded public-teacher cache contains 66,030 examples; paired validation counts are 6,862 / 6,663 / 6,742. Mean agreement is 47.332096% baseline and 77.258906% identity, rounded to 47.33% and 77.26%. The producer records 66,074 generated rows, reconciling to 66,030 cached plus 44 skipped. The [clean producer excerpt](factory/proofs/representation/second/CORPUS-PROVENANCE-EXCERPT.json) credits Roman Rozen's public V13 teacher through recorded identifiers; the loader has not been re-executed. An unrelated historical teacher-strength assertion is excluded.
+
+Each result is an unweighted mean of three recorded seed comparisons. Inspected trainer code uses seed-dependent whole-game splits; the retained summaries do not supply assignments for independent split verification. Different recorded corpus constructions are not proof of disjoint data or independent replication. No raw overlap audit was performed.
+
+Both identity conditions add a 16-dimensional embedding, enlarge the option-layer input from four to twenty and increase capacity by 69,632 parameters. There is no capacity-matched control. The summaries do not fully bind original trainer/runtime/checkpoint identities. The recount verifies saved metric arithmetic without rerunning training, certifying teacher correctness or attributing playing strength. Current v2 is not claimed to descend directly from these July probes. Figure 1 compresses the investigations into lessons; it does not assert that one exact probe caused the separate v2 rebuild.
 
 ## [5] Learning design, selection and teaching
 

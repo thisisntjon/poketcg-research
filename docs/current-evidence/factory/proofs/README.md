@@ -7,7 +7,7 @@ python representation/verify.py
 python selection/selection_demo.py
 ```
 
-The first command needs only Python 3.10+ and the standard library. It verifies the retained files' SHA-256 hashes and recalculates the reported **48.62% → 74.25%** mean validation agreement from six historical run rows. It does not retrain the models or reconstruct the original validation sets.
+The first command needs only Python 3.10+ and the standard library. It verifies the retained files' SHA-256 hashes and recalculates the reported **48.62% → 74.25%** and **47.33% → 77.26%** mean validation agreement from twelve historical run rows across two caches. It does not retrain the models or reconstruct the original validation sets.
 
 The second command also needs PyTorch installed. It runs seven generic checks on CPU against the exact project-authored training-side decoder. It loads no trained model, game engine or card data and uses no network or GPU. One case changes prescribed scores after a selection; another checks rejection of an impossible minimum. These demonstrate component behavior, not strategic quality. Each directory includes the output captured from the public candidate's verification run.
 

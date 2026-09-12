@@ -1,0 +1,17 @@
+{
+  "schema": "ptcg.kernel_teacher_corpus.receipt/v1",
+  "generated_utc": "2026-07-31T17:51:24Z",
+  "n_games": 500,
+  "n_rows": 66074,
+  "gen_errors": 0,
+  "shard_bytes": 434559951,
+  "shard_sha256": "e4352bd2f6117888e2831ab176804f400f22c9a0a8e19090a9b23df851977cc0",
+  "teacher": {
+    "key": "romanrozen_strongstart_v13",
+    "loaded_via": "eval.load_agent_from_source",
+    "main_sha256": "a81eab3eb761af95da2ddf70a67d6078897a2cd698dae4a7b6ea92de070fad2b",
+    "deck_sha256": "2a541d7bf3d9e6b36037123f53f4dfef6348223f79fd27095dafc602a5357c19"
+  },
+  "source_sha256": "bf8b35d34e7fea7613ca48dc756310c3c8bb0e0bbc38e66bc72fbe0ceda1ee08",
+  "scope": "Selected producer-receipt fields, not independent runtime certification. Historical teacher-strength basis intentionally omitted as irrelevant to this claim."
+}

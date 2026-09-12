@@ -7,7 +7,7 @@ The Fleet is a human-directed research method built around game questions, testa
 | Research direction and coordination | Evolving roles, two-machine work, review and corrected handoffs | Documented operated cases; no controlled productivity multiplier |
 | Policy study and replay tools | Disagreement-driven modules and semantic action translation prerequisite | Implemented hypotheses and a small replay probe; no general search-strength result |
 | Labeling investigation | Consumer derivation, default-weight diagnosis, eight-case enrichment | Actionable changes to the research plan; no proven label accuracy or training gain |
-| Representation experiment | Six retained run rows and portable recount | Historical cached imitation agreement 48.62% to 74.25%; capacity also increased |
+| Representation experiment | Two recorded caches, twelve run rows and portable recount | Historical imitation agreement 48.62% to 74.25% and 47.33% to 77.26%; capacity also increased |
 | Learning components | Actor-visible representation, 256-unit recurrence, sequential STOP and set objective | Inspectable source and seven prescribed-score selection checks; current v2 strength unestablished |
 | Executed teaching | Historical teacher labels, training receipt and all student outcomes | Validation improved; selected checkpoint won 23/1,200 decided games against c61 |
 | Deck-policy intervention | Carmine-to-Xerosic substitution, targeting rule, factorial and later matchup comparisons | Substantial advantage against two tested Alakazam implementations; broader benefit unresolved |
