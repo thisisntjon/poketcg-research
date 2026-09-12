@@ -1,0 +1,9 @@
+# Preserve all manifest-listed bytes across operating systems.
+* -text
+# The following retained sources must remain byte-for-byte exact.
+representation/repr_probe_01_summary.json -text
+representation/cache_meta.json -text
+selection/action_decoder.py -text
+selection/selection_demo.py -text
+learning-design/HASH-V1-CLOSED-20260813.json -text
+learning-design/lf1-c0-v3-GATE-FAIL-20260812.json -text

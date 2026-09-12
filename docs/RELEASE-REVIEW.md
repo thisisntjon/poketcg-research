@@ -1,13 +1,9 @@
-# Release scope and revision review
+# Current release scope
 
-The [September 7 review](RELEASE-REVIEW-2026-09-07.md) remains preserved as a dated record. Its file counts, test transcripts and history coverage describe that inspected state; they are not a certification of later updates.
+This factory-centered report supersedes the learner-first report at public base `cfad057b5e804b2bb18e96db5d2cb38d1cb657e1`. Its conservative count is 1,900 words including figure text (1,941 with extra hyphen splitting). The platform counter is separate. The current report has two original explanatory/statistical figures and references 1–8.
 
-## September 11 report revision
+New evidence includes five traced research cycles, 13 bounded excerpts, labeling aggregates, the six-row representation recount, exact training-side decoder with seven prescribed-score checks, and the documented hash-v1 redesign. The current numerical evidence remains the previously verified outcome export; no new matches or training were run for publication.
 
-The revised report, two figures, one-page guide and evidence ZIP were built from inspected source excerpts and existing outcome records. The numerical bundle adds the formerly omitted third combined development comparison and the separate c61 follow-up. It labels the teacher-label count as a receipt assertion and corrects the directly rounded combined interval endpoint to 9.55.
+`docs/current-evidence/PACKAGE-MANIFEST.json` covers that public directory. The downloadable ZIP has its own manifest covering both current and historical members. PDF/report bytes match the corresponding ZIP members. Source manifests bind the selected original identities and output bytes; incomplete historical runtime and third-party provenance remain disclosed.
 
-Local checks verified package hashes, archive-member hashes, unchanged historical evidence, excerpt hashes, complete PDF prose/table content, image bounds, local reader links and the numerical command from a fresh extraction. The source article, report and figure data agree. These checks recount stored outcomes and inspect artifacts; they do not rerun historical games or training.
-
-The current evidence excludes organizer engine/card files, complete model weights, original teacher labels and third-party policy implementations. It includes participant source excerpts, reports and outcome-only exports. Selected source manifests state their scope. [Opponent provenance](OPPONENT-PROVENANCE.md) adds full retained-file hashes for the seventh panel alias and current public references for five other notebooks. Historical license, pull-date and version-linkage gaps in [NOTICE](../NOTICE) remain open; this update does not retroactively certify all upstream licenses or historical execution identities.
-
-A fresh scan of every object in public Git history is not claimed for this revision. The previous review's conclusions keep their original date and scope. Full winner-code delivery and the competition's public-code sharing requirements are separate from this artifact review.
+Original project-authored code and research material are curated here. Organizer engine/card databases/artwork, secrets, raw replays, trained weights and third-party player implementations are excluded from the new release. The general MIT license does not override [NOTICE](../NOTICE) or competition-use restrictions. This GitHub update does not submit or edit the live Kaggle writeup.

@@ -1,6 +1,8 @@
+> Current factory-centered report: [read it](STRATEGY-WRITEUP.md). Its references [1]–[8] are mapped in [the current evidence notes](current-evidence/SOURCE-NOTES.md). This page preserves supporting source context; earlier figure/reference numbering is historical.
+
 # How it plays
 
-This page explains the submitted public Grimmsnarl player and the experimental Lucario pilot. For the project-developed recurrent learner, see the [current report](STRATEGY-WRITEUP.md#give-the-learner-meaningful-choices) and [source excerpts](learner-evidence/README.md).
+This page explains the submitted public Grimmsnarl player and the experimental Lucario pilot. For the project-developed recurrent learner, see the [current report](STRATEGY-WRITEUP.md#give-decisions-enough-meaning) and [source excerpts](learner-evidence/README.md).
 
 Everything on this page comes from **static inspection of source and supplied card
 text**, recorded in

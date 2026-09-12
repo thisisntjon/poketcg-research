@@ -1,3 +1,5 @@
+> Historical supporting account. The current report is [The Fleet](STRATEGY-WRITEUP.md), with five traced cases in [Factory in action](current-evidence/factory/cases/FACTORY-IN-ACTION.md). Claims below retain their original evidence scope.
+
 # Ten instruments that lied
 
 Every tool below produced at least one confident, wrong verdict before we caught it. None
@@ -152,4 +154,4 @@ audit run for an unrelated reason, or by someone noticing that a result was too 
 practical conclusion we drew is that a research system needs a **cheap way for a second
 party to recompute a headline from raw rows** — which is why the published game-level rows
 in this repository are rows, not summaries. See
-[FOR-RESEARCHERS](FOR-RESEARCHERS.md#recount-the-retained-experiments).
+[FOR-RESEARCHERS](REPRODUCING.md).

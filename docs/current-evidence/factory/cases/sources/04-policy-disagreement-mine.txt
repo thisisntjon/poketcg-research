@@ -1,0 +1,45 @@
+SOURCE ID: S04
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/ptcg-agent/experiments/analysis/2026-07-31-roach-v13-decision-mine/SUMMARY.md
+FULL SOURCE SHA256: 2dba54f6d2f4b5cf4ac88abda8afb22485689c4025beccc7be0b28225c59e35b
+CONTEXT: Project-authored analysis of a credited public teacher, Roman Rozen's V13 policy. Winner-seat rates are descriptive; no causal action advantage, general minimum-sample guarantee or replay-fidelity certification is adopted from the historical prose. No public-teacher code or underlying replay rows are exported.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 10-23 ---
+1. **Divergence is rare and concentrated: 2.01%** (1,353/67,453; ~2.7 per
+   game), peaking mid-game turns 4-11, only in MAIN and CARD selects (zero in
+   ENERGY/COUNT/YES_NO). Winner-seat rows diverge 1.45× more than loser-seat.
+2. **The MAIN-phase verb: EVOLVE-FIRST.** ~254 decisions where the kernel
+   evolves and our champion attaches/plays/attacks instead — the
+   evolve-over-attach cluster (168) runs 68% winner-seat.
+3. **The CARD-select doctrine (729 decisions → exactly two contexts):**
+   - SWITCH (527): kernel picks **Riolu** — the attacker line's evolution
+     source — where the champion picks Lunatone/Makuhita/Solrock/Hariyama
+     (421 decisions; the 202-decision Riolu-over-Lunatone pattern is 72%
+     winner-seat).
+   - TO_ACTIVE (202): after a KO the kernel promotes **Mega Lucario ex**
+     where the champion promotes Hariyama (110, **92% winner-seat** — the
+     strongest signal in the mine) or Makuhita (92, 75%).
+
+--- Original source lines 31-40 ---
+## Three falsifiable modules (confirmation-first, n≥400 each, per the board)
+
+- **M1 SWITCH-priority**: prefer Riolu as bench/switch target while the line
+  is undeveloped. Evidence: 421 counterexamples.
+- **M2 PROMOTION-priority**: prefer Mega Lucario ex at TO_ACTIVE when it can
+  attack. Evidence: 202 counterexamples at 75-92% winner-seat.
+- **M3 MAIN-ordering**: evolve before attach in turns 4-11. Evidence: 254
+  counterexamples.
+
+Test together AND separately — the doctrine may be load-bearing as a whole.
+
+--- Original source lines 57-66 ---
+## Caveats
+
+Winner-seat rates are suggestive, not causal (winners act more from strong
+positions). All divergence measured on kernel-visited states, kernel's deck
+(59/60 ours). Full rows (67,453, with obs) host-local at
+`ROACH:D:/ptcg-selfplay/v13-decision-diff/rows.jsonl`; the pattern table in
+this directory is the committed artifact.
+
+FENCES: ladder=0 / submissions=0 / spend=0 / actuate=0; all work replay
+mining + GPU probes under Jon's grants; zero new games.

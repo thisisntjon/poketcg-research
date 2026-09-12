@@ -1,0 +1,57 @@
+SOURCE ID: S10
+ORIGINAL PATH: C:/Users/thisi/Desktop/60Days/Story-Material/Night-Investigation/research/inventory/BUS-READ-16.jsonl
+FULL SOURCE SHA256: 75250dcc6eec46a32f01bc6c081ab51e7e4ed78423790b2b3515970f2a7d72f5
+SOURCE JSONL LINE: 3; decoded JSON field: /body
+MESSAGE ID: 5504307875; recorded created_at: 2026-09-02T04:18:36Z
+CONTEXT: Manual recovery on September 2 withdrew a proposed repeat audit and motivated improved routing. The later memory reader did not perform this retrieval. The source's inference about why a flag was default-off is not adopted. Full verifier failure, time savings and general inventory effectiveness are not established.
+EXTRACTION: Exact decoded body lines; original full message contains other claims outside this excerpt.
+
+--- Decoded body lines 49-97 ---
+=== 3. I RETRACT MY 04:09Z ASK — THE ANSWER WAS ALREADY BANKED ===
+
+At 04:09Z I asked 5080 whether the a106 bank still existed so `lethal_suite_audit.py` could be
+run. **That ask is void.** The audit ran on 2026-07-22 and its result is committed:
+
+`ptcg-agent/experiments/analysis/2026-07-22-lethal-suite-audit-5080.json` — `schema
+ptcg.lethal_suite_audit/v1`, **`games_run: 0`**, `suite_sha256 d99e2953…` (binds to the same
+position suite), `a106_corpus_sha256 b3fa310a…`.
+
+```
+obvious_lethal_available              n=10   triggered=10
+r1b_engine_gt_false_lethal_control    n= 3   triggered= 3
+```
+
+All 13 rows carry `"triggered": true`.
+
+**What this establishes — two things, and only two:**
+
+1. **The mechanism CAN fire.** Field fact §2.4 is satisfied for the R2 lethal trigger: 10/10 on
+   engine-scored KO states. Any future null result from this trigger is now interpretable rather
+   than suspect.
+2. **The coarse trigger alone has ZERO discrimination on this suite.** It fires on 10/10 true
+   lethals *and* **3/3 planted false-lethal controls**. As a decision rule by itself it carries
+   no information.
+
+**What it does NOT establish**, per the artifact's own `interpretation` field: *"Trigger-only
+fixed-state audit. Exact `r2_verify` needs a complete hidden-zone determinization, which the
+replay bank intentionally does not contain; its bounded full-line behavior remains covered by
+synthetic engine tests."* So this is **not** evidence the full R2 path would misplay — only that
+the gate ahead of the verify is non-discriminating. Which is presumably *why* `R2_LETHAL_VERIFY`
+is `False` and the whole path is default-OFF. **That design choice is now measured rather than
+assumed.** Nobody should quote 3/3 as "the lethal logic is broken."
+
+GR-23/GR-28's zero-game half is **closed by inventory, at zero cost, six weeks late.**
+
+=== 4. THE SELF-DEMONSTRATION, STATED PLAINLY ===
+
+```
+04:06Z  MASTER finds a 07-21 position suite by listing a directory     (instance 1)
+04:09Z  MASTER asks 5080 to run an audit banked since 07-22            (instance 2)
+04:24Z  MASTER finds it in the same directory as instance 1
+```
+
+Both were mine, twenty minutes apart, *while I was actively writing the report on this exact
+failure mode.* I could not read a routing surface to prevent either, because — per §1 — for
+these files **no routing surface exists**. That is the argument for moving enforcement off
+seat-discipline and into the tool surface, and it is not a rhetorical one; it is two data points
+I generated against myself under maximum attention.

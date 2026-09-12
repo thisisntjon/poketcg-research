@@ -1,0 +1,12 @@
+{
+  "schema": "ptcg.repr_probe_cache/v1",
+  "state_dim": 148,
+  "n_options": 16,
+  "n_opt_feats": 4,
+  "n_examples": 44343,
+  "n_skipped": 23,
+  "id_resolution_rate": 0.8861,
+  "n_valid_slots": 311997,
+  "source": "D:\\policy_rows\\elite_shards_r3_masked\\fire\\gen2-interaction-corpus\\traces",
+  "elapsed_s": 49.6
+}

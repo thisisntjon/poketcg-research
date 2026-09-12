@@ -1,37 +1,22 @@
-# What a reader can reproduce
+# Reproduce the checks behind the report
 
-## Report arithmetic
+Run these commands from the root of a GitHub clone. For the extracted evidence ZIP, remove the `docs/current-evidence/` prefix.
 
-From a clone of this repository, run:
+| Check | Command | Requirements |
+|---|---|---|
+| Historical game-result arithmetic | `python docs/current-evidence/numerical/verify_results.py --output verified-results.json` | Python 3.10+, standard library |
+| Historical representation arithmetic | `python docs/current-evidence/factory/proofs/representation/verify.py` | Python 3.10+, standard library |
+| Generic selection mechanics | `python docs/current-evidence/factory/proofs/selection/selection_demo.py` | Python 3.10+ and PyTorch; CPU |
+| Curated evidence integrity | `python docs/current-evidence/factory/cases/verify_curated.py` | Python 3.10+, standard library |
 
-```text
-python docs/current-evidence/numerical/verify_results.py --output verified-results.json
-```
+The numerical command checks hashes, unique records, cohorts and seats before recounting 28,000 development, 8,400 panel, 16,000 exact-c61 follow-up and 1,203 student records. [Methods](current-evidence/numerical/METHODS.md) define the contrasts, draw conventions and approximate intervals. [Expected results](current-evidence/numerical/verified-results.json) preserve the reference output.
 
-Python 3.10 or newer; no extra packages, network, engine, account or GPU. This checks input hashes, unique records, cohorts, seats and the reported arithmetic from 28,000 development, 8,400 panel, 16,000 c61-follow-up and 1,203 student records. All pooled combined development inputs are included. A missing or altered input returns an error.
+The [representation check](current-evidence/factory/proofs/representation/README.md) validates supplied bytes and retained metric rows; it does not reconstruct validation split assignments or rerun training. The [selection check](current-evidence/factory/proofs/selection/README.md) uses prescribed scores with the exact training-side decoder; it demonstrates seven component cases without a trained model, engine, network or GPU. These are different levels of verification, not substitutes for a fresh game experiment.
 
-[Exact formulas and contrast selection](current-evidence/numerical/METHODS.md) · [Expected summary](current-evidence/numerical/VERIFICATION.txt) · [Source manifest](current-evidence/numerical/SOURCE-MANIFEST.json)
+[Factory in action](current-evidence/factory/cases/FACTORY-IN-ACTION.md) and [original components](current-evidence/factory/proofs/ORIGINAL-COMPONENTS.md) explain why these artifacts exist. [Source notes](current-evidence/SOURCE-NOTES.md) map all eight report references to their evidence and limits.
 
-The main panel includes half-valued draws and uses unbiased sample variance/n. The older strike3 script used a different variance approximation and additional estimands; it is preserved as historical analysis. The current figures use the current verifier's values. The former 9.56 combined interval endpoint is corrected to 9.55 by direct rounding.
+Original games and training require complete historical policies, decks, engine/runtime versions, seeds, inputs and weights. This export does not supply that full environment. Organizer materials, third-party policies and original teacher-label decisions are excluded. Available identities and unresolved provenance are recorded in [opponents.json](current-evidence/numerical/opponents.json), [SOURCE-NOTES.md](current-evidence/SOURCE-NOTES.md) and [NOTICE.txt](current-evidence/NOTICE.txt). Conditional winner-code delivery is a separate obligation.
 
-## A research-record search
+## Search the wider research record
 
-```text
-python -X utf8 scripts/prior_art.py "Xerosic" --limit 2
-```
-
-The search reads the public export's tracked documents when the private catalog is absent. Git should be on PATH; without it the tool can use a directory walk. Counts and rankings vary with the corpus. A hit is a source pointer, not a verdict; a miss does not establish that work never happened. This example was checked on the inspected September 11 public snapshot and is separate from gameplay.
-
-## Preserved inventory and other tools
-
-The SRI inventory is a historical snapshot of a larger working repository. Its full input closure, external archive and original unsquashed Git objects are not included. It cannot be regenerated completely from this export. Providing one missing file does not restore those dependencies.
-
-Older full-suite and onboarding transcripts describe particular earlier exports, not a current passing test suite. The onboarding checker and several research tools depend on the private working repository. Their preserved source is not a promise that they can run here. Do not run cleanup or migration tools merely because their source is present.
-
-## What this package does not execute
-
-The original games and training require exact historical policies, decks, engine/runtime versions, seeds, training inputs and weights. This export does not supply that complete environment. Organizer materials and third-party opponent policies are excluded. The learner source excerpts support design inspection, not standalone inference or training.
-
-The August checkpoint/runtime and current v2 implementation are different artifacts. The experimental Lucario candidate and submitted c61 player are different artifacts. The teacher-label count is preserved from a receipt; original labeled decisions are not recounted by this command. Available opponent identities and remaining gaps are explicitly recorded in [opponents.json](current-evidence/numerical/opponents.json) and [NOTICE](../NOTICE).
-
-The [evidence map](EVIDENCE-MAP.md) follows current references [1]–[7]. Full training/game reproduction and conditional winner-code delivery remain distinct from the portable arithmetic check.
+Run `python -X utf8 scripts/prior_art.py "Xerosic" --limit 2`. Git should be on PATH; the tool falls back to a directory walk. A hit is a source pointer, and a miss does not establish absence. The SRI is a historical snapshot; complete regeneration, onboarding and other old full-suite commands depend on private inputs absent here. Preserved tools are not blanket promises of executability.

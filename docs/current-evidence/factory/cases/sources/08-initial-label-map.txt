@@ -1,0 +1,26 @@
+SOURCE ID: S08
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/receipts/label-doctrine-phase1/map-delta-input-receipt.json
+FULL SOURCE SHA256: 0d1c38357525382e546c68bbc641765269657320b0e4dea7a957f9e10241e4fc
+CONTEXT: Aggregate fields and provisional status only, extracted from an original project-authored receipt. Per-row identities are omitted. All 46 model-derived weights were default under the recorded mapping; this does not establish that labels can never help.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 1-13 ---
+{
+  "authority": "NONE - derived artifact, non-decision-grade, HOLD on the loss-harvest lane untouched (no new model calls)",
+  "finding": "Under this general reading, all 46 drafts land at default weight 1.0 - zero episodes move off default in this specific LLM batch. This is consistent with (not proof of) the doctrine's own pre-registered hypothesis (SYNTHESIS.md item 2 / labelmethod-04): 'if code subsumes LLM, the LLM's marginal contribution to T1 is zero.' Not asserting the conclusion myself - that call is Brock's diff + Master's adjudication once the code-only map lands and, ideally, the real catalog gap is closed.",
+  "gap": "workflow/research/2026-07-30-label-01-schema.md (PLAN-LABELING.md's cited 30-item catalog source, #9/#10/#11 brick/hopeless + #23 SYSTEM/timeout definitions) does not exist on origin/main. train_s4_r1b_real.py (the wired consumer) only consumes an already-built weight_map; it does not define the brick/hopeless classifier.",
+  "mechanism_counts": {
+    "AGENT_ERROR_OR_INVALID": 3,
+    "INSUFFICIENT_EVIDENCE": 43
+  },
+  "method": "General reading: mechanism values asserting a hopeless/unwinnable position -> 0.5; SYSTEM/timeout mechanisms -> excluded; everything else (including INSUFFICIENT_EVIDENCE and AGENT_ERROR_OR_INVALID, neither of which is a positive hopeless/system assertion) -> default 1.0.",
+  "n_at_default_1_0": 46,
+  "n_at_half_0_5": 0,
+  "n_drafts": 46,
+  "n_excluded": 0,
+
+--- Original source lines 338-341 ---
+  "schema": "ptcg.label-doctrine.map-delta-input/v1",
+  "source_drafts_path": "ROACH:V:/ptcg_selfplay/state/loss-lens-llm-01/throughput-e3night1/drafts.jsonl",
+  "source_drafts_sha256": "502372bd6e9af1f741d3c162675aa28b974f6823b5dd723fa2277cd5f3749af1",
+  "status": "PROVISIONAL - catalog gap, not certified against exact #9/#10/#11/#23 wording",

@@ -9,3 +9,5 @@ Opponent aliases and available historical hashes are recorded in numerical/oppon
 Organizer card data, artwork, engine, bindings and secrets are excluded. This package includes participant-authored source excerpts and outcome-only research exports; it is not a complete runnable release of the trained player. Full winner-code delivery is a separate obligation under the competition rules.
 
 ©Pokémon/Nintendo/Creatures/GAME FREAK. Pokémon and character names are trademarks of Nintendo.
+
+Roman Rozen (romanrozen) is credited for the public V13 policy used in the disagreement study; that implementation is not redistributed here. Newly curated material comprises project-authored excerpts, aggregate receipts, verification code and the original training-side decoder. Source hashes identify provenance and do not imply ownership of third-party foundations.

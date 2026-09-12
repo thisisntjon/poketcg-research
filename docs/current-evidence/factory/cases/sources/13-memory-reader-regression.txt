@@ -1,0 +1,17 @@
+SOURCE ID: S13
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/ptcg-agent/harness/test_research_memory.py
+FULL SOURCE SHA256: 38578ef98ed2ba4cfb4d657badd6d68dea0cf238a1ef8588853d1268cd31c75c
+CONTEXT: Project-authored regression fixture with synthetic text, not a recorded game. The test checks both show and search for a retraction in the introduction. Source inspection is not a fresh test execution.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 733-742 ---
+    def test_preamble_retraction_is_visible_and_searchable(self):
+        self.write(self.path, "## E001: Fallback\nRETRACTED: zebrasentinel result belongs to the wrong arm; do not reuse.\n\n- **Result**: 4/4 wins\n")
+        self.commit()
+        rc, out = self.invoke("show", "E001")
+        self.assertEqual(rc, 0)
+        self.assertIn("RETRACTED: zebrasentinel", out["record"]["preamble"]["text"])
+        self.assertEqual(out["record"]["preamble"]["line_end"], 3)
+        rc, found = self.invoke("search", "zebrasentinel")
+        self.assertEqual(rc, 0)
+        self.assertEqual([r["id"] for r in found["matches"]], ["E001"])

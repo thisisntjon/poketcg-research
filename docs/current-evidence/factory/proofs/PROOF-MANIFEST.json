@@ -1,0 +1,119 @@
+{
+  "schema": "ptcg.public_factory_proofs_manifest/v1",
+  "prepared_date": "2026-09-11",
+  "python_version": "3.11.9",
+  "verification": {
+    "representation": "PASS: 48.62 -> 74.25 percent; +25.63 percentage points",
+    "selection": "PASS: seven prescribed-score CPU checks; one execution of copied candidate",
+    "learning_design": "PASS: source hashes, closure links and both authored excerpts checked",
+    "new_games": 0,
+    "models_trained": 0
+  },
+  "files": [
+    {
+      "file": ".gitattributes",
+      "bytes": 397,
+      "sha256": "b9297bd41aafcb524ebf7f7a1fd080f897655bfe7320bd52f64e3a7c0f867bed"
+    },
+    {
+      "file": "learning-design/ARCHITECTURE-EXCERPTS.md",
+      "bytes": 2552,
+      "sha256": "b1a54c1370fa3fad821424d36167de400bf165296b1b1e4d6fbb89414835000d"
+    },
+    {
+      "file": "learning-design/HASH-V1-CLOSED-20260813.json",
+      "bytes": 6259,
+      "sha256": "ed4e4c6ac66186a85b036193db39efdbeb0434e1ffafc834abf51fe0043232a2"
+    },
+    {
+      "file": "learning-design/lf1-c0-v3-GATE-FAIL-20260812.json",
+      "bytes": 1619,
+      "sha256": "bcfb9ec60a74229d27efbd14741e3deb3445ff38437682c009874e6419a8e8c1"
+    },
+    {
+      "file": "learning-design/MANIFEST.json",
+      "bytes": 1769,
+      "sha256": "92bc988dd1dda1e07edfed20625c94dfbb5d0a102fb6399639050ef5a8470a20"
+    },
+    {
+      "file": "learning-design/READINESS-EXCERPT.md",
+      "bytes": 1550,
+      "sha256": "aceb7f69f8291b73926630ece716c3a1714b33d856b8075fd751c2d77ef52be9"
+    },
+    {
+      "file": "learning-design/README.md",
+      "bytes": 2090,
+      "sha256": "9c601ba34387c39ce910bfd898d10ee3aeca7c17d0612f7aebea44384c7ae04f"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 1072,
+      "sha256": "c0d19152318a96b687bc56323ed74be20ff9173ca41346c785a97b988ebbd034"
+    },
+    {
+      "file": "ORIGINAL-COMPONENTS.md",
+      "bytes": 4870,
+      "sha256": "176f3e3e18b0f5aae3d38f4388a1b769e5643fb28e7f0e79c9e5a8e4030c1b54"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1607,
+      "sha256": "a812df2dd2522eafd36dc17cb3edd20732536a6b9211a3c339d291d98b300d8c"
+    },
+    {
+      "file": "representation/cache_meta.json",
+      "bytes": 330,
+      "sha256": "f7506ddc1e1d9d3fe015030057404bcd5c07db5a8ab4cade63152a090503a1a1"
+    },
+    {
+      "file": "representation/CHECK-RESULT.json",
+      "bytes": 1245,
+      "sha256": "e972caf9a70a37b9ab099aaba4243003ad5aad84329b0cb6a93e49507419bf77"
+    },
+    {
+      "file": "representation/MANIFEST.json",
+      "bytes": 2058,
+      "sha256": "f39350bd00b5904d7cebdedcd014ade76d93f7959e4e25d2f7731d749899c62c"
+    },
+    {
+      "file": "representation/README.md",
+      "bytes": 3348,
+      "sha256": "f9015807d6a6a08280aeab983b4c4c34e58a08228fafda55daec8baa20ec04a3"
+    },
+    {
+      "file": "representation/repr_probe_01_summary.json",
+      "bytes": 2172,
+      "sha256": "df1f04deef1fa7ce98ff421a920cfd1977a68cfde243c0df33656deabb46d888"
+    },
+    {
+      "file": "representation/verify.py",
+      "bytes": 4896,
+      "sha256": "914f761825a3cc65b716dd977cc729a242585299d85a115f7660df3b92c54ec9"
+    },
+    {
+      "file": "selection/action_decoder.py",
+      "bytes": 4808,
+      "sha256": "05917722d740c3a12ba1533ea91049acbf61e15afae9ff0c50306d6baa7bc724"
+    },
+    {
+      "file": "selection/CHECK-RESULT.json",
+      "bytes": 1163,
+      "sha256": "cece2af5fa74a0b0054aaf62156416a1f39fb4db46c503df6d970f3789c6b876"
+    },
+    {
+      "file": "selection/MANIFEST.json",
+      "bytes": 1361,
+      "sha256": "c68e9b3c35be6623f37fc85569689c0a576024d5143ff8013c980b9a720b78f6"
+    },
+    {
+      "file": "selection/README.md",
+      "bytes": 2128,
+      "sha256": "cbe3f868e08efbf5bbd8e94d49a19afe9cca5a353771110840111f2837de0bba"
+    },
+    {
+      "file": "selection/selection_demo.py",
+      "bytes": 2412,
+      "sha256": "d58183be8b90d75e3b3ce01f45e0b6520032880cc645ee4d9da6c96117a4a7f2"
+    }
+  ]
+}

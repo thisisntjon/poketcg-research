@@ -1,0 +1,80 @@
+SOURCE ID: S09
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/ptcg-agent/experiments/analysis/2026-07-30-roach-enrich01v2-batch1/SUMMARY.md
+FULL SOURCE SHA256: 72abfed3a8199fac6d4f6deb9f25fc6d8797b23b580d4d94f3689a4bb8848811
+CONTEXT: Same eight previously inconclusive episodes, richer evidence projection, five non-abstaining outputs. Outputs remained quarantined. Non-abstention is not correctness. Original mapping: eight default weights; alternate doctrine interpretation: two changed, using a disclosed illustrative weight. Format failures and resumes are retained. No training benefit is established.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 8-23 ---
+Producer code: PR #2071. Data files: PR #2069 (Misty, episode extract).
+
+## What ran
+
+- Input: 8 episodes (episode_id 2-9, ref 900000001, batch e3night1) -- the exact same 8 that
+  returned 8/8 INSUFFICIENT_EVIDENCE in the first production run (PLAN-LABELING.md's cited
+  origin story), reconfirmed via my own STUCK investigation (chronological batch boundary +
+  5/15-field-count match to the documented root cause).
+- Projection: sec.3.1 game scalars + sec.3.2 decision windows (`enrich01_evidence.py`, PR #2071)
+  instead of the old 5-thin-field ledger row.
+- Endpoint: LM Studio local, `google/gemma-4-e4b`, temperature 0, same
+  `_draft_response_schema`/`_validate_model_draft` machinery as every prior batch -- no
+  validation logic was loosened to get this result.
+- Real run, 3 resume cycles (transient per-row format failures mid-run, detailed below),
+  `terminal_state: COMPLETE`, 8/8 rows appended, 0 unresolved failures. Full CLI receipts and
+  raw quarantined drafts committed alongside this file (`drafts.jsonl`, `final-run-receipt.json`).
+
+--- Original source lines 28-37 ---
+|---|---|---|
+| 2 | RESOURCE_MANAGEMENT_ERROR | MEDIUM |
+| 3 | AGENT_ERROR_OR_INVALID | HIGH |
+| 4 | AGENT_ERROR_OR_INVALID | LOW |
+| 5 | SEQUENCING_ERROR | HIGH |
+| 6 | AGENT_ERROR_OR_INVALID | LOW |
+| 7 | INSUFFICIENT_EVIDENCE | LOW |
+| 8 | INSUFFICIENT_EVIDENCE | LOW |
+| 9 | INSUFFICIENT_EVIDENCE | LOW |
+
+
+--- Original source lines 44-44 ---
+**Gate condition A (>0 non-IE drafts) is satisfied.**
+
+--- Original source lines 50-73 ---
+**Method A -- the exact same "general reading" rule used for the prior 46-draft batch (PR
+#2046)**: mechanism values asserting a hopeless/unwinnable position -> 0.5; SYSTEM/timeout ->
+excluded; else -> default 1.0. Under this rule, `MATCHUP_OR_DECK_LIMIT` and
+`TIMEOUT_OR_LATENCY` are the only mechanisms that move off default -- and **none of this batch's
+8 drafts hit either one**. Applying the identical method used before: **8/8 land at weight 1.0
+-- still an identity map.** (`weight-map-method-a-same-as-46draft.json`)
+
+**Method B -- the schema-v2 doctrine's own field-1 consumption-path table**
+(`label-01-schema.md` sec.2, table row #1, read on `origin/phased/recovery-2026-07-29-apprentice`
+-- not yet on main): "POLICY-owned losses (MISSED_LETHAL, SEQUENCING, PRIZE_RACE, RESOURCE,
+TARGETING) -> keep/raise weight." Two of this batch's 8 drafts hit exactly those named
+mechanisms (episode 2: RESOURCE_MANAGEMENT_ERROR, episode 5: SEQUENCING_ERROR). Applying that
+table's own stated rule (raised weight 1.5, a disclosed illustrative value -- the doctrine says
+"keep/raise", not a specific number): **2/8 move off default -- a non-identity map.**
+(`weight-map-method-b-schema-v2-policy-owned.json`)
+
+**Neither method is silently preferred here.** Method A is the literal same-method comparison
+against the prior batch (apples-to-apples, shows genuinely nothing new by that specific rule).
+Method B is what the v2 doctrine's own design document actually specifies as the intended
+consumption path for these exact mechanism values -- but the v2 mechanism enum split
+(`DECK_BRICK_ZERO_CONVERSION`/`OUT_VALUED_EXCHANGE`) was never implemented (out of scope for
+this one-batch gate test, per my own scoping decision when I built the producer), so Method B is
+applying a v2-designed rule to v1-schema mechanism values -- workable, but not a byte-exact
+match to how the doctrine intended it to run once the full v2 schema lands.
+
+--- Original source lines 87-100 ---
+## Honest limits
+
+- n=8 is small; mechanism-level percentages here are not a corpus-scale claim.
+- The 2/8 CLI-level format failures during the run (both `MODEL_EVIDENCE_FIELDS_INVALID`,
+  reproduced directly: the model occasionally repeats a field token 3-4x in `evidence_fields`
+  under the larger enriched-schema enum, e.g. `["opp_archetype","opp_archetype","opp_archetype",
+  "opp_archetype", ...]`) are a real, disclosed local-model quality limitation at this
+  enrichment size -- not a code defect, and not silently retried away: both failing rows
+  eventually succeeded on a later resume attempt with the same input, confirming the failure is
+  non-systematic for this specific content, not a permanent block. Flagging this as a real
+  throughput cost worth tracking if ENRICH-01 scales past one small batch (larger schema, larger
+  enum, more repetition risk).
+
+Verdict: DESCRIPTIVE_ONLY. Gate condition A is unambiguous; gate condition B needs a ruling on

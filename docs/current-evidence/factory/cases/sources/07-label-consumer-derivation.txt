@@ -1,0 +1,35 @@
+SOURCE ID: S07
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/research/2026-07-30-labelmethod-01-consumer-derivation.md
+FULL SOURCE SHA256: 61f05d34218632086e5cec315ec75253074ff4d075d3eec85c919d129f6880bf
+CONTEXT: Historical inspection of the then-current trainer. The one-relative-scalar conclusion applies to labels routed through this weighted-loss seam, not all possible annotation or training architectures. Code-reading conclusions and reported/inferred claims remain distinguished.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 5-25 ---
+## (a) Consumer enumeration (verified by reading code)
+
+**C1 — Per-row loss weighting (the only live gradient-touching consumer).** `ptcg-agent/harness/train_bc.py`: `row_outcome_weight` :219–237 reads shard `label` (outcome), fallback `result`+`seat`; the weight is attached at `collect_examples` :283–293 as tuple element 5, materialized in `_batches` :325, and reaches the loss in `compute_batch_loss` :330–341 as `(per_example_CE * w).sum() / w.sum()`. Knobs: `--loss-weighting {none,outcome}`, `--loss-weight`, `--winners-only` (hard filter :284–286), `--focal-gamma` (a *model-computed* difficulty weight :338–340). Row fields consumed: `obs`, `action[0]`, `game` (episode grouping + holdout split :260–274), `label`/`result`/`seat`. **No decision index is consumed**; grouping is by `game` only, and note :263–266 — string game ids are crc32-hashed, which constrains any join-key design.
+
+**C1′ — A second, ALREADY-MERGED sidecar weight-map consumer**: `ptcg-agent/harness/train_s4_r1b_real.py` :87–160 — loads a sha-pinned JSON `weight_map` **keyed by `decision_id`**, asserts an exact bijection with shard decision ids (`set(ids) != set(weights_by_id)` refusal :~154) and asserts the weight distribution counts (145/77/183.5), then rides the identical `row_to_example`+`compute_batch_loss` seam. This is the existence proof for label-03's proposed `--label-weight-map`: the pattern is production code on main, at *decision* granularity, not merely a design.
+
+**C2 — Curriculum / ordering / oversampling.** **No consumer exists.** Grep of origin/main harness for `curriculum` returns nothing; `_batches` :313–327 does a uniform seeded shuffle. Oversampling is feasible only as row duplication at the collect seam (an extension, not a surface).
+
+**C3 — Gated training targets.** The CE target is `row_to_example`'s label slot :186 (recorded action index in the top-16 rank map). No auxiliary head exists; a counterfactual-class target would require an action-class→option-slot mapper plus an architecture change. Purely prospective.
+
+**C4 — Eval stratification.** `r3_stratified_holdout_agreement.py`: strata = `phase|outcome` only — phase from data-driven turn tertiles (:239, reusing `ga_slate_leak.phase_buckets`), outcome from the row's own `label` field (:84–92); runs against the frozen 13,963-row holdout (`stream_holdout_rows` :60–74 filters by `decision_id`). `r3_gen_drift_series.py`: strata = action-class buckets via `r3_mask_staging.bucket` (:160), consumed as entropy/rare-line-rate vs a sha-pinned frozen state set (:174–186). Kill bar consumes exactly three strata (OVERALL, LATE|WIN, LATE|LOSS — label-03 sec.1c).
+
+**C5 — The labeler itself as a consumer of code labels (feeder contract).** `loss_lens.py`: `LLM_DRAFT_SAFE_SCALAR_FIELDS` :168–184 contracts 15 scalars (`matchup_bucket`, `phase`, `prize_delta_bucket`, `selected_action_class`, `our/opp_archetype`, `turn_bucket`, …) + `duration` :185–194 + `alert_kinds`; `_draft_source_projection` :1183–1227 admits only these. The feeder (`local_loss_harvest.py` `build_local_ledger_row` :174–195) supplies only `episode_id/our_seat/outcome/decision_count` — loss-only rows, episode-granular, both facts verified. Draft output contract: exactly 6 fields (`_validate_model_draft` :1371–1423), enums :128–158, evidence citations enum-constrained to the projection's own keys (:1459–1466).
+
+**C6 — Config/process surface constraining consumption.** `r3_fire_cell.py`: `KNOWN_CELL_FIELDS` refusal (~:110–129), exactly two weighting shapes in `resolve_train_flags` (~:181–201) — any label-weight arm is a third declared shape + grid re-pin + Master seq-bind, or an outside-the-grid prereg.
+
+**C7 — Deck-lane / report-only.** No code surface; absorbs anything, produces no gradient.
+
+## (b) Top-down derived label-type set
+
+**The collapse theorem first (the rigorous part):** `compute_batch_loss` normalizes by `w.sum()`, so only the *relative per-row positive scalar* matters. Any k label dimensions routed to weighting pass through some map f: labels→ℝ⁺ and collapse to **exactly one effective dimension per row**. Additional label dimensions buy accuracy and auditability of f — never capacity. Hard filters (winners-only style) are f=0. Oversampling-by-duplication is f restricted to integers (approximately — see assumption 3). The only genuinely separate channels are: an *ordering* (C2, no seam today), a *target* (C3, gated), and *strata* (C4, reporting/kill-bar only). Also note the trainer already computes one label-free difficulty weight itself (`focal_gamma`), which any "hard decision" label would partially duplicate.
+
+--- Original source lines 65-69 ---
+## (d) Verified vs inferred
+
+**Verified (read the bytes):** every file:line above; the single-scalar collapse (arithmetic of :330–341); absence of any curriculum code (grep); the decision_id weight-map consumer on main (train_s4_r1b_real.py); loss-only + 4-field thinness of the feeder; the 6-field draft contract and enums; phase×outcome-only strata; KNOWN_CELL_FIELDS refusal; crc32 game-id hashing.
+**Inferred:** the elite-vs-selfplay corpus mismatch *consequence* (paths and defaults verified; "no path today" is my derivation); oversampling≈weighting equivalence; that C7 items have zero training value.
+**Reported (not re-derived):** 282→326 labels/hr, 22/35 brick / 11/35 out-valued distribution, 46/48 labeled backlog state — all from the branch docs/bus, per their own tags.

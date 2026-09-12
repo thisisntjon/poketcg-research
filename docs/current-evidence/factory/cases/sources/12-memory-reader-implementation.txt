@@ -1,0 +1,17 @@
+SOURCE ID: S12
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/scripts/research_memory.py
+FULL SOURCE SHA256: 2fab85e7eac6ef704806f8c107c41cbc89fc470f5a47a6eaa1f161619305e458
+CONTEXT: Project-authored fragments retaining and rendering the document preamble. These are inspection excerpts, not a complete executable reader. The regression test separately checks retrieval and search visibility.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 661-666 ---
+            preamble_end = parts[0]["line_start"] - 1 if parts else len(text.splitlines())
+            add({"id": rid, "kind": "experiment_report", "title": title,
+                 "basis": "historical source assertion; not re-executed or re-certified",
+                 "source": snap.source(path), "sections": parts,
+                 "preamble": {"text": "\n".join(text.splitlines()[:preamble_end]),
+                              "line_start": 1, "line_end": preamble_end},
+
+--- Original source lines 1052-1053 ---
+        if card.get("preamble", {}).get("text"):
+            lines.extend(["", "Original introduction:", card["preamble"]["text"]])

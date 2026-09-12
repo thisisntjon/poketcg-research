@@ -1,0 +1,48 @@
+SOURCE ID: S02
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/research/2026-09-03-4070-repro/FINDING.md
+FULL SOURCE SHA256: 6d23ff47a6d6d149b6cecb8dcc046d5d441d34365cd346fc0ac734836ec837d7
+CONTEXT: The initial attempt spent zero games. Historical run labels such as shipped refer to the experimental Lucario control, not the final submitted c61 player. Panel: five implementations, 40% Alakazam. The article uses the later pooled result, not this document's superseded single-batch title.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 3-8 ---
+**Status: VOID — no games were run, so there is no delta and no interval here.** The reproduction
+was dispatched, staged, guarded and then blocked. The blocker is the finding.
+
+- **Dispatch:** STRATEGIST → MASTER, bus `#3132` 2026-09-03T05:10:22Z (re-routed from ROACH)
+- **Target:** `#3220` at `503e83aa67` · **Box:** roach / RTX 4070 SUPER
+- **Games authorised:** 4,000 · **Games actually spent: 0**
+
+--- Original source lines 10-26 ---
+## What blocked it
+
+Both arms exited immediately:
+
+```
+unknown opponent(s): kernel_prvsiyan_alakazam_v8, kernel_prvsiyan_alakazam_v12, kernel_prvsiyan_844_router
+```
+
+Enumerating `opponents.POOL` at `503e83aa67` gives **40 addressable opponents, and none of the
+three is among them.** Of the five-kernel panel, only `kernel_aristophanivan_940` and
+`kernel_romanrozen_v13` are registered by name.
+
+This is not a missing-files problem. The kernel **sources are present on this box** —
+`keval24/sources/prvsiyan_alakazam_v8`, `_v12` and `_844_router` all exist, and `844_router` even
+carries its extracted `main.py` and `deck.csv`. They are simply **never registered as opponent
+keys**. The only occurrences of those names anywhere in the pinned tree are in *analysis documents
+recording past results*. No environment variable and no roster file extends the pool.
+
+--- Original source lines 75-88 ---
+**The default is ON**, so an unset variable yields two treatment arms and a clean, meaningless
+null — how P1e died. STRATEGIST flagged this in the dispatch and it checks out.
+
+Worth recording separately: **that default changed after the original factorial.** Their own
+`arms_proof.json` records `A_baseline` with `"env": "unset"` and `"flag_in_child": "False"`.
+**Anyone re-running the banked recipe verbatim today would silently get the wrong control arm.**
+
+## What was deliberately not done
+
+The two addressable kernels could have been run and reported. That subset **excludes both Alakazam
+kernels**, which is exactly where the claimed mechanism lives and where the gain is concentrated —
+so it would answer a different question, and its number would be worse than no number. A partial
+panel reported against a whole-panel pre-registration is how a reproduction becomes a laundering
+step.

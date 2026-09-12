@@ -1,0 +1,53 @@
+{
+  "source_sha256": "05917722d740c3a12ba1533ea91049acbf61e15afae9ff0c50306d6baa7bc724",
+  "torch_version": "2.11.0.dev20260115+cu128",
+  "device": "cpu",
+  "trained_models_loaded": 0,
+  "games_run": 0,
+  "checks": [
+    {
+      "case": "optional empty selection",
+      "selected": [],
+      "passed": true
+    },
+    {
+      "case": "minimum one; illegal highest score masked",
+      "selected": [
+        0
+      ],
+      "passed": true
+    },
+    {
+      "case": "minimum two; no repeated selection",
+      "selected": [
+        0,
+        1
+      ],
+      "passed": true
+    },
+    {
+      "case": "maximum bound",
+      "selected": [
+        0
+      ],
+      "passed": true
+    },
+    {
+      "case": "maximum zero",
+      "selected": [],
+      "passed": true
+    },
+    {
+      "case": "context-dependent STOP",
+      "selected": [
+        0
+      ],
+      "passed": true
+    },
+    {
+      "case": "unsatisfiable minimum rejected",
+      "passed": true
+    }
+  ],
+  "scope": "Generic deterministic checks of the training-side decoder; not a full-agent reproduction or measured game-strength result."
+}

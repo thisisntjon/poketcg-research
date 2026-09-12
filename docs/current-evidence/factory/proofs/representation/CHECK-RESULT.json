@@ -1,0 +1,39 @@
+{
+  "verification": "PASS",
+  "python_version": "3.11.9",
+  "scope": "Retained aggregate arithmetic only; not a historical training reproduction",
+  "source_sha256": {
+    "repr_probe_01_summary.json": "df1f04deef1fa7ce98ff421a920cfd1977a68cfde243c0df33656deabb46d888",
+    "cache_meta.json": "f7506ddc1e1d9d3fe015030057404bcd5c07db5a8ab4cade63152a090503a1a1"
+  },
+  "cache_examples": 44343,
+  "seed_comparisons": 3,
+  "paired_seed_validation_counts_match": true,
+  "actual_validation_assignments_reconstructed": false,
+  "baseline_mean_raw_accuracy_pct": 48.62,
+  "identity_mean_raw_accuracy_pct": 74.25,
+  "delta_percentage_points": 25.63,
+  "aggregation": "Equal weight per seed, not pooled validation rows",
+  "paired_deltas_percentage_points": [
+    {
+      "seed": 0,
+      "n_val_per_arm": 4308,
+      "delta": 25.858867
+    },
+    {
+      "seed": 1,
+      "n_val_per_arm": 4466,
+      "delta": 25.974026
+    },
+    {
+      "seed": 2,
+      "n_val_per_arm": 4579,
+      "delta": 25.070976
+    }
+  ],
+  "additional_parameters_from_inspected_design": 69632,
+  "capacity_matched_control": false,
+  "original_runtime_and_checkpoint_identity_reproduced": false,
+  "models_trained": 0,
+  "games_run": 0
+}

@@ -1,3 +1,5 @@
+> Historical supporting account. The current report is [The Fleet](STRATEGY-WRITEUP.md), with five traced cases in [Factory in action](current-evidence/factory/cases/FACTORY-IN-ACTION.md). Claims below retain their original evidence scope.
+
 # What we learned
 
 Alongside a measured, scoped counter-strategy, this project produced a long list of

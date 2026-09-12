@@ -1,3 +1,3 @@
-# Current evidence package
+# Evidence package guide
 
-Read the [one-page guide](downloads/EVIDENCE-GUIDE.pdf), [reference map](EVIDENCE-MAP.md) and [reproduction instructions](REPRODUCING.md). The [downloadable ZIP](downloads/PTCG-EVIDENCE.zip) contains all current numerical inputs and selected source evidence, with earlier material preserved under historical/. The current report uses two figures and references [1]–[7].
+[Read the current guide](current-evidence/EVIDENCE-GUIDE.md) or [download its PDF](downloads/EVIDENCE-GUIDE.pdf). Start with the [five factory cases](current-evidence/factory/cases/FACTORY-IN-ACTION.md), then follow the [eight-reference source map](EVIDENCE-MAP.md). The [portable ZIP](downloads/PTCG-EVIDENCE.zip) carries the same report and evidence, with earlier versions under historical/.

@@ -1,0 +1,491 @@
+{
+  "schema": "ptcg.factory-curation/v1",
+  "prepared_date": "2026-09-11",
+  "repository_snapshot": "7fc7696e82646a6bb47d455368e94a5fe7f40eae",
+  "purpose": "Project-authored, bounded evidence for factory writeup references 1, 2, 3 and 8. No engine, card table, original replay, model weights or third-party policy files are exported.",
+  "source_hash_limit": "Source hashes establish identity, not scientific truth or complete runtime reconstruction.",
+  "sources": {
+    "S01": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/research/2026-09-05-inventory-playbook/NOTE-three-vendors-caught-what-one-did-not.md",
+      "repository_relative_path": "workflow/research/2026-09-05-inventory-playbook/NOTE-three-vendors-caught-what-one-did-not.md",
+      "full_source_sha256": "4e9ef09594229f5f0a78275d558685516adfc805af35ae92da7d21fee85e1437",
+      "full_source_bytes": 3414,
+      "line_count": 29,
+      "last_modifying_commit": "17084aeaba84fd67fe4d19b93f299bccfe05e26b",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored research record"
+    },
+    "S02": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/research/2026-09-03-4070-repro/FINDING.md",
+      "repository_relative_path": "workflow/research/2026-09-03-4070-repro/FINDING.md",
+      "full_source_sha256": "6d23ff47a6d6d149b6cecb8dcc046d5d441d34365cd346fc0ac734836ec837d7",
+      "full_source_bytes": 5118,
+      "line_count": 105,
+      "last_modifying_commit": "0532ab82f2aebdb8e54faf4ba6cb719b5f2cf9c9",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored research record"
+    },
+    "S03": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/research/2026-09-03-4070-repro/RESULT.md",
+      "repository_relative_path": "workflow/research/2026-09-03-4070-repro/RESULT.md",
+      "full_source_sha256": "0ce910e05b95f12b980f16f885ef323b23a295e35b7f66105b7c2d381a44e071",
+      "full_source_bytes": 5437,
+      "line_count": 108,
+      "last_modifying_commit": "e1934242b381fb5b188800c049204a2eb2a11cc4",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored research record"
+    },
+    "S04": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/ptcg-agent/experiments/analysis/2026-07-31-roach-v13-decision-mine/SUMMARY.md",
+      "repository_relative_path": "ptcg-agent/experiments/analysis/2026-07-31-roach-v13-decision-mine/SUMMARY.md",
+      "full_source_sha256": "2dba54f6d2f4b5cf4ac88abda8afb22485689c4025beccc7be0b28225c59e35b",
+      "full_source_bytes": 3169,
+      "line_count": 66,
+      "last_modifying_commit": "21e6e12263d5aa4fb719ed693404c0d6f6bdb6ea",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored research record"
+    },
+    "S05": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/ptcg-agent/agent/rules_lucario.py",
+      "repository_relative_path": "ptcg-agent/agent/rules_lucario.py",
+      "full_source_sha256": "1cb60b171d3bb71172c134048b45ee0490dca269e5440f8bb7a3d8deb83b21be",
+      "full_source_bytes": 60750,
+      "line_count": 1139,
+      "last_modifying_commit": "f733de2ddf3aac67a436dc6ac8f0badf17c053a0",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored code additions within a credited derivative",
+      "addition_commit": "abed09b270f7bc41b3487bf8dddc4e70e7e96a28"
+    },
+    "S06": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/research/2026-08-09-direct-state-engine-poc.md",
+      "repository_relative_path": "workflow/research/2026-08-09-direct-state-engine-poc.md",
+      "full_source_sha256": "43063f2da4a4b286bb88fd61a114966f0eead858735c55ecdf3da96ffa219cef",
+      "full_source_bytes": 6000,
+      "line_count": 116,
+      "last_modifying_commit": "471b5b63176e50c027d93657f9d5e11196f7185b",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored research record"
+    },
+    "S07": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/research/2026-07-30-labelmethod-01-consumer-derivation.md",
+      "repository_relative_path": "workflow/research/2026-07-30-labelmethod-01-consumer-derivation.md",
+      "full_source_sha256": "61f05d34218632086e5cec315ec75253074ff4d075d3eec85c919d129f6880bf",
+      "full_source_bytes": 13013,
+      "line_count": 87,
+      "last_modifying_commit": "d47fcb3a831666b36fe13b307326aaeedc85fe70",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored research record"
+    },
+    "S08": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/receipts/label-doctrine-phase1/map-delta-input-receipt.json",
+      "repository_relative_path": "workflow/receipts/label-doctrine-phase1/map-delta-input-receipt.json",
+      "full_source_sha256": "0d1c38357525382e546c68bbc641765269657320b0e4dea7a957f9e10241e4fc",
+      "full_source_bytes": 12464,
+      "line_count": 344,
+      "last_modifying_commit": "42d0619a8a3f2b442f1c3e0543cd1e3cd35548a1",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored research record"
+    },
+    "S09": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/ptcg-agent/experiments/analysis/2026-07-30-roach-enrich01v2-batch1/SUMMARY.md",
+      "repository_relative_path": "ptcg-agent/experiments/analysis/2026-07-30-roach-enrich01v2-batch1/SUMMARY.md",
+      "full_source_sha256": "72abfed3a8199fac6d4f6deb9f25fc6d8797b23b580d4d94f3689a4bb8848811",
+      "full_source_bytes": 6432,
+      "line_count": 103,
+      "last_modifying_commit": "8a0d7dfef0f0769886158b9ff2a27ca18feb9243",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored research record"
+    },
+    "S11": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/knowledge-register/audits/2026-09-05-memory-reader/REVIEW.md",
+      "repository_relative_path": "workflow/knowledge-register/audits/2026-09-05-memory-reader/REVIEW.md",
+      "full_source_sha256": "177ae5b0e671e405ebf720fee3f49a48ee40042ca450250f1d753ed2454663c5",
+      "full_source_bytes": 4047,
+      "line_count": 60,
+      "last_modifying_commit": "4bbdaf8127f502a7c257d8a0e8377819056bbd2d",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored research record"
+    },
+    "S12": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/scripts/research_memory.py",
+      "repository_relative_path": "scripts/research_memory.py",
+      "full_source_sha256": "2fab85e7eac6ef704806f8c107c41cbc89fc470f5a47a6eaa1f161619305e458",
+      "full_source_bytes": 73688,
+      "line_count": 1259,
+      "last_modifying_commit": "4ceaaa1a4a3f20da8012dca1ee8ff183072a4159",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored code"
+    },
+    "S13": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/ptcg-agent/harness/test_research_memory.py",
+      "repository_relative_path": "ptcg-agent/harness/test_research_memory.py",
+      "full_source_sha256": "38578ef98ed2ba4cfb4d657badd6d68dea0cf238a1ef8588853d1268cd31c75c",
+      "full_source_bytes": 65375,
+      "line_count": 1145,
+      "last_modifying_commit": "4ceaaa1a4a3f20da8012dca1ee8ff183072a4159",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored synthetic test code"
+    },
+    "S10": {
+      "original_path": "C:/Users/thisi/Desktop/60Days/Story-Material/Night-Investigation/research/inventory/BUS-READ-16.jsonl",
+      "repository_relative_path": null,
+      "full_source_sha256": "75250dcc6eec46a32f01bc6c081ab51e7e4ed78423790b2b3515970f2a7d72f5",
+      "full_source_bytes": 74791,
+      "line_count": 16,
+      "last_modifying_commit": null,
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "preserved project-authored research message"
+    },
+    "S14": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/receipts/label-doctrine-phase1/llm-derived-weight-map-provisional.json",
+      "repository_relative_path": "workflow/receipts/label-doctrine-phase1/llm-derived-weight-map-provisional.json",
+      "full_source_sha256": "5191908f64848444e4b533411fa03fe51388b2fbd21252d40887d478ae394330",
+      "full_source_bytes": 3453,
+      "line_count": 48,
+      "last_modifying_commit": "42d0619a8a3f2b442f1c3e0543cd1e3cd35548a1",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored derived weight map"
+    },
+    "S15": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/ptcg-agent/experiments/analysis/2026-07-30-roach-enrich01v2-batch1/drafts.jsonl",
+      "repository_relative_path": "ptcg-agent/experiments/analysis/2026-07-30-roach-enrich01v2-batch1/drafts.jsonl",
+      "full_source_sha256": "b82de3cb469f23f0855b9a400b7afe85b45c31acaf6d396f006eb8a40a24a1cb",
+      "full_source_bytes": 38808,
+      "line_count": 8,
+      "last_modifying_commit": "8a0d7dfef0f0769886158b9ff2a27ca18feb9243",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "quarantined model outputs; only aggregate counts exported"
+    },
+    "S16": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/ptcg-agent/experiments/analysis/2026-07-30-roach-enrich01v2-batch1/weight-map-method-a-same-as-46draft.json",
+      "repository_relative_path": "ptcg-agent/experiments/analysis/2026-07-30-roach-enrich01v2-batch1/weight-map-method-a-same-as-46draft.json",
+      "full_source_sha256": "88370fe10e4565460c1ef564c42131c0850f1f044376e118d6077baf177f7041",
+      "full_source_bytes": 611,
+      "line_count": 10,
+      "last_modifying_commit": "8a0d7dfef0f0769886158b9ff2a27ca18feb9243",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored derived weight map"
+    },
+    "S17": {
+      "original_path": "C:/Users/thisi/Desktop/PK-squads/submission-polish/ptcg-agent/experiments/analysis/2026-07-30-roach-enrich01v2-batch1/weight-map-method-b-schema-v2-policy-owned.json",
+      "repository_relative_path": "ptcg-agent/experiments/analysis/2026-07-30-roach-enrich01v2-batch1/weight-map-method-b-schema-v2-policy-owned.json",
+      "full_source_sha256": "0efbdc8af5e812166115ef9c117411f3982b8aeb6c6139574572fd13d651082a",
+      "full_source_bytes": 611,
+      "line_count": 10,
+      "last_modifying_commit": "8a0d7dfef0f0769886158b9ff2a27ca18feb9243",
+      "commit_meaning": "Last Git change to the source file; not necessarily the run date.",
+      "kind": "project-authored alternative weight map"
+    }
+  },
+  "excerpts": [
+    {
+      "path": "sources/01-cross-vendor-roles.txt",
+      "sha256": "85fe0ef86eae8c3e7b800937a674ce9d0a4db5bb6bf7633a19bbd9e1095dddd8",
+      "bytes": 1666,
+      "source_id": "S01",
+      "selected_line_ranges": [
+        {
+          "start": 5,
+          "end": 5
+        },
+        {
+          "start": 9,
+          "end": 10
+        },
+        {
+          "start": 21,
+          "end": 21
+        },
+        {
+          "start": 28,
+          "end": 29
+        }
+      ]
+    },
+    {
+      "path": "sources/02-counter-reconstruction-stop.txt",
+      "sha256": "53cf18097637504783f41389b2d508b7df996e0624574616bb07a61913caefe0",
+      "bytes": 2906,
+      "source_id": "S02",
+      "selected_line_ranges": [
+        {
+          "start": 3,
+          "end": 8
+        },
+        {
+          "start": 10,
+          "end": 26
+        },
+        {
+          "start": 75,
+          "end": 88
+        }
+      ]
+    },
+    {
+      "path": "sources/03-counter-reconstruction-result.txt",
+      "sha256": "ef3f7296ab017f2668300fac3a93d2be2e597730d4323a30557ae1fdd3928b9a",
+      "bytes": 2872,
+      "source_id": "S03",
+      "selected_line_ranges": [
+        {
+          "start": 3,
+          "end": 8
+        },
+        {
+          "start": 10,
+          "end": 21
+        },
+        {
+          "start": 62,
+          "end": 79
+        }
+      ]
+    },
+    {
+      "path": "sources/04-policy-disagreement-mine.txt",
+      "sha256": "36807a5b7b45b867baf5a8ebd0b0be371779879ab1981d47db2ba919fa37d532",
+      "bytes": 2728,
+      "source_id": "S04",
+      "selected_line_ranges": [
+        {
+          "start": 10,
+          "end": 23
+        },
+        {
+          "start": 31,
+          "end": 40
+        },
+        {
+          "start": 57,
+          "end": 66
+        }
+      ]
+    },
+    {
+      "path": "sources/05-project-policy-modules.txt",
+      "sha256": "58488fce35f61ffdc80acf2631b51d6c0038b6f0850cdb2da30200275a9de2f2",
+      "bytes": 1917,
+      "source_id": "S05",
+      "selected_line_ranges": [
+        {
+          "start": 325,
+          "end": 325
+        },
+        {
+          "start": 332,
+          "end": 332
+        },
+        {
+          "start": 351,
+          "end": 353
+        },
+        {
+          "start": 843,
+          "end": 844
+        },
+        {
+          "start": 861,
+          "end": 865
+        },
+        {
+          "start": 1032,
+          "end": 1035
+        }
+      ]
+    },
+    {
+      "path": "sources/06-replay-state-proof-of-concept.txt",
+      "sha256": "f7e80084839f3c215048d0a2196e617c97578f0f87c465734d24aed0f7ef1cb0",
+      "bytes": 4237,
+      "source_id": "S06",
+      "selected_line_ranges": [
+        {
+          "start": 30,
+          "end": 41
+        },
+        {
+          "start": 44,
+          "end": 46
+        },
+        {
+          "start": 64,
+          "end": 100
+        },
+        {
+          "start": 115,
+          "end": 116
+        }
+      ]
+    },
+    {
+      "path": "sources/07-label-consumer-derivation.txt",
+      "sha256": "38d3a8798f858d83e14d45a9fb0d967143925ec9c36d545fc92729e94cb8ea63",
+      "bytes": 6183,
+      "source_id": "S07",
+      "selected_line_ranges": [
+        {
+          "start": 5,
+          "end": 25
+        },
+        {
+          "start": 65,
+          "end": 69
+        }
+      ]
+    },
+    {
+      "path": "sources/08-initial-label-map.txt",
+      "sha256": "1685d76d562c550112ac878e6aad9171c33ce588ea8760c7b08c92b2d0ca804d",
+      "bytes": 2464,
+      "source_id": "S08",
+      "selected_line_ranges": [
+        {
+          "start": 1,
+          "end": 13
+        },
+        {
+          "start": 338,
+          "end": 341
+        }
+      ]
+    },
+    {
+      "path": "sources/09-enriched-labeling-comparison.txt",
+      "sha256": "5fac4c6f2d2c2af7ef173285c117fcc8576c626a2d7a2a86e93f8be8fc44a981",
+      "bytes": 5236,
+      "source_id": "S09",
+      "selected_line_ranges": [
+        {
+          "start": 8,
+          "end": 23
+        },
+        {
+          "start": 28,
+          "end": 37
+        },
+        {
+          "start": 44,
+          "end": 44
+        },
+        {
+          "start": 50,
+          "end": 73
+        },
+        {
+          "start": 87,
+          "end": 100
+        }
+      ]
+    },
+    {
+      "path": "sources/11-memory-reader-review.txt",
+      "sha256": "9c4efda50419516ac794c0db74c59e66283c5d4362359808536a8b97efa9c363",
+      "bytes": 2859,
+      "source_id": "S11",
+      "selected_line_ranges": [
+        {
+          "start": 3,
+          "end": 7
+        },
+        {
+          "start": 20,
+          "end": 23
+        },
+        {
+          "start": 36,
+          "end": 57
+        }
+      ]
+    },
+    {
+      "path": "sources/12-memory-reader-implementation.txt",
+      "sha256": "ade928c81c9b59b418e9e963e9ecb88c05870b1c6b469efc0720d53dc4886806",
+      "bytes": 1212,
+      "source_id": "S12",
+      "selected_line_ranges": [
+        {
+          "start": 661,
+          "end": 666
+        },
+        {
+          "start": 1052,
+          "end": 1053
+        }
+      ]
+    },
+    {
+      "path": "sources/13-memory-reader-regression.txt",
+      "sha256": "7b2d3a9a9301ce4e6209027d08f8e76d5e0d794ff6b461502f0b15543b14a786",
+      "bytes": 1204,
+      "source_id": "S13",
+      "selected_line_ranges": [
+        {
+          "start": 733,
+          "end": 742
+        }
+      ]
+    },
+    {
+      "path": "sources/10-manual-audit-recovery.txt",
+      "sha256": "92d136145a384a5c42234d1c4c5123cbe233e7fbbc47441dbcfb9983df2f5474",
+      "bytes": 3368,
+      "source_id": "S10",
+      "selected_line_ranges": [
+        {
+          "start": 3,
+          "end": 3
+        }
+      ],
+      "json_field": "/body",
+      "decoded_body_line_ranges": [
+        {
+          "start": 49,
+          "end": 97
+        }
+      ],
+      "message_id": 5504307875,
+      "recorded_created_at": "2026-09-02T04:18:36Z"
+    }
+  ],
+  "derived_artifacts": [
+    {
+      "path": "labeling-aggregates.json",
+      "sha256": "068266afbb3f0286b6d4480d0507759d4a0fd2de8b189a8324aff3b44fee249d",
+      "bytes": 1122,
+      "source_ids": [
+        "S14",
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "method": "Parse all entries of three weight-map JSON objects and all eight JSONL rows; count values and quarantined_draft.mechanism; export aggregate counts only.",
+      "selected_source_fields": {
+        "S14": "all object values",
+        "S15": "JSONL lines 1-8: /quarantined_draft/mechanism",
+        "S16": "all object values",
+        "S17": "all object values"
+      }
+    }
+  ],
+  "documents": [
+    {
+      "path": "README.md",
+      "sha256": "99daf6caca777c740c28d0e46804c0e4083062966e0ff34694d7df7ce468b2a9",
+      "bytes": 4159,
+      "kind": "new explanatory document"
+    },
+    {
+      "path": "FACTORY-IN-ACTION.md",
+      "sha256": "288aa7316ed8fcfe82b94b8c4107474bb9aa5283a08d95003c36b1a08f41b0b9",
+      "bytes": 9540,
+      "kind": "new explanatory document"
+    },
+    {
+      "path": "verify_curated.py",
+      "sha256": "29a56a78a8a9a4b5b93aaeb5c30698b0f2fc6f7539346fc851d0c2a83dcf459d",
+      "bytes": 1324,
+      "kind": "standard-library delivered-byte verifier"
+    }
+  ]
+}
