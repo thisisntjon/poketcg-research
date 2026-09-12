@@ -2,7 +2,7 @@
 
 **A short route from the report to the research behind it.** Jonathan Simone.
 
-Start with the report, then read **Factory in action** in the evidence ZIP. Its five cases show what was asked, what was built or inspected, what the evidence changed, and what remains unresolved. The public repository has the same current evidence at [github.com/thisisntjon/poketcg-research](https://github.com/thisisntjon/poketcg-research).
+The report contains four figures and a two-cache table. **SOURCE-NOTES.md** and **visual-evidence/README.md** map claims to evidence; **Factory in action** contains five research cases. The [public repository](https://github.com/thisisntjon/poketcg-research) carries the same evidence.
 
 ## Follow a claim
 
@@ -15,7 +15,7 @@ Start with the report, then read **Factory in action** in the evidence ZIP. Its 
 | [5] Learning | Hash-v1 closure, v2 interface, runnable decoder, historical teacher/student result | factory/proofs/README.md and SOURCE-NOTES.md |
 | [6] Counter | Factorial, three combined comparisons, all seven matchups, c61 follow-up | numerical/METHODS.md |
 | [7] Entry and deck | Credited submitted player, dated score, retention review and mechanics | source-evidence/receipts/ and SOURCE-NOTES.md |
-| [8] Memory | Manual audit recovery, reader failure, repair and regression evidence | factory/cases/sources/10–13 files |
+| [8] Memory | 2,333-artifact snapshot; audit recovery, reader repair | SOURCE-NOTES.md and factory/cases/sources/10–13 files |
 
 ## Three different checks
 
