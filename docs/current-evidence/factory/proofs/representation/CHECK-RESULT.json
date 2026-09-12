@@ -1,39 +1,164 @@
 {
   "verification": "PASS",
   "python_version": "3.11.9",
-  "scope": "Retained aggregate arithmetic only; not a historical training reproduction",
+  "scope": "Saved aggregate arithmetic and recorded provenance counts only; no training reproduction",
   "source_sha256": {
     "repr_probe_01_summary.json": "df1f04deef1fa7ce98ff421a920cfd1977a68cfde243c0df33656deabb46d888",
-    "cache_meta.json": "f7506ddc1e1d9d3fe015030057404bcd5c07db5a8ab4cade63152a090503a1a1"
+    "cache_meta.json": "f7506ddc1e1d9d3fe015030057404bcd5c07db5a8ab4cade63152a090503a1a1",
+    "second/repr_probe_kernel_summary.json": "ded35c19470ab8a2331e9e8aab0146b7a91739bf5ccb8848058dacdd1c90fd14",
+    "second/cache_meta.json": "69d988de075dc89e3649c4111aeb8ec317126cfd3d8b7922f9b208ce0d883768",
+    "second/CORPUS-PROVENANCE-EXCERPT.json": "9197aa80a2666f36d48d5820c0f008e11bafce71cb382338a7a83bd7d13afb21"
   },
-  "cache_examples": 44343,
-  "seed_comparisons": 3,
-  "paired_seed_validation_counts_match": true,
-  "actual_validation_assignments_reconstructed": false,
-  "baseline_mean_raw_accuracy_pct": 48.62,
-  "identity_mean_raw_accuracy_pct": 74.25,
-  "delta_percentage_points": 25.63,
-  "aggregation": "Equal weight per seed, not pooled validation rows",
-  "paired_deltas_percentage_points": [
-    {
-      "seed": 0,
-      "n_val_per_arm": 4308,
-      "delta": 25.858867
-    },
-    {
-      "seed": 1,
-      "n_val_per_arm": 4466,
-      "delta": 25.974026
-    },
-    {
-      "seed": 2,
-      "n_val_per_arm": 4579,
-      "delta": 25.070976
+  "first": {
+    "cache_examples": 44343,
+    "cached_skipped_rows": 23,
+    "seed_comparisons": 3,
+    "arm_seed_rows_checked": 6,
+    "paired_seed_validation_counts_match": true,
+    "actual_validation_assignments_reconstructed": false,
+    "baseline_mean_raw_accuracy_pct": 48.61673703942312,
+    "identity_mean_raw_accuracy_pct": 74.25136017058033,
+    "delta_percentage_points": 25.634623131157202,
+    "all_recorded_seed_deltas_positive": true,
+    "aggregation": "Equal weight per recorded seed, not pooled validation rows",
+    "seed_rows": [
+      {
+        "seed": 0,
+        "n_val_per_arm": 4308,
+        "n_val_tied_per_arm": 3079,
+        "baseline_raw_agreement_pct": 48.51439182915506,
+        "identity_raw_agreement_pct": 74.3732590529248,
+        "delta_percentage_points": 25.858867223769728
+      },
+      {
+        "seed": 1,
+        "n_val_per_arm": 4466,
+        "n_val_tied_per_arm": 3210,
+        "baseline_raw_agreement_pct": 48.67890729959696,
+        "identity_raw_agreement_pct": 74.65293327362292,
+        "delta_percentage_points": 25.974025974025967
+      },
+      {
+        "seed": 2,
+        "n_val_per_arm": 4579,
+        "n_val_tied_per_arm": 3281,
+        "baseline_raw_agreement_pct": 48.65691198951736,
+        "identity_raw_agreement_pct": 73.72788818519327,
+        "delta_percentage_points": 25.07097619567591
+      }
+    ],
+    "all_retained_metric_summaries_checked": {
+      "baseline": {
+        "raw": {
+          "mean": 0.48616737039423125,
+          "sample_sd": 0.0008931324070363306
+        },
+        "tie_excluded": {
+          "mean": 0.7794196878982675,
+          "sample_sd": 0.023028343462098106
+        },
+        "on_tied_rows": {
+          "mean": 0.37027078471631203,
+          "sample_sd": 0.007282029815715789
+        }
+      },
+      "identity": {
+        "raw": {
+          "mean": 0.7425136017058033,
+          "sample_sd": 0.004744171234731928
+        },
+        "tie_excluded": {
+          "mean": 0.862934485090111,
+          "sample_sd": 0.0075332158383187115
+        },
+        "on_tied_rows": {
+          "mean": 0.6949050701717936,
+          "sample_sd": 0.009377221597431916
+        }
+      }
     }
-  ],
+  },
+  "second": {
+    "cache_examples": 66030,
+    "cached_skipped_rows": 44,
+    "seed_comparisons": 3,
+    "arm_seed_rows_checked": 6,
+    "paired_seed_validation_counts_match": true,
+    "actual_validation_assignments_reconstructed": false,
+    "baseline_mean_raw_accuracy_pct": 47.33209618958853,
+    "identity_mean_raw_accuracy_pct": 77.25890582461969,
+    "delta_percentage_points": 29.92680963503116,
+    "all_recorded_seed_deltas_positive": true,
+    "aggregation": "Equal weight per recorded seed, not pooled validation rows",
+    "seed_rows": [
+      {
+        "seed": 0,
+        "n_val_per_arm": 6862,
+        "n_val_tied_per_arm": 4898,
+        "baseline_raw_agreement_pct": 47.027105800058294,
+        "identity_raw_agreement_pct": 76.74147478869135,
+        "delta_percentage_points": 29.71436898863305
+      },
+      {
+        "seed": 1,
+        "n_val_per_arm": 6663,
+        "n_val_tied_per_arm": 4799,
+        "baseline_raw_agreement_pct": 47.87633198259043,
+        "identity_raw_agreement_pct": 77.81779978988443,
+        "delta_percentage_points": 29.94146780729401
+      },
+      {
+        "seed": 2,
+        "n_val_per_arm": 6742,
+        "n_val_tied_per_arm": 4851,
+        "baseline_raw_agreement_pct": 47.09285078611688,
+        "identity_raw_agreement_pct": 77.2174428952833,
+        "delta_percentage_points": 30.124592109166414
+      }
+    ],
+    "all_retained_metric_summaries_checked": {
+      "baseline": {
+        "raw": {
+          "mean": 0.47332096189588535,
+          "sample_sd": 0.0047246698253556275
+        },
+        "tie_excluded": {
+          "mean": 0.7883732112643708,
+          "sample_sd": 0.007331760858602411
+        },
+        "on_tied_rows": {
+          "mean": 0.3494983510696306,
+          "sample_sd": 0.005295709782010234
+        }
+      },
+      "identity": {
+        "raw": {
+          "mean": 0.772589058246197,
+          "sample_sd": 0.005393591177779353
+        },
+        "tie_excluded": {
+          "mean": 0.8976861412443838,
+          "sample_sd": 0.037771854592768384
+        },
+        "on_tied_rows": {
+          "mean": 0.7235686173073319,
+          "sample_sd": 0.008173489555651076
+        }
+      }
+    },
+    "generated_row_accounting": {
+      "generated_rows_as_recorded": 66074,
+      "cached_examples": 66030,
+      "skipped_rows": 44,
+      "reconciles": true
+    }
+  },
   "additional_parameters_from_inspected_design": 69632,
   "capacity_matched_control": false,
+  "raw_overlap_or_deduplication_audit_performed": false,
+  "independent_or_disjoint_replication_established": false,
   "original_runtime_and_checkpoint_identity_reproduced": false,
+  "teacher_correctness_or_playing_strength_measured": false,
   "models_trained": 0,
   "games_run": 0
 }

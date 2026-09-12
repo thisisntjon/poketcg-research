@@ -12,17 +12,15 @@ Over roughly sixty days, I learned the game as a solo developer directing AI res
 
 The research factory operated; its intended endpoint—a learned player that repeatedly retained those discoveries—remains unfinished. My Simulation entry was Tetsutani's unmodified public Grimmsnarl ex Damage-Transfer Control, policy c61e540b and deck 92b92bac. Its September 6 score was 834.0, rank 840/6,807. The experimental results below belong to their identified development branches. [7]
 
+![Three research questions, their evidence, and lessons informing the next investigation](FIGURE-1-RESEARCH-FACTORY.png)
+
+*Figure 1. Selected investigations and the lessons they supplied. Representation variants also increased capacity. The dashed path is future work; repeated retained student improvement has not been demonstrated.*
+
 ## Organize inquiry, implementation, and challenge
 
 Across the campaign, I used a strategy lead, researchers, implementers, agents responsible for two compute machines, and separate reviewers. An adversarial role challenged assumptions and experimental claims. I set the objectives and constraints and redirected work when evidence challenged the plan. In the experiments reported here, the tested policies selected moves; Fleet agents conducted development and evaluation. [1]
 
-Roles had concrete purposes. Researchers investigated mechanics, literature, and public policies; implementers turned hypotheses into controlled changes; reviewers checked the artifacts and interpretation. Different vendors supplied additional perspectives, while source inspection and tests settled disagreements. This was a human-directed process with evolving coordination tools.
-
-For example, a second-machine counter comparison initially stopped because its committed opponent registry could not reconstruct the intended panel. Repairing that handoff preceded the comparison. The useful result of review was an experimental condition corrected before it could contaminate the conclusion. [1,6]
-
-![How the research factory converted questions into evidence and subsequent decisions](FIGURE-1-RESEARCH-FACTORY.png)
-
-*Figure 1. The operated research cycle. The separate dashed path marks the intended transfer into successive stronger learned players; that endpoint has not been demonstrated.*
+Researchers, implementers, and reviewers connected mechanics to controlled comparisons. That separation mattered when a second-machine reproduction could not reconstruct its opponent registry: running the available subset would have omitted both Alakazam implementations, precisely the matchup the counter was meant to test. Inspection also found that a changed default could enable the intervention in both arms. The team repaired the registry and set the control explicitly before the comparison. Review therefore preserved the intended strategic question as well as the experiment's control. [1,6]
 
 ## Discover what the learner could use
 
@@ -30,15 +28,15 @@ Public players supplied working teachers and material for investigation. In one 
 
 Search raised another prerequisite: could we faithfully test alternatives from a recorded position? A replay-state proof of concept matched seven transitions before shuffled menus exposed the need to translate actions by their meaning instead of reusing option numbers. This established a small building block for counterfactual experiments, with broader continuation and useful alternative-action selection still unproved. [2]
 
-Labeling raised a related question: what information could the trainer actually absorb? Parallel investigations examined the training consumer, labeling methods, local-model behavior, and failure cases. Inspecting the loss revealed that the proposed weighting labels ultimately entered training through one relative scalar per row. A richer taxonomy could improve how that scalar was estimated, but added categories alone did not create new learning channels. [3]
+Labeling raised a related question: what information could the trainer actually absorb? Parallel investigations examined the training consumer, labeling methods, local-model behavior, and failure cases. Inspecting the loss revealed that the proposed weighting labels ultimately entered training through one relative loss weight per row. A richer taxonomy could improve how that weight was estimated, but added categories alone did not create new learning channels. [3]
 
 An initial batch of 46 quarantined model drafts all mapped to the default weight under the declared mapping. That redirected attention toward the evidence supplied to the labeler and its downstream consumer. One agent extracted episode evidence, another built an enriched projection, and the second machine ran a small local-model comparison on eight previously inconclusive episodes. Five then produced non-abstaining explanations. Their correctness and training benefit remained unestablished; under the original weight mapping, all eight still received default weight. The lesson was actionable: test the entire evidence-to-training path before scaling label production. [3]
 
 ## Give decisions enough meaning
 
-Useful supervision also depends on what the learner can represent. In a cached imitation probe, an identity-embedding variant improved mean raw validation accuracy from 48.62% to 74.25% across three matched seed/split comparisons. This measured agreement with recorded decisions, using a cache with 44,343 examples. The variant also increased model capacity; this was an imitation result, not a playing-strength comparison. [4]
+Useful supervision also depends on what the learner can represent. In a cached imitation probe, an identity-embedding variant improved mean raw validation accuracy from 48.62% to 74.25% across three matched seed/split comparisons. The cache contained 44,343 examples. A second public-teacher cache (66,030 examples) showed a similar pattern: 47.33% to 77.26% across three recorded seed comparisons. The variant also increased capacity; neither comparison measured playing strength. [4]
 
-A separate bootstrap line repeatedly failed its fidelity gates with a hashed representation. That led us to rebuild the information interface while retaining working replay and training components. My current v2 learner explicitly links legal options to their available sources and targets. A 256-unit recurrent network supplies context across decisions, and the observation projection uses the acting player's view. The changing legal menu is scored through its features instead of treating an option's position as a permanent meaning. [5]
+Repeated fidelity failures in a separate hashed-representation line led us to rebuild the information interface while retaining replay and training components. Current v2 links legal options to their available sources and targets. For example, a Darkness Energy attachment can enable Munkidori's damage transfer or develop another attacker: its target changes the strategic meaning. This illustrates the interface, not a demonstrated learned tactic. A 256-unit recurrent network supplies context across decisions using the acting player's view, while offered options are scored by their features instead of permanent menu positions. [5,7]
 
 Optional choices also matter strategically. An effect allowing up to three selections may be best used with fewer. My sequential decoder selects without replacement, updates its context, and permits a learned STOP after the minimum. For unordered targets, the training objective sums the probabilities of valid selection orders, so selecting the same set in another order is acceptable. These are implemented components; seven runnable checks with prescribed scores demonstrate their selection constraints. [5]
 
@@ -52,7 +50,7 @@ An Energy attachment can enable Munkidori's transfer or prepare another attacker
 
 The clearest positive case used a derivative of makthanithin's Apache-2.0 community_1084 Lucario policy. Mega Lucario ex's Aura Jab deals 130 for one Fighting Energy and can attach up to three discarded Basic Fighting Energy to Benched Pokémon. Mega Brave deals 270 for two Fighting Energy but cannot be reused by that Pokémon next turn. Preparing a successor attacker therefore matters alongside taking the current prize. [6]
 
-Against Alakazam, we tested pressure on two resources. Powerful Hand places two damage counters per card in its player's hand. Replacing one Carmine with Xerosic gave the pilot a way to reduce a large opposing hand to three. Separately, modified targeting preferred visible Abra or Kadabra when the Alakazam line was detected, threatening future attackers. Disruption costs a Supporter opportunity; targeting an evolving threat can forgo another prize. These tradeoffs made the whole-game comparison essential. [6]
+Against Alakazam, we tested pressure on two resources. Powerful Hand places two damage counters per card in its player's hand. Replacing one Carmine with Xerosic gave the pilot a way to reduce a large opposing hand to three. Separately, modified targeting preferred visible Abra or Kadabra when the Alakazam line appeared, bringing a Benched target Active when possible and threatening future attackers. Disruption costs a Supporter opportunity; targeting an evolving threat can forgo another prize. These tradeoffs made the whole-game comparison essential. [6]
 
 | | Original list | Carmine replaced by Xerosic |
 |---|---|---|
@@ -63,9 +61,9 @@ One complete four-arm experiment used 8,000 games. The pooled development analys
 
 ![Absolute scores and intervention effects across seven tested opponent implementations](FIGURE-2-MATCHUP-RESULTS.png)
 
-*Figure 2. A later 8,400-game panel: 600 games per arm per opponent, balanced by seat; win = 1, draw = ½, loss = 0. Approximate 95% intervals condition on these implementations and independent games. One Alakazam deck overlaps development under another pilot.*
+*Figure 2. A later panel of seven implementations, 600 games per arm per opponent, balanced by seat. Intervals condition on these implementations and independent games.*
 
-The two Alakazam cells improved by 20.42 and 18.75 points. The other five averaged −0.47 [−2.64, +1.71]. The factory had found a substantial conditional counter, with broader benefit unresolved. A separate 16,000-game comparison against exact c61 estimated −0.14 [−1.68, +1.40] points with draws excluded. That result did not establish equivalence. Terminal records support these product comparisons without identifying which individual sequences caused each win. [6]
+The two Alakazam cells improved by 20.42 and 18.75 points. The other five averaged −0.47 [−2.64, +1.71]. This supported a substantial conditional counter; broader benefit remained unresolved. In a separate 16,000-game comparison, both Lucario arms faced exact c61: adding the intervention changed decided-game win rate by −0.14 [−1.68, +1.40] points. This did not establish equivalence. Terminal records measure product outcomes without identifying the move sequences responsible. [6]
 
 ## Make the next investigation remember
 

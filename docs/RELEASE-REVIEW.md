@@ -1,9 +1,7 @@
-# Current release scope
+# Current visual release
 
-This factory-centered report supersedes the learner-first report at public base `cfad057b5e804b2bb18e96db5d2cb38d1cb657e1`. Its conservative count is 1,900 words including figure text (1,941 with extra hyphen splitting). The platform counter is separate. The current report has two original explanatory/statistical figures and references 1–8.
+This revision builds on public `2ff6ddabd7dfb348e4d48ec576ca195b10304075`. It integrates the reviewed textual refinements and second recorded representation cache, replaces both figures at their intended report width, and moves the research map earlier in the article. Conservative count: 1,891 words including figure text; 1,933 with extra hyphen splitting. The platform counter remains separate.
 
-New evidence includes five traced research cycles, 13 bounded excerpts, labeling aggregates, the six-row representation recount, exact training-side decoder with seven prescribed-score checks, and the documented hash-v1 redesign. The current numerical evidence remains the previously verified outcome export; no new matches or training were run for publication.
+All seven result cells and their saved approximate intervals are unchanged. Minimum figure text is 9 points at 507-point placement. The source map and portable verifier now cover both representation caches, retaining capacity, corpus-overlap and historical-execution limits. Neither representation comparison measures playing strength.
 
-`docs/current-evidence/PACKAGE-MANIFEST.json` covers that public directory. The downloadable ZIP has its own manifest covering both current and historical members. PDF/report bytes match the corresponding ZIP members. Source manifests bind the selected original identities and output bytes; incomplete historical runtime and third-party provenance remain disclosed.
-
-Original project-authored code and research material are curated here. Organizer engine/card databases/artwork, secrets, raw replays, trained weights and third-party player implementations are excluded from the new release. The general MIT license does not override [NOTICE](../NOTICE) or competition-use restrictions. This GitHub update does not submit or edit the live Kaggle writeup.
+The prior public revision remains in Git history. The current PDFs, PNG/SVG figures, article and portable ZIP are synchronized. Final packet and exact-public-candidate review are recorded in the private release receipts before publication. Live Kaggle submission is separate. No new matches or training were run.

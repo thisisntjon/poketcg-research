@@ -3,7 +3,7 @@
   "prepared_date": "2026-09-11",
   "python_version": "3.11.9",
   "verification": {
-    "representation": "PASS: 48.62 -> 74.25 percent; +25.63 percentage points",
+    "representation": "PASS: two recorded caches, twelve rows; 48.62 -> 74.25 and 47.33 -> 77.26 percent. Capacity increased; no gameplay claim.",
     "selection": "PASS: seven prescribed-score CPU checks; one execution of copied candidate",
     "learning_design": "PASS: source hashes, closure links and both authored excerpts checked",
     "new_games": 0,
@@ -57,8 +57,13 @@
     },
     {
       "file": "README.md",
-      "bytes": 1607,
-      "sha256": "a812df2dd2522eafd36dc17cb3edd20732536a6b9211a3c339d291d98b300d8c"
+      "bytes": 1654,
+      "sha256": "40a3d9dae5e3a4c537a50d987977815bc48d8a9ee467eeade6b5bf55275faa2e"
+    },
+    {
+      "file": "representation/.gitattributes",
+      "bytes": 96,
+      "sha256": "d66042eb507af7e768d9173aad6830a44627b80a4b943f73a8ea09f21a8cb954"
     },
     {
       "file": "representation/cache_meta.json",
@@ -67,18 +72,28 @@
     },
     {
       "file": "representation/CHECK-RESULT.json",
-      "bytes": 1245,
-      "sha256": "e972caf9a70a37b9ab099aaba4243003ad5aad84329b0cb6a93e49507419bf77"
+      "bytes": 5605,
+      "sha256": "d330394ed2f43f187cb5dd09adca50f542e6e6d87183bd745c7f9ff72ffda312"
+    },
+    {
+      "file": "representation/CHECKER-VALIDATION.json",
+      "bytes": 873,
+      "sha256": "ba3ebc54c05e09622266383488fffd17b5f04aa3fcfa6d2b3a8f2d919336ee9f"
+    },
+    {
+      "file": "representation/LICENSE",
+      "bytes": 1072,
+      "sha256": "c0d19152318a96b687bc56323ed74be20ff9173ca41346c785a97b988ebbd034"
     },
     {
       "file": "representation/MANIFEST.json",
-      "bytes": 2058,
-      "sha256": "f39350bd00b5904d7cebdedcd014ade76d93f7959e4e25d2f7731d749899c62c"
+      "bytes": 4741,
+      "sha256": "33a1701d659e297ff5bd4c00a06757d68aa9e1491c53f5e1472bd96caf96238c"
     },
     {
       "file": "representation/README.md",
-      "bytes": 3348,
-      "sha256": "f9015807d6a6a08280aeab983b4c4c34e58a08228fafda55daec8baa20ec04a3"
+      "bytes": 4284,
+      "sha256": "6c89e92f105152e6cbf29e4bbc0e44fe16df33f1294f69dfeda44ff22b5374ea"
     },
     {
       "file": "representation/repr_probe_01_summary.json",
@@ -86,9 +101,24 @@
       "sha256": "df1f04deef1fa7ce98ff421a920cfd1977a68cfde243c0df33656deabb46d888"
     },
     {
+      "file": "representation/second/cache_meta.json",
+      "bytes": 302,
+      "sha256": "69d988de075dc89e3649c4111aeb8ec317126cfd3d8b7922f9b208ce0d883768"
+    },
+    {
+      "file": "representation/second/CORPUS-PROVENANCE-EXCERPT.json",
+      "bytes": 811,
+      "sha256": "9197aa80a2666f36d48d5820c0f008e11bafce71cb382338a7a83bd7d13afb21"
+    },
+    {
+      "file": "representation/second/repr_probe_kernel_summary.json",
+      "bytes": 2175,
+      "sha256": "ded35c19470ab8a2331e9e8aab0146b7a91739bf5ccb8848058dacdd1c90fd14"
+    },
+    {
       "file": "representation/verify.py",
-      "bytes": 4896,
-      "sha256": "914f761825a3cc65b716dd977cc729a242585299d85a115f7660df3b92c54ec9"
+      "bytes": 7922,
+      "sha256": "162b1b98de3460bea839ff639c722985a7f5a97c369ed597e917aa43191d33e4"
     },
     {
       "file": "selection/action_decoder.py",

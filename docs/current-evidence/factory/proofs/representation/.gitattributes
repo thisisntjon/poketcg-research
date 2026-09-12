@@ -1,0 +1,3 @@
+repr_probe_01_summary.json -text
+cache_meta.json -text
+second/*.json -text whitespace=cr-at-eol

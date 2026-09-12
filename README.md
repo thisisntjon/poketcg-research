@@ -8,14 +8,14 @@ I am Jonathan Simone. Over roughly sixty days, I directed AI research and coding
 
 [**Read the report**](docs/STRATEGY-WRITEUP.md) · [Report PDF](docs/downloads/FINAL-REPORT.pdf) · [Evidence guide](docs/downloads/EVIDENCE-GUIDE.pdf) · [Portable evidence ZIP](docs/downloads/PTCG-EVIDENCE.zip)
 
-[![The operated research cycle and the intended future learning loop](docs/current-figures/01-research-factory.png)](docs/STRATEGY-WRITEUP.md)
+[![Research questions, evidence and lessons informing the next decision](docs/current-figures/01-research-factory.png)](docs/STRATEGY-WRITEUP.md)
 
 ## Follow a discovery
 
 | Explore | What changed |
 |---|---|
 | [Five research cycles](docs/current-evidence/factory/cases/FACTORY-IN-ACTION.md) | A reconstruction halt, policy study, labeling diagnosis and memory correction changed subsequent work. |
-| [Representation experiment](docs/current-evidence/factory/proofs/representation/README.md) | Retained imitation means rose from 48.62% to 74.25%; capacity also increased. Run the six-row recount. |
+| [Representation experiment](docs/current-evidence/factory/proofs/representation/README.md) | Two recorded caches: 48.62% to 74.25% and 47.33% to 77.26% imitation agreement. Capacity also increased; run the twelve-row recount. |
 | [Original learning components](docs/current-evidence/factory/proofs/ORIGINAL-COMPONENTS.md) | Legal choices gain source/target meaning, recurrence and sequential stopping. Run seven prescribed-score decoder checks. |
 | [Deck-policy counter](docs/current-evidence/numerical/METHODS.md) | Separate card and targeting changes, then inspect their combination across opponents. Recount the saved game outcomes. |
 | [Eight-reference source map](docs/EVIDENCE-MAP.md) | Trace each report claim to selected sources, identities and limitations. |
