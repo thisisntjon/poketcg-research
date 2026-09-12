@@ -1,7 +1,7 @@
-# Current visual release
+# Current editorial refinement
 
-This revision builds on public `2ff6ddabd7dfb348e4d48ec576ca195b10304075`. It integrates the reviewed textual refinements and second recorded representation cache, replaces both figures at their intended report width, and moves the research map earlier in the article. Conservative count: 1,891 words including figure text; 1,933 with extra hyphen splitting. The platform counter remains separate.
+This revision builds on public `013343ab3c91b90bbd81e4152d31184f07193f85` after independent adjudication of an external review. Entry identity now precedes the experimental headline; the entered deck has a concrete development and damage-placement plan, correct action timing and a source-linked initial selection rationale. The article names the current v2 architecture precisely. Both figures, all plotted values and the factory-centered premise remain unchanged.
 
-All seven result cells and their saved approximate intervals are unchanged. Minimum figure text is 9 points at 507-point placement. The source map and portable verifier now cover both representation caches, retaining capacity, corpus-overlap and historical-execution limits. Neither representation comparison measures playing strength.
+The added historical sensitivity supplement preserves a separate estimand and variance convention; it does not replace the current seven-cell chart. The model-size declaration fills a small source-excerpt gap without rewriting original evidence. Counter arithmetic, representation probes and player-runtime evidence keep their distinct scopes.
 
-The prior public revision remains in Git history. The current PDFs, PNG/SVG figures, article and portable ZIP are synchronized. Final packet and exact-public-candidate review are recorded in the private release receipts before publication. Live Kaggle submission is separate. No new matches or training were run.
+Conservative count: 1,921 including figure text; 1,962 with extra hyphen splitting. Current report, guide, figures and evidence ZIP are synchronized. The earlier release remains in Git history. No live Kaggle changes, new games or training occurred.

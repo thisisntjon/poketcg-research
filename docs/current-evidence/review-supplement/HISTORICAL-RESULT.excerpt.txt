@@ -1,0 +1,38 @@
+Project-authored historical source: workflow/research/2026-09-03-strike3-generalisation.md
+Extraction: selected line ranges, LF-normalized. See README for current interpretation.
+
+--- Original lines 83-85 ---
+- **`llccqq624_marnie` shares a deck** (`0598646548d0`) with dev-panel cell
+  `kernel_prvsiyan_alakazam_v12`, byte-identical, different pilot. It is the excluded cell in
+  the clean-six headline and is reported as a deck-exposure sensitivity, not dropped.
+
+--- Original lines 173-201 ---
+### The harness has its own convention and it is neither of ours — added 22:25Z
+
+**MASTER found that `eval.py` scores a draw as HALF a win** — `score = wins + 0.5 * draws`,
+over `wins + losses + draws`, at **`origin/main:1271`**.
+
+*(Cited against `origin/main`, not against a worktree. My first version of this note said
+`:1199`, which is the line in my scratch tree — behind main, so the citation would not have
+resolved for any reader. A line number is only meaningful with the ref it belongs to.)* **So the third row of that table is
+the harness's own convention, and the row this document computed in is not.**
+
+**Under the harness convention, for the record:**
+
+| quantity | draws as non-wins (this doc) | **harness (draws = ½)** |
+|---|---|---|
+| Alakazam-conditional pooled | +19.26pp [+15.52, +23.00] | **+19.51pp [+15.77, +23.25]** |
+| clean six (RE) | +2.71pp [−3.22, +8.63] | **+2.72pp [−3.29, +8.74]** |
+| all seven (RE) | +5.16pp [−1.61, +11.94] | **+5.21pp [−1.66, +12.08]** |
+| within-archetype I² | 0.0% (Q = 0.19) | **0.0% (Q = 0.19)** |
+| detection floor | 7.50pp | **7.51pp** |
+| Alakazam seat gap | −0.33pp | **−0.17pp** |
+| pooled seat gap | +3.00pp | **+3.00pp** |
+
+**Every conclusion is identical.** The clean-six headline contains zero under both; the
+archetype separation is unchanged; no seat gap excludes zero under either.
+
+**Switching to the harness convention is principled rather than post-hoc** — it is the
+convention the instrument that produced these artifacts reports, so a reader cross-checking any
+figure against an `eval.py` summary should not find a mismatch. **A future analysis of this data
+should use draws = ½ and say so.**

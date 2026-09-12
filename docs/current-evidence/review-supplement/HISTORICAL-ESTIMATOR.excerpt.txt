@@ -1,0 +1,61 @@
+Project-authored historical source: workflow/research/2026-09-03-strike3-recompute.py
+Extraction: selected line ranges, LF-normalized. See README for current interpretation.
+
+--- Original lines 79-95 ---
+def rate(games, conv):
+    """Score and DENOMINATOR under the chosen draw convention.
+
+    Returns both, not just the ratio, because the variance must use the same n the rate
+    was computed on. Under `excluded` the denominator is decisive games only, which is
+    smaller than len(games) -- see the note in delta().
+    """
+    w = sum(1 for g in games if g["outcome"].lower() == "win")
+    l = sum(1 for g in games if g["outcome"].lower() == "loss")
+    d = sum(1 for g in games if g["outcome"].lower() == "draw")
+    if conv == "half":          # harness: eval.py origin/main:1271
+        return w + 0.5 * d, w + l + d
+    if conv == "loss":          # draws counted as non-wins
+        return w, w + l + d
+    if conv == "excluded":      # decisive games only
+        return w, w + l
+    raise ValueError(conv)
+
+--- Original lines 98-115 ---
+def delta(rows, pred, conv):
+    """Champion minus baseline, as a percentage-point difference, with its variance.
+
+    The variance uses the denominator `rate()` actually divided by. An earlier version
+    hardcoded len(games) here, which was right for `half` and `loss` -- where the
+    denominator IS every game -- and WRONG for `excluded`, where draws leave the
+    denominator. That inflated Q from 83.87 to 84.08 on the seven-cell pool and made the
+    published draws-excluded sensitivity disagree with an independent recompute. The
+    default (`half`) path and every published figure were unaffected.
+    """
+    b = [g for g in rows if g["arm"] == "BASELINE" and pred(g)]
+    c = [g for g in rows if g["arm"] == "CHAMPION" and pred(g)]
+    k0, n0 = rate(b, conv)
+    k1, n1 = rate(c, conv)
+    p0, p1 = k0 / n0, k1 / n1
+    d = 100 * (p1 - p0)
+    v = 1e4 * (p1 * (1 - p1) / n1 + p0 * (1 - p0) / n0)
+    return d, v
+
+--- Original lines 118-135 ---
+def pool(items):
+    """Fixed- and random-effects (DerSimonian-Laird) pooling of per-cell deltas."""
+    ws = [1 / v for _, v in items]
+    ds = [d for d, _ in items]
+    fe = sum(w * d for w, d in zip(ws, ds)) / sum(ws)
+    se_fe = math.sqrt(1 / sum(ws))
+    q = sum(w * (d - fe) ** 2 for w, d in zip(ws, ds))
+    k = len(items)
+    if k > 1:
+        c = sum(ws) - sum(w * w for w in ws) / sum(ws)
+        tau2 = max(0.0, (q - (k - 1)) / c)
+    else:
+        tau2 = 0.0
+    w2 = [1 / (v + tau2) for _, v in items]
+    re = sum(w * d for w, d in zip(w2, ds)) / sum(w2)
+    se_re = math.sqrt(1 / sum(w2))
+    i2 = max(0.0, (q - (k - 1)) / q) * 100 if q > 0 else 0.0
+    return fe, se_fe, re, se_re, q, k - 1, i2

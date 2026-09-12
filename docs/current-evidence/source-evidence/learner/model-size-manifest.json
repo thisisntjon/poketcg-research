@@ -1,0 +1,13 @@
+{
+  "file": "model-size-declarations.excerpt.txt",
+  "sha256": "3f8acfba45477781166dee2bd094fdb29abb6d024beda772d70a198cd36fb1dd",
+  "source": "ptcg-agent/learning_factory/model_v2.py",
+  "source_sha256": "dd59df5c520050709c0c6b28779a6c80addf70493f816b19b167a92356b53eb2",
+  "ranges": [
+    [
+      29,
+      33
+    ]
+  ],
+  "scope": "Adds the constant declaration without changing any historical excerpt or runtime."
+}
