@@ -1,0 +1,47 @@
+SOURCE ID: S03
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/research/2026-09-03-4070-repro/RESULT.md
+FULL SOURCE SHA256: 0ce910e05b95f12b980f16f885ef323b23a295e35b7f66105b7c2d381a44e071
+CONTEXT: Second-computer reproduction on the same five-implementation, 40%-Alakazam development panel. Within-batch decided-game result; not a hardware-equivalence test, broad-field improvement, isolated sequence mechanism or Simulation-submission gain. The later combined headline pools three comparisons.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 3-8 ---
+**Independent 4070 reproduction. 4,000 games, 2,000 per arm, zero errors.**
+Verdict against the pre-registered criterion: **REPRODUCES.**
+
+- **Dispatch:** STRATEGIST → MASTER, bus `#3132` 2026-09-03T05:10:22Z (re-routed from ROACH)
+- **Trees:** `#3220` at `503e83aa67` **plus `#3211`'s single registry file** — see *Deviation* below
+- **Box:** roach / RTX 4070 SUPER · original result measured on the 5080
+
+--- Original source lines 10-21 ---
+## Result
+
+| opponent | A shipped | D combined | delta |
+|---|---|---|---|
+| `kernel_prvsiyan_alakazam_v8` | 14.25% | 32.75% | **+18.50pp** |
+| `kernel_prvsiyan_alakazam_v12` | 38.35% | 52.00% | **+13.65pp** |
+| `kernel_aristophanivan_940` | 40.10% | 42.61% | +2.51pp |
+| `kernel_prvsiyan_844_router` | 36.50% | 37.25% | +0.75pp |
+| `kernel_romanrozen_v13` | 44.75% | 44.00% | −0.75pp |
+
+**Pooled: 34.78% → 41.72%, delta +6.94pp, 95% CI [+3.93, +9.94]** (SE 1.53).
+Decided games 1,998 / 1,999. Errors **0 / 0**. Undecided (draws) 2 / 1. Both arms `rc=0`.
+
+--- Original source lines 62-79 ---
+## Deviation from the pinned tree, disclosed
+
+`#3220` at `503e83aa67` **cannot run this panel**: three of the five kernels are not addressable
+opponents there. That was the earlier VOID (`FINDING.md`, `GR-32`, PR `#3227`).
+
+Two changes were needed, both harness-side:
+
+1. **`#3211`'s single file** — `ptcg-agent/harness/opponents/__init__.py`, +29/−0, registering
+   `kernel_prvsiyan_alakazam_v8` / `_v12` / `_844_router`. Verified as exactly one file before
+   applying. **This is the faithful choice, not a shortcut:** SKYNET confirms the original
+   factorial was itself produced with that patch applied, and the registration is identical for
+   both arms by construction, so it cannot confound a difference.
+2. **The sanctioned extraction** — `extract_keval24_cell.py` for four kernels whose `main.py` /
+   `deck.csv` are git-ignored and absent from a fresh worktree. Output **verified against the
+   frozen shas recorded in the registry's own comment**: `aristophanivan main.py=5884a990…`,
+   `romanrozen main.py=a81eab3e…`, both `deck.csv=2a541d7b…`. They match.
+
+**No agent bytes were edited.** `--allow-random-fallback` was never passed.

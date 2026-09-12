@@ -1,0 +1,39 @@
+{
+  "schema": "ptcg.public_learning_design_evidence/v1",
+  "prepared_date": "2026-09-11",
+  "scope": "Historical aggregate fidelity failures and the documented decision to rebuild the representation; no new training or game evaluation",
+  "license": "MIT for project-authored records and documentation; no organizer-provided materials included",
+  "artifacts": [
+    {
+      "file": "HASH-V1-CLOSED-20260813.json",
+      "origin": "workflow/artifacts/learning-factory/HASH-V1-CLOSED-20260813.json",
+      "sha256": "ed4e4c6ac66186a85b036193db39efdbeb0434e1ffafc834abf51fe0043232a2",
+      "source_commit": "99ee03f97cf5c1743a5aa36daa7847bdf50cad89",
+      "copy_mode": "exact bytes"
+    },
+    {
+      "file": "lf1-c0-v3-GATE-FAIL-20260812.json",
+      "origin": "workflow/artifacts/learning-factory/lf1-c0-v3-GATE-FAIL-20260812.json",
+      "sha256": "bcfb9ec60a74229d27efbd14741e3deb3445ff38437682c009874e6419a8e8c1",
+      "copy_mode": "exact bytes; referenced by the closure record"
+    }
+  ],
+  "excerpt_sources": [
+    {
+      "file": "ARCHITECTURE-EXCERPTS.md",
+      "origin": "workflow/WINNING-STRATEGY-ARCHITECTURE.md",
+      "origin_sha256": "94c57e89e07c515bb9178cdef07d04fa3f2773ed695af546246fa6c56a51af42",
+      "source_commit": "4238c61932f970529b29133ac43842e05d656c50",
+      "line_ranges": [[386, 401], [1263, 1279]]
+    },
+    {
+      "file": "READINESS-EXCERPT.md",
+      "origin": "workflow/research/owned-learning-roadmap-20260813/implementation-readiness.md",
+      "origin_sha256": "3b6d8d82dadced34d45d806fcd60d45c8f58d6d4fdf62a8b64b217947cfebe2f",
+      "source_commit": "4d6bd0b931a820464ccc69f2fff77569f7d583fd",
+      "line_ranges": [[7, 8], [12, 15]]
+    }
+  ],
+  "games_run_for_this_package": 0,
+  "models_trained_for_this_package": 0
+}

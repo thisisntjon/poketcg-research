@@ -1,0 +1,42 @@
+SOURCE ID: S11
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/knowledge-register/audits/2026-09-05-memory-reader/REVIEW.md
+FULL SOURCE SHA256: 177ae5b0e671e405ebf720fee3f49a48ee40042ca450250f1d753ed2454663c5
+CONTEXT: The excerpt supports the introductory-retraction defect and repair. It retains receipt-custody and coverage limits; unrelated retrieval counts are not exported as an effectiveness claim. This later reader did not produce the earlier manual audit recovery.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 3-7 ---
+The new entry point connects existing experiment reports and compact tried-result rows
+to their original method, result and caveats. Eight explanatory records add question,
+why, lesson, reopening condition and explicit limits. It reads Git objects from one
+resolved revision and leaves source documents in place. It is linked from START-HERE
+and the master index.
+
+--- Original source lines 20-23 ---
+- Independent code review reproduced an introductory retraction disappearing from both
+  `show` and `search` while source verification passed. The reader now retains/searches
+  the preamble, with dedicated regression cases. Source integrity alone did not catch
+  this semantic extraction defect.
+
+--- Original source lines 36-57 ---
+The original shared scratch receipt path was overwritten after the first read by an
+unidentified writer. The consumer denied authorship of that replacement and preserved
+its original from retained state at a unique path. `consumer.json` is that reconstruction
+(original and trailing-newline-normalized banked SHA-256 values in assessment.json);
+no pre-overwrite hash was captured. This weakens session
+custody and timing claims. It does not replace the source-locator checks or justify using
+the unrelated replacement's metrics. Future acceptance receipts need unique paths and
+an immediate content hash at return.
+
+## Remaining gaps
+
+This is not full-goal completion. The master-index census names 54 existing surfaces,
+all present at the selected revision, with explicit reader dispositions. Most are still
+unintegrated and semantically unreviewed. Important attempt history, retractions as
+individual records, math, tools, datasets/models, other branches/hosts and transcripts
+need coverage. The first consumer followed README's known chains; it is not a held-out
+discovery benchmark and there is no measured comparison with prior onboarding.
+
+Next: reconcile these source families and recover the high-value items they contain,
+then extend acceptance to unseen questions and session turnover. Compact structured
+retraction lookup is a concrete context opportunity: the first consumer opened the
+whole register. Preserve qualifiers and contradictions when adding that view.

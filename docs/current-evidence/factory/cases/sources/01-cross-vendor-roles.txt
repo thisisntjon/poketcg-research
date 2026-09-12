@@ -1,0 +1,19 @@
+SOURCE ID: S01
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/research/2026-09-05-inventory-playbook/NOTE-three-vendors-caught-what-one-did-not.md
+FULL SOURCE SHA256: 4e9ef09594229f5f0a78275d558685516adfc805af35ae92da7d21fee85e1437
+CONTEXT: Historical role attribution from one review episode. The original note reports defects and also coordination failures; no universal enforcement, eleven-defect effectiveness estimate, or causal vendor advantage is claimed here.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 5-5 ---
+**Setting.** Three harnesses from three vendors worked the same inventory build for six hours: SKYNET (Claude Code, author of the inventory PRs), ASTRA (Codex, lead and red team), ROACH (Antigravity, certifier). Author ≠ verifier was the rule; every PR needed a non-author certification.
+
+--- Original source lines 9-10 ---
+| Defect | Found by | Where | What the author had believed |
+|---|---|---|---|
+
+--- Original source lines 21-21 ---
+| `research_memory.py` dropped an introductory retraction from `show` and `search` while source verification passed | ASTRA's independent reviewer | memory-reader REVIEW | source integrity implied extraction integrity |
+
+--- Original source lines 28-29 ---
+## What it does not show
+Not that three vendors are better than one in general (n = 1 night, one author, one repo); not that the merged defects would have reached a user (nothing here ships). It shows only that on this work the author's own checks were blind to eleven defects that two other seats found from the artifacts.

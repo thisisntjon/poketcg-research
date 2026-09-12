@@ -1,0 +1,37 @@
+{
+  "schema": "ptcg.factory-labeling-aggregates/v1",
+  "initial_batch": {
+    "source_id": "S14",
+    "rows": 46,
+    "weight_counts": {
+      "1.0": 46
+    }
+  },
+  "enriched_batch": {
+    "draft_source_id": "S15",
+    "rows": 8,
+    "mechanism_counts": {
+      "AGENT_ERROR_OR_INVALID": 3,
+      "INSUFFICIENT_EVIDENCE": 3,
+      "RESOURCE_MANAGEMENT_ERROR": 1,
+      "SEQUENCING_ERROR": 1
+    },
+    "non_abstaining": 5,
+    "original_mapping_source_id": "S16",
+    "original_mapping_weight_counts": {
+      "1.0": 8
+    },
+    "alternate_mapping_source_id": "S17",
+    "alternate_mapping_weight_counts": {
+      "1.0": 6,
+      "1.5": 2
+    }
+  },
+  "limits": [
+    "Counts recomputed from retained files, not new model calls.",
+    "Non-abstention does not establish semantic accuracy.",
+    "Both mappings were historical interpretations; the 1.5 alternate weight was illustrative.",
+    "Outputs remained quarantined; training benefit was not measured.",
+    "The first eight-episode all-abstention baseline is reported by the original enriched-run summary; its raw original outputs were not recounted here."
+  ]
+}

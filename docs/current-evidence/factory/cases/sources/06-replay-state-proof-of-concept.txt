@@ -1,0 +1,67 @@
+SOURCE ID: S06
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/workflow/research/2026-08-09-direct-state-engine-poc.md
+FULL SOURCE SHA256: 43063f2da4a4b286bb88fd61a114966f0eead858735c55ecdf3da96ffa219cef
+CONTEXT: One state and seven consecutive recorded transitions were investigated. The omitted intervening line lists concrete card identifiers and multiplicities; no raw replay contents are exported. This is source-level historical evidence, not a new engine rerun. Full actor-visible state agreement is required; legal-menu agreement alone is insufficient.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 30-41 ---
+3. `search_begin` accepted those inputs without error and reproduced the anchor's
+   turn, action count, acting seat, select type, and legal-option count.
+4. The action associated with that observation is stored on the following Kaggle step
+   for the previously active seat. Applying that recorded action twice from two fresh
+   search roots produced identical successor projections (A/A PASS).
+5. The successor matched the following official replay observation exactly under the
+   public semantic projection defined below.
+6. Applying a different legal root action produced a different successor digest
+   (forced A/B divergence PASS).
+
+A follow-on recorded-action continuation matched **seven consecutive transitions**.
+The eighth raw projection diverged immediately after a deck-search/shuffle sequence.
+
+--- Original source lines 44-46 ---
+deck positions—and therefore raw option indices—differed. This is a second load-bearing
+correction: a multi-step replay runner must translate recorded selections by resolved
+semantic option identity, not reuse historical option indices after a shuffle.
+
+--- Original source lines 64-100 ---
+Raw next-state byte equality is the wrong gate. The search engine re-instantiates card
+serial numbers and returns an omniscient search observation, while the recorded acting
+observation censors prize contents and the opponent hand. The first raw comparison
+therefore differed even though every public mechanic agreed.
+
+The correct equality contract is a versioned **public semantic projection**:
+
+- preserve turn, action count, acting seat, first player, once-per-turn flags, result,
+  stadium, public logs if used, and all public board mechanics;
+- preserve active/bench/discard card identity, damage, Energy, tools, conditions, and
+  other public attributes, but ignore regenerated serial identity;
+- preserve deck, hand, and prize counts;
+- preserve only the acting player's visible hand card IDs; censor the opponent hand;
+- replace both prize zones with count-only placeholders;
+- remove hidden deck compositions;
+- preserve legal-menu semantics while removing absent/default serialization fields
+  and regenerated serial/player-index metadata; for zone-selection menus, resolve each
+  option to its referenced card/target identity and compare multisets rather than raw
+  shuffled positions.
+
+Under that projection, the one-step recorded continuation was exactly equal. Any future
+projection must be frozen and hash-pinned before a scaled read; changing it after seeing
+results invalidates the comparison.
+
+## What is not yet proved
+
+- multi-step continuation fidelity through stochastic effects and seat changes;
+- action translation after shuffles/randomized zone order (semantic menus matched in
+  the first observed divergence, but the translator is not yet implemented);
+- exact action alignment across all replay phases and terminal conditions;
+- branch independence in concurrent workers;
+- policy-module isolation when two multi-file agents are loaded (a separate known
+  module-cache defect requires per-seat subprocesses or an equivalent fail-before /
+  pass-after isolation fixture);
+- scale across stores, dates, card/deck families, or SDK versions;
+- that any alternate action improves a bounded or terminal outcome;
+- permission to use omniscient fields in a live policy (still forbidden).
+
+--- Original source lines 115-116 ---
+This POC changes the value of the replay project substantially, but it does not yet
+produce a causal agent improvement.

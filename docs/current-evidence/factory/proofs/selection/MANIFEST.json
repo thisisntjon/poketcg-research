@@ -1,0 +1,32 @@
+{
+  "schema": "ptcg.public_selection_proof/v1",
+  "prepared_date": "2026-09-11",
+  "license": "MIT; project-authored source and demonstration, developed with AI assistance under Jonathan Simone's direction",
+  "scope": "Seven prescribed-score CPU checks of the training-side decoder; not a learned model or full-agent reproduction",
+  "artifacts": [
+    {
+      "file": "action_decoder.py",
+      "sha256": "05917722d740c3a12ba1533ea91049acbf61e15afae9ff0c50306d6baa7bc724",
+      "origin": "ptcg-agent/learning_factory/action_decoder.py",
+      "copied_from": "workflow/research/2026-09-11-submission-polish/premise-challenge/proofs/action_decoder.py",
+      "source_commit": "291329316e3594c50e4982a7a92072abebcfe889",
+      "copy_mode": "exact bytes; matches original project source"
+    },
+    {
+      "file": "selection_demo.py",
+      "sha256": "d58183be8b90d75e3b3ce01f45e0b6520032880cc645ee4d9da6c96117a4a7f2",
+      "origin": "workflow/research/2026-09-11-submission-polish/premise-challenge/proofs/selection_demo.py",
+      "copy_mode": "exact bytes"
+    }
+  ],
+  "runtime": {
+    "python_minimum": "3.10",
+    "optional_dependency": "PyTorch; CPU-only installation sufficient",
+    "device": "cpu",
+    "trained_models_loaded": 0,
+    "games_run": 0,
+    "network_required": false,
+    "engine_required": false,
+    "card_data_required": false
+  }
+}

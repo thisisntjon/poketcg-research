@@ -1,0 +1,33 @@
+SOURCE ID: S05
+ORIGINAL PATH: C:/Users/thisi/Desktop/PK-squads/submission-polish/ptcg-agent/agent/rules_lucario.py
+FULL SOURCE SHA256: 1cb60b171d3bb71172c134048b45ee0490dca269e5440f8bb7a3d8deb83b21be
+CONTEXT: Only project-authored addition fragments from commit abed09b270f7bc41b3487bf8dddc4e70e7e96a28 are exported. They show independently switchable, default-off hypotheses and their scoring sites; they are not a complete runnable policy or evidence of winning transfers. The surrounding Lucario policy derives from credited Apache-2.0 community_1084 code; its third-party source is not included here.
+EXTRACTION: Original decoded lines, preserved without textual edits; UTF-8 with LF newlines. Gaps are explicit.
+
+--- Original source lines 325-325 ---
+RULE_ALP_M1_SWITCH_RIOLU = os.environ.get("PTCG_ALP_M1_SWITCH_RIOLU", "") == "1"
+
+--- Original source lines 332-332 ---
+RULE_ALP_M2_PROMOTE_MEGA = os.environ.get("PTCG_ALP_M2_PROMOTE_MEGA", "") == "1"
+
+--- Original source lines 351-353 ---
+RULE_ALP_M3_EVOLVE_FIRST = os.environ.get("PTCG_ALP_M3_EVOLVE_FIRST", "") == "1"
+ALP_M3_TURN_MIN = 4
+ALP_M3_TURN_MAX = 11
+
+--- Original source lines 843-844 ---
+                            if RULE_ALP_M2_PROMOTE_MEGA and energy_count >= 1:
+                                score += 40
+
+--- Original source lines 861-865 ---
+                            if RULE_ALP_M1_SWITCH_RIOLU:
+                                my_board = [p for p in ([my_state.active[0]] + list(my_state.bench))
+                                            if p is not None]
+                                if not any(p.id == Mega_Lucario_ex for p in my_board):
+                                    score += 30
+
+--- Original source lines 1032-1035 ---
+                in_window = (RULE_ALP_M3_EVOLVE_FIRST
+                             and ALP_M3_TURN_MIN <= state.turn <= ALP_M3_TURN_MAX)
+                if not in_window:
+                    score = -1

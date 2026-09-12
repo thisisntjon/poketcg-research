@@ -1,3 +1,5 @@
+> Current factory-centered report: [read it](STRATEGY-WRITEUP.md). Its references [1]–[8] are mapped in [the current evidence notes](current-evidence/SOURCE-NOTES.md). This page preserves supporting source context; earlier figure/reference numbering is historical.
+
 # Opponent provenance: verified facts and remaining gaps
 
 This page supplements the historical register and [NOTICE](../NOTICE). It does not change the reported outcomes or grant rights to third-party code. No third-party notebook source is included in this update.

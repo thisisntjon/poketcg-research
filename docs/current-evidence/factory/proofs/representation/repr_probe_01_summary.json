@@ -1,0 +1,100 @@
+{
+  "schema": "ptcg.repr_probe.receipt/v1",
+  "cache": "D:\\policy_rows\\feature_cache\\repr_probe_traces",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "baseline": {
+    "raw": {
+      "mean": 0.4862,
+      "sd": 0.0009
+    },
+    "tie_excluded": {
+      "mean": 0.7794,
+      "sd": 0.023
+    },
+    "on_tied_rows": {
+      "mean": 0.3703,
+      "sd": 0.0073
+    }
+  },
+  "identity": {
+    "raw": {
+      "mean": 0.7425,
+      "sd": 0.0047
+    },
+    "tie_excluded": {
+      "mean": 0.8629,
+      "sd": 0.0075
+    },
+    "on_tied_rows": {
+      "mean": 0.6949,
+      "sd": 0.0094
+    }
+  },
+  "delta_raw_pp": 25.63,
+  "runs": [
+    {
+      "use_ids": false,
+      "seed": 0,
+      "raw": 0.4851439182915506,
+      "tie_excluded": 0.7534580960130187,
+      "on_tied_rows": 0.378044819746671,
+      "n_val": 4308,
+      "n_val_tied": 3079,
+      "elapsed_s": 1.0
+    },
+    {
+      "use_ids": false,
+      "seed": 1,
+      "raw": 0.4867890729959696,
+      "tie_excluded": 0.7874203821656051,
+      "on_tied_rows": 0.3691588785046729,
+      "n_val": 4466,
+      "n_val_tied": 3210,
+      "elapsed_s": 0.7
+    },
+    {
+      "use_ids": false,
+      "seed": 2,
+      "raw": 0.4865691198951736,
+      "tie_excluded": 0.7973805855161787,
+      "on_tied_rows": 0.36360865589759217,
+      "n_val": 4579,
+      "n_val_tied": 3281,
+      "elapsed_s": 0.8
+    },
+    {
+      "use_ids": true,
+      "seed": 0,
+      "raw": 0.7437325905292479,
+      "tie_excluded": 0.8567941415785191,
+      "on_tied_rows": 0.6986034426761936,
+      "n_val": 4308,
+      "n_val_tied": 3079,
+      "elapsed_s": 1.0
+    },
+    {
+      "use_ids": true,
+      "seed": 1,
+      "raw": 0.7465293327362292,
+      "tie_excluded": 0.8606687898089171,
+      "on_tied_rows": 0.7018691588785047,
+      "n_val": 4466,
+      "n_val_tied": 3210,
+      "elapsed_s": 0.9
+    },
+    {
+      "use_ids": true,
+      "seed": 2,
+      "raw": 0.7372788818519327,
+      "tie_excluded": 0.8713405238828967,
+      "on_tied_rows": 0.6842426089606827,
+      "n_val": 4579,
+      "n_val_tied": 3281,
+      "elapsed_s": 1.0
+    }
+  ]
+}

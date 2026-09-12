@@ -1,0 +1,156 @@
+{
+  "schema": "ptcg.hash_v1_closed/v1",
+  "host": "SKYNET",
+  "authority_main_sha": "4238c61932f970529b29133ac43842e05d656c50",
+  "architecture_artifact_sha256": "94C57E89E07C515BB9178CDEF07D04FA3F2773ED695AF546246FA6C56A51AF42",
+  "claim": "HASH_V1_PERMANENTLY_CLOSED",
+  "games": 0,
+  "disposition": "HASH_V1_CLOSED",
+  "revive_by_runtime_repair": false,
+  "competence_sample_consumed": false,
+  "do_not": [
+    "revive_hash_v1",
+    "tune_hash_encoder_after_outcome",
+    "start_c0_400_on_hash_v1",
+    "lower_majority_lift_gate",
+    "treat_failed_hash_v1_as_BC0"
+  ],
+  "receipts": [
+    {
+      "run": "v1",
+      "host": "SKYNET",
+      "absolute_source_path": "C:\\Users\\thisi\\Desktop\\PK-squads\\master-ops\\workflow\\artifacts\\learning-factory\\lf1-c0-GATE-FAIL-20260812.json",
+      "banked_path": "workflow/artifacts/learning-factory/lf1-c0-GATE-FAIL-20260812.json",
+      "bytes": 2314,
+      "receipt_sha256": "cb6f2bba576e3d3232637e7e896b75946b7a73e0d7139d8c73bfd11d9eca9397",
+      "disposition": "C0_GATE_FAIL",
+      "validation_gate_passed": false,
+      "majority_accuracy_lift": -0.04773860980629496,
+      "claim_scope": "BEHAVIOR_IMITATION_ONLY_NOT_CAUSAL_NOT_STRENGTH",
+      "schema": "ptcg.lf1_c0_gate_fail/v0",
+      "run_identity": {
+        "boundary": "boundary-00000757",
+        "boundary_manifest_sha256": "c4aa57de59cb358346afff2e60de76048e04833280194b766c3a1a8a7467b8ca",
+        "last_verified_training_boundary": null,
+        "trainer": null,
+        "thresholds": {
+          "max_validation_stratum_regression": 0.02,
+          "min_b0_accuracy_lift": 0.1,
+          "min_majority_accuracy_lift": 0.05,
+          "min_validation_nll_improvement": 0.1
+        },
+        "stratum_regressions": [
+          "((3, 3), 2, 1, 1)"
+        ]
+      }
+    },
+    {
+      "run": "v2",
+      "host": "SKYNET",
+      "absolute_source_path": "C:\\Users\\thisi\\Desktop\\PK-squads\\master-ops\\workflow\\artifacts\\learning-factory\\lf1-c0-v2-GATE-FAIL-20260812.json",
+      "banked_path": "workflow/artifacts/learning-factory/lf1-c0-v2-GATE-FAIL-20260812.json",
+      "bytes": 1627,
+      "receipt_sha256": "285e5e670acd7c95002cc2f815ea5c34145887301d506b449f523996f7d82fbc",
+      "disposition": "C0_GATE_FAIL",
+      "validation_gate_passed": false,
+      "majority_accuracy_lift": -0.04611562963326843,
+      "claim_scope": "BEHAVIOR_IMITATION_ONLY_NOT_CAUSAL_NOT_STRENGTH",
+      "schema": "ptcg.lf1_behavior_training_receipt/v0",
+      "run_identity": {
+        "boundary": null,
+        "boundary_manifest_sha256": null,
+        "last_verified_training_boundary": null,
+        "trainer": {
+          "accumulation_episodes": 8,
+          "device": "cuda",
+          "epochs": 1,
+          "learning_rate": 0.0003,
+          "max_validation_stratum_regression": 0.02,
+          "min_b0_accuracy_lift": 0.1,
+          "min_majority_accuracy_lift": 0.05,
+          "min_validation_nll_improvement": 0.1,
+          "seed": 20260812,
+          "upsample_factor": 4,
+          "upsample_stratum": "((3, 3), 2, 1, 1)"
+        },
+        "thresholds": null,
+        "stratum_regressions": [
+          "((3, 3), 2, 1, 1)"
+        ]
+      }
+    },
+    {
+      "run": "v3",
+      "host": "SKYNET",
+      "absolute_source_path": "C:\\Users\\thisi\\Desktop\\PK-squads\\master-ops\\workflow\\artifacts\\learning-factory\\lf1-c0-v3-GATE-FAIL-20260812.json",
+      "banked_path": "workflow/artifacts/learning-factory/lf1-c0-v3-GATE-FAIL-20260812.json",
+      "bytes": 1619,
+      "receipt_sha256": "bcfb9ec60a74229d27efbd14741e3deb3445ff38437682c009874e6419a8e8c1",
+      "disposition": "C0_GATE_FAIL",
+      "validation_gate_passed": false,
+      "majority_accuracy_lift": -0.03703767556469695,
+      "claim_scope": "BEHAVIOR_IMITATION_ONLY_NOT_CAUSAL_NOT_STRENGTH",
+      "schema": "ptcg.lf1_behavior_training_receipt/v0",
+      "run_identity": {
+        "boundary": null,
+        "boundary_manifest_sha256": null,
+        "last_verified_training_boundary": null,
+        "trainer": {
+          "accumulation_episodes": 8,
+          "device": "cuda",
+          "epochs": 1,
+          "learning_rate": 0.0003,
+          "max_validation_stratum_regression": 0.02,
+          "min_b0_accuracy_lift": 0.1,
+          "min_majority_accuracy_lift": 0.05,
+          "min_validation_nll_improvement": 0.1,
+          "seed": 20260812,
+          "stratum_loss_weight": 8.0,
+          "upsample_factor": 1,
+          "upsample_stratum": "((3, 3), 2, 1, 1)"
+        },
+        "thresholds": null,
+        "stratum_regressions": []
+      }
+    },
+    {
+      "run": "v5",
+      "host": "SKYNET",
+      "absolute_source_path": "C:\\Users\\thisi\\Desktop\\PK-squads\\master-ops\\workflow\\artifacts\\learning-factory\\lf1-c0-v5-GATE-FAIL-20260812.json",
+      "banked_path": "workflow/artifacts/learning-factory/lf1-c0-v5-GATE-FAIL-20260812.json",
+      "bytes": 1376,
+      "receipt_sha256": "66f2b27dcc8547126b7ba6db798ecce797735588c11ead983a3f9df2d12455cd",
+      "disposition": "C0_GATE_FAIL",
+      "validation_gate_passed": false,
+      "majority_accuracy_lift": -0.03859903498512729,
+      "claim_scope": "BEHAVIOR_IMITATION_ONLY_NOT_CAUSAL_NOT_STRENGTH",
+      "schema": "ptcg.lf1_behavior_training_receipt/v0",
+      "run_identity": {
+        "boundary": null,
+        "boundary_manifest_sha256": null,
+        "last_verified_training_boundary": {
+          "steps": 1514,
+          "manifest_sha256": "56ce7963f46d5e0a42baa6b56486f0a1c2091f36acd37000ff402545e6ddbd49",
+          "payload_sha256": "5de5de20a1bcfe445e1aef483c3c4ec033bc85440d0332afd3fb6c46f1184b68"
+        },
+        "trainer": {
+          "accumulation_episodes": 8,
+          "device": "cuda",
+          "epochs": 2,
+          "learning_rate": 0.0003,
+          "max_validation_stratum_regression": 0.02,
+          "min_b0_accuracy_lift": 0.1,
+          "min_majority_accuracy_lift": 0.05,
+          "min_validation_nll_improvement": 0.1,
+          "seed": 20260812,
+          "stratum_loss_weight": 8.0,
+          "upsample_factor": 1,
+          "upsample_stratum": "((3, 3), 2, 1, 1)"
+        },
+        "thresholds": null,
+        "stratum_regressions": []
+      }
+    }
+  ],
+  "receipt_payload_sha256": "bd6dc1f65a1d20323308c3337fa3f5480b349ee852719aed40fb203430b381eb"
+}

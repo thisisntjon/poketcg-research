@@ -2,13 +2,9 @@
 
 **None of the images in this directory are figures of the current report.**
 
-They were produced for earlier drafts and are kept because this project preserves
-superseded evidence rather than deleting it. No current page links to them, and their
-numbering does not correspond to the current report's Figures 1–3.
+These figures belong to earlier drafts and are preserved as historical evidence. Their numbering is separate from the current report.
 
-The current report's three figures are the exact submitted bytes, and live at
-`workflow/writeup/visuals-2026-09-06/` with their hashes recorded in
-[docs/EVIDENCE-MAP.md](../docs/EVIDENCE-MAP.md#the-three-report-figures).
+The current report uses [Figure 1: research factory](../docs/current-figures/01-research-factory.png) and [Figure 2: matchup results](../docs/current-figures/02-matchup-results.png). Read the [current report](../docs/STRATEGY-WRITEUP.md) and [evidence map](../docs/EVIDENCE-MAP.md) for their sources and scope. GitHub publication is separate from live Kaggle submission.
 
 | File | Belongs to |
 |---|---|
