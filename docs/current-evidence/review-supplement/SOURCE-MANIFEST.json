@@ -28,11 +28,19 @@
         ],
         [
           173,
-          201
+          176
+        ],
+        [
+          185,
+          186
+        ],
+        [
+          188,
+          188
         ]
       ],
       "normalization": "line extraction with LF newlines; source bytes not altered",
-      "excerpt_sha256": "688b02c7c28e064e6c9f709484ebc8d05574e022d43e0d06d8567239ff26908a"
+      "excerpt_sha256": "7ec3a60d24d25d38d0ff7a3d486bd4e14015b78935c3a1b31e0ebacd715db009"
     },
     {
       "path": "workflow/research/2026-09-03-strike3-recompute.py",
@@ -72,8 +80,8 @@
     },
     {
       "path": "HISTORICAL-RESULT.excerpt.txt",
-      "sha256": "688b02c7c28e064e6c9f709484ebc8d05574e022d43e0d06d8567239ff26908a",
-      "bytes": 2187
+      "sha256": "7ec3a60d24d25d38d0ff7a3d486bd4e14015b78935c3a1b31e0ebacd715db009",
+      "bytes": 957
     },
     {
       "path": "LICENSE",
