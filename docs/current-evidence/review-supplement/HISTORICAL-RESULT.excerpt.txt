@@ -1,0 +1,20 @@
+Project-authored historical source: workflow/research/2026-09-03-strike3-generalisation.md
+Extraction: selected line ranges, LF-normalized. See README for current interpretation.
+
+--- Original lines 83-85 ---
+- **`llccqq624_marnie` shares a deck** (`0598646548d0`) with dev-panel cell
+  `kernel_prvsiyan_alakazam_v12`, byte-identical, different pilot. It is the excluded cell in
+  the clean-six headline and is reported as a deck-exposure sensitivity, not dropped.
+
+--- Original lines 173-176 ---
+### The harness has its own convention and it is neither of ours — added 22:25Z
+
+**MASTER found that `eval.py` scores a draw as HALF a win** — `score = wins + 0.5 * draws`,
+over `wins + losses + draws`, at **`origin/main:1271`**.
+
+--- Original lines 185-186 ---
+| quantity | draws as non-wins (this doc) | **harness (draws = ½)** |
+|---|---|---|
+
+--- Original lines 188-188 ---
+| clean six (RE) | +2.71pp [−3.22, +8.63] | **+2.72pp [−3.29, +8.74]** |

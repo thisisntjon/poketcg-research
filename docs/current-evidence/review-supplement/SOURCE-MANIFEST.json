@@ -1,0 +1,107 @@
+{
+  "schema": "ptcg.review-supplement.v1",
+  "scope": "Historical six-implementation random-effects sensitivity; current figure estimator unchanged",
+  "excluded_opponent_id": "P01",
+  "excluded_deck_sha256": "0598646548d081832ec311c15fdc369b32c6f5e63175b0cfd1904d21fd082451",
+  "inputs": {
+    "panel-outcomes.csv": {
+      "relative_path": "../numerical/panel-outcomes.csv",
+      "sha256": "3d5888e34564a79c34a9118dc8a271aa75fc989a0f089c5a2188f49b51a46795"
+    },
+    "opponents.json": {
+      "relative_path": "../numerical/opponents.json",
+      "sha256": "dcdd8c8270b02807c56824153331ac7768c9514ee3b28c182fadc0eb13da0663"
+    }
+  },
+  "sources": [
+    {
+      "path": "workflow/research/2026-09-03-strike3-generalisation.md",
+      "git_commit": "3c2c7a77d0a255d9e49d7a1cabbe8f117ef71def",
+      "git_blob": "184f7502c16f132fca6fe74509bf2ad2c10eb76a",
+      "git_blob_sha256": "62871e274783a31708aabaff64a1ed0b1acdc92054873df6bb7d32e63e184334",
+      "inspected_worktree_sha256": "62871e274783a31708aabaff64a1ed0b1acdc92054873df6bb7d32e63e184334",
+      "excerpt": "HISTORICAL-RESULT.excerpt.txt",
+      "ranges": [
+        [
+          83,
+          85
+        ],
+        [
+          173,
+          176
+        ],
+        [
+          185,
+          186
+        ],
+        [
+          188,
+          188
+        ]
+      ],
+      "normalization": "line extraction with LF newlines; source bytes not altered",
+      "excerpt_sha256": "7ec3a60d24d25d38d0ff7a3d486bd4e14015b78935c3a1b31e0ebacd715db009"
+    },
+    {
+      "path": "workflow/research/2026-09-03-strike3-recompute.py",
+      "git_commit": "3c2c7a77d0a255d9e49d7a1cabbe8f117ef71def",
+      "git_blob": "eef1a0390eb70e7e17a07691036ff55831fad6eb",
+      "git_blob_sha256": "030e598fa3a3200b6afb93ceacac9e017337a3e6537ff03e08b6b0601a0c2182",
+      "inspected_worktree_sha256": "030e598fa3a3200b6afb93ceacac9e017337a3e6537ff03e08b6b0601a0c2182",
+      "excerpt": "HISTORICAL-ESTIMATOR.excerpt.txt",
+      "ranges": [
+        [
+          79,
+          95
+        ],
+        [
+          98,
+          115
+        ],
+        [
+          118,
+          135
+        ]
+      ],
+      "normalization": "line extraction with LF newlines; source bytes not altered",
+      "excerpt_sha256": "7cc0e20e561cc21eed9548b45e2292a29d53dbac11c302cf5c6c035fe4af066b"
+    }
+  ],
+  "exports": [
+    {
+      "path": "CHRONOLOGY.json",
+      "sha256": "b05620e45d300384264901db5ab3b1403fd15c9098e2a1b50650d63d489e96f6",
+      "bytes": 2007
+    },
+    {
+      "path": "HISTORICAL-ESTIMATOR.excerpt.txt",
+      "sha256": "7cc0e20e561cc21eed9548b45e2292a29d53dbac11c302cf5c6c035fe4af066b",
+      "bytes": 2719
+    },
+    {
+      "path": "HISTORICAL-RESULT.excerpt.txt",
+      "sha256": "7ec3a60d24d25d38d0ff7a3d486bd4e14015b78935c3a1b31e0ebacd715db009",
+      "bytes": 957
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "762b55b0d05dea29ad91942f22e776f2b40105115080c943c4088996c57c53f6",
+      "bytes": 1072
+    },
+    {
+      "path": "README.md",
+      "sha256": "00531f5bea1615da55e39ed48a119213be65893dbc39aa747a3419e8d4db8f16",
+      "bytes": 4336
+    },
+    {
+      "path": "verify_historical_sensitivity.py",
+      "sha256": "16489370947e482d0bedbbee8a8fbb6537dc00f1c7656afa1524c43c1e5024cf",
+      "bytes": 5079
+    },
+    {
+      "path": "verified-historical-sensitivity.json",
+      "sha256": "2ba2f1e64916f85f0f462952274b978f8d29e107e59b89aef5ad43262112daa1",
+      "bytes": 1201
+    }
+  ]
+}

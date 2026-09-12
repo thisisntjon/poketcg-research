@@ -1,0 +1,37 @@
+{
+  "retrieved_at_utc": "2026-09-12T04:45:53.363923+00:00",
+  "scope": "Read-only original GitHub comment metadata and minimal excerpts; source repository is private. No complete experiment-runtime reconstruction.",
+  "comments": [
+    {
+      "comment_id": 5531411831,
+      "url": "https://github.com/thisisntjon/poketcg/issues/3132#issuecomment-5531411831",
+      "created_at": "2026-09-03T20:03:27Z",
+      "updated_at": "2026-09-03T20:03:27Z",
+      "author_login": "thisisntjon",
+      "body_utf8_sha256": "9554126dee110cf53fc0c9a6e0bf4cad1fa9b0ed5251bb997f16fbac8278303b",
+      "body_utf8_bytes": 3610,
+      "quotation_excerpts": [
+        "Trial is 20% through.",
+        "trial at ~850/4200 per arm"
+      ],
+      "paraphrase": "The declaration names P01 by its original alias and shared deck hash. It fixes six-cell exclusion sensitivity, both estimators including DerSimonian-Laird, and heterogeneity statistics. The initial run was already in progress.",
+      "full_body_redistributed": false
+    },
+    {
+      "comment_id": 5531551463,
+      "url": "https://github.com/thisisntjon/poketcg/issues/3132#issuecomment-5531551463",
+      "created_at": "2026-09-03T20:14:30Z",
+      "updated_at": "2026-09-03T20:14:30Z",
+      "author_login": "thisisntjon",
+      "body_utf8_sha256": "c95c9ba204f4ea29b81de353bab6319be9a367febe755de8a960038f44c225ec",
+      "body_utf8_bytes": 3792,
+      "quotation_excerpts": [
+        "at **600/arm unchanged**",
+        "from 20:06"
+      ],
+      "paraphrase": "The later chronology records a missing-replay halt around 20:05, restart at 20:06 with all seven cells and unchanged 600/arm, and retention of the earlier analysis declaration. This message is evidence about the restart, not the raw process log.",
+      "full_body_redistributed": false
+    }
+  ],
+  "interpretation": "The analysis declaration preceded the retained 20:06 replay run, but not the first games of the discarded initial run. Do not claim preregistration before either first row."
+}

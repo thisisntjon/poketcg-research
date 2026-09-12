@@ -1,0 +1,11 @@
+{
+  "scope": "Contemporaneous submitted description records the adoption rationale; the original local comparison was not re-executed and its full rows were not recovered for this supplement. Numbers in this quoted description are historical assertions, not new verified estimates.",
+  "source_path": "workflow/research/2026-08-15-lane-s-live-refresh-roach/submissions-raw.csv",
+  "source_commit": "3c2c7a77d0a255d9e49d7a1cabbe8f117ef71def",
+  "source_sha256": "29ba05f80da8982d7ad896ed02dafb373b6ecae168cf577a3a467ca081c05b31",
+  "submission_ref": "55316089",
+  "submission_date": "2026-08-07 05:36:37.050000",
+  "description_excerpt": "tetsutani grimmsnarl-ex c61e540b, unmodified public kernel (Apache 2.0, licence verified Jon 2026-08-07). Local: +21.3pp frozen holdout vs V13 champion, +20.8pp account-unseen cells, 4 regression guards clean, worst cell -6.4pp.",
+  "excluded_content": "Unrelated source-notebook score/version inference and later slot-replacement description omitted.",
+  "article_use": "Frozen local comparison favored c61 over the prior V13 player; no quantitative holdout gain claimed in the article."
+}

@@ -1,0 +1,10 @@
+SOURCE: ptcg-agent/learning_factory/model_v2.py
+SHA256 OF COMPLETE SOURCE: dd59df5c520050709c0c6b28779a6c80addf70493f816b19b167a92356b53eb2
+Scope: omitted model-size declarations from the same previously inspected source.
+
+LINES 29-33
+29: HIDDEN_SIZE = 256
+30: TOWER_SIZE = 128
+31: OPTION_EMBED_SIZE = 96
+32: PLAN_CLASSES = 8
+33: OWNERS = ("SELF", "OPP")
