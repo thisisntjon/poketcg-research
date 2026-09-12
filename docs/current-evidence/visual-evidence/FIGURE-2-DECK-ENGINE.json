@@ -1,0 +1,233 @@
+{
+  "width_points": 507,
+  "height_points": 160,
+  "minimum_font_points": 9.0,
+  "font_family": "Arial",
+  "visible_text": [
+    "How the entered deck prepares Prizes",
+    "Poffin",
+    "≤2 Basics\n≤70 HP",
+    "Impidimp",
+    "Snorunt",
+    "Rare Candy / Morgrem",
+    "Grimmsnarl ex",
+    "Punk Up: ≤5 Basic Darkness\nto Marnie’s Pokémon",
+    "Shadow Bullet",
+    "180 Active + 30 Bench",
+    "Froslass · Checkup",
+    "1 counter / Ability Pokémon\nboth sides, except Froslass",
+    "Munkidori",
+    "Darkness attached: move ≤3 counters\none friendly → one opposing Pokémon",
+    "before attack",
+    "friendly damage",
+    "Manual attachment: Munkidori or another attacker?"
+  ],
+  "words_whitespace": 68,
+  "words_extra_hyphen_split": 68,
+  "labels_outside_canvas": [],
+  "text_overlaps": [],
+  "label_bounds": [
+    {
+      "text": "How the entered deck prepares Prizes",
+      "bounds_points": [
+        0.0,
+        141.436,
+        234.0,
+        156.564
+      ],
+      "font_points": 13.0
+    },
+    {
+      "text": "Poffin",
+      "bounds_points": [
+        15.74,
+        115.181,
+        45.26,
+        126.819
+      ],
+      "font_points": 10.0
+    },
+    {
+      "text": "≤2 Basics\n≤70 HP",
+      "bounds_points": [
+        9.62,
+        90.527,
+        51.38,
+        111.473
+      ],
+      "font_points": 9.0
+    },
+    {
+      "text": "Impidimp",
+      "bounds_points": [
+        81.4,
+        115.472,
+        124.6,
+        126.528
+      ],
+      "font_points": 9.5
+    },
+    {
+      "text": "Snorunt",
+      "bounds_points": [
+        80.0,
+        58.472,
+        116.0,
+        69.528
+      ],
+      "font_points": 9.5
+    },
+    {
+      "text": "Rare Candy / Morgrem",
+      "bounds_points": [
+        111.84,
+        128.763,
+        206.16,
+        139.237
+      ],
+      "font_points": 9.0
+    },
+    {
+      "text": "Grimmsnarl ex",
+      "bounds_points": [
+        240.42,
+        117.6,
+        314.58,
+        130.4
+      ],
+      "font_points": 11.0
+    },
+    {
+      "text": "Punk Up: ≤5 Basic Darkness\nto Marnie’s Pokémon",
+      "bounds_points": [
+        217.02,
+        88.527,
+        337.98,
+        109.473
+      ],
+      "font_points": 9.0
+    },
+    {
+      "text": "Shadow Bullet",
+      "bounds_points": [
+        412.86,
+        124.181,
+        484.14,
+        135.819
+      ],
+      "font_points": 10.0
+    },
+    {
+      "text": "180 Active + 30 Bench",
+      "bounds_points": [
+        400.868,
+        110.763,
+        496.133,
+        121.237
+      ],
+      "font_points": 9.0
+    },
+    {
+      "text": "Froslass · Checkup",
+      "bounds_points": [
+        179.62,
+        67.181,
+        275.38,
+        78.819
+      ],
+      "font_points": 10.0
+    },
+    {
+      "text": "1 counter / Ability Pokémon\nboth sides, except Froslass",
+      "bounds_points": [
+        169.54,
+        42.527,
+        285.46,
+        63.473
+      ],
+      "font_points": 9.0
+    },
+    {
+      "text": "Munkidori",
+      "bounds_points": [
+        392.66,
+        67.181,
+        442.34,
+        78.819
+      ],
+      "font_points": 10.0
+    },
+    {
+      "text": "Darkness attached: move ≤3 counters\none friendly → one opposing Pokémon",
+      "bounds_points": [
+        336.86,
+        42.527,
+        498.14,
+        63.473
+      ],
+      "font_points": 9.0
+    },
+    {
+      "text": "before attack",
+      "bounds_points": [
+        415.64,
+        91.763,
+        470.36,
+        102.237
+      ],
+      "font_points": 9.0
+    },
+    {
+      "text": "friendly damage",
+      "bounds_points": [
+        289.88,
+        23.763,
+        356.12,
+        34.237
+      ],
+      "font_points": 9.0
+    },
+    {
+      "text": "Manual attachment: Munkidori or another attacker?",
+      "bounds_points": [
+        139.74,
+        6.472,
+        367.26,
+        17.528
+      ],
+      "font_points": 9.5
+    }
+  ],
+  "source_files_sha256": {
+    "deck.csv": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+    "EN_Card_Data.csv": "a0ea63cf7adcb65d35436ce0eb390de6e2e35654a7c67c065a45f4abaa00f373"
+  },
+  "source_card_ids": [
+    104,
+    112,
+    646,
+    647,
+    648,
+    860,
+    1079,
+    1086
+  ],
+  "source_scope": "Static local card-text/deck review, not engine execution or an observed match. Organizer card data is not redistributed.",
+  "recommended_caption": "Entered-deck resource map, not a single-turn script. Evolution timing still applies; Froslass acts between turns. Existing friendly damage enables transfer before the attack. [7]",
+  "mechanics_qualifications": [
+    "Poffin can search at most two Basics with 70 HP or less. Both depicted Basics have 70 HP.",
+    "Impidimp uses Rare Candy or the Morgrem evolution route; normal evolution and Rare Candy timing restrictions apply.",
+    "Punk Up triggers when Grimmsnarl ex is played from hand to evolve during the turn, and attaches at most five Basic Darkness from the deck to Marnie Pokémon.",
+    "Froslass acts during Checkup on Ability Pokémon on both sides except every Froslass.",
+    "The Froslass-to-Munkidori arrow represents friendly damage being available; it is not a same-turn Checkup action or a requirement that damage come from Froslass.",
+    "A Darkness-equipped Munkidori can transfer at most three damage counters from one friendly Pokémon to one opposing Pokémon once during the turn.",
+    "Transfer precedes Shadow Bullet because attacking ends the turn. Attack numbers are printed damage before applicable modifications.",
+    "The attachment footer is a strategic resource tradeoff, not a claim about the policy choices observed in games."
+  ],
+  "files": {
+    "FIGURE-2-DECK-ENGINE.png": "35979c6a170f3deb489182ddcb08f297333bdefea2486329cf7ce45577d2de34",
+    "FIGURE-2-DECK-ENGINE.svg": "146fa9b9af007b29d25b7dd0b8549c8739fc9142d1ee610d90810bc2e36907cf"
+  },
+  "new_games": 0,
+  "new_training": 0
+}

@@ -1,5 +1,12 @@
 # Current report figures
 
-[Figure 1](01-research-factory.png) maps research questions to evidence and next decisions. [Figure 2](02-matchup-results.png) pairs absolute scores with conditional intervention effects across seven opponents. Both are original project diagrams/charts with text at least 9 points when placed at 507 PDF points wide. [Vector 1](01-research-factory.svg) · [Vector 2](02-matchup-results.svg).
+All four original figures use Arial, 507-point report width and at least 9-point labels.
 
-The [article](../STRATEGY-WRITEUP.md) contains captions and interpretation limits; [source notes](../current-evidence/SOURCE-NOTES.md) supply methods and provenance. The dashed student path is future work. Counter intervals describe these implementations and the stated independence assumptions. No new games or training were run to create these visuals.
+| Figure | PNG | SVG | Purpose |
+|---|---|---|---|
+| 1 | [Fleet investigation](01-research-factory.png) | [Vector](01-research-factory.svg) | Checks and repairs preserve a comparison. |
+| 2 | [Entered deck](02-deck-engine.png) | [Vector](02-deck-engine.svg) | Setup, Energy allocation and counter conversion. |
+| 3 | [Development grid](03-development-results.png) | [Vector](03-development-results.svg) | Separate pooled estimates and single-batch interaction. |
+| 4 | [Matchup results](04-matchup-results.png) | [Vector](04-matchup-results.svg) | Absolute scores and conditional effects across seven opponents. |
+
+[Article and captions](../STRATEGY-WRITEUP.md) · [Source map](../current-evidence/visual-evidence/README.md). The old 02-matchup-results URLs are compatibility aliases to the current Figure 4. No new games or training. The research loop is distinct from unfinished retained player learning.

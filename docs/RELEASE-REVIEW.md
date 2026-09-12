@@ -1,7 +1,7 @@
-# Current editorial refinement
+# Visual enhancement release
 
-This revision builds on public `013343ab3c91b90bbd81e4152d31184f07193f85` after independent adjudication of an external review. Entry identity now precedes the experimental headline; the entered deck has a concrete development and damage-placement plan, correct action timing and a source-linked initial selection rationale. The article names the current v2 architecture precisely. Both figures, all plotted values and the factory-centered premise remain unchanged.
+This revision follows public `15e3fd5ef94480dfe12819441f5f8b9e4b7c1531`. Four original figures and one two-cache table make the operated research case, entered deck and numerical comparisons visible. Prose repeated by those visuals is compressed; the factory premise, attribution and evidence limits remain. Arial unifies body and figures.
 
-The added historical sensitivity supplement preserves a separate estimand and variance convention; it does not replace the current seven-cell chart. The model-size declaration fills a small source-excerpt gap without rewriting original evidence. Counter arithmetic, representation probes and player-runtime evidence keep their distinct scopes.
+The development grid contains differently pooled card/rule/combined contrasts, each with its comparison count. Its interaction is explicitly a separate single-batch calculation. All seven panel estimates remain unchanged. No zero-effect, equivalence, broad preregistration or integrated retained-learning claim is introduced.
 
-Conservative count: 1,921 including figure text; 1,962 with extra hyphen splitting. Current report, guide, figures and evidence ZIP are synchronized. The earlier release remains in Git history. No live Kaggle changes, new games or training occurred.
+Count: 1,881 including figure text; 1,929 with extra hyphen splitting. Report, guide, figures, evidence ZIP and source map are synchronized. Historical numerical/source bytes are preserved. No live Kaggle changes, games or training occurred.

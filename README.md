@@ -8,7 +8,7 @@ I am Jonathan Simone. Over roughly sixty days, I directed AI research and coding
 
 [**Read the report**](docs/STRATEGY-WRITEUP.md) · [Report PDF](docs/downloads/FINAL-REPORT.pdf) · [Evidence guide](docs/downloads/EVIDENCE-GUIDE.pdf) · [Portable evidence ZIP](docs/downloads/PTCG-EVIDENCE.zip)
 
-[![Research questions, evidence and lessons informing the next decision](docs/current-figures/01-research-factory.png)](docs/STRATEGY-WRITEUP.md)
+[![A documented Fleet comparison: checking, repairing and retaining evidence](docs/current-figures/01-research-factory.png)](docs/STRATEGY-WRITEUP.md)
 
 ## Follow a discovery
 
