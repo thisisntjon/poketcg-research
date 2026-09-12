@@ -1,0 +1,126 @@
+{
+  "schema": "recycler_source_manifest/v1",
+  "inspected_repository_head": "2cdd813c8d8009f125b61f81c9d7ec6cfe914d04",
+  "source_identity_note": "Git blob IDs identify committed originals; SHA-256 records inspected original file bytes. Neither establishes historical runtime custody. Original private repository is not an access dependency.",
+  "release_boundary": "Authored explanations, historical count receipts, configuration summaries and portable checker only. No full deck lists, organizer card database, engine, secrets or raw replay files.",
+  "sources": [
+    {
+      "source_id": "R01",
+      "description": "September 3 Stage 1 preregistration",
+      "original_name": "PREREG.md",
+      "original_file_sha256": "947b182afdd19b9228cda6c5972eae55df09dcb0190cff4244aafa6556cef85b",
+      "original_file_bytes": 4826,
+      "git_blob_id": "19cecae0fe3333096f8c692fb4159660c483a148",
+      "exported_receipt": "SOURCES.md",
+      "export_form": "authored summary and limited count transcription; original full document not redistributed"
+    },
+    {
+      "source_id": "R02",
+      "description": "September 3 Stage 1 result",
+      "original_name": "RESULT.md",
+      "original_file_sha256": "c6c781e0072841d5d291969e213daef55f846bf13423ee2157f932ae4140c789",
+      "original_file_bytes": 4311,
+      "git_blob_id": "d83ab1cd59742695738e14272f7e39f33947d213",
+      "exported_receipt": "SOURCES.md",
+      "export_form": "authored summary and limited count transcription; original full document not redistributed"
+    },
+    {
+      "source_id": "R03",
+      "description": "September 3 Stage 2 result and adjudication",
+      "original_name": "STAGE2-RESULT.md",
+      "original_file_sha256": "2d7a7f9780ada13db35707e19387b3380e5c19cbc482b215392e16b9ce3ef85a",
+      "original_file_bytes": 10171,
+      "git_blob_id": "be800c3df0b4e2ab3e8c3b15d1c0e3aa9e16bc48",
+      "exported_receipt": "SOURCES.md",
+      "export_form": "authored summary and limited count transcription; original full document not redistributed"
+    },
+    {
+      "source_id": "R04",
+      "description": "Original control deck file; authored summary only",
+      "original_name": "deck_A.csv",
+      "original_file_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+      "original_file_bytes": 241,
+      "git_blob_id": "d1d3602207eb8c3697b75cdfb58811b9d78c6c6b",
+      "exported_receipt": "SOURCES.md",
+      "export_form": "authored summary and limited count transcription; original full document not redistributed"
+    },
+    {
+      "source_id": "R05",
+      "description": "Original treatment deck file; authored summary only",
+      "original_name": "deck_E.csv",
+      "original_file_sha256": "1d9b7273a903db44816a5c7c66ba4eeb36041529a88a70b5b8850f13ee91c761",
+      "original_file_bytes": 241,
+      "git_blob_id": "1e52f9c75b3e73961c5b62ed23e69c1c4f4aeea9",
+      "exported_receipt": "SOURCES.md",
+      "export_form": "authored summary and limited count transcription; original full document not redistributed"
+    },
+    {
+      "source_id": "R06",
+      "description": "September 11 battle-evidence source review",
+      "original_name": "03-battle-evidence.md",
+      "original_file_sha256": "8219eac6841143f497a499fea2346ceffe3973cbf5222daf0130dfe1a2506d73",
+      "original_file_bytes": 9564,
+      "git_blob_id": "ae2b1a98a3eac597fa962b400838467c64405d5b",
+      "exported_receipt": "SOURCES.md",
+      "export_form": "authored summary and limited count transcription; original full document not redistributed"
+    },
+    {
+      "source_id": "R07",
+      "description": "Attempt ledger GR-43 historical investigator attribution",
+      "original_name": "ATTEMPTS-LEDGER.md",
+      "original_file_sha256": "9ceab8705782fb965bda2747c06fbdc64359adff8b4b586d2f6fdcf2ab31b967",
+      "original_file_bytes": 277421,
+      "git_blob_id": "8be250fd685d331f9c6e6d1990faccbb85939ca0",
+      "exported_receipt": "SOURCES.md",
+      "export_form": "authored summary and limited count transcription; original full document not redistributed"
+    }
+  ],
+  "exports": [
+    {
+      "file": "README.md",
+      "sha256": "c7f74f5e9a70e827e360d1eacdd460726e1299690bcf7b59575ffc26239b303e",
+      "bytes": 9078
+    },
+    {
+      "file": "SOURCES.md",
+      "sha256": "16bdb5c7f0261628574dc2d7953e10713e034a41149806ccdcfd89182d24cf21",
+      "bytes": 6178
+    },
+    {
+      "file": "BODY-PARAGRAPH.md",
+      "sha256": "1aabc0d611f27e67f2af511bcca6ac99a6f88b8c6d8798ea54a9a61b687a8464",
+      "bytes": 1463
+    },
+    {
+      "file": "aggregates.json",
+      "sha256": "fa14d5f33bba96f800dbc4b69640ddfe673f8b1f0ad129072913a9782048a8ec",
+      "bytes": 3552
+    },
+    {
+      "file": "identities.json",
+      "sha256": "741691f1b4f063922bf63dd5fc0faa7e2bdd1fae1150d52956d425500123814a",
+      "bytes": 2641
+    },
+    {
+      "file": "expected-results.json",
+      "sha256": "da32eac42bcc3a5ce42a2f01c41fe8729c378e5ff19cb3809ffd6c42a9b28073",
+      "bytes": 742
+    },
+    {
+      "file": "verify_case.py",
+      "sha256": "c1800d296f33d8bdafcc5695705269d41011375b2b19addebc939d75e734a082",
+      "bytes": 8195
+    },
+    {
+      "file": "verify.py",
+      "sha256": "c0c36281b87d617f1224d7736eb625cfc0792afaadaac99935dce3c1d4cc6386",
+      "bytes": 189
+    }
+  ],
+  "unhashed_by_design": [
+    "SOURCE-MANIFEST.json",
+    "CHECK-OUTPUT.json"
+  ],
+  "hash_design": "Manifest cannot hash itself. CHECK-OUTPUT.json records a run against this manifest and is hashed by the enclosing release manifest.",
+  "portable_command": "python -X utf8 verify.py"
+}

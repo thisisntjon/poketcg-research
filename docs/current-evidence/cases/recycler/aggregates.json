@@ -1,0 +1,127 @@
+{
+  "schema": "recycler_aggregate_case/v1",
+  "outcome_convention": "wins_divided_by_decided; exclude undecided; no half-draw scoring",
+  "undecided_custody": "Stage 2 original receipt does not separately classify draws and other undecided outcomes.",
+  "method": {
+    "id": "independent_arm_binomial_normal",
+    "z": 1.96,
+    "paired_covariance": false,
+    "panel_variance": "aggregate binomial approximation; per-cell count variance unavailable"
+  },
+  "contrasts": [
+    {
+      "id": "stage1_first_target_batch",
+      "source_id": "R02",
+      "evidence_level": "recounted_historical_aggregate_counts",
+      "stage": 1,
+      "opponents": [
+        "prvsiyan_844_router"
+      ],
+      "control": {
+        "arm_id": "A",
+        "attempts": 1000,
+        "decided": 1000,
+        "wins": 335,
+        "undecided": 0,
+        "reported_errors": 0
+      },
+      "treatment": {
+        "arm_id": "E",
+        "attempts": 1000,
+        "decided": 1000,
+        "wins": 408,
+        "undecided": 0,
+        "reported_errors": 0
+      }
+    },
+    {
+      "id": "stage2_wider_panel",
+      "source_id": "R03",
+      "evidence_level": "recounted_historical_aggregate_counts",
+      "stage": 2,
+      "opponents": [
+        "aristophanivan_940",
+        "prvsiyan_844_router",
+        "prvsiyan_alakazam_v12",
+        "prvsiyan_alakazam_v8",
+        "romanrozen_v13"
+      ],
+      "control": {
+        "arm_id": "A",
+        "attempts": 5000,
+        "decided": 4996,
+        "wins": 2135,
+        "undecided": 4,
+        "reported_errors": 0
+      },
+      "treatment": {
+        "arm_id": "E",
+        "attempts": 5000,
+        "decided": 4996,
+        "wins": 2081,
+        "undecided": 4,
+        "reported_errors": 0
+      }
+    }
+  ],
+  "stage1_endings": {
+    "source_id": "R02",
+    "control": {
+      "deckout_losses": 664,
+      "all_deckouts": 665,
+      "prize_wins": 202
+    },
+    "treatment": {
+      "deckout_losses": 592,
+      "all_deckouts": 595,
+      "prize_wins": 253
+    }
+  },
+  "stage_membership": {
+    "stage1_target_attempts": 2000,
+    "stage2_target_attempts": 2000,
+    "stage2_total_attempts": 10000,
+    "target_pool_and_stage2_panel_overlap_attempts": 2000,
+    "unique_total_attempts": 12000,
+    "unique_total_decided": 11992
+  },
+  "historical_only": {
+    "evidence_level": "receipt_only_not_numerically_verified",
+    "source_id": "R03",
+    "excluded_from_headlines_and_plots": true,
+    "stage2_target": {
+      "reported_control_pct": 36.14,
+      "reported_treatment_pct": 39.2,
+      "reported_delta_pp": 3.06,
+      "reported_ci95_pp": [
+        -1.18,
+        7.31
+      ],
+      "reported_denominator_notation": "999/1000 per arm",
+      "exact_wins": null
+    },
+    "target_pool": {
+      "reported_decided_total": 3999,
+      "reported_delta_pp": 5.18,
+      "reported_ci95_pp": [
+        2.19,
+        8.18
+      ],
+      "equal_weight_adjudication_ci95_pp": [
+        2.19,
+        8.17
+      ],
+      "exact_wins": null,
+      "method_reconciled": false
+    },
+    "candidate_pool_from_later_review": {
+      "source_id": "R06",
+      "control_wins": 696,
+      "control_decided": 1999,
+      "treatment_wins": 800,
+      "treatment_decided": 2000,
+      "status": "not adopted as recovered observations; later review cites same original receipts"
+    },
+    "per_cell_rounding_note": "Stage 2 table in SOURCES.md is receipt-only; no per-cell counts inferred."
+  }
+}

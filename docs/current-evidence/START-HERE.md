@@ -1,8 +1,7 @@
 # Start here: The Fleet
 
-1. Read [the report](REPORT.md) or [the PDF](FINAL-REPORT.pdf).
-2. Open [Factory in action](factory/cases/FACTORY-IN-ACTION.md): five documented research cycles and the decisions they changed.
-3. Inspect [original components](factory/proofs/ORIGINAL-COMPONENTS.md) and [two runnable demonstrations](factory/proofs/README.md).
-4. Follow [all eight references](SOURCE-NOTES.md), inspect [contributions](CONTRIBUTIONS.md), or [reproduce the game-result arithmetic](REPRODUCING.md).
+Read the [current report](REPORT.md), [report PDF](FINAL-REPORT.pdf) or [evidence guide](EVIDENCE-GUIDE.md). The report follows three strategy experiments: the [counter evidence](numerical/METHODS.md), [Energy Recycler](cases/recycler/README.md) and [knockout priority](cases/ko/README.md).
 
-Current article, figures and source notes are at this package's root. `historical/` preserves earlier materials unchanged as provenance; their titles, reference numbering, figures and limits apply to those earlier versions. Current manifests bind the current files. This is selected evidence, not the complete private repository or a complete trained-player release. See [NOTICE.txt](NOTICE.txt).
+[Source notes](SOURCE-NOTES.md) bind claims and limitations. [Figure sources](visual-evidence/README.md), [original components](factory/proofs/ORIGINAL-COMPONENTS.md), [research cases](factory/cases/FACTORY-IN-ACTION.md) and [reproduction commands](REPRODUCING.md) give deeper routes.
+
+`historical/` preserves prior releases and source history unchanged. Earlier titles, claims and figure numbering describe those earlier versions. This selected evidence export does not recreate the complete private runtime, original games or training. See [NOTICE.txt](NOTICE.txt).

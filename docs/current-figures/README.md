@@ -1,12 +1,7 @@
-# Current report figures
+# Current article figures
 
-All four original figures use Arial, 507-point report width and at least 9-point labels.
+- [FIGURE-1-DECK-ENGINE](FIGURE-1-DECK-ENGINE.png): Entered deck resource relationships, not a recorded turn or newly learned tactic.
+- [FIGURE-2-COUNTER-MATCHUPS](FIGURE-2-COUNTER-MATCHUPS.png): Counter seven-implementation half-draw panel, distinct from the KO panel.
+- [FIGURE-3-KNOCKOUT-MATCHUPS](FIGURE-3-KNOCKOUT-MATCHUPS.png): ko_priority_seven_implementations_20260904_8400
 
-| Figure | PNG | SVG | Purpose |
-|---|---|---|---|
-| 1 | [Fleet investigation](01-research-factory.png) | [Vector](01-research-factory.svg) | Checks and repairs preserve a comparison. |
-| 2 | [Entered deck](02-deck-engine.png) | [Vector](02-deck-engine.svg) | Setup, Energy allocation and counter conversion. |
-| 3 | [Development grid](03-development-results.png) | [Vector](03-development-results.svg) | Separate pooled estimates and single-batch interaction. |
-| 4 | [Matchup results](04-matchup-results.png) | [Vector](04-matchup-results.svg) | Absolute scores and conditional effects across seven opponents. |
-
-[Article and captions](../STRATEGY-WRITEUP.md) · [Source map](../current-evidence/visual-evidence/README.md). The old 02-matchup-results URLs are compatibility aliases to the current Figure 4. No new games or training. The research loop is distinct from unfinished retained player learning.
+[Article](../STRATEGY-WRITEUP.md) · [Source metadata](../current-evidence/visual-evidence/FIGURES.json). Earlier figure URLs are retained as historical compatibility routes.

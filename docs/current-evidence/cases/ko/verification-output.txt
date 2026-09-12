@@ -1,0 +1,10 @@
+Dataset: ko_priority_seven_implementations_20260904_8400
+tetsutani c61: ON-OFF -1.08 pp; approximate 95% CI [-6.67, +4.50]
+prvsiyan Static-Deck Tusk v24: ON-OFF +14.33 pp; approximate 95% CI [+8.84, +19.82]
+dedquoc Rule-Based Engine: ON-OFF -0.50 pp; approximate 95% CI [-2.41, +1.41]
+raunakdey07 Advanced Heuristic: ON-OFF -0.50 pp; approximate 95% CI [-6.04, +5.04]
+penguin069 Public Scores 915: ON-OFF -11.58 pp; approximate 95% CI [-17.13, -6.04]
+aristophanivan 2plyexpectimax: ON-OFF -7.42 pp; approximate 95% CI [-12.87, -1.96]
+pixiux Mega Lucario v62: ON-OFF -7.75 pp; approximate 95% CI [-13.26, -2.24]
+PASS: 8,400 rows; 7 cells; 600 games/arm/cell; 300/seat; all W/L/D counts, score means, sample variances, intervals, figure values and local hashes agree.
+Scope: retained outcome recount and exported identity-receipt consistency; historical runtime, random-seed independence, decision causality and opponent-source custody are not replayed or certified.

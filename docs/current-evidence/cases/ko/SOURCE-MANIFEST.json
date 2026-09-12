@@ -1,0 +1,306 @@
+{
+  "schema": "ko-source-manifest/v1",
+  "dataset_id": "ko_priority_seven_implementations_20260904_8400",
+  "prepared_date": "2026-09-12",
+  "source_checkout_commit": "2cdd813c8d8009f125b61f81c9d7ec6cfe914d04",
+  "source_host": "SKYNET",
+  "source_boundary": "Only derived outcome fields and authored summaries redistributed; original source locators are provenance, not runtime dependencies.",
+  "source_files": [
+    {
+      "kind": "prior-recovery receipt or export",
+      "locator": "workflow/research/2026-09-11-submission-polish/premise-challenge/KO-PANEL.md",
+      "sha256": "e16c996a54544d52c8c4ce7bf09a69af8160e1c5382ce97cde4a30cbed501a26",
+      "bytes": 2194,
+      "redistributed": false
+    },
+    {
+      "kind": "prior-recovery receipt or export",
+      "locator": "workflow/research/2026-09-11-submission-polish/premise-challenge/KO-PANEL.json",
+      "sha256": "33d2f0b4efbe7acf2227b6d4b6c0ae382602ad4d0ae832da21a2182ea9cfded3",
+      "bytes": 18013,
+      "redistributed": false
+    },
+    {
+      "kind": "prior-recovery receipt or export",
+      "locator": "workflow/research/2026-09-11-submission-polish/premise-challenge/ko-panel-outcomes.csv",
+      "sha256": "4df7111861d2764f02cd3dcd6729532f949524a2aa8221c0ad9c3cfe30ff919f",
+      "bytes": 586045,
+      "redistributed": false
+    },
+    {
+      "kind": "prior-recovery receipt or export",
+      "locator": "workflow/research/2026-09-11-submission-polish/premise-challenge/LOCAL-DISCOVERIES.md",
+      "sha256": "4942804fb9c97889a64e13c3274b9c6834d0f7169f1a269dab041c7c675ca562",
+      "bytes": 6321,
+      "redistributed": false
+    },
+    {
+      "kind": "prior-recovery receipt or export",
+      "locator": "workflow/research/2026-09-11-submission-polish/premise-challenge/check_ko_panel.py",
+      "sha256": "f262e49cd2ee77ab00b6e3e8628e0683be0fb066780c4e439a2bfb9caf95630e",
+      "bytes": 6094,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-004458-KOFLAG-A_off-tb_c61e540b_tetsutani_grimmsnarl-ex-dama.json",
+      "sha256": "6d00a2f260ce0df68e6d99a5fd18ca1c09095b86bf091c1fee56cde16eff5852",
+      "bytes": 42733,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/A_off__tb_c61e540b_tetsutani_grimmsnarl-ex-dama.games.jsonl",
+      "sha256": "3be2042c77f74d064f6fe0f1265adee087d082c59a3d73b2d193e70bba122501",
+      "bytes": 1009063,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-004716-KOFLAG-B_on-tb_c61e540b_tetsutani_grimmsnarl-ex-dama.json",
+      "sha256": "e5dba1aef2131e7ba2c48a8da4ab57eea43a04431611fb86d6a6d80f1d92a784",
+      "bytes": 42660,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/B_on__tb_c61e540b_tetsutani_grimmsnarl-ex-dama.games.jsonl",
+      "sha256": "c3d78498cb9c4b366faff6411c98ab3756ce91cf2d10c134b43dcc1ea853d76d",
+      "bytes": 1009159,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-004934-KOFLAG-A_off-tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-stat.json",
+      "sha256": "672ace9ae73691011b0aff5d9d32191b3874ba1e8deac3bd2fa436526ed10428",
+      "bytes": 42921,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/A_off__tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-stat.games.jsonl",
+      "sha256": "764677a81e63a77133f0dc7d3593a776ff968403b1604ed7f45ce72d9e9593c7",
+      "bytes": 1006398,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-005005-KOFLAG-B_on-tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-stat.json",
+      "sha256": "dc04ad758266fe1fa8511e5aa62aaab520919d6200f34ffb5537475b6d4e1c4f",
+      "bytes": 43097,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/B_on__tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-stat.games.jsonl",
+      "sha256": "1447de9f739c7a6d600d244213400e552169df4ae7d0ed4657db8f84cb821c3a",
+      "bytes": 1007321,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-005034-KOFLAG-A_off-tb_39927049_dedquoc_the-pok-mon-rule-bas.json",
+      "sha256": "8b1a544f5a13b6434041f9998f572458998769318f97761cc7b5ab26e0d21c66",
+      "bytes": 43140,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/A_off__tb_39927049_dedquoc_the-pok-mon-rule-bas.games.jsonl",
+      "sha256": "bd46962b865b557c3a9641718291d99f962543c62efa2344b6bf025d269a617f",
+      "bytes": 1006295,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-005101-KOFLAG-B_on-tb_39927049_dedquoc_the-pok-mon-rule-bas.json",
+      "sha256": "503c6eae76996b048200ed8ccf96e7dd969f44ecc1d166401204f101bd30f317",
+      "bytes": 43268,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/B_on__tb_39927049_dedquoc_the-pok-mon-rule-bas.games.jsonl",
+      "sha256": "f85e095d58f96d4ec0c05a89252b0f7d7f366a19f03aaf63630ff30a8007d55f",
+      "bytes": 1006367,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-005127-KOFLAG-A_off-tb_64e9991a_raunakdey07_pok-mon-tcg-adva.json",
+      "sha256": "f7c6db27258cb50bbc76aa547cd6ddb7af92f5d47be6f7a63073b5c794c77509",
+      "bytes": 42906,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/A_off__tb_64e9991a_raunakdey07_pok-mon-tcg-adva.games.jsonl",
+      "sha256": "0b7fb0fdfe6c5bb8c5d335e80afcc8a1e9d173c5893f03a82c8b3d8727983864",
+      "bytes": 1008755,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-005400-KOFLAG-B_on-tb_64e9991a_raunakdey07_pok-mon-tcg-adva.json",
+      "sha256": "9ed314465fbfe1eadcd0ce0da873cb00e2adef8c9d19a44bc1c634d82798a2ba",
+      "bytes": 43306,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/B_on__tb_64e9991a_raunakdey07_pok-mon-tcg-adva.games.jsonl",
+      "sha256": "6885ae5b72b239710c4631177212ab7c71c08f494f90226959b3c9fe7c818ac7",
+      "bytes": 1008801,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-005637-KOFLAG-A_off-tb_8026b86b_penguin069_public-scores-915.json",
+      "sha256": "2961ad15e4ded4ab681f3878d92d0369ba5e63c922380ca99cd3576eeb540782",
+      "bytes": 43553,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/A_off__tb_8026b86b_penguin069_public-scores-915.games.jsonl",
+      "sha256": "ce8749dd2556a6055c1722875c0e64b425f2f3627d561fe520854d1f5aac5b5e",
+      "bytes": 997452,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-005704-KOFLAG-B_on-tb_8026b86b_penguin069_public-scores-915.json",
+      "sha256": "7e3c7fb16f8e68e690bb67db0a4d9d95b2aa602d2f5bd62239e217753869f316",
+      "bytes": 43723,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/B_on__tb_8026b86b_penguin069_public-scores-915.games.jsonl",
+      "sha256": "c483e7dbad0a3c48a192c8d6578c1e6ec7b424ed8566b2144b4d8cf337415405",
+      "bytes": 997380,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-005731-KOFLAG-A_off-tb_96cac124_aristophanivan_2plyexpectima.json",
+      "sha256": "3283eccafabfa86b859bd3a654bcbfa3d4f76320059016ab6fbf58fefaf3d7ff",
+      "bytes": 43783,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/A_off__tb_96cac124_aristophanivan_2plyexpectima.games.jsonl",
+      "sha256": "e11c13919028bff72f6cde14b0ed1e97712fb0e8d1baa74cf04a7215ba1c9592",
+      "bytes": 998227,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-005800-KOFLAG-B_on-tb_96cac124_aristophanivan_2plyexpectima.json",
+      "sha256": "4f16ba9db3c0378d59ba9cf5ff8b22bcb3a3b3ec3513d1bf1f6d686453ae05d8",
+      "bytes": 43958,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/B_on__tb_96cac124_aristophanivan_2plyexpectima.games.jsonl",
+      "sha256": "eea1187f93b0eb6bff604b1a7d23ab081218b97e3c62fd65af9705b471884fe0",
+      "bytes": 998354,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-005826-KOFLAG-A_off-tb_887f651a_pixiux_ptcg-mega-lucario-ex-.json",
+      "sha256": "3f4b4d77a69d8e690a5c8ca1f2526b4541968bf3ab7bd33b8e80aac66f1bfb93",
+      "bytes": 44046,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/A_off__tb_887f651a_pixiux_ptcg-mega-lucario-ex-.games.jsonl",
+      "sha256": "9f761fdf0dddd2e33168a4cf789494221420556f5372098353a68e880f5375de",
+      "bytes": 999495,
+      "redistributed": false
+    },
+    {
+      "kind": "historical eval metadata",
+      "locator": "ptcg-agent/experiments/eval/20260904-005854-KOFLAG-B_on-tb_887f651a_pixiux_ptcg-mega-lucario-ex-.json",
+      "sha256": "dff85e0d695288523b55b386f6bb9c1a10e9a36f2562b5f7ff9f92474483714f",
+      "bytes": 44174,
+      "redistributed": false
+    },
+    {
+      "kind": "original retained outcome JSONL",
+      "locator": "SKYNET:koflag/B_on__tb_887f651a_pixiux_ptcg-mega-lucario-ex-.games.jsonl",
+      "sha256": "10782a4eb46583ba439fd071694a018e87b9384e5a630affe6d801fe5d668e7a",
+      "bytes": 999495,
+      "redistributed": false
+    }
+  ],
+  "git_source_files": {
+    "ptcg-agent/agent/rules_lucario.py": {
+      "git_blob_sha256": "5894f922b4e7ab3bfeeac3342d917a5242897125c9e5087f8f712442f09a5884",
+      "git_blob_oid": "0621faaedc22d1393807100d4d6c861e552a8b91"
+    },
+    "ptcg-agent/agent/main.py": {
+      "git_blob_sha256": "32f6a669f970964ab850cf9af6a7a4511dcd2fd8c119f09d7b484ee4058381f4",
+      "git_blob_oid": "7bfb3ca335fc97dd7673543ecc9b210a5546debd"
+    },
+    "ptcg-agent/agent/config.py": {
+      "git_blob_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+      "git_blob_oid": "f6bc70c1f42e0d118cb3ca923a67b5835a4cdc35"
+    },
+    "ptcg-agent/harness/eval.py": {
+      "git_blob_sha256": "da272ea9ccb73317d32ef5b50a0feb59a1f3c768ad43f2cae910f7f732d7aaf6",
+      "git_blob_oid": "8a0dd13000f2e188bff77f3eefb14c77eaba6b3d"
+    },
+    "ptcg-agent/harness/run_koflag_screen.py": {
+      "git_blob_sha256": "622328a98e8e12e547e2f131e53a3a0a133df194cbe773f19ae4260b383caf38",
+      "git_blob_oid": "cde5f6d090a8d919d0d59add7cffd4145eb48fc2"
+    },
+    "workflow/unconstrained-agent/PREREG-ko-flag-live-screen.md": {
+      "git_blob_sha256": "545bf7be39302689182425605f8ea2dc01e2f921b7dbd4bb0abe1fb313eaedb4",
+      "git_blob_oid": "a654ed9dafc9f6ce77f0e2f933272e2304983c19"
+    }
+  },
+  "exported_files": {
+    "outcomes.csv": {
+      "sha256": "4df7111861d2764f02cd3dcd6729532f949524a2aa8221c0ad9c3cfe30ff919f",
+      "bytes": 586045
+    },
+    "aggregates.json": {
+      "sha256": "fe63554e3db9b87aa0bf4c690dbb2ae5f1a83476be1e2829ba38ca2ac2382b4f",
+      "bytes": 6682
+    },
+    "identities.json": {
+      "sha256": "7696a2ae39bee0ea3e2ce72eb9eac992ffc9ade2d42bf2f53cee468b3b06c212",
+      "bytes": 34272
+    },
+    "figure-input.json": {
+      "sha256": "d30a4bed51919c4c1aa31ea015ea9a45aaddda182e6518081354b6e409d7cdfc",
+      "bytes": 3035
+    },
+    "CLAIM-CONTRACT.json": {
+      "sha256": "3423b4299de9bd8e6908f82234ecf5105abc68366d2c14af7bb6db2a81a04d9b",
+      "bytes": 7376
+    },
+    "README.md": {
+      "sha256": "954f2f9dfe0fc5e38a35724de5b50183d1c780c407c712d96e54f75fe7b52bb6",
+      "bytes": 7907
+    },
+    "BODY-PARAGRAPH.md": {
+      "sha256": "f65687195adc7b2a4b680cbca02a1b4eaecac04472ee5acd611497e037150bf4",
+      "bytes": 1094
+    },
+    "verify_case.py": {
+      "sha256": "087be2e0ecd09beaf172a74b18534e1e3dadd210ec952218db8ff03d40a6b4e9",
+      "bytes": 9247
+    },
+    "verify.py": {
+      "sha256": "0e80f498aa264a5121a2fa57db9cec78e46abc1b0cfdc01dbcc8ec1521a2cfbf",
+      "bytes": 230
+    }
+  },
+  "manifest_exclusions": "This manifest and verification-output.txt are excluded to avoid self-referential hashes. The enclosing release manifest must hash both. The root KO-CLAIM-CONTRACT.json is byte-identical to the local CLAIM-CONTRACT.json."
+}

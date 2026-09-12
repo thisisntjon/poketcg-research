@@ -1,34 +1,33 @@
 # The Fleet: evidence guide
 
-**A short route from the report to the research behind it.** Jonathan Simone.
+**Jonathan Simone · Pokémon TCG AI Battle Challenge Strategy**
 
-The report contains four figures and a two-cache table. **SOURCE-NOTES.md** and **visual-evidence/README.md** map claims to evidence; **Factory in action** contains five research cases. The [public repository](https://github.com/thisisntjon/poketcg-research) carries the same evidence.
+The report follows three game-strategy experiments, the entered deck and a separate learning branch. This package lets a reader inspect the argument, reproduce saved-result arithmetic and distinguish those checks from historical gameplay.
 
-## Follow a claim
+## Start with the strategic decisions
 
-| Report reference | What to inspect | Where inside the evidence ZIP |
+| Case | Question and supported result | Start here |
 |---|---|---|
-| [1] Fleet operation | Roles; stopped and repaired two-machine comparison | factory/cases/FACTORY-IN-ACTION.md |
-| [2] Policy dissection | V13 disagreements; project modules; seven-transition replay probe | factory/cases/sources/04–06 files |
-| [3] Labeling | Loss consumer; 46 drafts; eight-case enrichment and unchanged original weights | factory/cases/labeling-aggregates.json |
-| [4] Representation | Two caches, twelve retained rows; capacity and imitation limits | factory/proofs/representation/README.md |
-| [5] Learning | Hash-v1 closure, v2 interface, runnable decoder, historical teacher/student result | factory/proofs/README.md and SOURCE-NOTES.md |
-| [6] Counter | Factorial, three combined comparisons, all seven matchups, c61 follow-up | numerical/METHODS.md |
-| [7] Entry and deck | Credited submitted player, dated score, retention review and mechanics | source-evidence/receipts/ and SOURCE-NOTES.md |
-| [8] Memory | 2,333-artifact snapshot; audit recovery, reader repair | SOURCE-NOTES.md and factory/cases/sources/10–13 files |
+| Hand disruption and targeting | Separate card/rule changes; large counter gains in two tested Alakazam cells, broader benefit unresolved. | [Counter methods](numerical/METHODS.md) |
+| Energy recovery | One search slot becomes recovery. First target batch improves; the wider panel does not establish improvement. | [Recycler case](cases/recycler/README.md) |
+| Knockout priority | One large scoring bonus produces opposite effects across seven implementations. A universal upgrade is unsupported. | [KO case](cases/ko/README.md) |
+| Entered player and deck | Tetsutani's public c61 is the unmodified entry. Its score is separate from every research result. | [Source notes, reference 7](SOURCE-NOTES.md) |
+| Owned learning components | Source/target option features, recurrence and sequential STOP; seven prescribed-score checks, with competitive learning still unfinished. | [Original components](factory/proofs/ORIGINAL-COMPONENTS.md) |
 
-## Three different checks
+## Recount the results
 
-**Game-result arithmetic:** From the extracted ZIP folder, run `python numerical/verify_results.py --output verified-results.json`. Python 3.10+; standard library only. Checks hashes and cohorts, then recounts 28,000 development, 8,400 panel, 16,000 c61-follow-up and 1,203 student records.
+From the extracted archive, the following checks use Python's standard library and no game engine:
 
-**Representation arithmetic:** Run `python factory/proofs/representation/verify.py`. Standard library only. Checks twelve retained run rows across two caches, paired counts and metadata; recalculates both historical imitation comparisons.
+```text
+python -X utf8 numerical/verify_results.py
+python -X utf8 cases/recycler/verify.py
+python -X utf8 cases/ko/verify.py
+```
 
-**Selection mechanics:** Run `python factory/proofs/selection/selection_demo.py`. Requires PyTorch. Seven prescribed-score checks run on CPU, without a trained model, game engine, GPU or network.
+See [REPRODUCING.md](REPRODUCING.md) for exact invocation details, remaining source/representation/sensitivity checks and the optional CPU PyTorch selection demonstration. Counter and KO arithmetic uses exported terminal outcome rows. Recovery arithmetic uses exported historical aggregate receipts; original game rows were not recovered. No command above replays games or trains a model.
 
-These checks answer different questions. They do not replay historical matches, retrain the representation probe or establish tactical quality. Source manifests make the selected excerpts inspectable; they do not supply the private project's complete runtime.
+## Follow the research process
 
-## Attribution and boundaries
+[Five traced research cases](factory/cases/FACTORY-IN-ACTION.md) show policy investigation, labeling, review/repair and research memory. [SOURCE-NOTES.md](SOURCE-NOTES.md) connects report references to source excerpts, identities, methods and limitations. [CONTRIBUTIONS.md](CONTRIBUTIONS.md) separates original work, public foundations and future integration.
 
-Tetsutani's unmodified public c61 Grimmsnarl player is the Simulation entry, teacher and comparator. The experimental learner is a different artifact. The Lucario experiment modifies makthanithin's Apache-2.0 community_1084 policy. Roman Rozen's V13 policy supplied material for the disagreement study and the second recorded teacher cache. Public implementations remain credited foundations.
-
-The factory operated through documented research cycles. Repeated retained improvement in an integrated learned player remains future work. The counter's approximately 19–20-point gains apply to two tested Alakazam implementations; broader benefit is unresolved. Representation agreement is not playing strength. Detailed assumptions, source identities, formulas and limits are in **SOURCE-NOTES.md**, **CONTRIBUTIONS.md**, **REPRODUCING.md** and **NOTICE.txt**.
+The public repository is [poketcg-research](https://github.com/thisisntjon/poketcg-research). The evidence is available without requesting access. The package omits organizer engine/card assets, artwork, full player weights and third-party policy implementations. Its [NOTICE](NOTICE.txt) preserves rights and competition-use boundaries. Source hashes establish file identity; they do not certify complete historical execution or universal strategy quality.

@@ -1,0 +1,107 @@
+{
+  "schema": "ko-figure-input/v1",
+  "dataset_id": "ko_priority_seven_implementations_20260904_8400",
+  "title": "One KO-priority bonus, opposite observed effects",
+  "x_axis": "ON minus OFF mean game score (percentage points)",
+  "caption": "Seven fixed opponent implementations; 600 games per arm and 300 per seat. Draws count one half. Bars are approximate unadjusted 95% intervals from independent-game sample-score variance. Exploratory comparisons; the rows do not establish decision-level mechanisms or deck causality.",
+  "cells": [
+    {
+      "opponent": "tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control",
+      "label": "tetsutani c61",
+      "delta_pp": -1.0833333333333306,
+      "ci95_pp": [
+        -6.669016955637173,
+        4.502350288970512
+      ],
+      "display_delta_pp": "-1.08",
+      "display_ci95_pp": [
+        "-6.67",
+        "+4.50"
+      ]
+    },
+    {
+      "opponent": "tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-static-deck-tusk-1208-v24",
+      "label": "prvsiyan Static-Deck Tusk v24",
+      "delta_pp": 14.333333333333337,
+      "ci95_pp": [
+        8.844680246613203,
+        19.82198642005347
+      ],
+      "display_delta_pp": "+14.33",
+      "display_ci95_pp": [
+        "+8.84",
+        "+19.82"
+      ]
+    },
+    {
+      "opponent": "tb_39927049_dedquoc_the-pok-mon-rule-based-engine",
+      "label": "dedquoc Rule-Based Engine",
+      "delta_pp": -0.5000000000000004,
+      "ci95_pp": [
+        -2.4055724354659507,
+        1.4055724354659496
+      ],
+      "display_delta_pp": "-0.50",
+      "display_ci95_pp": [
+        "-2.41",
+        "+1.41"
+      ]
+    },
+    {
+      "opponent": "tb_64e9991a_raunakdey07_pok-mon-tcg-advanced-heuristic-agent",
+      "label": "raunakdey07 Advanced Heuristic",
+      "delta_pp": -0.5000000000000004,
+      "ci95_pp": [
+        -6.043452042306614,
+        5.043452042306614
+      ],
+      "display_delta_pp": "-0.50",
+      "display_ci95_pp": [
+        "-6.04",
+        "+5.04"
+      ]
+    },
+    {
+      "opponent": "tb_8026b86b_penguin069_public-scores-915",
+      "label": "penguin069 Public Scores 915",
+      "delta_pp": -11.583333333333334,
+      "ci95_pp": [
+        -17.129584586919805,
+        -6.037082079746865
+      ],
+      "display_delta_pp": "-11.58",
+      "display_ci95_pp": [
+        "-17.13",
+        "-6.04"
+      ]
+    },
+    {
+      "opponent": "tb_96cac124_aristophanivan_2plyexpectimax",
+      "label": "aristophanivan 2plyexpectimax",
+      "delta_pp": -7.416666666666666,
+      "ci95_pp": [
+        -12.872385978967927,
+        -1.9609473543654046
+      ],
+      "display_delta_pp": "-7.42",
+      "display_ci95_pp": [
+        "-12.87",
+        "-1.96"
+      ]
+    },
+    {
+      "opponent": "tb_887f651a_pixiux_ptcg-mega-lucario-ex-v62",
+      "label": "pixiux Mega Lucario v62",
+      "delta_pp": -7.750000000000002,
+      "ci95_pp": [
+        -13.258719859533432,
+        -2.2412801404665705
+      ],
+      "display_delta_pp": "-7.75",
+      "display_ci95_pp": [
+        "-13.26",
+        "-2.24"
+      ]
+    }
+  ]
+}
