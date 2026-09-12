@@ -1,0 +1,190 @@
+{
+  "public_commit": "9124f24a7a7988f7941f4f55b8fdcefebfd63639",
+  "manifest_url": "https://raw.githubusercontent.com/thisisntjon/poketcg-research/9124f24a7a7988f7941f4f55b8fdcefebfd63639/workflow/inventories/sri/MANIFEST.jsonl",
+  "manifest_sha256": "b04cda0bd23a36ae63bc1b9dd8db021e389d897d4c38241fc763c659010ccab1",
+  "build_url": "https://raw.githubusercontent.com/thisisntjon/poketcg-research/9124f24a7a7988f7941f4f55b8fdcefebfd63639/workflow/inventories/sri/BUILD.json",
+  "build_sha256": "9179315bca51ee3a2e9dd8ef5ecdb9c0b6cc88034da7ae4d5a9c9ffc3ce44dc2",
+  "records": 2333,
+  "unique_ids": 2333,
+  "unique_paths": 2333,
+  "build": {
+    "schema": "ptcg.sri_build/v1",
+    "built": "2026-09-06",
+    "main": "555c9dd07e1729da37cdd1c12eaad4371068ff0b",
+    "counts": {
+      "learnings": 1706,
+      "claims": 47,
+      "methods": 10,
+      "tools": 503,
+      "decisions": 1740,
+      "open": 19,
+      "tombstones": 92,
+      "manifest": 2333,
+      "timeline": 525
+    },
+    "digest": "6f597c0035c9a2ccee0b249ad1b9557f2d596cd37f8c66d34bb26c7da0d622ee",
+    "surface_coverage": {
+      "catalogued": 57,
+      "harvested": 35,
+      "json-pack-pointer-only": 16,
+      "routing": 3,
+      "sri-output": 3,
+      "unharvested_markdown": []
+    },
+    "history_complete": true,
+    "sources": {
+      "dead_ends": {
+        "path": "workflow/DEAD-ENDS.md",
+        "blob": "875877157e98c83851cd809bfa86b553e5b7d56d"
+      },
+      "ledger": {
+        "path": "workflow/ATTEMPTS-LEDGER.md",
+        "blob": "8be250fd685d331f9c6e6d1990faccbb85939ca0"
+      },
+      "tried": {
+        "path": "workflow/inventories/TRIED-RESULTS-COMPACT.json",
+        "blob": "6a4b2f4f598dee12d2a819388ff22c33407b52d0"
+      },
+      "kill_cards": {
+        "path": "workflow/inventories/HYPOTHESIS-KILL-CARDS.json",
+        "blob": "2db29df5cae2ac1dfaf18072affa450f9ec21b5a"
+      },
+      "graveyard": {
+        "path": "workflow/canon/GRAVEYARD-INDEX.json",
+        "blob": "0f39b1bd6dcc22daf075fa2b3595e1d5aba0ca55"
+      },
+      "numbers": {
+        "path": "workflow/NUMBERS-INVENTORY.md",
+        "blob": "d568bf2db006c37d49580df3626181dded46c51f"
+      },
+      "metrics": {
+        "path": "workflow/inventories/METRICS-INVENTORY.json",
+        "blob": "ab6964cc066a3790e7915241ef9f73252a71755d"
+      },
+      "equations": {
+        "path": "workflow/canon/EQUATIONS.md",
+        "blob": "fb71ae100476ac8e7aedf25adb808837e3fe695c"
+      },
+      "retractions": {
+        "path": "workflow/canon/RETRACTIONS.md",
+        "blob": "5ff638289a260b8ed9f78cc554fbc55a75c259e0"
+      },
+      "decisions": {
+        "path": "workflow/DECISIONS.md",
+        "blob": "bd43e2aef105ce3eb5aedc5190bcabb7a21827fb"
+      },
+      "improvement": {
+        "path": "workflow/IMPROVEMENT-INVENTORY.md",
+        "blob": "952e12ae46bb6c7698f86944dc676a1943418d9b"
+      },
+      "supersession": {
+        "path": "workflow/canon/SUPERSESSION-REGISTER.md",
+        "blob": "577ce2c9b3299902cd808b50466f44e5d2b039b7"
+      },
+      "tools_output": {
+        "path": "workflow/inventories/TOOLS-OUTPUT-EXISTS.json",
+        "blob": "633411dd25f636ffc81329687379cd375055d167"
+      },
+      "learnings_index": {
+        "path": "workflow/LEARNINGS.md",
+        "blob": "23a8498e484dbc6128d12b0ed53c6bbad0ccac1f"
+      },
+      "lessons": {
+        "path": "workflow/LESSONS.md",
+        "blob": "e07daac7b4f715617855be692267f15c63247b0f"
+      }
+    },
+    "surfaces": {
+      "owned-revisit": {
+        "path": "workflow/research/2026-08-11-OWNED-POLICY-REVISIT-INVENTORY.md",
+        "blob": "68d7f12d4b9989232fb46f07c61a09fa83477b62"
+      },
+      "own-policy": {
+        "path": "workflow/research/2026-08-11-OWN-POLICY-INVENTORY.md",
+        "blob": "71c4ea6b881dd31c597bd7220400d0694248dd43"
+      },
+      "graveyard-reconstruction": {
+        "path": "workflow/research/2026-08-11-STRATEGY-GRAVEYARD-RECONSTRUCTION.md",
+        "blob": "e7f5010d8dc926da7468ab149899360e7dad47d8"
+      },
+      "exploration-depth": {
+        "path": "workflow/research/2026-08-11-STRATEGY-EXPLORATION-INVENTORY.md",
+        "blob": "65678836e611338625aeae05770f66cc7f3647d8"
+      },
+      "replay-stores": {
+        "path": "workflow/REPLAY-STORES.md",
+        "blob": "e8ddc54be5dc7eb95e884ecb1a9935c66c8b4bed"
+      },
+      "peer-mine": {
+        "path": "workflow/PEER-MINE-15-BACKLOG.md",
+        "blob": "459efb3d516e187cf522ccd89ff3523d181000b9"
+      },
+      "missed-assets": {
+        "path": "workflow/research/2026-08-10-missed-asset-inventory.md",
+        "blob": "4760d35ca63f7b719bafe73c0a0afe4eb3844697"
+      },
+      "opportunity-catalog": {
+        "path": "workflow/research/2026-08-11-INVENTORY-OPPORTUNITY-CATALOG.md",
+        "blob": "16032a4cd58669deecab276b72eae5f103bd7d6b"
+      },
+      "doc-roles": {
+        "path": "workflow/canon/DOC-ROLES.md",
+        "blob": "120ed07b554f64c71af0fd84e84252750777a159"
+      },
+      "reconciliation-0823": {
+        "path": "workflow/research/2026-08-23-answers-exist-inventory-reconciliation.md",
+        "blob": "03fd9ad241bcfed93ee98da085c5bc30624bdc67"
+      },
+      "full-history-audit-0824": {
+        "path": "workflow/research/2026-08-24-full-history-inventory-audit.md",
+        "blob": "e78d74346c002e5f70ca83b4cd25483e194939e1"
+      },
+      "loss-modes": {
+        "path": "workflow/LOSS-MODES.md",
+        "blob": "bc637cd8180b2c4914ab942c2cbe6bed99ddcd45"
+      },
+      "knowledge": {
+        "path": "workflow/KNOWLEDGE.md",
+        "blob": "c7a4ddf40adc80f083b7d89b802ee82b2fdb7608"
+      },
+      "asset-index": {
+        "path": "workflow/ASSET-INDEX.md",
+        "blob": "8aa1bd2193eb87c25f5da4e0e1982932f79ba49b"
+      },
+      "archive-policy": {
+        "path": "workflow/canon/ARCHIVE-POLICY.md",
+        "blob": "8d90bfe07de259deed2945d0628f005a624ed81e"
+      },
+      "competitive-loop": {
+        "path": "workflow/canon/COMPETITIVE-LOOP-OF-RECORD.md",
+        "blob": "f3e8bbd3504a150f4639cf043848c49568459931"
+      },
+      "measured-0806": {
+        "path": "workflow/canon/MEASURED-2026-08-06.md",
+        "blob": "381b7b804305fd32de1659a756abc438a58c8924"
+      },
+      "mu-strategy": {
+        "path": "workflow/canon/MU-STRATEGY.md",
+        "blob": "9a985f51b809b9f3728ed707d004b50708093082"
+      },
+      "strategy-atlas": {
+        "path": "workflow/canon/STRATEGY-ATLAS.md",
+        "blob": "15b0a09a8cce305a5e2c592652397d3e99e23104"
+      },
+      "research-index": {
+        "path": "workflow/research/INDEX.md",
+        "blob": "ed9a609eb60a6fb3a784cd179f073b002379ac45"
+      },
+      "measurements-index": {
+        "path": "workflow/measurements/INDEX.md",
+        "blob": "ca576360fffb1db0d904ba69649e98d95b5d1f7f"
+      },
+      "product-passport": {
+        "path": "workflow/inventories/PRODUCT-PASSPORT.md",
+        "blob": "043094bcda2ac2907f63efe6a668b8af092f0d3b"
+      }
+    },
+    "gate": "PASS — records: 2333 | fails: 0 | warnings: 0"
+  },
+  "scope": "Indexed project artifacts, not distinct experiments or validated discoveries; original indexed files are not all redistributed."
+}

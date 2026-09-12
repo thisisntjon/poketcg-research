@@ -1,7 +1,5 @@
-# Visual enhancement release
+# Final text refinement
 
-This revision follows public `15e3fd5ef94480dfe12819441f5f8b9e4b7c1531`. Four original figures and one two-cache table make the operated research case, entered deck and numerical comparisons visible. Prose repeated by those visuals is compressed; the factory premise, attribution and evidence limits remain. Arial unifies body and figures.
+This revision follows public `9124f24a7a7988f7941f4f55b8fdcefebfd63639`. Two approved text edits explain the purpose of parallel investigation and independent review, and identify the September 6 inventory snapshot as 2,333 indexed project artifacts. The source map links the public manifest and build record, distinguishes artifacts from experiments, and corrects an earlier Figure 1 description.
 
-The development grid contains differently pooled card/rule/combined contrasts, each with its comparison count. Its interaction is explicitly a separate single-batch calculation. All seven panel estimates remain unchanged. No zero-effect, equivalence, broad preregistration or integrated retained-learning claim is introduced.
-
-Count: 1,881 including figure text; 1,929 with extra hyphen splitting. Report, guide, figures, evidence ZIP and source map are synchronized. Historical numerical/source bytes are preserved. No live Kaggle changes, games or training occurred.
+Count: 1,896 including every figure label; 1,944 with extra hyphen splitting. All four figures and all pre-existing numerical, factory, source-evidence and historical-sensitivity bytes remain unchanged. Report, guide and evidence ZIP match the revised article. No new games, training or live Kaggle changes.

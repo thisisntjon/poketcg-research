@@ -18,7 +18,7 @@ Over roughly sixty days, I learned the game as a solo developer directing AI res
 
 ## Organize inquiry, implementation, and challenge
 
-Across the campaign, I used a strategy lead, researchers, implementers, agents responsible for two compute machines, and separate reviewers. An adversarial role challenged assumptions and experimental claims. I set the objectives and constraints and redirected work when evidence challenged the plan. In the experiments reported here, the tested policies selected moves; Fleet agents conducted development and evaluation. [1]
+To make a solo project cover more ground, I separated parallel investigation from independent review. Across the campaign, I directed a strategy lead, researchers, implementers, agents responsible for two compute machines, and adversarial reviewers. I set objectives and constraints and redirected work when evidence challenged the plan. The tested policies selected moves; Fleet agents conducted development and evaluation. [1]
 
 Review protected the strategic question. A second-machine reproduction risked excluding both target Alakazam opponents and enabling the intervention in both arms. Repairing the registry and setting the control explicitly preserved the intended comparison before that reproduction ran. [1,6]
 
@@ -77,7 +77,7 @@ The two Alakazam cells improved by 20.42 and 18.75 points. The other five averag
 
 ## Make the next investigation remember
 
-As work accumulated, context became a research bottleneck. A proposed lethal-search rerun was withdrawn when we found an earlier audit already on disk. That incident helped motivate an inventory connecting questions, methods, results, corrections, limitations, and conditions for reopening a hypothesis. Recovering the earlier audit and its limits changed the next research decision. [8]
+As work accumulated, context became a research bottleneck. A proposed lethal-search rerun was withdrawn when we found an earlier audit already on disk. That incident helped motivate an inventory connecting questions, methods, results, corrections, limitations, and conditions for reopening a hypothesis. The September 6 inventory snapshot indexed 2,333 project artifacts, including code, documents and data. Recovering the earlier audit and its limits changed the next research decision. [8]
 
 The factory also needed correction. Independent review found that the memory reader dropped an introductory retraction even though its source hashes were correct. The repair preserved that text and added a regression check that it remained visible and searchable. This memory across research sessions is distinct from a player's recurrent memory and from changes to trained weights. [1,8]
 
