@@ -1,88 +1,74 @@
 # The Fleet: Building a Research Factory for Pokémon TCG
 
-*Sixty days of solo-directed AI research: turning game questions into experiments, player components, and reusable lessons.*
+*Sixty days of solo-directed AI research into hand disruption, Energy recovery, and the whole-game cost of a good move.*
 
 Jonathan Simone
 
-## The strategy behind the player
+## When does a good move make a better player?
 
-A Pokémon TCG player can take a prize now and leave itself without an attacker next turn. How could I discover decisions that improve the whole game, then teach them to an agent? My strategy was to build a research factory around that problem.
+A Pokémon TCG player can take a Prize now and leave the opponent's main attacker untouched. It can recover Energy and weaken the search that establishes its next attacker. My strategy was to build a research factory that could turn these competing demands into experiments: identify a decision, change it, measure complete games, challenge the interpretation, and preserve what should change next.
 
-My Simulation entry was Tetsutani's unmodified public Grimmsnarl ex Damage-Transfer Control, policy c61e540b and deck 92b92bac. As read on September 6, its score was 834.0, rank 840/6,807. The experimental results below belong to their identified development branches. [7]
+Over roughly sixty days, I directed AI research and coding agents across vendors, calling them The Fleet. As the solo developer, I set objectives, coordinated researchers and implementers across two machines, and assigned independent reviewers to challenge assumptions. The policies selected game actions; Fleet agents developed and evaluated them. This report follows three separate research cases: a counter with 19–20 percentage-point gains against two tested Alakazam implementations, a recovery substitution, and a knockout rule whose effects changed sign across opponents. [1,6,9,10]
 
-Over roughly sixty days, I learned the game as a solo developer directing AI research and coding agents across vendors, calling them The Fleet. I organized their work around a scientific cycle: investigate a question, build the necessary tool, test a hypothesis, challenge the interpretation, and preserve what should change next. This produced original learning components, experiments in teaching and representation, and a separate Lucario deck-policy counter with approximately 19–20 percentage-point gains against two tested Alakazam implementations, without established broader benefit. The factory operated; its intended endpoint—a learned player repeatedly retaining those discoveries—remains unfinished. [1–6]
+My Simulation entry was Tetsutani's unmodified public Grimmsnarl ex Damage-Transfer Control, policy c61e540b and deck 92b92bac. Its September 6 standing was 834.0, rank 840/6,807. A contemporaneous local comparison favored c61 over the previous V13 player; reviewed replacements subsequently failed execution and whole-game improvement gates. These are the recorded retention reasons, not a newly reproduced selection experiment. The research products below are separate from that entry. [7]
 
-![One documented Fleet investigation, including checks that repaired the comparison](current-figures/01-research-factory.png)
+## The entered deck: prepare damage, then convert it into Prizes
 
-*Figure 1. A documented review-and-repair case. Arrows summarize research dependencies; they do not depict a completed student-learning loop. [1,6]*
+The entered list contains 18 Pokémon, 32 Trainers and 10 Basic Darkness Energy. Four Impidimp, three Morgrem, three Grimmsnarl and three Rare Candy provide two evolution routes. Its plan combines direct attacks with prepared damage-counter knockouts. Punk Up accelerates Energy onto Marnie's Pokémon when Grimmsnarl evolves from hand; Munkidori requires a separately allocated Darkness attachment. [7]
 
-## Organize inquiry, implementation, and challenge
+![](current-figures/FIGURE-1-DECK-ENGINE.png)
 
-To make a solo project cover more ground, I separated parallel investigation from independent review. Across the campaign, I directed a strategy lead, researchers, implementers, agents responsible for two compute machines, and adversarial reviewers. I set objectives and constraints and redirected work when evidence challenged the plan. The tested policies selected moves; Fleet agents conducted development and evaluation. [1]
+*Figure 1. Resource relationships across turns. Punk Up takes Energy from the deck; evolution timing applies. Checkup is between turns. [7]*
 
-Review protected the strategic question. A second-machine reproduction risked excluding both target Alakazam opponents and enabling the intervention in both arms. Repairing the registry and setting the control explicitly preserved the intended comparison before that reproduction ran. [1,6]
+Froslass creates a useful tension: its Checkup counters reach both sides, while friendly damage can become material for Munkidori's transfer. An attachment can enable that transfer or prepare another attacker. Boss's Orders brings a prepared target Active; Night Stretcher recovers a Pokémon or Basic Energy. Transfers precede the attack that ends the turn. These choices explain the credited deck's resource allocation. [7]
 
-## Discover what the learner could use
+## Experiment 1: attack the hand and the next attacker
 
-Public players supplied labels and material for investigation. In one study, we replayed recorded decisions from Roman Rozen's V13 policy and compared its choices with our working pilot. Disagreements suggested three testable behaviors: establishing Riolu, promoting Mega Lucario ex, and choosing when to evolve. These observations became separate, default-off policy modules. A disagreement identified a hypothesis; its frequency alone did not establish which action was better. [2]
+Our counter used a derivative of makthanithin's Apache-2.0 community_1084 Lucario policy. I contributed the card substitution, targeting modification and comparisons. Mega Lucario ex's Aura Jab deals 130 for one Fighting Energy and can attach up to three discarded Basic Fighting Energy to Benched Pokémon. Mega Brave deals 270 for two Fighting Energy but cannot be reused by that Pokémon next turn. Developing a successor therefore competes with maximizing the current attack. [6]
 
-Search raised another prerequisite: could we faithfully test alternatives from a recorded position? A replay-state proof of concept matched seven transitions before shuffled menus exposed the need to translate actions by their meaning instead of reusing option numbers. This established a small building block for counterfactual experiments, with broader continuation and useful alternative-action selection still unproved. [2]
+Alakazam's Powerful Hand places two damage counters per card in its player's hand. Replacing one Carmine with Xerosic offered a way to reduce a large opposing hand to three at resolution, at the cost of a draw Supporter. Separately, modified targeting preferred visible Abra or Kadabra when the Alakazam line appeared, bringing a Benched target Active when possible. The hypothesis was pressure on both current damage and future attackers. The costs were a Supporter opportunity and potentially passing up another Prize; Alakazam could also draw again. [6]
 
-Labeling raised a related question: what information could the trainer actually absorb? Parallel investigations examined the training consumer, labeling methods, local-model behavior, and failure cases. Inspecting the loss revealed that the proposed weighting labels ultimately entered training through one relative loss weight per row. A richer taxonomy could improve how that weight was estimated, but added categories alone did not create new learning channels. [3]
+One four-arm experiment used 8,000 games, separating the card and targeting changes. Across 28,000 development records on a 40%-Alakazam panel, pooled treatment-versus-control differences within each batch gave +5.02 points for the card, +3.62 for targeting and +7.82 [6.08, 9.55] for the combination. These use decided-game win rates and inverse-variance pooling. The estimates share factorial arms; their interaction did not establish synergy. All three combined comparisons were positive. [6]
 
-An initial batch of 46 quarantined model drafts all mapped to the default weight. Investigators enriched the episode evidence and the second machine tested eight previously inconclusive episodes: five yielded non-abstaining explanations, but all eight retained default weight. Correctness and training benefit remained unestablished. The lesson was to test the evidence-to-training path before scaling label production. [3]
+Independent challenge mattered to one reproduction. Before games, review found that the second machine's registry omitted both target Alakazam opponents and a changed default could activate the intervention in both arms. Restoring the registry and explicitly setting the control preserved the intended comparison. [1,6]
 
-## Give decisions enough meaning
+![](current-figures/FIGURE-2-COUNTER-MATCHUPS.png)
 
-Could the learner distinguish the teacher's choices? Two cached imitation probes compared an identity-embedding variant with the baseline. The table reports mean raw validation accuracy across three recorded seed comparisons per cache; the first used matched seeds and splits. [4]
+*Figure 2. A later seven-implementation panel, 600 games per arm per opponent, balanced by seat. One Alakazam deck overlaps development under another pilot. [6]*
 
-| Recorded cache | Examples | Baseline | Identity variant |
+The two Alakazam cells gained 20.42 and 18.75 points; the other five averaged −0.47 [−2.64, +1.71]. A separate 16,000-game comparison against exact c61 changed decided-game win rate by −0.14 [−1.68, +1.40], without establishing equivalence. The result supported a counter to the tested Alakazam implementations, with broader benefit unresolved. Terminal outcomes measure the combined product without identifying which individual move sequences caused each win. [6]
+
+## Experiment 2: recover the resource that runs out
+
+Recovery posed a different choice: use a slot to find Pokémon, or return discarded Energy to the deck. Against the targeted 844_router wall, loss inspection motivated Energy Recycler: it could extend the deck and replenish attack Energy. Sacred Ash returns Pokémon instead. We replaced one Poké Pad, whose restricted search cannot fetch Mega Lucario ex. Both arms retained the same targeting setting. Removing search was a cost in every matchup. [9]
+
+| Historical comparison | Control wins / decided | Recycler wins / decided | Change, points [95% interval] |
 |---|---:|---:|---:|
-| First teacher cache | 44,343 | 48.62% | 74.25% |
-| Second public-teacher cache | 66,030 | 47.33% | 77.26% |
+| First target batch | 335 / 1,000 | 408 / 1,000 | +7.30 [3.08, 11.52] |
+| Later five-implementation panel | 2,135 / 4,996 | 2,081 / 4,996 | −1.08 [−3.02, +0.86] |
 
-Capacity also increased. Higher imitation agreement did not measure playing strength. These probes are distinct from the hashed-representation failures that prompted rebuilding our information interface while retaining replay and training components. [4,5]
+The first batch passed the written plan's gate to a wider check. Deckout losses fell from 664 to 592, supporting the resource hypothesis without separating deck extension from Energy availability. The later target batch's reported interval crossed zero; that batch is inside the wider panel. Eight undecided games were excluded from the panel. Its aggregate result established neither overall improvement nor harm. An encouraging target result had not earned promotion as a general upgrade. The package recounts retained aggregate receipts; original game rows were not recovered. [9]
 
-The current v2 architecture links legal options to their available sources and targets. For example, a Darkness Energy attachment can enable Munkidori's damage transfer or develop another attacker: its target changes the strategic meaning. This illustrates the interface, not a demonstrated learned tactic. A 256-unit recurrent network supplies context across decisions using the acting player's view, while offered options are scored by their features instead of permanent menu positions. [5,7]
+## Experiment 3: a knockout bonus is not a universal upgrade
 
-Optional choices also matter strategically. An effect allowing up to three selections may be best used with fewer. My sequential decoder selects without replacement, updates its context, and permits a learned STOP after the minimum. For unordered targets, the training objective sums the probabilities of valid selection orders, so selecting the same set in another order is acceptable. These are implemented components; seven runnable checks with prescribed scores demonstrate their selection constraints. [5]
+A separate rule added a large score bonus for a projected knockout, strongly favoring it over partial damage. The intuition was attractive: remove a Pokémon before it can attack or recover. The competing hypothesis was that taking a smaller knockout could leave the important attacker untouched. We compared the experimental Lucario policy with that bonus on and off. [10]
 
-Complete games remained a separate test. In an August experiment, 1,358 teacher-labeled learner decisions were mixed into training. The selected checkpoint improved its validation loss but won only 23 of 1,200 decided games against exact c61 on the same Grimmsnarl deck. This evaluates the recorded August checkpoint. Better imitation had not established a competitive replacement. [5,7]
+![](current-figures/FIGURE-3-KNOCKOUT-MATCHUPS.png)
 
-## Treat the deck and policy as one strategic object
+*Figure 3. Separate 8,400-game knockout-priority panel: seven implementations, 600 games per arm each, balanced by seat. All cells are shown. [10]*
 
-The entered Grimmsnarl deck aims for six Prizes through direct attacks and prepared damage-counter knockouts. Its 18 Pokémon, 32 Trainers and 10 Darkness Energy support that plan. Four Impidimp, three Morgrem, three Grimmsnarl and three Rare Candy provide two evolution routes. [7]
+The bonus gained 14.33 points against the tested Tusk implementation, while three other cells lost 7.42–11.58 points. That sign reversal argued against a universal rule. It did not establish that deck identity caused the differences or validate an opponent-dependent selector. The evidence did not justify adopting the bonus as a universal default; the pressure-versus-Prize question remained open for a better-targeted policy. Complete games challenged a plausible tactical improvement. [10]
 
-![The entered deck's setup, energy allocation and damage-placement relationships](current-figures/02-deck-engine.png)
+## Give the next learner meaningful choices
 
-*Figure 2. Resource relationships, not a single-turn script. Evolution timing applies; Punk Up triggers on evolution from hand and attaches Energy from the deck. Checkup is between turns. [7]*
+In a separate learning branch, I implemented source-and-target features for legal options, using the acting player's visible state and a 256-unit recurrent network. An Energy attachment to Munkidori and one to another attacker can have different strategic meanings even when offered through the same menu. My sequential decoder selects without replacement and permits a learned STOP after the minimum. For unordered targets, training sums probabilities across valid selection orders. Seven runnable checks with prescribed scores demonstrate selection constraints; they do not measure learned tactical quality. [5]
 
-Spending an attachment on Munkidori competes with preparing another attacker. Boss's Orders brings a prepared target Active; Night Stretcher recovers Pokémon or Basic Energy. My recorded adoption rationale favored c61 over the prior V13 player in a frozen local comparison; reviewed alternatives subsequently failed the required execution and whole-game improvement gates. [7]
+Complete games remained a separate standard. An August checkpoint trained with 1,358 additional teacher-labeled learner decisions improved validation loss but won 23 of 1,200 decided games against exact c61 on the same Grimmsnarl deck. That historical checkpoint did not justify replacement and does not evaluate the current v2 implementation. [5,7]
 
-The clearest positive case used a derivative of makthanithin's Apache-2.0 community_1084 Lucario policy. Mega Lucario ex's Aura Jab deals 130 for one Fighting Energy and can attach up to three discarded Basic Fighting Energy to Benched Pokémon. Mega Brave deals 270 for two Fighting Energy but cannot be reused by that Pokémon next turn. Preparing a successor attacker therefore matters alongside taking the current prize. [6]
+As research accumulated, an inventory connected questions, methods, results, corrections and reopening conditions. Its September 6 snapshot indexed 2,333 artifacts. Independent review also caught a memory reader dropping an introductory retraction despite correct source hashes; the repair preserved that text and added a regression check. Research memory had to preserve meaning, not merely files. [1,8]
 
-Against Alakazam, we tested pressure on two resources. Powerful Hand places two damage counters per card in its player's hand. Replacing one Carmine with Xerosic gave the pilot a way to reduce a large opposing hand to three. Separately, modified targeting preferred visible Abra or Kadabra when the Alakazam line appeared, bringing a Benched target Active when possible and threatening future attackers. Disruption costs a Supporter opportunity; targeting an evolving threat can forgo another prize. The targeting rule depends on Alakazam, while hand disruption can affect other matchups too. Whole-game comparisons therefore matter. [6]
-
-![Pooled effects of card and targeting changes, with their distinct comparison counts](current-figures/03-development-results.png)
-
-*Figure 3. Pooled contrasts; the interaction uses only the single four-arm batch. [6]*
-
-One complete four-arm experiment used 8,000 games. The pooled analysis includes it within 28,000 records on a 40%-Alakazam panel, using inverse-variance weighting. The estimates share factorial arms. All three combined comparisons were positive, including the second-machine reproduction; the interaction did not establish synergy. [6]
-
-![Absolute scores and intervention effects across seven tested opponent implementations](current-figures/04-matchup-results.png)
-
-*Figure 4. A later seven-opponent panel: 600 games per arm per opponent, balanced by seat. Intervals condition on these implementations and independent games. [6]*
-
-The two Alakazam cells improved by 20.42 and 18.75 points. The other five averaged −0.47 [−2.64, +1.71]. Excluding the overlapping deck in a historical sensitivity analysis also left broader benefit unresolved. In a separate 16,000-game comparison, both Lucario arms faced exact c61: adding the intervention changed decided-game win rate by −0.14 [−1.68, +1.40] points, without establishing equivalence. Terminal records measure product outcomes without identifying the move sequences responsible. [6]
-
-## Make the next investigation remember
-
-As work accumulated, context became a research bottleneck. A proposed lethal-search rerun was withdrawn when we found an earlier audit already on disk. That incident helped motivate an inventory connecting questions, methods, results, corrections, limitations, and conditions for reopening a hypothesis. The September 6 inventory snapshot indexed 2,333 project artifacts, including code, documents and data. Recovering the earlier audit and its limits changed the next research decision. [8]
-
-The factory also needed correction. Independent review found that the memory reader dropped an introductory retraction even though its source hashes were correct. The repair preserved that text and added a regression check that it remained visible and searchable. This memory across research sessions is distinct from a player's recurrent memory and from changes to trained weights. [1,8]
-
-My contribution is the research method and its concrete outputs: inspectable player components, tested teaching and representation choices, a controlled matchup counter, and a record that can challenge the next idea. The next generation I envision connects those pieces: teach validated decisions to a student, test fresh complete games against its parent, then repeat while checking earlier matchups. The research cycles documented here are the foundation for that still-uncompleted learning loop.
+The Fleet produced a scoped counter, evidence for withholding a recovery change and an unconditional tactical rule, and inspectable learning components. These cases show how I used parallel investigation and independent challenge to make strategic choices accountable. The next step is to teach validated decisions to a student, compare fresh games against its parent, and repeat while checking earlier matchups. Repeated retained improvement in that integrated player remains unfinished; the documented research cycles provide its foundation.
 
 ## Evidence and acknowledgements
 
-Source notes map [1] Fleet operation and review; [2] policy dissection; [3] labeling; [4] representation; [5] learning components and teaching; [6] counter experiments; [7] submission and deck; [8] memory and corrections. Supporting records distinguish source inspection, retained historical results, reproducible arithmetic, and unresolved execution details. Public teachers are credited; recurrent and imitation-learning methods are established. AI agents assisted implementation, analysis, and writing under my direction.
+Intervals are approximate 95% intervals, conditional on tested implementations and independence assumptions, without multiplicity adjustment. Figures 2–3 score win/draw/loss as 1/½/0; development and recovery comparisons exclude undecided games. [Source notes](current-evidence/SOURCE-NOTES.md) link [1] Fleet review; [5] learner; [6] counter; [7] entry/deck; [8] memory; [9] recovery; [10] knockout priority. Public players are credited; recurrent and imitation-learning methods are established. AI agents assisted research, implementation, analysis and writing under my direction.

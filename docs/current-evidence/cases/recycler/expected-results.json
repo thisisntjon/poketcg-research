@@ -1,0 +1,35 @@
+{
+  "schema": "recycler_expected_results/v1",
+  "rounding_tolerance": 0.005000000001,
+  "contrasts": {
+    "stage1_first_target_batch": {
+      "control_pct": 33.5,
+      "treatment_pct": 40.8,
+      "delta_pp": 7.3,
+      "se_pp": 2.15,
+      "ci95_pp": [
+        3.08,
+        11.52
+      ]
+    },
+    "stage2_wider_panel": {
+      "control_pct": 42.73,
+      "treatment_pct": 41.65,
+      "delta_pp": -1.08,
+      "se_pp": 0.99,
+      "ci95_pp": [
+        -3.02,
+        0.86
+      ]
+    }
+  },
+  "stage1_count_changes": {
+    "wins": 73,
+    "losses": -73,
+    "deckout_losses": -72,
+    "all_deckouts": -70,
+    "prize_wins": 51
+  },
+  "unique_total_attempts": 12000,
+  "unique_total_decided": 11992
+}

@@ -1,0 +1,263 @@
+{
+  "schema": "ko-aggregates/v1",
+  "dataset_id": "ko_priority_seven_implementations_20260904_8400",
+  "cells": {
+    "tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control": {
+      "OFF": {
+        "n": 600,
+        "wins": 256,
+        "losses": 340,
+        "draws": 4,
+        "score_mean": 0.43,
+        "sample_score_variance": 0.24383973288814692,
+        "variance_of_mean": 0.0004063995548135782,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "ON": {
+        "n": 600,
+        "wins": 251,
+        "losses": 348,
+        "draws": 1,
+        "score_mean": 0.4191666666666667,
+        "sample_score_variance": 0.24345506399554817,
+        "variance_of_mean": 0.0004057584399925803,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "delta_pp": -1.0833333333333306,
+      "ci95_pp": [
+        -6.669016955637173,
+        4.502350288970512
+      ]
+    },
+    "tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-static-deck-tusk-1208-v24": {
+      "OFF": {
+        "n": 600,
+        "wins": 197,
+        "losses": 403,
+        "draws": 0,
+        "score_mean": 0.3283333333333333,
+        "sample_score_variance": 0.22089872008903727,
+        "variance_of_mean": 0.00036816453348172877,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "ON": {
+        "n": 600,
+        "wins": 283,
+        "losses": 317,
+        "draws": 0,
+        "score_mean": 0.4716666666666667,
+        "sample_score_variance": 0.24961324429604895,
+        "variance_of_mean": 0.00041602207382674826,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "delta_pp": 14.333333333333337,
+      "ci95_pp": [
+        8.844680246613203,
+        19.82198642005347
+      ]
+    },
+    "tb_39927049_dedquoc_the-pok-mon-rule-based-engine": {
+      "OFF": {
+        "n": 600,
+        "wins": 584,
+        "losses": 16,
+        "draws": 0,
+        "score_mean": 0.9733333333333334,
+        "sample_score_variance": 0.025998887033945352,
+        "variance_of_mean": 4.333147838990892e-05,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "ON": {
+        "n": 600,
+        "wins": 581,
+        "losses": 19,
+        "draws": 0,
+        "score_mean": 0.9683333333333334,
+        "sample_score_variance": 0.030715080690038917,
+        "variance_of_mean": 5.119180115006486e-05,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "delta_pp": -0.5000000000000004,
+      "ci95_pp": [
+        -2.4055724354659507,
+        1.4055724354659496
+      ]
+    },
+    "tb_64e9991a_raunakdey07_pok-mon-tcg-advanced-heuristic-agent": {
+      "OFF": {
+        "n": 600,
+        "wins": 241,
+        "losses": 358,
+        "draws": 1,
+        "score_mean": 0.4025,
+        "sample_score_variance": 0.2404778797996661,
+        "variance_of_mean": 0.00040079646633277684,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "ON": {
+        "n": 600,
+        "wins": 238,
+        "losses": 361,
+        "draws": 1,
+        "score_mean": 0.3975,
+        "sample_score_variance": 0.2394762103505843,
+        "variance_of_mean": 0.00039912701725097386,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "delta_pp": -0.5000000000000004,
+      "ci95_pp": [
+        -6.043452042306614,
+        5.043452042306614
+      ]
+    },
+    "tb_8026b86b_penguin069_public-scores-915": {
+      "OFF": {
+        "n": 600,
+        "wins": 287,
+        "losses": 312,
+        "draws": 1,
+        "score_mean": 0.4791666666666667,
+        "sample_score_variance": 0.2495652476349471,
+        "variance_of_mean": 0.0004159420793915785,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "ON": {
+        "n": 600,
+        "wins": 217,
+        "losses": 381,
+        "draws": 2,
+        "score_mean": 0.36333333333333334,
+        "sample_score_variance": 0.23087367835281028,
+        "variance_of_mean": 0.00038478946392135046,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "delta_pp": -11.583333333333334,
+      "ci95_pp": [
+        -17.129584586919805,
+        -6.037082079746865
+      ]
+    },
+    "tb_96cac124_aristophanivan_2plyexpectimax": {
+      "OFF": {
+        "n": 600,
+        "wins": 245,
+        "losses": 354,
+        "draws": 1,
+        "score_mean": 0.4091666666666667,
+        "sample_score_variance": 0.241735531441291,
+        "variance_of_mean": 0.00040289255240215165,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "ON": {
+        "n": 600,
+        "wins": 201,
+        "losses": 399,
+        "draws": 0,
+        "score_mean": 0.335,
+        "sample_score_variance": 0.22314691151919866,
+        "variance_of_mean": 0.0003719115191986644,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "delta_pp": -7.416666666666666,
+      "ci95_pp": [
+        -12.872385978967927,
+        -1.9609473543654046
+      ]
+    },
+    "tb_887f651a_pixiux_ptcg-mega-lucario-ex-v62": {
+      "OFF": {
+        "n": 600,
+        "wins": 259,
+        "losses": 340,
+        "draws": 1,
+        "score_mean": 0.4325,
+        "sample_score_variance": 0.24543614357262106,
+        "variance_of_mean": 0.0004090602392877018,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "ON": {
+        "n": 600,
+        "wins": 212,
+        "losses": 386,
+        "draws": 2,
+        "score_mean": 0.355,
+        "sample_score_variance": 0.22852253756260432,
+        "variance_of_mean": 0.0003808708959376739,
+        "seats": {
+          "first": 300,
+          "second": 300
+        }
+      },
+      "delta_pp": -7.750000000000002,
+      "ci95_pp": [
+        -13.258719859533432,
+        -2.2412801404665705
+      ]
+    }
+  },
+  "panel_totals": {
+    "OFF": {
+      "n": 4200,
+      "wins": 2069,
+      "losses": 2123,
+      "draws": 8
+    },
+    "ON": {
+      "n": 4200,
+      "wins": 1983,
+      "losses": 2211,
+      "draws": 6
+    }
+  },
+  "evidence_level": "recounted retained outcome rows; each count also matches retained original JSONL and metadata on 2026-09-12",
+  "method": {
+    "outcome_scores": {
+      "win": 1,
+      "draw": 0.5,
+      "loss": 0
+    },
+    "estimator": "100 * (mean(score_ON) - mean(score_OFF))",
+    "variance": "sample score variance s^2=(W+D/4-n*mean^2)/(n-1); variance(mean)=s^2/n",
+    "interval": "delta_pp +/- 1.96*100*sqrt(s_ON^2/n_ON+s_OFF^2/n_OFF)",
+    "multiplicity_adjusted": false
+  }
+}

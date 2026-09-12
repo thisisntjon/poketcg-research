@@ -1,5 +1,5 @@
-# Final text refinement
+# Three-experiment Fleet release
 
-This revision follows public `9124f24a7a7988f7941f4f55b8fdcefebfd63639`. Two approved text edits explain the purpose of parallel investigation and independent review, and identify the September 6 inventory snapshot as 2,333 indexed project artifacts. The source map links the public manifest and build record, distinguishes artifacts from experiments, and corrects an earlier Figure 1 description.
+This release follows public `d288fc33bf4c6c3383a6660e3756f3a45b513a26`. The complete article, source notes, evidence guide, figures and two new portable cases come from one release. The archive preserves every baseline evidence member at its old path or a recorded historical path.
 
-Count: 1,896 including every figure label; 1,944 with extra hyphen splitting. All four figures and all pre-existing numerical, factory, source-evidence and historical-sensitivity bytes remain unchanged. Report, guide and evidence ZIP match the revised article. No new games, training or live Kaggle changes.
+Inclusive words: 1736; extra-hyphen split: 1770. Report: 4 pages; figures: 3. Portable arithmetic and integrity checks are distinct from independent scientific review and visual inspection; the release receipts record those checks separately. No new games or training are part of this release.

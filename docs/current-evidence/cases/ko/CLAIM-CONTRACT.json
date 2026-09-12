@@ -1,0 +1,114 @@
+{
+  "schema": "ko-claim-contract/v1",
+  "dataset_id": "ko_priority_seven_implementations_20260904_8400",
+  "selection_date": "2026-09-12",
+  "status": "frozen dataset and claim scope for writeup consumers",
+  "selection_reason": "Complete outcome-only rows and original metadata/raw-file recount support every cell; older KO grouping inputs are less complete. This choice replaces the older narrative as a unit.",
+  "historical_games_date": "2026-09-04",
+  "analysis_mode": "retrospective exploratory",
+  "arms": [
+    "OFF",
+    "ON"
+  ],
+  "arm_definition": {
+    "candidate": "agent.main dispatching rules_lucario; experimental Lucario player with project-authored KO intervention, distinct from entered unmodified tetsutani c61",
+    "OFF": "Dedicated and broader KO switches absent in recorded environment.",
+    "ON": "PTCG_MIRROR_PATCH_01_KO=1; +100000 score bonus for a projected knockout in the target scorer.",
+    "other_recorded_environment_equal": true
+  },
+  "included_cells": [
+    "tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control",
+    "tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-static-deck-tusk-1208-v24",
+    "tb_39927049_dedquoc_the-pok-mon-rule-based-engine",
+    "tb_64e9991a_raunakdey07_pok-mon-tcg-advanced-heuristic-agent",
+    "tb_8026b86b_penguin069_public-scores-915",
+    "tb_96cac124_aristophanivan_2plyexpectimax",
+    "tb_887f651a_pixiux_ptcg-mega-lucario-ex-v62"
+  ],
+  "rows": 8400,
+  "games_per_arm_cell": 600,
+  "games_per_seat_arm_cell": 300,
+  "outcome_scores": {
+    "win": 1,
+    "draw": 0.5,
+    "loss": 0
+  },
+  "estimator": "100 * (mean(score_ON) - mean(score_OFF))",
+  "variance": "sample score variance s^2=(W+D/4-n*mean^2)/(n-1); variance(mean)=s^2/n",
+  "interval": "delta_pp +/- 1.96*100*sqrt(s_ON^2/n_ON+s_OFF^2/n_OFF)",
+  "ci_multiplier": 1.96,
+  "multiplicity_adjusted": false,
+  "outcomes_sha256": "4df7111861d2764f02cd3dcd6729532f949524a2aa8221c0ad9c3cfe30ff919f",
+  "permitted_sentences": [
+    "The same projected-knockout priority bonus produced opposite observed whole-game effects across seven tested opponent implementations.",
+    "In 8,400 recorded games, each opponent had 600 games per arm and 300 per seat, scoring a draw as half a win.",
+    "The ON-minus-OFF change was +14.33 percentage points against prvsiyan Static-Deck Tusk v24 and -11.58 points against penguin069 Public Scores 915.",
+    "Changes against aristophanivan 2plyexpectimax and pixiux Mega Lucario v62 were -7.42 and -7.75 points; the other three approximate intervals crossed zero.",
+    "These exploratory fixed-implementation comparisons do not justify a universal KO-priority default or establish which deck or decision caused the differences."
+  ],
+  "forbidden_inherited_claims": [
+    "Older +13.33/-10.60 favorable/unfavorable deck-group effects and their pooled counts.",
+    "Older +12.33-point new-pilot result as a separate corroboration of an overlapping positive pool.",
+    "Older 20,400-game denominator, two-deck/two-pilot story or claimed deck discriminator.",
+    "Any merge with counter seven-opponent 8,400 rows or conditional KO-race 8,400 rows.",
+    "Prospective prediction, proof that deck identity caused the signs, actual-knockout causal attribution, learned routing or general improvement to entered c61.",
+    "A guarantee that the scoring bonus makes every actual knockout outrank every alternative."
+  ],
+  "downstream_consumers": [
+    "Canonical writeup body and its short KO paragraph",
+    "Report PDF and paste-ready Kaggle body",
+    "KO figure values, labels, captions and alternative text",
+    "Evidence guide, claim matrix and source citations",
+    "Public GitHub case and evidence ZIP",
+    "Release manifest and numerical validator"
+  ],
+  "required_consumer_rule": "Use this dataset, arms, all-seven supporting table and limitations together. Do not retain superseded figures, group labels, captions or citations. Two highlighted cells may illustrate the contrast only when the complete seven-cell table remains accessible.",
+  "limitations": [
+    "Exploratory retrospective analysis of seven fixed opponent implementations. It is not a representative survey or a prospective prediction.",
+    "Intervals use independent-game sample-score variance and a 1.96 normal multiplier, with no multiplicity adjustment. Random-seed independence and absence of overdispersion are not established by these records.",
+    "All seven implementations are retained; interval crossings do not establish equivalence or no effect.",
+    "No decision traces accompany these rows. Individual knockout choices, mechanisms of losses and causal deck determination cannot be inferred.",
+    "No successful conditional selector, learned routing policy, student improvement or entered-player improvement is established.",
+    "Historical candidate runtime uses two Git commit labels with identical tracked agent tree and eval.py. This does not reconstruct untracked imports, engine bytes or every historical process.",
+    "Historical pool hash binds alias and selfcheck text, not opponent files. The full opponent main/deck hashes here were inspected from retained files on 2026-09-12; they are not a historical execution attestation.",
+    "The related preregistration describes 4,000 games per arm against c61 followed conditionally by a 300-per-arm panel. These recovered records instead contain 600 per arm in seven cells; no prospective status is claimed.",
+    "This dataset is separate from the older KO grouping studies, conditional KO-race follow-up, and the counter experiment that also has 8,400 records."
+  ],
+  "identities_sha256": "7696a2ae39bee0ea3e2ce72eb9eac992ffc9ade2d42bf2f53cee468b3b06c212",
+  "candidate_identity": {
+    "module": "agent.main",
+    "effective_policy": "rules_lucario",
+    "archetype": "lucario",
+    "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+    "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+    "deck_snapshot_exported": false,
+    "engine_exported": false,
+    "entered_c61_is_a_different_product": true
+  },
+  "runtime_identity": {
+    "ptcg-agent/agent/rules_lucario.py": {
+      "git_blob_sha256": "5894f922b4e7ab3bfeeac3342d917a5242897125c9e5087f8f712442f09a5884",
+      "git_blob_oid": "0621faaedc22d1393807100d4d6c861e552a8b91"
+    },
+    "ptcg-agent/agent/main.py": {
+      "git_blob_sha256": "32f6a669f970964ab850cf9af6a7a4511dcd2fd8c119f09d7b484ee4058381f4",
+      "git_blob_oid": "7bfb3ca335fc97dd7673543ecc9b210a5546debd"
+    },
+    "ptcg-agent/agent/config.py": {
+      "git_blob_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+      "git_blob_oid": "f6bc70c1f42e0d118cb3ca923a67b5835a4cdc35"
+    },
+    "ptcg-agent/harness/eval.py": {
+      "git_blob_sha256": "da272ea9ccb73317d32ef5b50a0feb59a1f3c768ad43f2cae910f7f732d7aaf6",
+      "git_blob_oid": "8a0dd13000f2e188bff77f3eefb14c77eaba6b3d"
+    },
+    "ptcg-agent/harness/run_koflag_screen.py": {
+      "git_blob_sha256": "622328a98e8e12e547e2f131e53a3a0a133df194cbe773f19ae4260b383caf38",
+      "git_blob_oid": "cde5f6d090a8d919d0d59add7cffd4145eb48fc2"
+    },
+    "workflow/unconstrained-agent/PREREG-ko-flag-live-screen.md": {
+      "git_blob_sha256": "545bf7be39302689182425605f8ea2dc01e2f921b7dbd4bb0abe1fb313eaedb4",
+      "git_blob_oid": "a654ed9dafc9f6ce77f0e2f933272e2304983c19"
+    }
+  }
+}

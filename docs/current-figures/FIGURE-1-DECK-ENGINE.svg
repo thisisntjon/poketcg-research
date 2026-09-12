@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="507pt" height="160pt" viewBox="0 0 507 160" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-11T22:45:12.076301</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Original research schematic; source-checked 2026-09-12</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 160
+L 507 160
+L 507 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 4 73
+L 57 73
+Q 61 73 61 69
+L 61 36
+Q 61 32 57 32
+L 4 32
+Q 0 32 0 36
+L 0 69
+Q 0 73 4 73
+z
+" clip-path="url(#p309b533c39)" style="fill: #f4f7f9; stroke: #adcdd0; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 62.971436 41.688721
+Q 70.498344 40.500262 76.920899 39.486174
+" clip-path="url(#p309b533c39)" style="fill: none; stroke: #007c80; stroke-linecap: round"/>
+    <path d="M 73.510518 38.404833
+L 76.920899 39.486174
+L 74.009598 41.565675
+z
+" clip-path="url(#p309b533c39)" style="fill: #007c80; stroke: #007c80; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 62.140381 68.647217
+Q 70.001137 80.001643 77.225497 90.436829
+" clip-path="url(#p309b533c39)" style="fill: none; stroke: #007c80; stroke-linecap: round"/>
+    <path d="M 76.719533 86.895078
+L 77.225497 90.436829
+L 74.088518 88.71655
+z
+" clip-path="url(#p309b533c39)" style="fill: #007c80; stroke: #007c80; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 128.99707 37
+Q 166.996361 37 203.877618 37
+" clip-path="url(#p309b533c39)" style="fill: none; stroke: #007c80; stroke-linecap: round"/>
+    <path d="M 200.677618 35.4
+L 203.877618 37
+L 200.677618 38.6
+z
+" clip-path="url(#p309b533c39)" style="fill: #007c80; stroke: #007c80; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 213 48
+L 342 48
+Q 346 48 346 44
+L 346 28
+Q 346 24 342 24
+L 213 24
+Q 209 24 209 28
+L 209 44
+Q 209 48 213 48
+z
+" clip-path="url(#p309b533c39)" style="fill: #e7f3f2; stroke: #adcdd0; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 348.002075 36
+Q 367.002554 36 384.884999 36
+" clip-path="url(#p309b533c39)" style="fill: none; stroke: #007c80; stroke-linecap: round"/>
+    <path d="M 381.684999 34.4
+L 384.884999 36
+L 381.684999 37.6
+z
+" clip-path="url(#p309b533c39)" style="fill: #007c80; stroke: #007c80; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 394 52
+L 503 52
+Q 507 52 507 48
+L 507 26
+Q 507 22 503 22
+L 394 22
+Q 390 22 390 26
+L 390 48
+Q 390 52 394 52
+z
+" clip-path="url(#p309b533c39)" style="fill: #e7f3f2; stroke: #adcdd0; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 119.001831 96
+Q 128.499965 96 136.880065 96
+" clip-path="url(#p309b533c39)" style="fill: none; stroke: #007c80; stroke-linecap: round"/>
+    <path d="M 133.680065 94.4
+L 136.880065 96
+L 133.680065 97.6
+z
+" clip-path="url(#p309b533c39)" style="fill: #007c80; stroke: #007c80; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 146 124
+L 309 124
+Q 313 124 313 120
+L 313 80
+Q 313 76 309 76
+L 146 76
+Q 142 76 142 80
+L 142 120
+Q 142 124 146 124
+z
+" clip-path="url(#p309b533c39)" style="fill: #e7f3f2; stroke: #adcdd0; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 332 124
+L 503 124
+Q 507 124 507 120
+L 507 80
+Q 507 76 503 76
+L 332 76
+Q 328 76 328 80
+L 328 120
+Q 328 124 332 124
+z
+" clip-path="url(#p309b533c39)" style="fill: #e7f3f2; stroke: #adcdd0; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 487 73.998169
+Q 487 64.500035 487 56.119935
+" clip-path="url(#p309b533c39)" style="fill: none; stroke: #007c80; stroke-linecap: round"/>
+    <path d="M 485.4 59.319935
+L 487 56.119935
+L 488.6 59.319935
+z
+" clip-path="url(#p309b533c39)" style="fill: #007c80; stroke: #007c80; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 369 129.000488
+Q 369 127.498877 369 127.115299
+" clip-path="url(#p309b533c39)" style="fill: none; stroke: #007c80; stroke-linecap: round"/>
+    <path d="M 367.4 130.315299
+L 369 127.115299
+L 370.6 130.315299
+z
+" clip-path="url(#p309b533c39)" style="fill: #007c80; stroke: #007c80; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 277 124
+L 277 131
+L 369 131
+" clip-path="url(#p309b533c39)" style="fill: none; stroke: #007c80; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 0 138
+L 507 138
+" clip-path="url(#p309b533c39)" style="fill: none; stroke: #adcdd0; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial'; text-anchor: start; fill: #173349" x="0" y="14.369844" transform="rotate(-0 0 14.369844)">How the entered deck prepares Prizes</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #173349" x="30.5" y="42.58125" transform="rotate(-0 30.5 42.58125)">Poffin</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'Arial'; fill: #4e6271" transform="translate(11.023438 56.944941)">≤2 Basics</text>
+    <text style="font-size: 9px; font-family: 'Arial'; fill: #4e6271" transform="translate(15.523438 67.41623)">≤70 HP</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'Arial'; text-anchor: middle; fill: #173349" x="103" y="41.462578" transform="rotate(-0 103 41.462578)">Impidimp</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'Arial'; text-anchor: middle; fill: #173349" x="98" y="99.397734" transform="rotate(-0 98 99.397734)">Snorunt</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9px; font-family: 'Arial'; text-anchor: middle; fill: #4e6271" x="159" y="28.32875" transform="rotate(-0 159 28.32875)">Rare Candy / Morgrem</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Arial'; text-anchor: middle; fill: #173349" x="277.5" y="39.936797" transform="rotate(-0 277.5 39.936797)">Grimmsnarl ex</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9px; font-family: 'Arial'; fill: #4e6271" transform="translate(220.258594 58.089941)">Punk Up: ≤5 Basic Darkness</text>
+    <text style="font-size: 9px; font-family: 'Arial'; fill: #4e6271" transform="translate(235.315313 69.438027)">to Marnie’s Pokémon</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #173349" x="448.5" y="33.576562" transform="rotate(-0 448.5 33.576562)">Shadow Bullet</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'Arial'; text-anchor: middle; fill: #173349" x="448.5" y="47.177422" transform="rotate(-0 448.5 47.177422)">180 Active + 30 Bench</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #173349" x="227.5" y="89.653125" transform="rotate(-0 227.5 89.653125)">Froslass · Checkup</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'Arial'; fill: #173349" transform="translate(172.973359 104.092051)">1 counter / Ability Pokémon</text>
+    <text style="font-size: 9px; font-family: 'Arial'; fill: #173349" transform="translate(172.978281 114.56334)">both sides, except Froslass</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial'; text-anchor: middle; fill: #173349" x="417.5" y="90.520313" transform="rotate(-0 417.5 90.520313)">Munkidori</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'Arial'; fill: #173349" transform="translate(341.747422 104.940723)">Darkness attached: move ≤3 counters</text>
+    <text style="font-size: 9px; font-family: 'Arial'; fill: #173349" transform="translate(339.955156 114.565449)">one friendly → one opposing Pokémon</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: 'Arial'; text-anchor: middle; fill: #007c80" x="443" y="66.223125" transform="rotate(-0 443 66.223125)">before attack</text>
+   </g>
+   <g id="text_16">
+    <g id="patch_14">
+     <path d="M 289.993906 137.226699
+L 356.006094 137.226699
+L 356.006094 124.773301
+L 289.993906 124.773301
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 9px; font-family: 'Arial'; text-anchor: middle; fill: #007c80" x="323" y="133.32875" transform="rotate(-0 323 133.32875)">friendly damage</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'Arial'; text-anchor: middle; fill: #007c80" x="253.5" y="151.37918" transform="rotate(-0 253.5 151.37918)">Manual attachment: Munkidori or another attacker?</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p309b533c39">
+   <rect x="0" y="0" width="507" height="160"/>
+  </clipPath>
+ </defs>
+</svg>

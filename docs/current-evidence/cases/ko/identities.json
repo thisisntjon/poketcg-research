@@ -1,0 +1,568 @@
+{
+  "schema": "ko-identities/v1",
+  "dataset_id": "ko_priority_seven_implementations_20260904_8400",
+  "credits": {
+    "human_direction": "Jon",
+    "historical_investigator": "SKYNET, as recorded by historical runner and preregistration",
+    "intervention": "Project-authored rules_lucario KO-priority flag; not authorship of the third-party opponents",
+    "recount": "Existing September 11 recovery, independently re-read and compared to original retained rows on SKYNET on September 12; no new games"
+  },
+  "candidate": {
+    "module": "agent.main",
+    "effective_policy": "rules_lucario",
+    "archetype": "lucario",
+    "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+    "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+    "deck_snapshot_exported": false,
+    "engine_exported": false,
+    "entered_c61_is_a_different_product": true
+  },
+  "runtime": {
+    "older_commit": "2745012525ee624df3833483590a788cd7d1f9da",
+    "newer_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+    "tracked_agent_tree_unchanged": true,
+    "tracked_eval_py_unchanged": true,
+    "changed_files": [
+      "A\tptcg-agent/harness/koflag_receipt.py",
+      "A\tptcg-agent/harness/run_koflag_screen.py",
+      "A\tworkflow/unconstrained-agent/PREREG-ko-flag-live-screen.md"
+    ],
+    "older_agent_tree_git_oid": "b8b9afcf01f7237ab621fdbb0753400cba0aa191",
+    "newer_agent_tree_git_oid": "b8b9afcf01f7237ab621fdbb0753400cba0aa191",
+    "files": {
+      "ptcg-agent/agent/rules_lucario.py": {
+        "git_blob_sha256": "5894f922b4e7ab3bfeeac3342d917a5242897125c9e5087f8f712442f09a5884",
+        "git_blob_oid": "0621faaedc22d1393807100d4d6c861e552a8b91"
+      },
+      "ptcg-agent/agent/main.py": {
+        "git_blob_sha256": "32f6a669f970964ab850cf9af6a7a4511dcd2fd8c119f09d7b484ee4058381f4",
+        "git_blob_oid": "7bfb3ca335fc97dd7673543ecc9b210a5546debd"
+      },
+      "ptcg-agent/agent/config.py": {
+        "git_blob_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "git_blob_oid": "f6bc70c1f42e0d118cb3ca923a67b5835a4cdc35"
+      },
+      "ptcg-agent/harness/eval.py": {
+        "git_blob_sha256": "da272ea9ccb73317d32ef5b50a0feb59a1f3c768ad43f2cae910f7f732d7aaf6",
+        "git_blob_oid": "8a0dd13000f2e188bff77f3eefb14c77eaba6b3d"
+      },
+      "ptcg-agent/harness/run_koflag_screen.py": {
+        "git_blob_sha256": "622328a98e8e12e547e2f131e53a3a0a133df194cbe773f19ae4260b383caf38",
+        "git_blob_oid": "cde5f6d090a8d919d0d59add7cffd4145eb48fc2"
+      },
+      "workflow/unconstrained-agent/PREREG-ko-flag-live-screen.md": {
+        "git_blob_sha256": "545bf7be39302689182425605f8ea2dc01e2f921b7dbd4bb0abe1fb313eaedb4",
+        "git_blob_oid": "a654ed9dafc9f6ce77f0e2f933272e2304983c19"
+      }
+    },
+    "comparison_checked": "2026-09-12 on SKYNET without executing a player",
+    "discrepancy": "c61 OFF metadata names older commit; all other records name newer commit. Older metadata reports runner/prereg/receipt files untracked, but no agent/ or eval.py dirty paths. No full import/engine attestation exists.",
+    "protocol_discrepancy": "The related preregistration describes 4,000 games per arm against c61 followed conditionally by a 300-per-arm panel. These recovered records instead contain 600 per arm in seven cells; no prospective status is claimed."
+  },
+  "runs": {
+    "tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control": {
+      "OFF": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-004458-KOFLAG-A_off-tb_c61e540b_tetsutani_grimmsnarl-ex-dama.json",
+        "metadata_sha256": "6d00a2f260ce0df68e6d99a5fd18ca1c09095b86bf091c1fee56cde16eff5852",
+        "raw_locator": "SKYNET:koflag/A_off__tb_c61e540b_tetsutani_grimmsnarl-ex-dama.games.jsonl",
+        "raw_sha256": "3be2042c77f74d064f6fe0f1265adee087d082c59a3d73b2d193e70bba122501",
+        "recorded_runtime_commit": "2745012525ee624df3833483590a788cd7d1f9da",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "70fb1b3022038138d904ae8171b6713c165ee3d57d35103cc55b7d01b08c6745",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      },
+      "ON": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-004716-KOFLAG-B_on-tb_c61e540b_tetsutani_grimmsnarl-ex-dama.json",
+        "metadata_sha256": "e5dba1aef2131e7ba2c48a8da4ab57eea43a04431611fb86d6a6d80f1d92a784",
+        "raw_locator": "SKYNET:koflag/B_on__tb_c61e540b_tetsutani_grimmsnarl-ex-dama.games.jsonl",
+        "raw_sha256": "c3d78498cb9c4b366faff6411c98ab3756ce91cf2d10c134b43dcc1ea853d76d",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "70fb1b3022038138d904ae8171b6713c165ee3d57d35103cc55b7d01b08c6745",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0",
+          "PTCG_MIRROR_PATCH_01_KO": "1"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      }
+    },
+    "tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-static-deck-tusk-1208-v24": {
+      "OFF": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-004934-KOFLAG-A_off-tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-stat.json",
+        "metadata_sha256": "672ace9ae73691011b0aff5d9d32191b3874ba1e8deac3bd2fa436526ed10428",
+        "raw_locator": "SKYNET:koflag/A_off__tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-stat.games.jsonl",
+        "raw_sha256": "764677a81e63a77133f0dc7d3593a776ff968403b1604ed7f45ce72d9e9593c7",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "0f6f4cc9d42049695e253b9741ef94a87e45c4b16563087acdc956bd0f1ff8fe",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-static-deck-tusk-1208-v24",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      },
+      "ON": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-005005-KOFLAG-B_on-tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-stat.json",
+        "metadata_sha256": "dc04ad758266fe1fa8511e5aa62aaab520919d6200f34ffb5537475b6d4e1c4f",
+        "raw_locator": "SKYNET:koflag/B_on__tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-stat.games.jsonl",
+        "raw_sha256": "1447de9f739c7a6d600d244213400e552169df4ae7d0ed4657db8f84cb821c3a",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "0f6f4cc9d42049695e253b9741ef94a87e45c4b16563087acdc956bd0f1ff8fe",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0",
+          "PTCG_MIRROR_PATCH_01_KO": "1"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-static-deck-tusk-1208-v24",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      }
+    },
+    "tb_39927049_dedquoc_the-pok-mon-rule-based-engine": {
+      "OFF": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-005034-KOFLAG-A_off-tb_39927049_dedquoc_the-pok-mon-rule-bas.json",
+        "metadata_sha256": "8b1a544f5a13b6434041f9998f572458998769318f97761cc7b5ab26e0d21c66",
+        "raw_locator": "SKYNET:koflag/A_off__tb_39927049_dedquoc_the-pok-mon-rule-bas.games.jsonl",
+        "raw_sha256": "bd46962b865b557c3a9641718291d99f962543c62efa2344b6bf025d269a617f",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "baedb72002fc63c828d2456b533af4cbaf18e58c21b2aca38daead0057ea85d9",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_39927049_dedquoc_the-pok-mon-rule-based-engine",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      },
+      "ON": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-005101-KOFLAG-B_on-tb_39927049_dedquoc_the-pok-mon-rule-bas.json",
+        "metadata_sha256": "503c6eae76996b048200ed8ccf96e7dd969f44ecc1d166401204f101bd30f317",
+        "raw_locator": "SKYNET:koflag/B_on__tb_39927049_dedquoc_the-pok-mon-rule-bas.games.jsonl",
+        "raw_sha256": "f85e095d58f96d4ec0c05a89252b0f7d7f366a19f03aaf63630ff30a8007d55f",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "baedb72002fc63c828d2456b533af4cbaf18e58c21b2aca38daead0057ea85d9",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0",
+          "PTCG_MIRROR_PATCH_01_KO": "1"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_39927049_dedquoc_the-pok-mon-rule-based-engine",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      }
+    },
+    "tb_64e9991a_raunakdey07_pok-mon-tcg-advanced-heuristic-agent": {
+      "OFF": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-005127-KOFLAG-A_off-tb_64e9991a_raunakdey07_pok-mon-tcg-adva.json",
+        "metadata_sha256": "f7c6db27258cb50bbc76aa547cd6ddb7af92f5d47be6f7a63073b5c794c77509",
+        "raw_locator": "SKYNET:koflag/A_off__tb_64e9991a_raunakdey07_pok-mon-tcg-adva.games.jsonl",
+        "raw_sha256": "0b7fb0fdfe6c5bb8c5d335e80afcc8a1e9d173c5893f03a82c8b3d8727983864",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "380b8b07179a9650e946338388403ba2cfd461b486f4de72e8d58a5a3b4f7c3d",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_64e9991a_raunakdey07_pok-mon-tcg-advanced-heuristic-agent",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      },
+      "ON": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-005400-KOFLAG-B_on-tb_64e9991a_raunakdey07_pok-mon-tcg-adva.json",
+        "metadata_sha256": "9ed314465fbfe1eadcd0ce0da873cb00e2adef8c9d19a44bc1c634d82798a2ba",
+        "raw_locator": "SKYNET:koflag/B_on__tb_64e9991a_raunakdey07_pok-mon-tcg-adva.games.jsonl",
+        "raw_sha256": "6885ae5b72b239710c4631177212ab7c71c08f494f90226959b3c9fe7c818ac7",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "380b8b07179a9650e946338388403ba2cfd461b486f4de72e8d58a5a3b4f7c3d",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0",
+          "PTCG_MIRROR_PATCH_01_KO": "1"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_64e9991a_raunakdey07_pok-mon-tcg-advanced-heuristic-agent",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      }
+    },
+    "tb_8026b86b_penguin069_public-scores-915": {
+      "OFF": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-005637-KOFLAG-A_off-tb_8026b86b_penguin069_public-scores-915.json",
+        "metadata_sha256": "2961ad15e4ded4ab681f3878d92d0369ba5e63c922380ca99cd3576eeb540782",
+        "raw_locator": "SKYNET:koflag/A_off__tb_8026b86b_penguin069_public-scores-915.games.jsonl",
+        "raw_sha256": "ce8749dd2556a6055c1722875c0e64b425f2f3627d561fe520854d1f5aac5b5e",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "c411fc7cf8f54c03e0e9565edc409517e15d8309790bce237a6002834a120eac",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_8026b86b_penguin069_public-scores-915",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      },
+      "ON": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-005704-KOFLAG-B_on-tb_8026b86b_penguin069_public-scores-915.json",
+        "metadata_sha256": "7e3c7fb16f8e68e690bb67db0a4d9d95b2aa602d2f5bd62239e217753869f316",
+        "raw_locator": "SKYNET:koflag/B_on__tb_8026b86b_penguin069_public-scores-915.games.jsonl",
+        "raw_sha256": "c483e7dbad0a3c48a192c8d6578c1e6ec7b424ed8566b2144b4d8cf337415405",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "c411fc7cf8f54c03e0e9565edc409517e15d8309790bce237a6002834a120eac",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0",
+          "PTCG_MIRROR_PATCH_01_KO": "1"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_8026b86b_penguin069_public-scores-915",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      }
+    },
+    "tb_96cac124_aristophanivan_2plyexpectimax": {
+      "OFF": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-005731-KOFLAG-A_off-tb_96cac124_aristophanivan_2plyexpectima.json",
+        "metadata_sha256": "3283eccafabfa86b859bd3a654bcbfa3d4f76320059016ab6fbf58fefaf3d7ff",
+        "raw_locator": "SKYNET:koflag/A_off__tb_96cac124_aristophanivan_2plyexpectima.games.jsonl",
+        "raw_sha256": "e11c13919028bff72f6cde14b0ed1e97712fb0e8d1baa74cf04a7215ba1c9592",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "ba48c1713a0351f17db8d579ce462796682f49f21551577cc33879be991f75fa",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_96cac124_aristophanivan_2plyexpectimax",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      },
+      "ON": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-005800-KOFLAG-B_on-tb_96cac124_aristophanivan_2plyexpectima.json",
+        "metadata_sha256": "4f16ba9db3c0378d59ba9cf5ff8b22bcb3a3b3ec3513d1bf1f6d686453ae05d8",
+        "raw_locator": "SKYNET:koflag/B_on__tb_96cac124_aristophanivan_2plyexpectima.games.jsonl",
+        "raw_sha256": "eea1187f93b0eb6bff604b1a7d23ab081218b97e3c62fd65af9705b471884fe0",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "ba48c1713a0351f17db8d579ce462796682f49f21551577cc33879be991f75fa",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0",
+          "PTCG_MIRROR_PATCH_01_KO": "1"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_96cac124_aristophanivan_2plyexpectimax",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      }
+    },
+    "tb_887f651a_pixiux_ptcg-mega-lucario-ex-v62": {
+      "OFF": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-005826-KOFLAG-A_off-tb_887f651a_pixiux_ptcg-mega-lucario-ex-.json",
+        "metadata_sha256": "3f4b4d77a69d8e690a5c8ca1f2526b4541968bf3ab7bd33b8e80aac66f1bfb93",
+        "raw_locator": "SKYNET:koflag/A_off__tb_887f651a_pixiux_ptcg-mega-lucario-ex-.games.jsonl",
+        "raw_sha256": "9f761fdf0dddd2e33168a4cf789494221420556f5372098353a68e880f5375de",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "b7e2f9b198d9ec7df15e7bccee917cccc77ccd037e59e993b112f8e5d4e7d0ac",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_887f651a_pixiux_ptcg-mega-lucario-ex-v62",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      },
+      "ON": {
+        "metadata_locator": "ptcg-agent/experiments/eval/20260904-005854-KOFLAG-B_on-tb_887f651a_pixiux_ptcg-mega-lucario-ex-.json",
+        "metadata_sha256": "dff85e0d695288523b55b386f6bb9c1a10e9a36f2562b5f7ff9f92474483714f",
+        "raw_locator": "SKYNET:koflag/B_on__tb_887f651a_pixiux_ptcg-mega-lucario-ex-.games.jsonl",
+        "raw_sha256": "10782a4eb46583ba439fd071694a018e87b9384e5a630affe6d801fe5d668e7a",
+        "recorded_runtime_commit": "6bb1c5b3a660ee531300c49f667a739fa0f11750",
+        "config_sha256": "2b7d7d7ccae22fc715c1fe13ea80f29d8d41cb1e952228f0275a33070c24777a",
+        "deck_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+        "pool_alias_selfcheck_hash": "b7e2f9b198d9ec7df15e7bccee917cccc77ccd037e59e993b112f8e5d4e7d0ac",
+        "recorded_environment": {
+          "PTCG_HARNESS_WATCHDOG_ACTUATE": "0",
+          "PTCG_MIRROR_PATCH_01_KO": "1"
+        },
+        "recorded_effective_policy": "rules_lucario",
+        "per_game_isolation": true,
+        "distinct_worker_tokens": 600,
+        "recorded_errors": 0,
+        "recorded_runtime_dirty_paths": false,
+        "decision_traces_retained": false,
+        "recorded_argv_summary": {
+          "candidate": "agent.main",
+          "pool": "tb_887f651a_pixiux_ptcg-mega-lucario-ex-v62",
+          "games": 600,
+          "workers": 8,
+          "per_game_isolation": true
+        }
+      }
+    }
+  },
+  "opponents": {
+    "tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control": {
+      "label": "tetsutani c61",
+      "author": "tetsutani",
+      "historical_source_slug": "tetsutani/grimmsnarl-ex-damage-transfer-control",
+      "source_url": "https://www.kaggle.com/code/tetsutani/grimmsnarl-ex-damage-transfer-control",
+      "source_type": "Historical tarball-lifted public competition product, attributed by staged alias and opponent registry.",
+      "main_sha256_retained_20260912": "c61e540bcb45aa2e8184ae912e7e17efaa900dba3df4536468da41899b09dcd8",
+      "deck_sha256_retained_20260912": "92b92bac9f9163ecff933b3dc39294d2cc154c8684f3c8497877661419ebc59d",
+      "retained_file_host": "SKYNET",
+      "identity_scope": "Current retained main.py hash agrees with historical alias prefix; full historical opponent-file/import custody not reconstructed.",
+      "public_source_page_check_20260912": "Kaggle page title resolved; source bytes and license not checked.",
+      "license": "Not independently verified in this export; no third-party source, archive, deck list or engine is redistributed.",
+      "original_pull_timestamp": "Not recovered; tarball staging lineage described by repository opponent registry."
+    },
+    "tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-static-deck-tusk-1208-v24": {
+      "label": "prvsiyan Static-Deck Tusk v24",
+      "author": "prvsiyan",
+      "historical_source_slug": "prvsiyan/ptcg-ai-battle-static-deck-tusk-1208-v24",
+      "source_url": "https://www.kaggle.com/code/prvsiyan/ptcg-ai-battle-static-deck-tusk-1208-v24",
+      "source_type": "Historical tarball-lifted public competition product, attributed by staged alias and opponent registry.",
+      "main_sha256_retained_20260912": "8f2fa9c432642cd07b1fa10246aa200bbd2713b94cbc8a98d902419ff4ad18c8",
+      "deck_sha256_retained_20260912": "6415396d35c0f4b3d69ee6c231337968cc9f2d5d0767de801346d6f412c18e62",
+      "retained_file_host": "SKYNET",
+      "identity_scope": "Current retained main.py hash agrees with historical alias prefix; full historical opponent-file/import custody not reconstructed.",
+      "public_source_page_check_20260912": "Kaggle page title resolved; source bytes and license not checked.",
+      "license": "Not independently verified in this export; no third-party source, archive, deck list or engine is redistributed.",
+      "original_pull_timestamp": "Not recovered; tarball staging lineage described by repository opponent registry."
+    },
+    "tb_39927049_dedquoc_the-pok-mon-rule-based-engine": {
+      "label": "dedquoc Rule-Based Engine",
+      "author": "dedquoc",
+      "historical_source_slug": "dedquoc/the-pok-mon-rule-based-engine",
+      "source_url": "https://www.kaggle.com/code/dedquoc/the-pok-mon-rule-based-engine",
+      "source_type": "Historical tarball-lifted public competition product, attributed by staged alias and opponent registry.",
+      "main_sha256_retained_20260912": "39927049b4189213781acf23ff412389afe0048eec46a9470f3ffc441a25e003",
+      "deck_sha256_retained_20260912": "42068a1803902756badcfd418f6f348b7901365a281d78af0692cbf2589f0799",
+      "retained_file_host": "SKYNET",
+      "identity_scope": "Current retained main.py hash agrees with historical alias prefix; full historical opponent-file/import custody not reconstructed.",
+      "public_source_page_check_20260912": "Kaggle page title resolved; source bytes and license not checked.",
+      "license": "Not independently verified in this export; no third-party source, archive, deck list or engine is redistributed.",
+      "original_pull_timestamp": "Not recovered; tarball staging lineage described by repository opponent registry."
+    },
+    "tb_64e9991a_raunakdey07_pok-mon-tcg-advanced-heuristic-agent": {
+      "label": "raunakdey07 Advanced Heuristic",
+      "author": "raunakdey07",
+      "historical_source_slug": "raunakdey07/pok-mon-tcg-advanced-heuristic-agent",
+      "source_url": "https://www.kaggle.com/code/raunakdey07/pok-mon-tcg-advanced-heuristic-agent",
+      "source_type": "Historical tarball-lifted public competition product, attributed by staged alias and opponent registry.",
+      "main_sha256_retained_20260912": "64e9991a5c39678c33c29a0062b72b8c7d42ce5a73346c00b796d13159e283dd",
+      "deck_sha256_retained_20260912": "8eccc69c3bf7d499f38c6116c33c5fac837050bf0ec71a5a1883f0f20f41ddbc",
+      "retained_file_host": "SKYNET",
+      "identity_scope": "Current retained main.py hash agrees with historical alias prefix; full historical opponent-file/import custody not reconstructed.",
+      "public_source_page_check_20260912": "Kaggle page title resolved; source bytes and license not checked.",
+      "license": "Not independently verified in this export; no third-party source, archive, deck list or engine is redistributed.",
+      "original_pull_timestamp": "Not recovered; tarball staging lineage described by repository opponent registry."
+    },
+    "tb_8026b86b_penguin069_public-scores-915": {
+      "label": "penguin069 Public Scores 915",
+      "author": "penguin069",
+      "historical_source_slug": "penguin069/public-scores-915",
+      "source_url": "https://www.kaggle.com/code/penguin069/public-scores-915",
+      "source_type": "Historical tarball-lifted public competition product, attributed by staged alias and opponent registry.",
+      "main_sha256_retained_20260912": "8026b86be33fdec0fcb60051c6adecf91a3ecd9cbbff539fb0a0c617d1601ad3",
+      "deck_sha256_retained_20260912": "b4464eb525a25e6598a972d00efc5e5b5156372e77f51853f4076d8ebb34fd7d",
+      "retained_file_host": "SKYNET",
+      "identity_scope": "Current retained main.py hash agrees with historical alias prefix; full historical opponent-file/import custody not reconstructed.",
+      "public_source_page_check_20260912": "Page retrieval failed; recorded historical URL retained as attribution, current availability unverified.",
+      "license": "Not independently verified in this export; no third-party source, archive, deck list or engine is redistributed.",
+      "original_pull_timestamp": "Not recovered; tarball staging lineage described by repository opponent registry."
+    },
+    "tb_96cac124_aristophanivan_2plyexpectimax": {
+      "label": "aristophanivan 2plyexpectimax",
+      "author": "aristophanivan",
+      "historical_source_slug": "aristophanivan/2plyexpectimax",
+      "source_url": "https://www.kaggle.com/code/aristophanivan/2plyexpectimax",
+      "source_type": "Historical tarball-lifted public competition product, attributed by staged alias and opponent registry.",
+      "main_sha256_retained_20260912": "96cac124cd8489b070aae38a3b2b197bacac02e5d260aa6ac5cd74a435dd3ca7",
+      "deck_sha256_retained_20260912": "2a541d7bf3d9e6b36037123f53f4dfef6348223f79fd27095dafc602a5357c19",
+      "retained_file_host": "SKYNET",
+      "identity_scope": "Current retained main.py hash agrees with historical alias prefix; full historical opponent-file/import custody not reconstructed.",
+      "public_source_page_check_20260912": "Page retrieval failed; recorded historical URL retained as attribution, current availability unverified.",
+      "license": "Not independently verified in this export; no third-party source, archive, deck list or engine is redistributed.",
+      "original_pull_timestamp": "Not recovered; tarball staging lineage described by repository opponent registry."
+    },
+    "tb_887f651a_pixiux_ptcg-mega-lucario-ex-v62": {
+      "label": "pixiux Mega Lucario v62",
+      "author": "pixiux",
+      "historical_source_slug": "pixiux/ptcg-mega-lucario-ex-v62",
+      "source_url": "https://www.kaggle.com/code/pixiux/ptcg-mega-lucario-ex-v62",
+      "source_type": "Historical tarball-lifted public competition product, attributed by staged alias and opponent registry.",
+      "main_sha256_retained_20260912": "887f651abdc21ec43305ab252803355638c74459ee9cc90a1213d26151e5d55b",
+      "deck_sha256_retained_20260912": "1a282ad180ca7481f560fb88beb7164f1a7ab22241ad4efbdd0ca8ff0e486f01",
+      "retained_file_host": "SKYNET",
+      "identity_scope": "Current retained main.py hash agrees with historical alias prefix; full historical opponent-file/import custody not reconstructed.",
+      "public_source_page_check_20260912": "Page retrieval failed; recorded historical URL retained as attribution, current availability unverified.",
+      "license": "Not independently verified in this export; no third-party source, archive, deck list or engine is redistributed.",
+      "original_pull_timestamp": "Not recovered; tarball staging lineage described by repository opponent registry."
+    }
+  },
+  "custody": {
+    "original_research_host": "SKYNET (line614 runtime locators; hostname not recorded per game)",
+    "inspection_host": "SKYNET",
+    "raw_records": "Retained koflag scratch JSONL files; only outcome, seat, index, arm and opponent aliases are exported. Original absolute local paths omitted from public files.",
+    "source_checkout_commit": "2cdd813c8d8009f125b61f81c9d7ec6cfe914d04",
+    "original_records_reinspected": true,
+    "historical_execution_recreated": false
+  },
+  "limitations": [
+    "Exploratory retrospective analysis of seven fixed opponent implementations. It is not a representative survey or a prospective prediction.",
+    "Intervals use independent-game sample-score variance and a 1.96 normal multiplier, with no multiplicity adjustment. Random-seed independence and absence of overdispersion are not established by these records.",
+    "All seven implementations are retained; interval crossings do not establish equivalence or no effect.",
+    "No decision traces accompany these rows. Individual knockout choices, mechanisms of losses and causal deck determination cannot be inferred.",
+    "No successful conditional selector, learned routing policy, student improvement or entered-player improvement is established.",
+    "Historical candidate runtime uses two Git commit labels with identical tracked agent tree and eval.py. This does not reconstruct untracked imports, engine bytes or every historical process.",
+    "Historical pool hash binds alias and selfcheck text, not opponent files. The full opponent main/deck hashes here were inspected from retained files on 2026-09-12; they are not a historical execution attestation.",
+    "The related preregistration describes 4,000 games per arm against c61 followed conditionally by a 300-per-arm panel. These recovered records instead contain 600 per arm in seven cells; no prospective status is claimed.",
+    "This dataset is separate from the older KO grouping studies, conditional KO-race follow-up, and the counter experiment that also has 8,400 records."
+  ]
+}

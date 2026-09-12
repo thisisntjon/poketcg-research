@@ -1,0 +1,435 @@
+{
+  "figures": [
+    {
+      "width_points": 507,
+      "height_points": 160,
+      "minimum_font_points": 9.0,
+      "visible_text": [
+        "How the entered deck prepares Prizes",
+        "Poffin",
+        "≤2 Basics\n≤70 HP",
+        "Impidimp",
+        "Snorunt",
+        "Rare Candy / Morgrem",
+        "Grimmsnarl ex",
+        "Punk Up: ≤5 Basic Darkness\nto Marnie’s Pokémon",
+        "Shadow Bullet",
+        "180 Active + 30 Bench",
+        "Froslass · Checkup",
+        "1 counter / Ability Pokémon\nboth sides, except Froslass",
+        "Munkidori",
+        "Darkness attached: move ≤3 counters\none friendly → one opposing Pokémon",
+        "before attack",
+        "friendly damage",
+        "Manual attachment: Munkidori or another attacker?"
+      ],
+      "labels_outside_canvas": [],
+      "id": "FIGURE-1-DECK-ENGINE",
+      "file": "FIGURE-1-DECK-ENGINE.png",
+      "files": {
+        "FIGURE-1-DECK-ENGINE.png": "35979c6a170f3deb489182ddcb08f297333bdefea2486329cf7ce45577d2de34",
+        "FIGURE-1-DECK-ENGINE.svg": "146fa9b9af007b29d25b7dd0b8549c8739fc9142d1ee610d90810bc2e36907cf"
+      },
+      "text_overlaps": [],
+      "source_scope": "Entered deck resource relationships, not a recorded turn or newly learned tactic.",
+      "source_refs": [
+        7
+      ],
+      "source_links": [
+        "source-evidence/receipts/source-verification.json"
+      ],
+      "preserved_from": {
+        "basename": "FIGURE-2-DECK-ENGINE",
+        "sha256_png": "35979c6a170f3deb489182ddcb08f297333bdefea2486329cf7ce45577d2de34"
+      }
+    },
+    {
+      "width_points": 507,
+      "height_points": 285,
+      "minimum_font_points": 9.0,
+      "visible_text": [
+        "+20.42",
+        "+18.75",
+        "+0.67",
+        "+0.33",
+        "+0.50",
+        "-0.75",
+        "-3.08",
+        "Score change (percentage points)",
+        "-10",
+        "0",
+        "10",
+        "20",
+        "Where the counter helped",
+        "Large Alakazam gains; broader benefit unresolved",
+        "Opponent / pilot",
+        "Score (%)",
+        "Baseline → combined",
+        "Alakazam",
+        "llccqq624*",
+        "36.67 → 57.08",
+        "Alakazam",
+        "raunakdey07",
+        "20.67 → 39.42",
+        "Steel",
+        "plamen06",
+        "32.50 → 33.17",
+        "Snapshot",
+        "aristophanivan",
+        "31.00 → 31.33",
+        "Dragapult",
+        "zoli800",
+        "86.33 → 86.83",
+        "Crustle",
+        "harukiharada",
+        "85.25 → 84.50",
+        "Grimmsnarl",
+        "BC (not c61)",
+        "58.92 → 55.83",
+        "8,400 games · Approx. 95% intervals · win 1, draw ½, loss 0",
+        "* Development deck, different pilot. Intervals assume independent games."
+      ],
+      "labels_outside_canvas": [],
+      "id": "FIGURE-2-COUNTER-MATCHUPS",
+      "file": "FIGURE-2-COUNTER-MATCHUPS.png",
+      "files": {
+        "FIGURE-2-COUNTER-MATCHUPS.png": "e4f93ae34c0fa2b158612f311dd1bef3f4a2ca8ea81572b42dfcb5cb81df947f",
+        "FIGURE-2-COUNTER-MATCHUPS.svg": "d455d62977cf4ce875a308136cb17968352d2f8d4733727c72bc585a113ccea5"
+      },
+      "text_overlaps": [],
+      "source_scope": "Counter seven-implementation half-draw panel, distinct from the KO panel.",
+      "source_refs": [
+        6
+      ],
+      "source_links": [
+        "numerical/verified-results.json",
+        "numerical/METHODS.md"
+      ],
+      "preserved_from": {
+        "basename": "FIGURE-4-MATCHUP-RESULTS",
+        "sha256_png": "e4f93ae34c0fa2b158612f311dd1bef3f4a2ca8ea81572b42dfcb5cb81df947f"
+      },
+      "bindings": [
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/0/delta_pp",
+          "value": 20.416666666666664
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/0/ci95_pp",
+          "value": [
+            14.891752395514573,
+            25.941580937818756
+          ]
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/1/delta_pp",
+          "value": 18.749999999999996
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/1/ci95_pp",
+          "value": [
+            13.675560674828315,
+            23.824439325171678
+          ]
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/2/delta_pp",
+          "value": 0.6666666666666643
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/2/ci95_pp",
+          "value": [
+            -4.651734620029976,
+            5.985067953363305
+          ]
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/3/delta_pp",
+          "value": 0.3333333333333357
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/3/ci95_pp",
+          "value": [
+            -4.912318053083487,
+            5.578984719750158
+          ]
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/4/delta_pp",
+          "value": 0.5
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/4/ci95_pp",
+          "value": [
+            -3.3530543018704893,
+            4.35305430187049
+          ]
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/5/delta_pp",
+          "value": -0.75
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/5/ci95_pp",
+          "value": [
+            -4.80432657731813,
+            3.30432657731813
+          ]
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/6/delta_pp",
+          "value": -3.0833333333333286
+        },
+        {
+          "source": "numerical/verified-results.json",
+          "pointer": "/panel/cells/6/ci95_pp",
+          "value": [
+            -8.674261026716565,
+            2.5075943600499064
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FIGURE-3-KNOCKOUT-MATCHUPS",
+      "file": "FIGURE-3-KNOCKOUT-MATCHUPS.png",
+      "files": {
+        "FIGURE-3-KNOCKOUT-MATCHUPS.png": "28bafa8ca51c07a5b7f22d95f6b2a48ee50c22d8b0e1844a7f034583c0beca88",
+        "FIGURE-3-KNOCKOUT-MATCHUPS.svg": "948b4c3082c925c1dd0c317af0c30648a853f9f17935273f9cc5d11a9e4de91b"
+      },
+      "width_points": 507,
+      "height_points": 285,
+      "minimum_font_points": 9.0,
+      "visible_text": [
+        "-1.08",
+        "+14.33",
+        "-0.50",
+        "-0.50",
+        "-11.58",
+        "-7.42",
+        "-7.75",
+        "Score change (percentage points)",
+        "-20",
+        "-10",
+        "0",
+        "10",
+        "20",
+        "One knockout bonus, opposite effects",
+        "The tested opponent changes the value of the preference",
+        "Opponent implementation",
+        "Score (%)",
+        "OFF → ON",
+        "Grimmsnarl",
+        "tetsutani c61",
+        "43.00 → 41.92",
+        "Static-Deck Tusk v24",
+        "prvsiyan",
+        "32.83 → 47.17",
+        "Rule-Based Engine",
+        "dedquoc",
+        "97.33 → 96.83",
+        "Advanced Heuristic",
+        "raunakdey07",
+        "40.25 → 39.75",
+        "Public Scores 915",
+        "penguin069",
+        "47.92 → 36.33",
+        "2plyexpectimax",
+        "aristophanivan",
+        "40.92 → 33.50",
+        "Mega Lucario v62",
+        "pixiux",
+        "43.25 → 35.50",
+        "8,400 games · Approx. 95% intervals · win 1, draw ½, loss 0",
+        "Exploratory; independent-game intervals, no multiplicity adjustment."
+      ],
+      "labels_outside_canvas": [],
+      "text_overlaps": [],
+      "source_scope": "ko_priority_seven_implementations_20260904_8400",
+      "source_refs": [
+        10
+      ],
+      "source_links": [
+        "cases/ko/README.md",
+        "cases/ko/CLAIM-CONTRACT.json"
+      ],
+      "bindings": [
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/0/delta_pp",
+          "value": -1.0833333333333306
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/0/ci95_pp",
+          "value": [
+            -6.669016955637173,
+            4.502350288970512
+          ]
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control/OFF/score_mean",
+          "value": 0.43
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_c61e540b_tetsutani_grimmsnarl-ex-damage-transfer-control/ON/score_mean",
+          "value": 0.4191666666666667
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/1/delta_pp",
+          "value": 14.333333333333337
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/1/ci95_pp",
+          "value": [
+            8.844680246613203,
+            19.82198642005347
+          ]
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-static-deck-tusk-1208-v24/OFF/score_mean",
+          "value": 0.3283333333333333
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_8f2fa9c4_prvsiyan_ptcg-ai-battle-static-deck-tusk-1208-v24/ON/score_mean",
+          "value": 0.4716666666666667
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/2/delta_pp",
+          "value": -0.5000000000000004
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/2/ci95_pp",
+          "value": [
+            -2.4055724354659507,
+            1.4055724354659496
+          ]
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_39927049_dedquoc_the-pok-mon-rule-based-engine/OFF/score_mean",
+          "value": 0.9733333333333334
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_39927049_dedquoc_the-pok-mon-rule-based-engine/ON/score_mean",
+          "value": 0.9683333333333334
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/3/delta_pp",
+          "value": -0.5000000000000004
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/3/ci95_pp",
+          "value": [
+            -6.043452042306614,
+            5.043452042306614
+          ]
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_64e9991a_raunakdey07_pok-mon-tcg-advanced-heuristic-agent/OFF/score_mean",
+          "value": 0.4025
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_64e9991a_raunakdey07_pok-mon-tcg-advanced-heuristic-agent/ON/score_mean",
+          "value": 0.3975
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/4/delta_pp",
+          "value": -11.583333333333334
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/4/ci95_pp",
+          "value": [
+            -17.129584586919805,
+            -6.037082079746865
+          ]
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_8026b86b_penguin069_public-scores-915/OFF/score_mean",
+          "value": 0.4791666666666667
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_8026b86b_penguin069_public-scores-915/ON/score_mean",
+          "value": 0.36333333333333334
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/5/delta_pp",
+          "value": -7.416666666666666
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/5/ci95_pp",
+          "value": [
+            -12.872385978967927,
+            -1.9609473543654046
+          ]
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_96cac124_aristophanivan_2plyexpectimax/OFF/score_mean",
+          "value": 0.4091666666666667
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_96cac124_aristophanivan_2plyexpectimax/ON/score_mean",
+          "value": 0.335
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/6/delta_pp",
+          "value": -7.750000000000002
+        },
+        {
+          "source": "cases/ko/figure-input.json",
+          "pointer": "/cells/6/ci95_pp",
+          "value": [
+            -13.258719859533432,
+            -2.2412801404665705
+          ]
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_887f651a_pixiux_ptcg-mega-lucario-ex-v62/OFF/score_mean",
+          "value": 0.4325
+        },
+        {
+          "source": "cases/ko/aggregates.json",
+          "pointer": "/cells/tb_887f651a_pixiux_ptcg-mega-lucario-ex-v62/ON/score_mean",
+          "value": 0.355
+        }
+      ]
+    }
+  ],
+  "cover_text": []
+}

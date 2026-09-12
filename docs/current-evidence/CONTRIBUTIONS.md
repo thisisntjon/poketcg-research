@@ -11,6 +11,8 @@ The Fleet is a human-directed research method built around game questions, testa
 | Learning components | Actor-visible representation, 256-unit recurrence, sequential STOP and set objective | Inspectable source and seven prescribed-score selection checks; current v2 strength unestablished |
 | Executed teaching | Historical teacher labels, training receipt and all student outcomes | Validation improved; selected checkpoint won 23/1,200 decided games against c61 |
 | Deck-policy intervention | Carmine-to-Xerosic substitution, targeting rule, factorial and later matchup comparisons | Substantial advantage against two tested Alakazam implementations; broader benefit unresolved |
+| Energy recovery | One Poké Pad replaced by Energy Recycler, fixed reported targeting setting, target and wider-panel checks | Recounted historical aggregate evidence: first target gain, wider improvement unresolved; full runtime not reconstructed |
+| Knockout-priority experiment | Dedicated projected-knockout bonus, seven implementation comparisons and all terminal rows | Opposite observed effects; universal promotion unsupported, no causal deck or successful conditional-selector claim |
 | Research memory | Source-linked inventory, recovered audit and reader regression repair | Specific decisions changed; no perfect memory or measured general time saving |
 
 ## Credited foundations

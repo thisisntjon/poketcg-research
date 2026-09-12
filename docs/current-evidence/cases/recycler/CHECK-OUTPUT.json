@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "schema": "recycler_case_verification/v1",
+  "scope": "Recounted exported historical aggregate arithmetic; no game re-execution or runtime certification",
+  "independent_review": false,
+  "checked_export_count": 8,
+  "source_manifest_sha256": "6ac21863df8c13a8e7d635174928a782308b9fc4e5c7ff5ece9bd53851ca91d3",
+  "recounted_contrasts": {
+    "stage1_first_target_batch": {
+      "control_pct": 33.5,
+      "treatment_pct": 40.8,
+      "delta_pp": 7.299999999999997,
+      "se_pp": 2.1547876925581324,
+      "ci95_pp": [
+        3.0766161225860573,
+        11.523383877413938
+      ]
+    },
+    "stage2_wider_panel": {
+      "control_pct": 42.7341873498799,
+      "treatment_pct": 41.6533226581265,
+      "delta_pp": -1.0808646917534048,
+      "se_pp": 0.9880734892470926,
+      "ci95_pp": [
+        -3.017488730677706,
+        0.8557593471708966
+      ]
+    }
+  },
+  "stage1_count_changes": {
+    "deckout_losses": -72,
+    "all_deckouts": -70,
+    "prize_wins": 51,
+    "wins": 73,
+    "losses": -73
+  },
+  "unique_attempts": 12000,
+  "unique_decided": 11992,
+  "historical_only_not_recomputed": [
+    "stage2_target",
+    "two_stage_target_pool",
+    "stage2_per_cell_table"
+  ],
+  "headline_boundary": "Stage1 must be labeled first target batch and carry later-batch/panel limits."
+}

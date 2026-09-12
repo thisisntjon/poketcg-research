@@ -1,0 +1,73 @@
+{
+  "schema": "recycler_identities/v1",
+  "authored_export_date": "2026-09-12",
+  "historical_experiment_date": "2026-09-03",
+  "source_ids": [
+    "R01",
+    "R04",
+    "R05",
+    "R06",
+    "R07"
+  ],
+  "intervention": "Replace one Poke Pad with one Energy Recycler; all other card counts equal.",
+  "control": {
+    "arm_id": "A",
+    "historical_label": "deck D / Parent 1",
+    "deck_file_sha256": "2186cf7be6cf0e99c8bb10cef6757f8dc7e921dcb2f2ea551d8b36a4dd3c54af",
+    "deck_size": 60,
+    "basic_fighting_energy_count": 14,
+    "changed_card_counts": {
+      "1152": 2,
+      "1139": 0
+    },
+    "recorded_policy_flags": {
+      "PTCG_ALAKAZAM_SNIPER": "1"
+    }
+  },
+  "treatment": {
+    "arm_id": "E",
+    "historical_label": "Energy Recycler one-slot variant",
+    "deck_file_sha256": "1d9b7273a903db44816a5c7c66ba4eeb36041529a88a70b5b8850f13ee91c761",
+    "deck_size": 60,
+    "basic_fighting_energy_count": 14,
+    "changed_card_counts": {
+      "1152": 1,
+      "1139": 1
+    },
+    "recorded_policy_flags": {
+      "PTCG_ALAKAZAM_SNIPER": "1"
+    }
+  },
+  "configuration_summary": {
+    "other_card_counts_equal_on_original_inspection": true,
+    "treatment_remaining_search": {
+      "Poke Pad": 1,
+      "Dusk Ball": 4,
+      "Fighting Gong": 4
+    },
+    "same_targeting_setting_in_both_arms": true,
+    "control_already_contains_xerosic": true,
+    "full_deck_lists_exported": false
+  },
+  "historical_custody": {
+    "reported_investigator": "MASTER research seat",
+    "reported_direction": "STRATEGIST",
+    "reported_project_host_context": "Exact historical execution host not established in inspected source set.",
+    "host_verification": "historical attribution only",
+    "outcome_rows_recovered": false,
+    "replay_sidecars_recovered": false,
+    "runtime_manifest_recovered": false,
+    "candidate_code_sha256": null,
+    "opponent_code_sha256": null,
+    "engine_sha256": null,
+    "seed_schedule": null,
+    "activation_trace_recovered": false,
+    "execution_claim": "No historical games re-executed by this export. Reported settings are not independently certified runtime activation."
+  },
+  "opponent_identity_scope": {
+    "target_label": "kernel_prvsiyan_844_router",
+    "public_kernel_context": "Opponent implementation labels are retained from authored historical receipts; exact public notebook versions and executable hashes are not recovered in this case.",
+    "archetype_causality_claim": false
+  },
+  "product_boundary": "Authored Lucario deck intervention; separate from entered public c61 and from learner products."
+}
