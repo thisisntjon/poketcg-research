@@ -1,4 +1,4 @@
-> Current factory-centered report: [read it](STRATEGY-WRITEUP.md). Its references [1]–[8] are mapped in [the current evidence notes](current-evidence/SOURCE-NOTES.md). This page preserves supporting source context; earlier figure/reference numbering is historical.
+> Current factory-centered report: [read it](STRATEGY-WRITEUP.md). Its references are mapped in [the current evidence notes](current-evidence/SOURCE-NOTES.md). This page preserves supporting source context; earlier figure/reference numbering is historical.
 
 # Opponent provenance: verified facts and remaining gaps
 
