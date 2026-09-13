@@ -50,6 +50,8 @@ The [historical sensitivity supplement](review-supplement/README.md) retains the
 
 The experimental Lucario lineage is makthanithin's Apache-2.0 community_1084 policy; the author's intervention is the card substitution, targeting modification and experimental comparison. [Mechanics inspection](source-evidence/receipts/source-verification.json) records source identities. Aura Jab and Mega Brave costs, damage, acceleration and reuse constraint were additionally inspected against retained card data, whose SHA-256 is a0ea63cf7adcb65d35436ce0eb390de6e2e35654a7c67c065a45f4abaa00f373. The Carmine-to-Xerosic replacement is the evaluated treatment, not another historical hardcoded list. Preferring Abra/Kadabra may require bringing it Active; these Lucario attacks do not damage a Benched target themselves. Organizer data is excluded.
 
+Clarity amendment, September 12: a fresh inspection of the same retained card-data file identified above confirms that record 1197 is Xerosic's Machinations. This is the full name of the disruption card already evaluated; the treatment has not changed. This authored finding supplements the frozen historical mechanics receipt. The organizer data file is not redistributed.
+
 ## [7] Submitted entry and deck strategy
 
 [Submission provenance](source-evidence/receipts/submission-provenance.json) identifies Tetsutani's unmodified public Grimmsnarl Damage-Transfer Control, policy c61e540b and deck 92b92bac. The [September 6 snapshot](source-evidence/receipts/competition-verification.json) records score 834.0 and rank 840/6,807, not a final rank. That score does not evaluate the factory's experimental learner or Lucario intervention.
@@ -74,6 +76,8 @@ The September 6 [SRI manifest](https://github.com/thisisntjon/poketcg-research/b
 ## [9] Energy recovery: target batch and wider panel
 
 The [Recycler case](cases/recycler/README.md) provides original-receipt source notes, aggregate counts, arm identities and a standard-library verifier. The exact intervention is one Poké Pad removed and one Energy Recycler added; all other card counts are unchanged and both arms retain the reported targeting setting. This is a separate experimental Lucario product; it is not the entered c61 player or a learned student.
+
+Clarity amendment, September 12: the same retained card-data file identified in [6], record 1152, restricts Poké Pad's search to Pokémon without a Rule Box. Mega Lucario ex has a Rule Box and therefore cannot be selected. This authored inspection finding explains the existing card substitution; it is not a new treatment or game result.
 
 The first target batch contains 1,000 decided games per arm: 335 control wins and 408 treatment wins, yielding +7.30 points [3.08, 11.52]. The later five-implementation panel has 2,135/4,996 versus 2,081/4,996 wins/decided, yielding −1.08 [−3.02, +0.86]. Four undecided games per arm are excluded; the original receipt does not distinguish their ending types. These two headline effects are recounted from historical aggregate counts, with independent-arm binomial normal intervals. The panel interval is an aggregate approximation because exact per-cell counts were not recovered.
 

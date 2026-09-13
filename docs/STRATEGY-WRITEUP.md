@@ -1,6 +1,6 @@
 # The Fleet: Building a Research Factory for Pokémon TCG
 
-*Sixty days of solo-directed AI research into hand disruption, Energy recovery, and the whole-game cost of a good move.*
+*Roughly two months of solo-directed AI research into hand disruption, Energy recovery, and the whole-game cost of a good move.*
 
 Jonathan Simone
 
@@ -10,7 +10,7 @@ A Pokémon TCG player can take a Prize now and leave the opponent's main attacke
 
 Over roughly sixty days, I directed AI research and coding agents across vendors, calling them The Fleet. As the solo developer, I set objectives, coordinated researchers and implementers across two machines, and assigned independent reviewers to challenge assumptions. The policies selected game actions; Fleet agents developed and evaluated them. This report follows three separate research cases: a counter with 19–20 percentage-point gains against two tested Alakazam implementations, a recovery substitution, and a knockout rule whose effects changed sign across opponents. [1,6,9,10]
 
-My Simulation entry was Tetsutani's unmodified public Grimmsnarl ex Damage-Transfer Control, policy c61e540b and deck 92b92bac. Its September 6 standing was 834.0, rank 840/6,807. A contemporaneous local comparison favored c61 over the previous V13 player; reviewed replacements subsequently failed execution and whole-game improvement gates. These are the recorded retention reasons, not a newly reproduced selection experiment. The research products below are separate from that entry. [7]
+My Simulation entry was Tetsutani's unmodified public Grimmsnarl ex Damage-Transfer Control, policy c61e540b and deck 92b92bac. Its September 6 standing was 834.0, rank 840/6,807. I selected c61 after a frozen local comparison favored it over our V13 player. I retained it because reviewed alternatives had not demonstrated a stronger replacement with reliable execution and verified submission identity. The original selection-game rows were not recovered for this report. The research products below are separate from that entry. [7]
 
 ## The entered deck: prepare damage, then convert it into Prizes
 
@@ -26,9 +26,9 @@ Froslass creates a useful tension: its Checkup counters reach both sides, while 
 
 Our counter used a derivative of makthanithin's Apache-2.0 community_1084 Lucario policy. I contributed the card substitution, targeting modification and comparisons. Mega Lucario ex's Aura Jab deals 130 for one Fighting Energy and can attach up to three discarded Basic Fighting Energy to Benched Pokémon. Mega Brave deals 270 for two Fighting Energy but cannot be reused by that Pokémon next turn. Developing a successor therefore competes with maximizing the current attack. [6]
 
-Alakazam's Powerful Hand places two damage counters per card in its player's hand. Replacing one Carmine with Xerosic offered a way to reduce a large opposing hand to three at resolution, at the cost of a draw Supporter. Separately, modified targeting preferred visible Abra or Kadabra when the Alakazam line appeared, bringing a Benched target Active when possible. The hypothesis was pressure on both current damage and future attackers. The costs were a Supporter opportunity and potentially passing up another Prize; Alakazam could also draw again. [6]
+Alakazam's Powerful Hand places two damage counters per card in its player's hand. Replacing one Carmine with Xerosic's Machinations offered a way to reduce a large opposing hand to three at resolution, at the cost of a draw Supporter. Separately, modified targeting preferred visible Abra or Kadabra when the Alakazam line appeared, bringing a Benched target Active when possible. The hypothesis was pressure on both current damage and future attackers. The costs were a Supporter opportunity and potentially passing up another Prize; Alakazam could also draw again. [6]
 
-One four-arm experiment used 8,000 games, separating the card and targeting changes. Across 28,000 development records on a 40%-Alakazam panel, pooled treatment-versus-control differences within each batch gave +5.02 points for the card, +3.62 for targeting and +7.82 [6.08, 9.55] for the combination. These use decided-game win rates and inverse-variance pooling. The estimates share factorial arms; their interaction did not establish synergy. All three combined comparisons were positive. [6]
+One four-arm experiment used 8,000 games, separating the card and targeting changes. The development analysis covers 28,000 game records, including that experiment, on a 40%-Alakazam panel. Pooling within-batch treatment-versus-control differences gave +5.02 points for the card, +3.62 for targeting and +7.82 [6.08, 9.55] for the combination. These use decided-game win rates and inverse-variance pooling. The estimates share factorial arms; their interaction did not establish synergy. All three combined comparisons were positive. [6]
 
 Independent challenge mattered to one reproduction. Before games, review found that the second machine's registry omitted both target Alakazam opponents and a changed default could activate the intervention in both arms. Restoring the registry and explicitly setting the control preserved the intended comparison. [1,6]
 
@@ -40,7 +40,7 @@ The two Alakazam cells gained 20.42 and 18.75 points; the other five averaged �
 
 ## Experiment 2: recover the resource that runs out
 
-Recovery posed a different choice: use a slot to find Pokémon, or return discarded Energy to the deck. Against the targeted 844_router wall, loss inspection motivated Energy Recycler: it could extend the deck and replenish attack Energy. Sacred Ash returns Pokémon instead. We replaced one Poké Pad, whose restricted search cannot fetch Mega Lucario ex. Both arms retained the same targeting setting. Removing search was a cost in every matchup. [9]
+Recovery posed a different choice: use a slot to find Pokémon, or return discarded Energy to the deck. Against the targeted 844_router wall, loss inspection motivated Energy Recycler: it could extend the deck and replenish attack Energy. Sacred Ash returns Pokémon instead. We replaced one Poké Pad, whose search excludes Rule Box Pokémon such as Mega Lucario ex. Both arms retained the same targeting setting. Removing search was a cost in every matchup. [9]
 
 | Historical comparison | Control wins / decided | Recycler wins / decided | Change, points [95% interval] |
 |---|---:|---:|---:|
