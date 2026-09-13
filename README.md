@@ -1,6 +1,6 @@
 # The Fleet: Building a Research Factory for Pokémon TCG
 
-**Sixty days of solo-directed AI research into hand disruption, Energy recovery, and the whole-game cost of a good move.**
+**Roughly two months of solo-directed AI research into hand disruption, Energy recovery, and the whole-game cost of a good move.**
 
 I am Jonathan Simone. I directed AI research and coding agents across vendors to turn strategic questions into explicit interventions, test complete games, challenge the conclusions and preserve what should change next. This repository makes the research method and its concrete outputs inspectable.
 
