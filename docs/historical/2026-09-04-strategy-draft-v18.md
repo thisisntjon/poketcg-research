@@ -4,10 +4,12 @@
 > the record. It was written before the September 6 evidence review and it
 > disagrees with the submitted manuscript in ways that matter:
 >
-> - It reports a pooled non-Alakazam estimate of **+2.72pp [−3.29, +8.74]**. The
->   current report gives the equal-weight mean of those five cells as
->   **−0.47pp [−2.64, +1.71]**. The two summaries use different pooling and are
->   not interchangeable; the current report's convention is the one in force.
+> - It reports **+2.72pp [−3.29, +8.74]** for a six-implementation sensitivity
+>   analysis that excludes the development-overlapping deck but retains one
+>   Alakazam implementation. The current report's **−0.47pp [−2.64, +1.71]**
+>   is the equal-weight mean of five non-Alakazam implementations. Both the
+>   population and estimator differ; these estimates are not interchangeable.
+>   See the [current sensitivity supplement](../current-evidence/review-supplement/README.md).
 > - It attributes the measured advantage to the targeting rule alone. The
 >   combined arm changes **both** the card list and the targeting rule, so its
 >   result is not attributable to one of them.
